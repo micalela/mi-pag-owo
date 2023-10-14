@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(113, 201, 237, 1) 0%,
+    rgba(236, 236, 236, 1) 100%
+  );
+}
+
+.imagenes {
+  background-color: lightsalmon;
+  cursor: crosshair;
+  border-radius: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}

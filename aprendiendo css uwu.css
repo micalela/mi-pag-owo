@@ -1,0 +1,55 @@
+p {
+  color: rgb(85, 54, 126);
+}
+body {
+  background: url("assets/fondos/celesestrellas.gif");
+}
+h4{
+    margin: 50px;
+    border: 9px solid powderblue;
+    padding: 30px;
+}
+
+.ponja{
+  font-size: 12pt !important;
+  font-family: "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ, Meiryo", "ＭＳ Ｐゴシック", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+}
+
+a:link {
+  color: rgb(91, 98, 188);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(116, 146, 196);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* 
+.otroslinks > a:link, a:visited{
+
+    background-color: #f44336;
+    color: rgb(46, 97, 100);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.otroslinks2 > a:hover, a:active {
+    background-color: rgb(149, 110, 233);
+  }
+   */
