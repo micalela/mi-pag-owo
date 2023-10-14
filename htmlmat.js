@@ -47,6 +47,7 @@ links.map((x, idx) => {
   const item = document.createElement("li"); /*<li></li>*/
   const pg = document.createElement("a"); /*<a></a>*/
   pg.setAttribute("href", x); /* a.href = url */
+  pg.setAttribute("target", "_blank");
   pg.text = x; /* a.text = url */
 
   item.appendChild(pg); /* a inside li */
