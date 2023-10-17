@@ -1,15 +1,15 @@
 const linksydesc = [
     {
         "url": "https://new.math.uiuc.edu/oldnew",
-        "desc": "descripcion"
+        "desc": "una buena página para explorar"
     },
     {
         "url": "http://new.math.uiuc.edu/oldnew/optiverse/",
-        "desc": "descripcion"
+        "desc": "acá nacieron los legendarios videos de cómo dar vuelta una esfera. hay un montón de material original de los videos y muchas reliquias para chusmear"
     },
     {
         "url": "https://new.math.uiuc.edu/oldnew/optiverse/tshirts.html",
-        "desc": "descripcion"
+        "desc": "cuando quieran coordinamos y les mandamos un mail, a ver si nos conseguimos unas remeras para el cmat"
     },
     {
         "url": "https://new.math.uiuc.edu/zipproof/conwaypng/",
