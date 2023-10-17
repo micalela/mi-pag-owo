@@ -41,7 +41,9 @@ const links = [
   "https://www.epsilones.com/paginas/0-bestiario/bestiario-000.html",
 ];
 
-const et = document.getElementById("links");
+const links2 = ["https://new.math.uiuc.edu/oldnew/optiverse/",]
+
+const et = document.getElementById("lista de links");
 
 links.map((x, idx) => {
   const item = document.createElement("li"); /*<li></li>*/
