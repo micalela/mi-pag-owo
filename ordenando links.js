@@ -149,11 +149,11 @@ const linksydesc = [
   },
   {
     url: "https://kleinbottle.com/?utm_source=substack&utm_medium=email",
-    desc: "descripcion",
+    desc: "sacar",
   },
   {
     url: "https://mathcurve.com/surfaces.gb/mobiussurface/mobiussurface.shtml",
-    desc: "descripcion",
+    desc: "sacar",
   },
   {
     url: "http://andrewbayly.com/PR/pr.html",
@@ -186,8 +186,10 @@ for (var i = 0; i < linksydesc.length; i++) {
   const br = document.createElement("br");
   pg.setAttribute("href", linksydesc[i].url);
   pg.setAttribute("target", "_blank");
+  pg.style = "word-break: break-word"
   pg.innerHTML = linksydesc[i].url; /* i.url */
   desc.innerHTML = linksydesc[i].desc; /* i.desc */
+
 
   item.appendChild(pg);
   et.appendChild(item);
