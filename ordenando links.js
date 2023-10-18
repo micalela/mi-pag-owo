@@ -2,6 +2,22 @@ const linksydesc = [
   {
     url: "https://new.math.uiuc.edu/oldnew",
     desc: "una buena página para explorar",
+  },  
+  {
+    url: "https://www.kleinbottle.com/",
+    desc: "una página completamente épica sobre botellas de klein",
+  },  
+  {
+    url: "http://web1.kcn.jp/hp28ah77/index.html#chapters",
+    desc: "una de mis páginas favoritas de esta colección. la presento con palabras del autor: 'You know that we can enjoy a masterpiece of painting even though we can not paint it ourselves. Everybody has the right to enjoy true mathematics even if one is not familiar with math. It is not necessary for sightseers to know the laws or rules of the region being visited. All we have to do is to see how the mountains look and how the rivers run. I began writing this webpage without any knowledge of hyperbolic geometry. I pursued whatever came to my mind on a given occasion. Sometimes I accepted a mathematician's idea without question. Anyway, the Hyperbolic Non-Euclidean World is very mysterious and captivating, so have fun! Let's take off on an academic sight-seeing flight, and enjoy panoramic views of infinity!'",
+  },  
+  {
+    url: "http://web1.kcn.jp/hp28ah77/us27i_klpr.htm",
+    desc: "esta es la entrada con la que descubrí la página",
+  },  
+  {
+    url: "https://www.geometrygames.org/HyperbolicBlanket/index.html",
+    desc: "una página que explica cómo hacer un poncho hiperbólico. juro solemnemente ponerme las pilas y hacer uno en algún momento",
   },
   {
     url: "http://new.math.uiuc.edu/oldnew/optiverse/",
@@ -10,6 +26,10 @@ const linksydesc = [
   {
     url: "https://new.math.uiuc.edu/oldnew/optiverse/tshirts.html",
     desc: "cuando quieran coordinamos y les mandamos un mail, a ver si nos conseguimos unas remeras para el cmat",
+  },  
+  {
+    url: "https://www.cs.ubc.ca/~tmm/gc/",
+    desc: "más material de geometry center. acá hay un pdf, 'Making Waves: A Guide to the Ideas behind Outside In', que me parece bastante icónico",
   },
   {
     url: "https://new.math.uiuc.edu/zipproof/conwaypng/",
@@ -28,40 +48,16 @@ const linksydesc = [
     desc: "cómo coser un bitoro",
   },
   {
-    url: "https://www.kleinbottle.com/",
-    desc: "una página completamente épica sobre botellas de klein",
-  },
-  {
-    url: "https://personal.math.ubc.ca/~cass/courses/m308-03b/projects-03b/skinner/ex-dimension-koch_snowflake.htm",
-    desc: "calculando la dimensión fractal de la curva de koch (sacar)",
-  },
-  {
-    url: "https://personal.math.ubc.ca/~cass/courses/m308-03b/projects-03b/skinner/",
-    desc: "sacar",
+    url: "http://www.rogmann.org/math/hyperbolic.html",
+    desc: "una página sobre teselaciones hiperbólicas, de acá sale el tutorial de cómo coser un bitoro",
   },
   {
     url: "https://www2.karlin.mff.cuni.cz/~pyrih/e/e2001v2/c/ect/node52.html",
     desc: "una entrada del solenoide en una página de continuos localmente conexos",
   },
   {
-    url: "http://web1.kcn.jp/hp28ah77/index.html#chapters",
-    desc: "una de mis páginas favoritas de esta colección. la presento con palabras del autor: 'You know that we can enjoy a masterpiece of painting even though we can not paint it ourselves. Everybody has the right to enjoy true mathematics even if one is not familiar with math. It is not necessary for sightseers to know the laws or rules of the region being visited. All we have to do is to see how the mountains look and how the rivers run. I began writing this webpage without any knowledge of hyperbolic geometry. I pursued whatever came to my mind on a given occasion. Sometimes I accepted a mathematician's idea without question. Anyway, the Hyperbolic Non-Euclidean World is very mysterious and captivating, so have fun! Let's take off on an academic sight-seeing flight, and enjoy panoramic views of infinity!'",
-  },
-  {
-    url: "http://web1.kcn.jp/hp28ah77/us27i_klpr.htm",
-    desc: "esta es la entrada con la que descubrí la página",
-  },
-  {
-    url: "https://www2.karlin.mff.cuni.cz/~pyrih/e/e2001v2/c/ect/node1.html",
-    desc: "sacar",
-  },
-  {
-    url: "http://www.complang.tuwien.ac.at/schani/",
-    desc: "descripcion",
-  },
-  {
-    url: "https://www.math.leidenuniv.nl/~desmit/",
-    desc: "descripcion",
+    url: "http://www.complang.tuwien.ac.at/schani/supermag/index.html",
+    desc: "construyendo poliedros y otras cosas curiosas con imanes, y después haciendo malabares. icónico",
   },
   {
     url: "http://pi.math.cornell.edu/~dtaimina/hypplanes.htm",
@@ -73,31 +69,15 @@ const linksydesc = [
   },
   {
     url: "https://www.georgehart.com/index.html",
-    desc: "la página del señor de los poliedros",
-  },
-  {
-    url: "https://www.cs.ubc.ca/~tmm/gc/",
-    desc: "más material de geometry center. acá hay un pdf, 'Making Waves: A Guide to the Ideas behind Outside In', que me parece bastante icónico",
-  },
-  {
-    url: "https://www.geometrygames.org/HyperbolicBlanket/index.html",
-    desc: "una página que explica cómo hacer un poncho hiperbólico. juro solemnemente ponerme las pilas y hacer uno en algún momento",
+    desc: "la página del señor de los poliedros, tiene un montón de cosas",
   },
   {
     url: "https://www.geometrygames.org/TorusGames/",
     desc: "juegos que buscan introducir el concepto del toro como cociente",
   },
   {
-    url: "http://www.biscuitsandjam.com/stripe_maker.php",
-    desc: "sacar",
-  },
-  {
     url: "http://madeleineshepherd.blogspot.com/search/label/random%20knitting",
     desc: "tejidos aleatorios, me pareció un buen concepto",
-  },
-  {
-    url: "https://themathematiciansshirts.wordpress.com/",
-    desc: "sacar",
   },
   {
     url: "http://www.woollythoughts.com",
@@ -105,19 +85,7 @@ const linksydesc = [
   },
   {
     url: "http://www.woollythoughts.com/dragons.html",
-    desc: "sacar",
-  },
-  {
-    url: "http://www.mentalblocks.co.uk/aboutus.html",
-    desc: "sacar",
-  },
-  {
-    url: "http://www.rogmann.org/math/hyperbolic.html",
-    desc: "una página sobre teselaciones hiperbólicas, de acá sale el tutorial de cómo coser un bitoro",
-  },
-  {
-    url: "http://www.rogmann.org/archiv/math/hyp/anim/Animationen.html",
-    desc: "sacar",
+    desc: "una entrada sobre la curva de dragón",
   },
   {
     url: "http://aleph0.clarku.edu/~djoyce/poincare/poincare.html",
@@ -129,11 +97,7 @@ const linksydesc = [
   },
   {
     url: "https://www.geometrygames.org/HyperbolicGames/",
-    desc: "otra como los torus games",
-  },
-  {
-    url: "https://www.ics.uci.edu/~eppstein/junkyard/tiling.html",
-    desc: "sacar",
+    desc: "otra como los torus games, pero con juegos hiperbólicos",
   },
   {
     url: "http://www.rogmann.org/math/csaszar/",
@@ -148,24 +112,16 @@ const linksydesc = [
     desc: "tópicos en puzzles y matemática",
   },
   {
-    url: "https://kleinbottle.com/?utm_source=substack&utm_medium=email",
-    desc: "sacar",
-  },
-  {
-    url: "https://mathcurve.com/surfaces.gb/mobiussurface/mobiussurface.shtml",
-    desc: "sacar",
-  },
-  {
     url: "http://andrewbayly.com/PR/pr.html",
-    desc: "descripcion",
+    desc: "script para jugar con poliedros",
   },
   {
     url: "https://www.epsilones.com/paginas/laboratorio/laboratorio-002-teseladopenrose.html",
-    desc: "descripcion",
+    desc: "una entrada de epsilones sobre el teselado de Penrose",
   },
   {
     url: "https://www.epsilones.com/paginas/0-bestiario/bestiario-000.html",
-    desc: "descripcion",
+    desc: "una colección de tópicos, también conocida como un 'bestiario' de matemática",
   },
   {
     url: "https://members.tripod.com/professor_tom/galleries/index.html",
@@ -175,6 +131,10 @@ const linksydesc = [
     url: "https://members.tripod.com/professor_tom/hyperbolic/index.html",
     desc: "una página sobre superficies hiperbólicas",
   },
+  {
+    url: "https://www2.clarku.edu/faculty/djoyce/complex/",
+    desc: "introducción a los números complejos",
+  }
 ];
 
 const et = document.getElementById("lista de links");
@@ -189,6 +149,8 @@ for (var i = 0; i < linksydesc.length; i++) {
   pg.style = "word-break: break-word"
   pg.innerHTML = linksydesc[i].url; /* i.url */
   desc.innerHTML = linksydesc[i].desc; /* i.desc */
+  desc.className = "descripcion"
+  
 
 
   item.appendChild(pg);
