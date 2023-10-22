@@ -158,6 +158,10 @@ const pixeles = [
     link: "http://www.lejlart.com/apple.html",
     img: "assets/cachivaches/stickers/babykau_anim.gif"
   },
+  {
+    link: "https://pixel-utopia.tumblr.com/",
+    img: "assets/cachivaches/stickers/jellyfish.webp",
+  },
 ];
 
 const nuse = [
@@ -165,6 +169,16 @@ const nuse = [
 ];
 
 const cachivaches = [
+  {
+    link: "http://lu.tiny-universes.net/stickers-sets.html",
+    img: "assets/cachivaches/miscelaneo/dog.png",
+    height: "55px",
+  },
+  {
+    link: "http://jansgraphics.com/Graphics/TeaTime/pg.html",
+    img: "assets/cachivaches/miscelaneo/te10.gif",
+    height: "100px",
+  },
   {
     link: "https://shroom.ink/decay/adopt-a-shroom/",
     img: "https://shroom.ink/images/adoptables/Amanita_muscaria.png",
@@ -189,6 +203,25 @@ const cachivaches = [
   {
     link: "https://www.deviantart.com/onnawufei/art/Animal-Crossing-Gyroid-Fan-108439723",
     img: "assets/cachivaches/stamps/d1sk8mj-31f3092b-bb6f-494a-9916-0f517d4e2215.gif",
+  },
+  {
+    img: "assets/cachivaches/stamps/night.gif"
+  },
+  {
+    img: "assets/cachivaches/stamps/yee.png"
+  },
+  {
+    img: "assets/cachivaches/stamps/system32.gif"
+  },
+  {
+    img: "assets/cachivaches/stamps/rat.jpg"
+  },
+  {
+    img: "assets/cachivaches/stamps/cat.png"
+  },
+  {
+    link: "https://www.deviantart.com/chuchucolate/art/Cats-Louis-Wayne-3-Stamp-386046115",
+    img: "assets/cachivaches/stamps/chuchucolate-waynecat.png"
   }
 ];
 

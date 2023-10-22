@@ -1,9 +1,5 @@
 const linksydesc = [
   {
-    url: "https://new.math.uiuc.edu/oldnew",
-    desc: "una buena página para explorar",
-  },  
-  {
     url: "https://www.kleinbottle.com/",
     desc: "una página completamente épica sobre botellas de klein",
   },  
@@ -15,6 +11,10 @@ const linksydesc = [
     url: "http://web1.kcn.jp/hp28ah77/us27i_klpr.htm",
     desc: "esta es la entrada con la que descubrí la página",
   },  
+  {
+    url: "http://bugman123.com/MinimalSurfaces/",
+    desc: "no puedo con la estética de esta página. superficies mínimas en todo su esplendor webcore",
+  },
   {
     url: "https://www.geometrygames.org/HyperbolicBlanket/index.html",
     desc: "una página que explica cómo hacer un poncho hiperbólico. juro solemnemente ponerme las pilas y hacer uno en algún momento",
@@ -31,6 +31,10 @@ const linksydesc = [
     url: "https://www.cs.ubc.ca/~tmm/gc/",
     desc: "más material de geometry center. acá hay un pdf, 'Making Waves: A Guide to the Ideas behind Outside In', que me parece bastante icónico",
   },
+  {
+    url: "https://new.math.uiuc.edu/oldnew",
+    desc: "una buena página para explorar",
+  },  
   {
     url: "https://new.math.uiuc.edu/zipproof/conwaypng/",
     desc: "una página con algunas ilustraciones de clasificación de superficies",
@@ -145,11 +149,18 @@ for (var i = 0; i < linksydesc.length; i++) {
   const pg = document.createElement("a");
   const desc = document.createElement("dd");
   const br = document.createElement("br");
+  const div = document.createElement("div");
+
+
   pg.setAttribute("href", linksydesc[i].url);
   pg.setAttribute("target", "_blank");
-  pg.style = "word-break: break-word"
-  const newcolor = linksydesc[i].color ? linksydesc[i].color : "black" /* si no existe linksydesc.color --> lo settea a red*/
-  pg.style.color = newcolor
+  pg.style = "word-break: break-word";
+
+  div.className = "clase";
+  
+  /* const newcolor = linksydesc[i].color ? linksydesc[i].color : "black"  */
+  /* ↑↑↑ si no existe linksydesc.color --> lo settea a red*/
+ /*  pg.style.color = newcolor */
 
   
   pg.innerHTML = linksydesc[i].url; /* i.url */
@@ -157,9 +168,14 @@ for (var i = 0; i < linksydesc.length; i++) {
   desc.className = "descripcion"
   
 
+  div.appendChild(item);
+  div.appendChild(desc);
+  div.appendChild(br);
 
   item.appendChild(pg);
-  et.appendChild(item);
-  et.appendChild(desc);
-  et.appendChild(br);
+
+  et.appendChild(div);
+
+  /* et.appendChild(desc);
+  et.appendChild(br); */
 }

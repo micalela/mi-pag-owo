@@ -1,0 +1,40 @@
+body {
+    background-image: url("../assets/fondos/celesestrellas.gif");
+  }
+
+  a:link {
+    color: rgb(103, 23, 179);
+    background-color: rgb(156, 231, 250);
+    text-decoration: none;
+    
+  }
+
+  a:hover {
+    color: rgb(160, 140, 230);
+    background-color: rgb(156, 231, 250);
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: rgb(23, 179, 132);
+    background-color: rgb(156, 231, 250);
+    text-decoration: none;
+  }
+
+/*     .descripcion {
+     background-color: rgb(133, 154, 252) 
+  } */
+
+  .clase {
+
+    margin: 25px;
+    background-color: rgb(196, 200, 255);
+    padding: 10px;
+
+  }
+  
+  @media screen and (max-width: 1122px) {
+    .imagenTitulo{
+      max-width: 100%;
+    }
+  }
