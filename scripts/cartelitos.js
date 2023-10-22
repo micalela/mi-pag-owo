@@ -8,10 +8,6 @@ const cartelitos = [
     img: "assets/botones/32marsh.gif",
   },
   {
-    link: "http://lu.tiny-universes.net/",
-    img: "assets/botones/stamp-yrownwebsite.png",
-  },
-  {
     link: "https://skelenby.neocities.org/dump/icons",
     img: "https://piranhebula.neocities.org/images_general/bestviewed.gif",
   },
@@ -22,6 +18,32 @@ const cartelitos = [
   {
     link: "https://skelenby.neocities.org/dump/icons",
     img: "https://piranhebula.neocities.org/images_buttons/blinkiesCafe-9l.gif",
+  },
+  {
+    link: "https://plasticdino.neocities.org/",
+    img: "assets/botones/o72VnsC.gif"
+  },
+  {
+    link: "https://skelenby.neocities.org/dump/icons",
+    img: "assets/botones/tumblr_98d138f3fe309ed76bc10315ee506228_59976930_640.webp",
+    height: "20px",
+  },
+  {
+    img: "assets/botones/stardew.gif",
+  },
+  {
+    img: "assets/botones/hollowknight.gif",
+  },
+  {
+    img: "assets/botones/aseprite.gif",
+  },
+  {
+    link: "https://skelenby.neocities.org/dump/icons",
+    img: "assets/botones/stars.gif",
+  },
+  {
+    link: "https://booberfaggle.tumblr.com/post/692324525220773888/beep-boop-blinkie-by-me",
+    img: "assets/botones/tumblr_387f759d7f666ad6d97b4c9f89ae2b57_6becaf92_1280.webp",
   },
 ];
 
@@ -99,14 +121,47 @@ const pixeles = [
   {
     title: "https://foxfable.fun/",
     img: "assets/cachivaches/stickers/Washingmachine.gif"
-  }
+  },
+  {
+    link: "https://mikaorangeart.neocities.org/shrine3",
+    img: "assets/cachivaches/stickers/mushroomjar.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/cloudpicnic_sangria.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/apartmentkitchen_milk.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/apartmentkitchen_rawhoney.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/dizzysummer_chime.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/dinershift_notepad.gif",
+  },
+  {
+    link: "http://bitmapdreams.lastsecret.net",
+    img: "assets/cachivaches/stickers/dinershift_painkillers.gif",
+  },
+  {
+    link: "http://www.lejlart.com/apple.html",
+    img: "assets/cachivaches/stickers/goldfish1.gif",
+  },
+  {
+    link: "http://www.lejlart.com/apple.html",
+    img: "assets/cachivaches/stickers/babykau_anim.gif"
+  },
 ];
 
 const nuse = [
-  {
-    link: "https://cinni.net/?z=/web",
-    img: "assets/cachivaches/stamps/pastel.gif",
-  },
+
 ];
 
 const cachivaches = [
@@ -115,6 +170,26 @@ const cachivaches = [
     img: "https://shroom.ink/images/adoptables/Amanita_muscaria.png",
     height: "50px",
   },
+  {
+    link: "https://cinni.net/?z=/web",
+    img: "assets/cachivaches/stamps/pastel.gif",
+  },
+  {
+    link: "http://lu.tiny-universes.net/",
+    img: "assets/cachivaches/stamps/stamp-yrownwebsite.png",
+  },
+  {
+    link: "https://skelenby.neocities.org/dump/icons",
+    img: "assets/cachivaches/stamps/thebread.png",
+  },
+  {
+    link: "https://www.deviantart.com/blubble-the-blubs/art/Nyan-205931322",
+    img: "assets/cachivaches/stamps/nyan_by_blubble_the_blubs_d3eltmi.gif",
+  },
+  {
+    link: "https://www.deviantart.com/onnawufei/art/Animal-Crossing-Gyroid-Fan-108439723",
+    img: "assets/cachivaches/stamps/d1sk8mj-31f3092b-bb6f-494a-9916-0f517d4e2215.gif",
+  }
 ];
 
 const apis = [
@@ -166,6 +241,6 @@ function poner(ls, donde, titulo) {
 
 poner(cartelitos, "cartelitos", "cartelitos");
 poner(pixeles, "pixeles", "pixel art");
-poner(nuse, "estampillas", "estampillas¿?");
+/* poner(nuse, "estampillas", "estampillas¿?"); */
 poner(cachivaches, "cachivaches", "cachivaches");
 poner(apis, "apis", "apis");
