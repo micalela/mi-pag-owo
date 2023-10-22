@@ -96,6 +96,10 @@ const pixeles = [
     link: "https://bloopywoopy.neocities.org/cool-stuff/collections",
     img: "assets/cachivaches/stickers/discord.png",
   },
+  {
+    title: "https://foxfable.fun/",
+    img: "assets/cachivaches/stickers/Washingmachine.gif"
+  }
 ];
 
 const nuse = [
@@ -124,12 +128,16 @@ function poner(ls, donde, titulo) {
   const div = document.getElementById(donde);
   const h3 = document.createElement("h3");
 
-    h3.text = titulo;
+    h3.innerText = titulo;
     div.appendChild(h3);
 
   for (var i = 0; i < ls.length; i++) {
     const a = document.createElement("a");
     const img = document.createElement("img");
+
+    if(donde === "pixeles"){
+        img.className = "renderpixeles"
+    }
 
     if (ls[i].link) {
       a.setAttribute("href", ls[i].link);
@@ -152,7 +160,6 @@ function poner(ls, donde, titulo) {
     }
 
     a.appendChild(img);
-    div.appendChild(h3)
     div.appendChild(a);
   }
 }
