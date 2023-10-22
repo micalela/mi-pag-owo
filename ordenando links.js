@@ -134,6 +134,7 @@ const linksydesc = [
   {
     url: "https://www2.clarku.edu/faculty/djoyce/complex/",
     desc: "introducción a los números complejos",
+    color: "#000000"
   }
 ];
 
@@ -147,6 +148,10 @@ for (var i = 0; i < linksydesc.length; i++) {
   pg.setAttribute("href", linksydesc[i].url);
   pg.setAttribute("target", "_blank");
   pg.style = "word-break: break-word"
+  const newcolor = linksydesc[i].color ? linksydesc[i].color : "black" /* si no existe linksydesc.color --> lo settea a red*/
+  pg.style.color = newcolor
+
+  
   pg.innerHTML = linksydesc[i].url; /* i.url */
   desc.innerHTML = linksydesc[i].desc; /* i.desc */
   desc.className = "descripcion"
