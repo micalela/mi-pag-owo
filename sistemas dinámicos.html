@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ciencia</title>
+    <link rel="icon" type="image/x-icon" href="assets\iconos\photodisc.png" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="css\sistemas dinámicos.css" />
+    <link rel="stylesheet" href="css\navbar.css" />
+  </head>
+  <body>
+    <script src="scripts\navbar.js"></script>
+
+    <img
+      src="assets\sistemas dinámicos\titulo.gif"
+      class="imagenTitulo"
+      alt="introducción a los sistemas dinámicos"
+    />
+
+    <img src="assets\constru.gif" alt="página en construcción" />
+    <div class="caja">
+      <p>
+        Definamos qué es un sistema dinámico en sentido general: Sea
+        $\mathbb{T}$ un grupo (semigrupo también anda)(o sea sin inverso) y sea
+        $X$ un espacio métrico compacto.
+      </p>
+      <p>
+        Un $\mathbb{T}$ - sistema dinámico en $X$ es una familia $\{\phi_t: X
+        \rightarrow X\}_{t\in \mathbb{T}}$ de mapas continuos tales que
+      </p>
+      <ul>
+        <li>$\phi_{Id}$ = Id</li>
+        <li>$\phi_{t\cdot s} = \phi_t \circ \phi_s$</li>
+      </ul>
+      <p>
+        Por lo general vamos a tomar $\mathbb{T}$ como $\mathbb{Z}$ o
+        $\mathbb{R}$.
+      </p>
+      <p>
+        En el caso $\mathbb{T}=\mathbb{N}$ obtenemos un sistema dinámico
+        discreto, y se cumple que $\phi_n = \overbrace{\phi_1 \circ \phi_1 \circ
+        \dots \circ \phi_1}^{\text{ n veces}}=(\phi_1)^n$
+      </p>
+    </div>
+    <div class="caja">
+    <span class="ej">Ejemplo:</span>
+    <span>Rotaciones de ángulo $\alpha$ en $S^1$</span>
+    <p>
+      Definimos $R_{\alpha}: S^1 \rightarrow S^1$ tal que $R_{\alpha}(x) = x +
+      \alpha$ (mod $\mathbb{Z}$) para cierto $\alpha \in \mathbb{R}$.
+    </p>
+  </div>
+  <div class="caja">
+    <span class="obs">Observación:</span>
+    <span
+      >Si $\alpha - \beta \in \mathbb{Z} \;\Rightarrow R_{\alpha} =
+      R_{\beta}$</span
+    ></div>
+    <div class="caja">
+    <span class="lema">Lema:</span>
+    <span
+      >$\alpha \not\in \mathbb{Q} \; \Leftrightarrow$ Toda órbita de
+      $R_{\alpha}$ es densa</span
+    ></div>
+    <div class="caja">
+    <span class="def">Plátera de definiciones:</span>
+    <span>Sea $f:X\rightarrow X$ homeo</span>
+    <ul style="list-style-type: circle">
+      <li>
+        $\mathcal{O}(x) = \{f^n(x)\}_{n\in \mathbb{Z}}$ es la órbita de $x$
+      </li>
+      <br />
+      <li>
+        $p\in X$ es periódico $ \Leftrightarrow \exists \; n_o > 0$ tal que
+        $f^{n_o}(p)=p$ $\Leftrightarrow \mathcal{O}(p)$ es finita <br /><br />
+        $\rightarrow$ Si $n_o$ es el mínimo para el que se cumple, entonces $p
+        \in Per_{n_o}(f)$
+      </li>
+      <br />
+      <li>
+        $f$ es <ins>minimal</ins> si $\overline{\mathcal{O}(x)} = X$ para todo
+        $x\in X$ (toda órbita es densa)
+      </li>
+      <br />
+      <li>$U \subset X$ es $f$-invariante si $f(U)\subset U$</li>
+      <br />
+      <li>
+        Un compacto $K$ $f$-invariante es <ins>minimal</ins> si $\forall \; L
+        \subset K$ compacto $f$-invariante, $L \neq \varnothing$ se tiene $L =
+        K$ <br /><br />
+        $\rightarrow$ Es decir, $K$ es el compacto invariante no trivial más
+        chico de $X$.
+      </li>
+      <br />
+      <li>
+        <ins>Omega límite:</ins> $\omega(x,f) = \{y\in X : \exists \; \{n_j\}
+        \nearrow \infty \; \text{ con } \; f^{n_j}(x) \rightarrow y\} = \bigcap
+        \limits_{k > 0} \overline{\bigcup \limits_{n > k} \{f^n(x)\}}$
+      </li>
+      <br />
+      <li>
+        <ins>Alfa límite:</ins> $\alpha(x,f) = \omega(x,f^{-1}) = \bigcap
+        \limits_{k < 0} \overline{\bigcup \limits_{n < k} \{f^n(x)\}}$
+      </li>
+      <br />
+      <li>$x$ es <ins>recurrente</ins> (futuro) si $x\in \omega(x)$</li>
+      <br />
+      <li>
+        $f$ es <ins>transitivo</ins> $\Leftrightarrow \exists \; x \in X$ tal
+        que $\overline{\mathcal{O}^+(x)}=X$
+      </li>
+    </ul>
+  </div>
+  <div class="caja">
+    <span class="lema">Lema:</span>
+    <span
+      >Si $K\subset X$ es minimal y $x\in K \Rightarrow
+      \overline{\mathcal{O}(x)} = K $</span
+    ><br /><br />
+    <span class="dem">Dem:</span>
+    <span
+      >$\overline{\mathcal{O}(x)}$ es un compacto invariante no vacío. ($X$ es
+      compacto) ⬛</span
+    ></div>
+    <div class="caja">
+    <span class="obs">Obs:</span>
+    <span
+      >Siempre tengo un conjunto minimal. <br /><br />
+      $\rightarrow$ Toda cadena decreciente de cerrados invariantes tiene cota
+      inferior (intersectar todos,
+      <ins>asumiendo que el espacio es hausdorff</ins>, me queda compacto y no
+      vacío por teo de cantor) $\Rightarrow$ por zorn tenemos un conjunto
+      minimal owo </span
+    ></div>
+    <div class="caja">
+    <span class="lema">Lema:</span>
+    <span>Todo sistema dinámico tiene puntos recurrentes.</span><br /><br />
+    <span class="dem">Dem:</span>
+    <span
+      >Sabemos que tenemos un conjunto minimal $K$ $\Rightarrow \forall \; x \in
+      K,\; \omega(x)=K \Rightarrow x \in \omega(x)$ ⬛</span
+    ></div>
+    <div class="caja">
+    <span class="obs">Obs:</span>
+    <span
+      >$\omega(x)$ es cerrado, invariante y no vacío. <br /><br />
+      <ins>cerrado:</ins> es intersección de cerrados <br /><br />
+      <ins>no vacío:</ins> el espacio es compacto $\Rightarrow$ tengo subsuc
+      convergente <br /><br />
+      <ins>invariante:</ins> $f^{n_j}(x) \rightarrow y \Rightarrow f^{n_j +
+      1}(x) \rightarrow f(y)$
+    </span>
+  </div>
+  </body>
+</html>

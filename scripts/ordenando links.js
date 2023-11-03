@@ -125,7 +125,7 @@ const linksydesc = [
   },
   {
     url: "https://www.epsilones.com/paginas/0-bestiario/bestiario-000.html",
-    desc: "una colección de tópicos, también conocida como un 'bestiario' de matemática",
+    desc: "una colección de tópicos, mejor llamada un 'bestiario' de matemática",
   },
   {
     url: "https://members.tripod.com/professor_tom/galleries/index.html",
