@@ -16,4 +16,6 @@ const body = document.body;
 
 body.insertAdjacentHTML("beforeBegin", navbar);
 
+console.log("anda")
+
 /* body.insertBefore(navbar, body.firstChild); */
