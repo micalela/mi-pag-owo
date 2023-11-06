@@ -1,0 +1,71 @@
+body {
+    background: url("../assets/fondos/celesestrellas.gif");
+  }
+
+  @font-face {
+    font-family: romanceA;
+    src: url("fonts/RomanceA.ttf");
+  }
+
+  span {
+    font-family: "romanceA";
+    background-color: #bdecff;
+    padding: 2px;
+    font-size: 14px;
+  }
+
+  .renderpixeles {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    margin: 5px;
+  }
+
+  .renderpixeles:hover{
+
+    transform: scale(1.2);
+
+  }
+
+  .rendercachivaches{
+
+    margin: 5px;
+
+  }
+
+  .caja{
+
+    background-color: rgba(248, 225, 234, 0.3);
+    margin: 25px;
+    width: fit-content;
+    padding: 25px 25px;
+
+  }
+
+  .cajita{
+
+    background-color: rgba(177, 219, 255, 0.342);
+/*     margin: 25px; */
+    width: fit-content;
+    padding: 5px 15px;
+/*     border: 32px solid orange;
+    border-image: url('../assets/dividers/borde4.png') 32 / 32px round;
+    background-clip: padding-box; <--- este comando ta bueno, queda el borde afuera del padding*/
+
+  }
+
+  .borde{
+    width: fit-content;
+    border: 32px solid orange;
+    border-image: url('../assets/dividers/borde4.png') 32 / 32px round;
+  }
+
+  .titulo{
+
+    background-color: rgb(252, 188, 231);
+    width: fit-content;
+    padding: 5px 15px;
+
+  }
+
+  

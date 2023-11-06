@@ -5,67 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🍰cachivachería🍦</title>
-    <link rel="icon" type="image/x-icon" href="assets\iconos\tetera.png">
+    <link rel="icon" type="image/x-icon" href="assets\iconos\tetera.png" />
     <link rel="stylesheet" href="css\cachivache.css" />
     <link rel="stylesheet" href="css\navbar.css" />
     <script src="scripts\cartelitos.js" defer></script>
   </head>
 
-  <style>
-    body {
-      background: url("assets/fondos/celesestrellas.gif");
-    }
-
-    @font-face {
-      font-family: romanceA;
-      src: url("fonts/RomanceA.ttf");
-    }
-
-    span {
-      font-family: "romanceA";
-      background-color: #bdecff;
-      padding: 2px;
-      font-size: 14px;
-    }
-
-    .renderpixeles {
-      image-rendering: pixelated;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: crisp-edges;
-    }
-
-  </style>
-
   <body>
     <!-- <span>asdfasdf</span> -->
 
-    <div id="cartelitos"></div>
+    <div id="cartelitos" class="caja">
+      <div class="borde">
+        <div id="cartelitos2" class="cajita"></div>
+      </div>
+    </div>
 
+    <div id="pixeles" class="caja">
+      <div class="borde">
+        <div id="pixeles2" class="cajita">
+        </div>
+      </div>
+    </div>
 
-    <div id="pixeles"></div>
+    <!--     <div id="estampillas" class="caja"></div> -->
 
- 
-    <div id="estampillas"></div>
+    <div id="cachivaches" class="caja">
+      <div class="borde">
+        <div id="cachivaches2" class="cajita"></div>
+      </div>
+    </div>
 
+    <div id="apis" class="caja">
+      <div class="borde"><div id="apis2" class="cajita"></div></div>
+    </div>
 
-    <div id="cachivaches"></div>
+    <div class="caja">
+      <h3 class="titulo">misc</h3>
+      <div class="borde">
+        <div class="cajita">
+          <iframe
+            src="https://shroom.ink/guard.html"
+            height="250px"
+            width="200px"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
 
+          <a
+            href="https://web.archive.org/web/20091027000648/http://www.conceptualmath.org/"
+            target="_blank"
+            ><img
+              src="assets/cachivaches/stamps/conmath.gif"
+              alt="conceptual mathematics"
+          /></a>
 
-    <div id="apis"></div>
-
-    <h3>misc</h3>
-
-    <iframe
-      src="https://shroom.ink/guard.html"
-      height="250px"
-      width="200px"
-      scrolling="no"
-      frameborder="0"
-    ></iframe>
-
-    <a href="https://web.archive.org/web/20091027000648/http://www.conceptualmath.org/" target="_blank"><img src="assets/cachivaches/stamps/conmath.gif" alt="conceptual mathematics"></a>
+          <a href="https://artwork.neocities.org/birthday" target="_blank"><img src="assets\cachivaches\boyzball01.gif" alt="gatitos de felicumple"></a>
+        </div>
+      </div>
+    </div>
 
     <script src="scripts\navbar.js"></script>
-
   </body>
 </html>

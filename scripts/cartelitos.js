@@ -21,7 +21,7 @@ const cartelitos = [
   },
   {
     link: "https://plasticdino.neocities.org/",
-    img: "assets/botones/o72VnsC.gif"
+    img: "assets/botones/o72VnsC.gif",
   },
   {
     link: "https://skelenby.neocities.org/dump/icons",
@@ -44,6 +44,18 @@ const cartelitos = [
   {
     link: "https://booberfaggle.tumblr.com/post/692324525220773888/beep-boop-blinkie-by-me",
     img: "assets/botones/tumblr_387f759d7f666ad6d97b4c9f89ae2b57_6becaf92_1280.webp",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/botones/76.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/botones/208.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/botones/dreaminpixels.gif",
   },
 ];
 
@@ -120,7 +132,7 @@ const pixeles = [
   },
   {
     title: "https://foxfable.fun/",
-    img: "assets/cachivaches/stickers/Washingmachine.gif"
+    img: "assets/cachivaches/stickers/Washingmachine.gif",
   },
   {
     link: "https://mikaorangeart.neocities.org/shrine3",
@@ -156,17 +168,92 @@ const pixeles = [
   },
   {
     link: "http://www.lejlart.com/apple.html",
-    img: "assets/cachivaches/stickers/babykau_anim.gif"
+    img: "assets/cachivaches/stickers/babykau_anim.gif",
   },
   {
     link: "https://pixel-utopia.tumblr.com/",
     img: "assets/cachivaches/stickers/jellyfish.webp",
   },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pulpo.gif",
+  },
+  {
+    link: "http://whimsical.heartette.net/",
+    img: "assets/cachivaches/froyo1d.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/0205.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/0217.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/0600.png",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/beta.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/038.png",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/140.png",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/166.png",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/202.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/216.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/288.png",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/333.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/546.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/564.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/973.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/1036.gif",
+  },
+  {
+    link: "https://antikrist.lol/",
+    img: "assets/cachivaches/pixeles/1048.gif",
+  },
+  {
+    link: "https://www.deviantart.com/riut/art/Seed-Plant-Cup-Free-avatar-290625190",
+    img: "assets/cachivaches/pixeles/plantita.gif",
+  },
+
 ];
 
-const nuse = [
-
-];
+const nuse = [];
 
 const cachivaches = [
   {
@@ -205,24 +292,31 @@ const cachivaches = [
     img: "assets/cachivaches/stamps/d1sk8mj-31f3092b-bb6f-494a-9916-0f517d4e2215.gif",
   },
   {
-    img: "assets/cachivaches/stamps/night.gif"
+    img: "assets/cachivaches/stamps/night.gif",
   },
   {
-    img: "assets/cachivaches/stamps/yee.png"
+    img: "assets/cachivaches/stamps/yee.png",
   },
   {
-    img: "assets/cachivaches/stamps/system32.gif"
+    img: "assets/cachivaches/stamps/system32.gif",
   },
   {
-    img: "assets/cachivaches/stamps/rat.jpg"
+    img: "assets/cachivaches/stamps/rat.jpg",
   },
   {
-    img: "assets/cachivaches/stamps/cat.png"
+    img: "assets/cachivaches/stamps/cat.png",
   },
   {
     link: "https://www.deviantart.com/chuchucolate/art/Cats-Louis-Wayne-3-Stamp-386046115",
-    img: "assets/cachivaches/stamps/chuchucolate-waynecat.png"
-  }
+    img: "assets/cachivaches/stamps/chuchucolate-waynecat.png",
+  },
+  {
+    img: "assets/cachivaches/miscelaneo/lattice.gif",
+  },
+  {
+    img: "assets/cachivaches/miscelaneo/fishbowlbutton.gif",
+  },
+
 ];
 
 const apis = [
@@ -232,19 +326,31 @@ const apis = [
   },
 ];
 
-function poner(ls, donde, titulo) {
-  const div = document.getElementById(donde);
-  const h3 = document.createElement("h3");
+function poner(ls, donde, donde2, titulo) {
 
-    h3.innerText = titulo;
-    div.appendChild(h3);
+  const h3 = document.createElement("h3");
+  const caja = document.getElementById(donde);
+  const cajita = document.getElementById(donde2);
+
+  h3.innerText = titulo;
+  h3.className = "titulo";
+  caja.insertBefore(h3, caja.firstChild);
 
   for (var i = 0; i < ls.length; i++) {
     const a = document.createElement("a");
     const img = document.createElement("img");
 
-    if(donde === "pixeles"){
-        img.className = "renderpixeles"
+    if (donde === "pixeles") {
+      img.className = "renderpixeles";
+    }
+    if (donde === "cartelitos") {
+      img.className = "rendercartelitos";
+    }
+    if (donde === "cachivaches") {
+      img.className = "rendercachivaches";
+    }
+    if (donde === "apis") {
+      img.className = "renderapis";
     }
 
     if (ls[i].link) {
@@ -268,12 +374,13 @@ function poner(ls, donde, titulo) {
     }
 
     a.appendChild(img);
-    div.appendChild(a);
+    cajita.appendChild(a);
+/*     caja.appendChild(cajita); */
   }
 }
 
-poner(cartelitos, "cartelitos", "cartelitos");
-poner(pixeles, "pixeles", "pixel art");
+poner(cartelitos, "cartelitos", "cartelitos2", "cartelitos");
+poner(pixeles, "pixeles", "pixeles2", "pixel art");
 /* poner(nuse, "estampillas", "estampillas¿?"); */
-poner(cachivaches, "cachivaches", "cachivaches");
-poner(apis, "apis", "apis");
+poner(cachivaches, "cachivaches", "cachivaches2", "cachivaches");
+poner(apis, "apis", "apis2", "apis");
