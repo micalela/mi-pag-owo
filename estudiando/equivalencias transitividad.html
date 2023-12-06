@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ciencia</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="..\assets\iconos\photodisc.png"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="..\css\sistemas dinámicos.css" />
+    <link rel="stylesheet" href="..\css\navbar.css" />
+  </head>
+  <body>
+    <script src="..\scripts\navbar estudiando.js"></script>
+
+    <img
+      src="..\assets\sistemas dinámicos\transitividad.gif"
+      class="imagenTitulo"
+      alt="equivalencias de la transitividad"
+    />
+
+    <div class="caja">
+      <span class="def">Def:</span>
+      <span
+        >$f$ es <ins>transitiva</ins> sii $\exists \; x \in X$ tal que
+        $\overline{O^+(x)}=X$</span
+      >
+    </div>
+    <div class="caja">
+      <span class="prop">Prop:</span>
+      <span>
+        $X$ espacio métrico compacto <ins>sin puntos aislados</ins>,
+        $f:X\rightarrow X$ homeo, son equivalentes:</span
+      >
+
+      <ol type="i">
+        <li style="padding-bottom: 24px">$f$ es transitiva</li>
+        <li style="padding-bottom: 24px">
+          Dados $U, V$ abiertos de $X$, existe $n\in \mathbb{N}$ tal que
+          $f^n(U)\cap V \neq \varnothing$
+        </li>
+        <li style="padding-bottom: 24px">
+          El conjunto $ \{x\in X : \overline{O^+(x)} = X\}$ es residual.
+        </li>
+        <li style="padding-bottom: 24px">
+          Existe $x \in X$ tal que $\overline{O(x)}=X$
+        </li>
+        <li style="padding-bottom: 24px">
+          Dados $U, V$ abiertos de $X$, existe $n\in \mathbb{Z}$ tal que
+          $f^n(U)\cap V \neq \varnothing$
+        </li>
+        <li>El conjunto $ \{x\in X : \overline{O(x)} = X\}$ es residual.</li>
+      </ol>
+      <p></p>
+    </div>
+    <div class="caja">
+      <span class="obs">Algunas observaciones:</span>
+      <ul>
+        <li style="padding-bottom: 24px">
+          Tenemos que n $\Rightarrow$ n+3 para cada elemento de la lista.
+        </li>
+        <li>
+          Un conjunto es residual si es una intersección numerable de abiertos
+          densos.
+          <br />
+          (Por ejemplo, los irracionales son un conjunto residual) (los
+          racionales son un magro)
+          <br />
+          Dato: Dos residuales siempre se cortan.
+        </li>
+      </ul>
+    </div>
+
+    <div class="caja">
+      <span class="dem">Dem:</span>
+      <span>
+        La idea es probar i $\Rightarrow$ ii $\Rightarrow$ iii $\Rightarrow$ i,
+        y eso da demostraciones análogas para iv $\Rightarrow$ v $\Rightarrow$
+        vi $\Rightarrow$ iv. Después, tenemos que probar que alguna entre {iv,
+        v, vi} implican alguna de {i, ii, iii}, eso es lo más jugado.</span
+      >
+
+      <p>
+        <ins>i $\Rightarrow$ ii:</ins><br /><br />
+        Sea $x \in X$ tal que $\overline{O^+(x)}=X$, sean $U, V \subset X$
+        abiertos. <br />
+        Como la órbita a futuro de $x$ es densa, tengo $m \in \mathbb(N)$ tal
+        que $f^m(x) \in U$. Además, por la misma razón tengo $n \in \mathbb{N}$
+        tal que $f^{m+n}(x) \in V$. <br />
+        Entonces, $f^n(U)\cap V \neq \varnothing$.
+      </p>
+<p>
+      <ins>ii $\Rightarrow$ iii:</ins><br /><br />
+      Tomo $\{U_k\}$ base de la topología en $X$ y defino $A_n := \{x \in X :
+      f^k(x) \in U_n \;\text{ para algún }\; k \in \mathbb{N}\} $. <br /><br />
+      Veamos que los $A_n$ son abiertos y densos.
+      <ul>
+        <li>
+          <ins>Abiertos:</ins>
+          $A_n = \bigcup\limits_{k=0}^{\infty}\{f^{-k}(U_n)\}$ $\Rightarrow$
+          Cada $A_n$ es unión numerable de abiertos. ($f$ continua y $U_n$
+          abiertos xd)
+        </li>
+        <li>
+          <ins>Densos:</ins>
+          Por hipótesis dados $U \subset X$ abierto, $k \in \mathbb{N}$ tengo $n
+          \in \mathbb{N}$ tal que $f^n(U)\cap U_k \neq \varnothing$. Luego
+          $\exists \;\; x \in U$ tal que $x \in A_k$.
+        </li>
+      </ul>
+      Luego $\bigcap\limits_{n=0}^{\infty}A_n = \{x\in X :
+      \overline{O^+(x)}=X\}$ es un conjunto residual.
+    </p>
+      <p>
+        <ins>iii $\Rightarrow$ i:</ins><br /><br />
+        Es directo (los residuales siempre son densos $\Rightarrow$ es no
+        vacío).
+      </p>
+      <p><ins> {iv, v, vi} $\Rightarrow$ {i, ii, iii} :</ins> <br /><br />
+    
+        Tenemos que $\exists \; x \in X$ tal que $\overline{O(x)}=X$ $\Rightarrow x$ visita todo abierto infinitas veces. (<ins> porque no hay puntos aislados</ins>) <br>
+        $\Rightarrow \exists \; \{n_k\}_{k\in \mathbb{N}} \in \mathbb{Z}^{\mathbb{N}}$ sucesión tal que $f^{n_k}(x) \in B(x, \frac{1}{k})$, es decir, $f{n_k}(x)\rightarrow x$. <br>
+        Esto implica $f^{n_k + l}(x) \rightarrow f^{l}(x)$, y por lo tanto tengo 
+    </p>
+    </div>
+  </body>
+</html>

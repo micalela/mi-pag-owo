@@ -7,7 +7,7 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="ascii.html">ascii</a>
 <span>✧</span>
-<a href="sistemas dinámicos.html">estudiando</a>
+<a href="estudiando/sistemas dinámicos.html">estudiando</a>
 <span>✧</span>
 <a href="desvaríos.html">desvaríos</a>
 </div>`;
