@@ -44,6 +44,7 @@ body {
 
   .cajita{
 
+
     background-color: rgba(177, 219, 255, 0.342);
 /*     margin: 25px; */
     width: fit-content;
@@ -58,6 +59,7 @@ body {
     width: fit-content;
     border: 32px solid orange;
     border-image: url('../assets/dividers/borde4.png') 32 / 32px round;
+    
   }
 
   .titulo{

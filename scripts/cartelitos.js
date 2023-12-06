@@ -17,8 +17,12 @@ const cartelitos = [
   },
   {
     link: "https://skelenby.neocities.org/dump/icons",
-    img: "https://piranhebula.neocities.org/images_buttons/blinkiesCafe-9l.gif",
+    img: "assets/botones/90.gif",
   },
+  /* {
+    link: "https://skelenby.neocities.org/dump/icons",
+    img: "https://piranhebula.neocities.org/images_buttons/blinkiesCafe-9l.gif",
+  }, */
   {
     link: "https://plasticdino.neocities.org/",
     img: "assets/botones/o72VnsC.gif",
@@ -127,7 +131,7 @@ const pixeles = [
     img: "assets/cachivaches/stickers/sticker-rainbow.png",
   },
   {
-    link: "https://bloopywoopy.neocities.org/cool-stuff/collections",
+    link: "https://cinni.net/?z=/theme/icons",
     img: "assets/cachivaches/stickers/discord.png",
   },
   {
@@ -311,11 +315,32 @@ const cachivaches = [
     img: "assets/cachivaches/stamps/chuchucolate-waynecat.png",
   },
   {
+    link: "https://cinni.net/",
+    img: "assets/cachivaches/stamps/gstamp.png",
+  },
+  {
     img: "assets/cachivaches/miscelaneo/lattice.gif",
   },
   {
     img: "assets/cachivaches/miscelaneo/fishbowlbutton.gif",
   },
+  {
+    img: "assets/cachivaches/miscelaneo/533454.png",
+    height: "100px"
+  },
+  {
+    img: "assets/cachivaches/miscelaneo/23422321.png",
+    height: "100px"
+  },
+  {
+    img: "assets/cachivaches/miscelaneo/estrella.png",
+    height: "100px"
+  },
+  {
+    img: "assets/cachivaches/miscelaneo/3.gif",
+    height: "100px"
+  },
+
 
 ];
 
