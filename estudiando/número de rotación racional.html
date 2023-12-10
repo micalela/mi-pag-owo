@@ -24,6 +24,90 @@
       </head>
 <body>
     <script src="..\scripts\navbar estudiando.js"></script>
-    asdfasdfasdf
+    <img
+      src="..\assets\sistemas dinámicos\rotacion racional.gif"
+      class="imagenTitulo"
+      alt="introducción a los sistemas dinámicos"
+    />
+    <div class="caja"><span class="def">Def:</span> <span>Dado $f:S^1\rightarrow S^1$ homeo que preserva orientación, $F:\mathbb{R}\rightarrow\mathbb{R}$ un levantado de $f$, definimos
+      $$\rho(F) := \lim_{n\to\infty} \frac{F^n(x)}{n} \text{ (número de traslación)}$$
+      $$\rho(f) := \rho(F) \;\;(\text{mod } \mathbb{Z}) \text{ (número de rotación)}$$
+    </span></div>
+    <div class="caja">Veamos que el número de traslación está bien definido:
+
+      <ul><li>No depende del $x\in \mathbb{R}$:</li></ul>
+
+      Sean $x < y \in \mathbb{R}$ tenemos entonces un $k\in \mathbb{Z}$ tal que $y-x < k$ <br><br>
+
+      Como $F(x+k)=F(x)+k$ y la $F$ es creciente tenemos $F(x) < F(y) < F(x) + k$. Esto implica $|F(x)-F(y)| < k$ y obtenemos $|F^n(x)-F^n(y)| < k$  para todo $n \in \mathbb{N}$. <br><br>
+
+      Por lo tanto tenemos que $\lim_{n\to\infty}|\frac{F^n(x)-F^n(y)}{n}| = \lim_{n\to\infty}\frac{k}{n} = 0$.
+
+      <ul><li>Existe el límite:</li></ul>
+
+      Veamos que la sucesión es de Cauchy. <br><br>
+
+      Tenemos $F^m(0)-1 \leq F^m(x)-x \leq F^m(1) = F^m(0)+1$ para todo $x\in [0,1]$. <br><br>
+
+      Como $F^m-Id$ es 1-periódica, esto nos asegura la desigualdad anterior $\forall \; x\in \mathbb{R}$. En particular para $0,\; F^m(0),\; F^{2m}(0),\;..., \;F^{(n-1)m}(0)$.<br><br>
+
+      Llamando entonces $\rho_m = F(0)^m-1$, obtenemos las siguientes desigualdades:
+
+      $$\rho_m \leq F^m(0) \leq \rho_m + 2$$
+      $$\rho_m \leq F^{2m}(0) - F^m(0) \leq \rho_m + 2$$
+      $$\cdots$$
+      $$\rho_m \leq F^{nm}(0) - F^{(n-1)m}(0) \leq \rho_m + 2$$
+
+      Sumando todas, obtenemos $n\rho_m \leq F^{nm}(0) \leq n(\rho_m + 2)$, es decir
+
+      $$\frac{\rho_m}{m} \leq \frac{F^{nm}(0)}{nm} \leq \frac{(\rho_m + 2)}{m}$$
+
+      Por la pimera desigualdad también tenemos 
+
+      $$\frac{\rho_m}{m} \leq \frac{F^{m}(0)}{m} \leq \frac{(\rho_m + 2)}{m}$$
+
+      Luego 
+
+      $$\left\lvert \frac{F^{nm}(0)}{nm} - \frac{F^{m}(0)}{m} \right\rvert < \frac{2}{m}$$
+
+      Haciendo lo mismo para $n$ (todo lo anterior, tomando $F^n(0)$ desde un principio) obtenemos también
+
+      $$\left\lvert \frac{F^{nm}(0)}{nm} - \frac{F^{n}(0)}{n} \right\rvert < \frac{2}{n}$$
+
+      Por lo tanto, se cumple
+
+      $$\left\lvert \frac{F^{m}(0)}{m} - \frac{F^{n}(0)}{n} \right\rvert < \frac{2}{m} + \frac{2}{n}$$
+
+      Con esto obtenemos que la sucesión $\frac{F^{n}(0)}{n}$ es de Cauchy y por lo tanto converge (─‿‿─) ⬛
+    </div>
+
+    <div class="caja"><span class="prop">Prop:</span> $f:S^1\to S^1$ homeo, entonces cumple $\rho(f) \in \mathbb{Q} \iff$ $f$ tiene puntos periódicos <br><br>
+    
+    Es más, si $\rho(f) = \frac{p}{q}$ entonces todos los puntos periódicos tienen período $q$.
+    </div>
+
+    <div class="caja"><span class="dem">Dem:</span>
+    
+    $(\Rightarrow)$: Sea $\rho(f) = \frac{p}{q}$. <br><br>
+
+    Se cumple que $\rho(f^q)=q\rho(f) = p = 0 \mod\mathbb{Z}$. (me da pereza escribirlo pero es hacer la cuenta con el límite y multiplicar y dividir q) <br><br>
+    
+    Probemos ahora que si $\rho(g) = 0$ entonces $g$ tiene algún punto fijo: <br><br>
+
+    Supongo $g$ no tiene puntos fijos. Entonces podemos suponer (sin pérdida de generalidad) $G-Id > 0$ para $G:\mathbb{R}\to \mathbb{R}$ levantado de $g$ con $\rho(G)=0$. <br><br>
+
+    Entonces, tenemos un $\delta > 0$ tal que $G(0) > \delta > 0$. Esto implica $G^n(0) > n\delta \;\; \forall n \in \mathbb{N}$. <br><br>
+
+    Pero con esto obtenemos $$\lim_{n\to\infty}\frac{G^n(0)}{n} \geq \frac{n\delta}{n} = \delta > 0$$ lo cual es absurdo ya que $\rho(g) = 0$. <br><br>
+
+    Por lo tanto, como $\rho(f^q) = 0$ tenemos que $f^q$ tiene algún punto fijo. Esto implica que $f$ tiene algún punto periódico. <br><br>
+
+    $(\Leftarrow)$: Sea $x\in S^1$ tal que $f^q(x)=x$. Tomando un levantado $F:\mathbb{R}\to\mathbb{R}$ tenemos que $F^q(x)=x+p$ con $p\in\mathbb{Z}$. <br><br>
+
+    Tenemos entonces $$\lim_{n\to\infty}\frac{F^{nq}(x)}{nq}=\lim_{n\to\infty}\frac{x+pq}{nq}=\frac{p}{q}$$
+
+    (─‿‿─) ⬛
+    
+    </div>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ciencia</title>
+        <link rel="icon" type="image/x-icon" href="..\assets\iconos\photodisc.png" />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="..\css\sistemas dinámicos.css" />
+        <link rel="stylesheet" href="..\css\navbar.css" />
+</head>
+<body>
+    <script src="..\scripts\navbar estudiando.js"></script>
+    <img
+      src="..\assets\sistemas dinámicos\rec cadenas.gif"
+      class="imagenTitulo"
+      alt="introducción a los sistemas dinámicos"
+    />
+    <div class="caja"><span class="def">Definiciones:</span> <ul>
+            
+    <li style="padding-bottom: 24px">$U\subset X$ abierto es <ins>región atrapante</ins> si $f(\overline{U})\subset U$.</li>
+        
+    <li style="padding-bottom: 24px">Dada $f:X\to X$ homeo, decimos que $x\in X$ es <ins>recurrente por cadenas</ins> si $\forall \; \varepsilon > 0 \;\;\exists \; x=x_0,\; x_1, \; \dots, x_n=x$ cadena tal que $d(x_i, f(x_{i-1})) < \varepsilon \;\forall \; i \in \{1, \dots, n\}$.</li>
+    
+    <li style="padding-bottom: 24px">$x\dashv_{\varepsilon} y \equiv$ existe una $\varepsilon$-cadena de $x$ a $y$</li>
+
+    <li>$P_{\varepsilon}(x) := \{y\in X : x\dashv_{\varepsilon} y\}$</li>
+
+    </ul></div>
+
+    <div class="caja"><span class="prop">Prop:</span> $P_{\varepsilon}(x)$ es una región atrapante $\forall \; x \in X$</div>
+
+    <div class="caja"><span class="dem">Dem:</span>
+        
+    Veamos que es un abierto no vacío:
+
+    <ul><li style="padding-bottom: 24px"><ins>No vacío:</ins> Siempre se cumple que $f(x)\in P_{\varepsilon}(x)$</li>
+    
+        <li><ins>Abierto:</ins> Sea $y \in P_{\varepsilon}(x)$, tenemos entonces una cadena $x=x_0,\; x_1, \dots, x_n=y$ que cumple $d(x_i, f(x_{i-1})) < \varepsilon \;\forall \; i \in \{1, \dots, n\}$. <br><br>
+            Es decir, $y \in B(f(x_{i-1}), \varepsilon)$. Esto implica que existe algún $\delta > 0$ tal que $B(y, \delta) \subset B(f(x_{i-1}), \varepsilon)$. <br><br>
+            Luego, la cadena anterior es una $\varepsilon$-cadena entre $x$ y $z$ para cualquier $z \in B(y,\delta)$, y por lo tanto $P_{\varepsilon}(x)$ es abierto.
+        
+        </li>
+    </ul>
+
+    Ahora resta verificar que $f(\overline{P_{\varepsilon}(x)})\subset P_{\varepsilon}(x)$.
+
+    </div>
+</body>
+</html>
