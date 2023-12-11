@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ciencia</title>
+        <link rel="icon" type="image/x-icon" href="..\assets\iconos\photodisc.png" />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="..\css\sistemas dinámicos.css" />
+        <link rel="stylesheet" href="..\css\navbar.css" />
+</head>
+<body>
+    <script src="..\scripts\navbar estudiando.js"></script>
+    <img
+      src="..\assets\sistemas dinámicos\rotacion irracional.gif"
+      class="imagenTitulo"
+      alt="introducción a los sistemas dinámicos"
+    />
+    <div class="caja"><span class="prop">Prop:</span> Sea $f: S^1\to S^1$ homeo que preserva orientación con $\rho(f)=\alpha \not\in \mathbb{Q}$, entonces
+    
+    existe $h:S^1\to S^1$ continua y sobre tal que $h\circ f=R_{\alpha}\circ h$. <br><br>
+
+    Más aún o.o si $\Omega(f) = S^1$ entonces $h$ es homeo.
+    
+    </div>
+
+    <div class="caja">Para probar esto, vamos a abordarlo mediante levantados:</div>
+
+    <div class="caja"><span class="prop">Prop:</span>Existe $H:\mathbb{R}\to\mathbb{R}$ continua, creciente y tal que 
+    
+    <ul><li style="padding-bottom: 24px">$H\circ F=T_{\alpha}\circ H $ para $F$ levantado de $f$</li>
+    <li>$H(x+1)=H(x)+1 \;\forall\; x\in X$</li></ul></div>
+
+    <div class="caja"><span class="dem">Dem</span>
+
+        Sea $B_x=\{F^n(x)+m : m,n\in \mathbb{Z}\}$ <br><br>
+
+        Definimos $H_0:B_x\to\mathbb{R}$ tal que $H_0(y)= n\rho(f)+m$, con $y=F^n(x)+m$ <br><br>
+
+        Usaremos sin probar (pq me da pereza hacer la prueba) el siguiente lema: <br><br>
+
+        <ins>Lema:</ins> $F^{n_1}(x)+m_1 < F^{n_2}(x)+m_2 \iff n_1\rho(f)+m_1 < n_2\rho(f)+m_2$ <br><br>
+
+        Esto nos dice que $H_0$ es continua, creciente y cumple $\overline{H(B_x)}=\mathbb{R}$. <span class="duda">pq es densa la imagen?</span><br><br>
+
+        Entonces podemos extenderla sobreyectivamente a $H_1:\overline{B_x}\to\mathbb{R}$ de forma única. <br><br>
+
+        Ahora, si tomamos $(a,b)$ intervalo de $\overline{B_x}^c$, necesariamente se cumple $H(a)=H(b)$, ya que si no tendríamos un intervalo abierto en Im(H). <br><br>
+
+        Esto implica nuevamente que puedo extenderla a una $H:\mathbb{R}\to\mathbb{R}$. <br><br>
+
+        Veamos que esta $H$ cumple lo buscado: <br><br>
+
+        Sea $y=F^n(x)+m \in B_x$. <br><br>
+
+        <ul><li style="padding-bottom: 24px"> $H(y+1)=H(F^n(y)+m+1)=n\rho(f)+m+1 = H(y)+1$</li>
+        
+        <li>$H\circ F(y)=H\circ F(F^n(x)+m)=H(F^{n+1}(x)+m)=(n+1)\rho(f)+m=H(y)+\rho(f) = T_\alpha \circ H$</li></ul>
+<span class="duda">ver bien esto de la clausura</span> <br><br>
+
+        Falta entonces probar que valen para $z\not\in \overline{B_x}$. Tomando $z$ de esta manera, tenemos $z\in (a,b)$, con $a,\; b \in \overline{B_x}$. <br><br>
+
+        Se cumple entonces que $H(a)=H(z)=H(b)$. <br><br>
+
+        Además, tenemos que $z+1\in (a+1,b+1)$, nuevamente con $a+1,b+1 \in \overline{B_x}$. Entonces:
+
+        <ul><li style="padding-bottom: 24px">$H(z+1)=H(a+1)=H(a)+1=H(z)+1$</li>
+        
+        <li>$H\circ F(z)=H\circ F(a)=T_{\alpha}\circ H(a) =T_{\alpha}\circ H(z)$</li></ul>
+
+        Por lo tanto, obtuvimos la $H:\mathbb{R}\to\mathbb{R}$ que buscábamos. (─‿‿─) ⬛
+
+    </div>
+
+    <div class="caja"><span class="dem">Ahora estamos en condiciones de probar la primera proposición:</span><br><br>
+    
+        Definimos $h:S^1\to S^1$ como $h = \pi \circ H$. $\rightarrow$ es continua y sobreyectiva. <br><br>
+
+        Ahora, si $\Omega(f)=S^1$, tenemos $\overline{B_x}=\mathbb{R}$ y por lo tanto H es monótona estricta. <span class="duda">ver bien esto sdfss</span> <br><br>
+
+        Entonces, como baja bien al cociente porque cumple $H(x+1)=H(x)+1$ tenemos que su cociente $h$ es un homeo.
+    
+    </div>
+</body>
+</html>
