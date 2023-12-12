@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ciencia</title>
+    <link rel="icon" type="image/x-icon" href="..\assets\iconos\photodisc.png" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="..\css\sistemas dinámicos.css" />
+    <link rel="stylesheet" href="..\css\navbar.css" />
+</head>
+<body>
+    <script src="..\scripts\navbar estudiando.js"></script>
+    <img
+      src="..\assets\sistemas dinámicos\expansivos.gif"
+      class="imagenTitulo"
+      alt="introducción a los sistemas dinámicos"
+    />
+
+    <div class="caja"><span class="def">Def:</span> <ul><li> Dado X espacio métrico compacto, decimos que un homeo $f:X\to X$ es <ins>$\alpha$-expansivo</ins> si cumple
+    $$\forall \; x \neq y\in X, \exists \; n \in \mathbb{Z}\; \text{  tal que  }\; d \big(f^n(x),f^n(y)\big)\geq \alpha$$</li>
+
+    <li>En las mismas hipótesis, decimos que $f$ es <ins>$\alpha$-expansivo a futuro</ins> si cumple
+    $$\forall \; x \neq y\in X, \exists \; n \in \mathbb{N}^*\; \text{  tal que  }\; d \big(f^n(x),f^n(y)\big)\geq \alpha$$</li></ul>
+    </div>
+
+    <div class="caja"><span class="prop">Lema:</span> $f:X\to X$ homeo $\alpha$-expansivo, se cumple:
+    $$\forall \; \delta > 0 \;\exists \; N > 0 \;\text{ tal que dado}\; C \subset X \;\text{compacto} ,\; \text{diam}\big( f^n(C) \big) \leq \alpha \;\forall \; n \in \mathbb{N} \Rightarrow \;\forall\; n > N, \;\text{diam}\big(f^n(C)\big)\leq \delta$$
+    <div class="duda">no entiendo quépija dice este enunciado todo mal redactado <br>
+        a ver, si tengo un compacto que se mantiene más chico que $\alpha$ para adelante, entonces a partir de un momento se tiene que mantener más chico que $\delta$ para un $\delta$ arbitrario. god?
+    </div>
+    </div>
+
+    <div class="caja"><span class="teo">Teo:</span> $f:X\to X$ $\alpha$-expansivo a futuro $\Rightarrow$ $X$ es un conjunto finito. </div>
+
+    <div class="caja"><span class="dem">Dem:</span> <ins>Afirmación:</ins> $f:X \to X$ $\alpha$-expansivo a futuro $\Rightarrow \;\exists \; \varepsilon < \frac{\alpha}{2} \;\text{ tal que } \;\forall \; x\in X,\;n>0\;\text{ diam }\big(f^{-n}(B_{x,\varepsilon})\big) \leq \alpha$ <br><br>
+
+        Para probar esta afirmación, razonamos por absurdo. Si esto no vale, tengo $\{x_n\}$, $\{y_n\}$ sucesiones con $d(x_n, y_n) < \frac{1}{n}$ tal que para algún $m_n > 0$ se cumple $d\big(f^{-m_n}(x_n),f^{-m_n}(y_n)\big) > \alpha$. <br><br>
+
+    <span>(es decir, tengo cosas en bolas tan chicas como quiera que cuando voy muy para atrás eventualmente se separan)</span><br><br>
+
+    Si tomamos $\{m_n\}$ suesión de los primeros momentos en los que $\{x_n\}$, $\{y_n\}$ distan más que $\alpha$, tenemos por continuidad de $f$ que $m_n \to \infty$. <br><br>
+
+    Como $X$ es compacto, tomando subsucesiones tenemos $f^{-m_n}(x_n)\to z$, $f^{-m_n}(y_n) \to w$, y se cumple que $d(z,w)\geq \alpha$ $\Rightarrow z\neq w$. <br><br>
+
+    Además, $d\big(f^i(z),f^i(w)\big) = \lim_n d\big(f^{i-m_n}(x_n),f^{i-m_n}(y_n)\big) \leq \alpha \;\forall\; i \geq 1$, entonces los puntos $z$, $w$ contradicen la $\alpha$-expansividad. Esto prueba la afirmación. <br><br>
+
+    Cubrimos X por $B_{x,\varepsilon}$ y tomamos $\{B_1,\dots,B_k\}$ subcubrimiento finito. <br><br>
+
+    Por la afiermación, tenemos $\text{diam}\big(f^{-n}(B_i)\big)\leq \alpha \;\forall\; n > 0$. <br><br>
+
+    Entonces, por el lema anterior, dado $\delta > 0 \;\exists\; N>0$ tal que $\text{diam}\big(f^{-n}(B_i)\big)\leq \delta$. <br><br>
+
+    Como $f$ es homeo, esto implica que $\{f^{-n}(B_1),\dots,f^{-n}(B_k)\}$ es cubrimiento de $X$ por $k$ conjuntos arbitrariamente chicos, entonces $X$ debe ser un conjunto finito. <br><br>
+
+    Para ver esta última afirmación formalmente, observemos lo siguiente: <br><br>
+
+    Sean $x1,\dots , x_{k+1}$ puntos de $X$. Llamamos $\delta_0 = \min\{d(x_i,x_j) : 1\leq i < j \leq k+1 \}$ y consideramos $\delta < \frac{\delta_0}{2}$ para el cubrimiento. <br><br>
+
+    Por palomar, necesariamente tengo dos índices $i_0$, $j_0$ tales que $x_{i_0}, x_{j_0} \in f^{-N}(B_l)$ para algún $1 \leq l \leq k+1$. <br><br>
+
+    Esto es absurdo pues implicaría $d(x_{i_0}, x_{j_0}) \leq 2\delta < \delta_0$. (─‿‿─) ⬛
+
+    </div>
+</body>
+</html>

@@ -11,6 +11,11 @@ body {
     background-color: rgb(151, 121, 235);
     padding: 3px;
 }
+.teo{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
 .prop{
     width: fit-content;
     background-color: rgb(151, 121, 235);
@@ -37,9 +42,14 @@ body {
     padding: 15px 25px;
     margin: 15px;
 }
-.caja{
+.duda{
     width: fit-content;
     background-color: rgb(230, 189, 113);
     padding: 15px 25px;
     margin: 15px;
+}
+.comm{
+    width: fit-content;
+    background-color: rgb(230, 189, 113);
+    padding: 5px;
 }

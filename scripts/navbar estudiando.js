@@ -3,9 +3,13 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="../estudiando/equivalencias transitividad.html">transitividad</a>
 <span>✧</span>
+<a href="../estudiando/recurrentes por cadenas.html">recurrentes por cadenas</a>
+<span>✧</span>
 <a href="../estudiando/número de rotación racional.html">rotación racional</a>
 <span>✧</span>
-<a href="../estudiando/recurrentes por cadenas.html">recurrentes por cadenas</a>
+<a href="../estudiando/número de rotación irracional.html">rotación irracional</a>
+<span>✧</span>
+<a href="../estudiando/expansivos a futuro.html">expansivos a futuro</a>
 <span>✧</span>
 <a href="../cartelitos.html">atrás!</a>
 </div>`;
