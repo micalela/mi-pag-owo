@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\sard.png"
+      class="imagenTitulo"
+      alt="teorema de sard"
+      style="padding: 20px 0px 10px 10px;"
+    />
+
+    <div class="caja"><span class="def">Def:</span>
+        Decimos que $A \subset \mathbb{R}^k$ tiene medida de Lebesgue nula si $\forall \varepsilon > 0$ existe un cubrimiento numerable por bolas de $A$ tal que $\sum\limits_{i=1}^{\infty}|B_i| < \varepsilon$.
+    </div>
+
+    <div class="caja">
+        <span class="teo">Teorema de Sard:</span>
+
+        Sean $U\subset \mathbb{R}^n$ abierto, $f:U\rightarrow \mathbb{R}^p$ suave. Entonces, el conjunto de los vaores críticos de $f$ tiene medida de Lebesgue nula. <br><br>
+
+        <span class="dem">Dem:</span> 
+
+        Vamos a hacer inducción en $n$. Para $n=0$ vale trivialmente. Hay que verificar que si el teorema vale para $n-1$ entonces vale para $n$. <br><br>
+
+        Sean: 
+        
+        <ul>
+            <li>
+                $C=\{\text{puntos críticos de }f\}$
+            </li>
+            <li> 
+                $C_i = \{\text{puntos tales que todas las derivadas de orden }\leq i \text{ de todas las coordenadas se anulan}\}$
+            </li>
+        </ul>
+
+        Entonces queda: $C \supset C_1 \supset C_2 \dots$ <span class="comm">observamos que $C$ son los puntos en los que el diferencial se anula</span> <br><br>
+
+        <span class="duda">¿por qué $C_1$ no es igual a $C$?</span> <br><br>
+
+        La prueba se separa en tres partes: 
+        
+        <ol>
+            <li>
+                $f(C-C_1)$ tiene medida nula
+            </li>
+            <li>
+                $f(C_k - C_{k+1})$ tiene medida nula $\forall k$.
+            </li>
+            <li>
+                $\exists \; k \text{ tal que } f(C_k)$ tiene medida nula.
+            </li>
+        </ol>
+
+        Si probamos todo esto tenemos el teorema, porque: 
+
+        $$ C = (C-C_1)\cup(C_1-C_2)\cup(C_2-C_3)\cup\dots\cup(C_{k-1}-C_k)\cup C_k$$
+
+        $$ \Rightarrow f(C)=f(C-C_1)\cup f(C_1-C_2)\cup f(C_2-C_3)\cup\dots\cup f(C_{k-1}-C_k)\cup f(C_k)$$
+
+        $$ \Rightarrow \mu(f(C))\leq\mu(f(C-C_1))\cup \mu(f(C_1-C_2))\cup \mu(f(C_2-C_3))\cup\dots\cup \mu(f(C_{k-1}-C_k))\cup \mu(f(C_k))$$
+
+    </div>
+
+    <div class="caja">
+        <span class="dem">Parte 1:</span>
+
+        Sea $x \in C-C_1 \Rightarrow$ existe alguna primera derivada de alguna coordenada que no se anula. 
+        
+        Sin pérdida de generalidad tomamos $$f(x_1,\dots,x_n) = \big( f_1(x_1,\dots,x_n), \dots, f_n(x_1,\dots,x_n)\big)$$
+
+        $$\frac{\partial f_1}{\partial x_1}(x) \neq 0$$
+
+        Definimos $h:U\rightarrow \mathbb{R}^n$ tal que $h(x_1,\dots,x_n) = \big( f_1(x_1,\dots,x_n), x_2, \dots, x_n\big)$ luego $h$ es suave y 
+        
+        $dh_x=
+        
+        \begin{pmatrix}
+
+        \frac{\partial f_1}{\partial x_1} & *\\
+        0 & Id_{\mathbb{R}^{n-1}}
+        
+        \end{pmatrix}$
+
+        $\Rightarrow dh_x$ es un isomorfismo para todo $x$.
+
+        <span class="comm">(es iny por $Id_{\mathbb{R}^{n-1}}$ y sobre porque $dh_x:\mathbb{R}^n\rightarrow\mathbb{R}^n$)</span> <br><br>
+
+        Aplicando TFI, obtenemos un abierto $V\subset U, \; x\in V$ tal que $h(V)$ es abierto y $h|_V:V\rightarrow h(V)$ es un difeo. <br><br>
+
+        Definimos $g = f\circ (h|_V)^{-1}$ --> es suave, ya que $f,\; h|_V$ suaves. <br><br>
+
+        <img src="..\..\assets\topodif\diagrama3.png" class="agrandar" width="250px"> <br><br>
+
+        <ins>Afirmación:</ins> Si $(t,x_2,\dots,x_n)\in h(V) \Rightarrow g(t,x_2,\dots,x_n)=\big(t,\phi(t,x_2,\dots,x_2)\big)$ <span class="comm">es decir, $g(t,x_2,\dots,x_n)=(t,y_2,\dots,y_n)$, fija la primera coord, me parece una forma más clara de expresarlo</span><br><br>
+
+        <ins>Dem:</ins> Si $(t,x_2,\dots,x_n)\in h(V) \Rightarrow (t,x_2,\dots,x_n) = \big( f_1(t,x_1,\dots,x_n),x_2,\dots,x_n \big)$ <span class="comm">def de $h$</span> $\Rightarrow t=f_1(t,x_1,\dots,x_n)$ <br><br>
+
+        Entonces puedo definir $g^t:\mathbb{R}^{n-1}\rightarrow\mathbb{R}^{p-1}$ tal que $g(t,x_2,\dots,x_n) = ()
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

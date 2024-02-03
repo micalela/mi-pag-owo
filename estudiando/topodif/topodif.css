@@ -1,5 +1,5 @@
 body {
-    background-image: url("../assets/fondos/skystarlight.gif");
+    background-image: url("../../assets/fondos/sky.png");
   }
 .ej{
     width: fit-content;
@@ -44,12 +44,23 @@ body {
 }
 .duda{
     width: fit-content;
-    background-color: rgb(230, 189, 113);
-    padding: 15px 25px;
-    margin: 15px;
+    background-color: rgb(228, 218, 185);
+    padding: 5px;
 }
 .comm{
     width: fit-content;
-    background-color: rgb(230, 189, 113);
+    background-color: rgb(209, 228, 185);
     padding: 5px;
+}
+
+.agrandar:hover{
+    transform: scale(1.5) translateX(50px);
+}
+
+.poronga:hover{
+    transform: scale(3) translateX(40px);
+}
+
+li{
+    padding: 4px;
 }

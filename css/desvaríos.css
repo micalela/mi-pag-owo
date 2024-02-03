@@ -1,3 +1,7 @@
 body {
     background-image: url("../assets/fondos/celesestrellas.png");
   }
+
+p {
+  background-color: rgb(248, 198, 240);
+}

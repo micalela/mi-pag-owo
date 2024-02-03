@@ -254,6 +254,66 @@ const pixeles = [
     link: "https://www.deviantart.com/riut/art/Seed-Plant-Cup-Free-avatar-290625190",
     img: "assets/cachivaches/pixeles/plantita.gif",
   },
+  {
+    img: "assets/cachivaches/pixeles/jupiter.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/saturno.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/tierra.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/esplosion.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/froggybobbin.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/pocion de leche xd.gif",
+    link: "https://sweetcharm.net/.CuteDesktop/index.html"
+  },
+  {
+    img: "assets/cachivaches/pixeles/totorogroup.gif",
+    link: "https://artwork.neocities.org/toybox"
+  },
+  {
+    img: "assets/cachivaches/pixeles/vangogh.png",
+    link: "https://artwork.neocities.org/toybox"
+  },
+  {
+    img: "assets/cachivaches/pixeles/30.gif",
+    link: "https://amelia.sg/ametarium/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/29.gif",
+    link: "https://amelia.sg/ametarium/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/28.gif",
+    link: "https://amelia.sg/ametarium/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/artworkposter1.png",
+    link: "https://artwork.neocities.org/toybox"
+  },
+  {
+    img: "assets/cachivaches/pixeles/artworkposter2.png",
+    link: "https://artwork.neocities.org/toybox"
+  },
+  {
+    img: "assets/cachivaches/pixeles/artworkposter3.png",
+    link: "https://artwork.neocities.org/toybox"
+  },
+  {
+    img: "assets/cachivaches/pixeles/artworkposter4.png",
+    link: "https://artwork.neocities.org/toybox"
+  },
 
 ];
 
@@ -342,6 +402,7 @@ const cachivaches = [
   },
 
 
+
 ];
 
 const apis = [
@@ -409,3 +470,7 @@ poner(pixeles, "pixeles", "pixeles2", "pixel art");
 /* poner(nuse, "estampillas", "estampillas¿?"); */
 poner(cachivaches, "cachivaches", "cachivaches2", "cachivaches");
 poner(apis, "apis", "apis2", "apis");
+
+/* function api_nombres() {
+  alert(<script type="text/javascript" src="https://momg.neocities.org/names.js" charset="utf-8"></script><script>alert(randomFullName());</script>)
+} */

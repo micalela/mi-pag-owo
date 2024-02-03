@@ -1,0 +1,55 @@
+body {
+    background-image: url("../../assets/fondos/skystarlight.gif");
+  }
+.ej{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.obs{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.teo{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.prop{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.lema{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.def{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.dem{
+    width: fit-content;
+    background-color: rgb(151, 121, 235);
+    padding: 3px;
+}
+.caja{
+    width: fit-content;
+    background-color: rgb(190, 185, 255);
+    padding: 15px 25px;
+    margin: 15px;
+}
+.duda{
+    width: fit-content;
+    background-color: rgb(209, 228, 185);
+    padding: 15px 25px;
+    margin: 15px;
+}
+.comm{
+    width: fit-content;
+    background-color: rgb(209, 228, 185);
+    padding: 5px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciencia</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="..\..\assets\iconos\photodisc.png"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="topodif.css" />
+    <link rel="stylesheet" href="..\..\css\navbar.css" />
+  </head>
+  <body>
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\valores regulares.png"
+      class="imagenTitulo"
+      alt="valores regulares"
+      style="padding: 20px 0px 10px 10px;"
+    />
+
+    <div class="caja">
+      <span class="def">Def:</span>
+
+      Sean $M, N$ variedades y $f:M\rightarrow N$ diferenciable:
+
+      <ul style="list-style-type: circle">
+        <li>
+        $x\in M$ es un <ins>punto regular</ins> de $f$ si $df_x:T_xM \rightarrow T_xN$ es sobreyectivo.
+        </li> <br>
+        <li>
+          De lo contrario, $x$ es un punto crítico de $f$.
+        </li> <br>
+        <li>
+          $y \in N$ es un valor regular de $f$ si $\forall x \in f^{-1}(y)$ se cumple que $x$ es un punto regular.
+        </li> <br>
+        <li>$y \in N$ es un valor crítico de $f$ si $f^{-1}(y)$ contiene algún punto crítico.</li>
+      </ul>
+    </div>
+
+    <div class="caja">
+      <span class="teo">Teo:</span> $M, N$ variedades, $f:M\rightarrow N$ suave, $y \in N$ valor regular con $f^{-1}(y)\neq \varnothing$, entonces $f^{-1}(y)$ es una variedad de dimensión $dim(M) - dim(N)$.
+      <br> <br>
+      <div class="comm">Observamos que esta variedad puede tener <ins>a lo sumo</ins> dimensión m, entonces tiene sentido que sea m - n</div>
+    </div>
+    
+    <div class="caja">
+      <span class="prop">Prop:</span> Sean $M, N$ variedades, $M$ compacta, dim($M$)=dim($N$), $f:M\rightarrow N$ suave, $y\in N$ valor regular de $f$, entonces $f^{-1}(y)$ es un conjunto finito.
+      <br><br>
+      <span class="dem">Dem:</span> Sea $x \in f^{-1}(y)$, como $y$ es valor regular, tenemos que $df_x$ es sobreyectivo, luego como $m = n$ tenemos que $df_x$ es un isomorfismo.
+    
+      Por el teorema de la función inversa tenemos $U \subset M$ abierto tal que $f(U)$ es abierto y $f|_U:U\rightarrow f(U)$ es un difeo. <br><br>
+      Se cumple que $f^{-1}(y) \cap U = \{x\}$ <span class="comm">(por ser un difeo).</span> Luego, como $f^{-1}(y)$ es un cerrado incluido en $M$ compacto, es compacto. 
+      Obtuvimos entonces que $f^{-1}(y)$ es un compacto discreto, por lo tanto es finito. $\square$
+      
+    </div>
+
+    <div class="caja">
+
+    <span class="teo">Pila de discos:</span>
+      $M, N$ variedades con dim($M$)=dim($N$), $M$ compacta, $y\in N$ valor regular de $f:M\rightarrow N$. 
+      Entonces, existe $U \in N$ abierto con $y \in U$ tal que $f^{-1}(U) = \bigsqcup \limits_{1}^{n} U_i$ con $U_i$ abiertos, disjuntos dos a dos y $f|_{U_i}:U_i\rightarrow U$ difeo.
+    
+      <br><br>
+
+    <span class="dem">Dem:</span> 
+    
+    Por la prop anterior tenemos que $f^{-1}(y) = \{x_1, \dots x_n\}$. Por el teorema de la función inversa <span class="comm">(puedo aplicarlo pq: val reg -> dif sobre, dim M = dim N -> dif iso)</span>
+    Aplicando TFI en cada $x_i$, obtengo un abierto $V_i$ tal que $x_i \in V_i$, $V_i \cap V_j = \varnothing$ si $i\neq j$ y $f|_{V_i}:V_i\rightarrow f(V_i)$ es un difeo. <br><br>
+    
+    Definimos $U = \bigcap \limits_{1}^{n} f(V_i) - f(M - \bigcup \limits_{1}^{n} V_i)$. Luego $f(U)$ es abierto y $f^{-1}(U)\subset \bigcup\limits_{1}^{n}$.
+
+    <span class="comm">obs que $M - \bigcup \limits_{1}^{n} V_i$ es compacto, luego $f(M - \bigcup \limits_{1}^{n} V_i)$ es compacto, y como el espacio es hausdorff $\Rightarrow$ son cerrados. luego $U$ es abierto :)</span> $\square$
+    
+    </div>
+
+    <div class="caja">
+      <span class="lema">Corolario:</span>
+      La función $ y \mapsto \# f^{-1}(y)$ es localmente constante en el conjunto de los valores regulares de $f$.
+
+      <p class="comm">moviendo un poquito el $y$ puedo usar los mismos abiertos de pila de discos, luego sigo teniendo la misma cantidad de abiertos disjuntos y por lo tanto la misma cantidad de preimágenes.</p>
+    
+      <p>¿<ins>Localmente</ins> constante? Este es un ejemplo de una $f:S^1\rightarrow S^1$ tal que este mapeo es localmente constante pero no constante.</p>
+
+      <img src="..\..\assets\topodif\ejemplo1.png" width="150px" class="poronga">
+
+    </div>
+
+    <div class="caja">
+      <span class="teo">Teorema fundamental del álgebra:</span> Un polinomio complejo no constante tiene al menos una raíz compleja.<br><br>
+      <span class="dem">Dem:</span>
+
+      Consideramos las proyecciones estereográficas desde el norte y sur: $\varphi_N:\mathbb{C} \rightarrow \mathbb{S}^2 - N$, $\;\varphi_S:\mathbb{C} \rightarrow \mathbb{S}^2 - S$<br><br>
+
+      Sea $p$ un polinomio no constante, definimos $f: \mathbb{S}^2 - N \rightarrow \mathbb{S}^2 - N$ para que conmute el siguiente diagrama:<br><br>
+
+      <img src="..\..\assets\topodif\diagrama1.png" width="200px" class="agrandar">
+      <!-- https://q.uiver.app/#q=WzAsNCxbMiwwLCJcXG1hdGhiYntTfV4yIC0gTiJdLFsyLDEsIlxcbWF0aGJie0N9Il0sWzAsMCwiXFxtYXRoYmJ7U31eMiAtIE4iXSxbMCwxLCJcXG1hdGhiYntDfSJdLFsxLDAsIlxcdmFycGhpX04iLDJdLFszLDEsInAiXSxbMywyLCJcXHZhcnBoaV9OIl0sWzIsMCwiZiJdXQ== --><br><br>
+
+      Es decir, $f=\varphi_N \circ p \circ (\varphi_N)^{-1} \Rightarrow f$ se extiende a una función continua si definimos $f(N)=N$, ya que $p(\infty)=\infty$.<br><br>
+
+      Tenemos que probar que $f$ es suave. Esto se cumple en todo punto salvo potencialmente en $N$, verifiquemos la suavidad en ese punto:<br><br>
+
+      Sea $U\subset \mathbb{S}^2$ abierto tal que $N\in U, S\not\in U, S\not\in f(U)$. Consideremos $g$ como en el diagrama, y veamos que es suave.<br><br>
+
+      <img src="..\..\assets\topodif\diagrama2.png" width="200px" class="agrandar"><br><br>
+
+      <ins>Afirmación:</ins> $\varphi_S^{-1} \circ \varphi_N (z) = 1/\overline{z}$ <br><br>
+
+      Para ver esto primero observamos <br><br>
+
+      <img src="..\..\assets\topodif\ejemplo2.png" width="200px" class="agrandar"> <br><br>
+
+      Observando que los triángulos de vértices $N, \varphi_N(z), S$ y $N, (0,0), z$ son semejantes, 
+      
+      <span class="duda">de alguna forma mística que no comprendo, concluimos: $\|\varphi_S^{-1}\circ\varphi_N(z)\| = \frac{1}{\|z\|}$</span> <br><br>
+
+      $$\text{Salteando esas cosas esotéricamente inentendibles, obtenemos que }g(z)= \frac{1}{\overline{p(1/\overline{z})}} \text{ es decir: } g(z)=\frac{z^n}{\overline{a_n}+\dots +\overline{a_0}z^n}$$
+
+      Lo que pasa con eso parguelas, es que <span class="duda">no entiendo por qué</span> esto nos dice que $g$ es $C^{\infty}$ si $\|z\|$ es chico. 
+      Además obtenemos que los puntos críticos de $f$ son los puntos críticos de $p$, que son finitos por ser un polinomio. 
+      Entonces, el conjnto de los valores regulares es conexo ($\mathbb{C}$ quitando finitos puntos), y por lo tanto el mapa $y\mapsto \# f^{-1}(y)$ es constante en los valores regulares.
+
+      Veamos que $\#f^{-1}(y)\neq 0 $ para todo $y$.
+
+      <ul><li>
+        Si $y$ es un valor crítico de $f$, ta pronto porque entonces tiene un punto crítico en su preimagen, entonces es $\neq \varnothing$.
+      </li>
+      <li>
+        Sea $y$ valor regular de $f$. Si $\#f^{-1}(y)=0$, entonces $f(\mathbb{S}^2)\subset \{\text{valores críticos de } f\}$. <span class="duda">???? que está pasando</span> <br><br>
+
+        Como $p$ toma infinitos valores, esto es absurdo <span class="duda">?????</span>
+      </li>
+    </ul>
+
+    Entendiendo este razonamiento concluimos que $f$ es sobreyectiva, y entonces $p$ es sobre también, por lo tanto tiene alguna raíz. $\square$
+    </div>
+
+</body>
+</html>
