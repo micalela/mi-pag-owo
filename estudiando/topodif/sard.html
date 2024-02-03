@@ -41,6 +41,10 @@
         Decimos que $A \subset \mathbb{R}^k$ tiene medida de Lebesgue nula si $\forall \varepsilon > 0$ existe un cubrimiento numerable por bolas de $A$ tal que $\sum\limits_{i=1}^{\infty}|B_i| < \varepsilon$.
     </div>
 
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
     <div class="caja">
         <span class="teo">Teorema de Sard:</span>
 
@@ -123,10 +127,32 @@
 
         <ins>Dem:</ins> Si $(t,x_2,\dots,x_n)\in h(V) \Rightarrow (t,x_2,\dots,x_n) = \big( f_1(t,x_1,\dots,x_n),x_2,\dots,x_n \big)$ <span class="comm">def de $h$</span> $\Rightarrow t=f_1(t,x_1,\dots,x_n)$ <br><br>
 
-        Entonces puedo definir $g^t:\mathbb{R}^{n-1}\rightarrow\mathbb{R}^{p-1}$ tal que $g(t,x_2,\dots,x_n) = ()
+        Entonces puedo definir $g^t:\mathbb{R}^{n-1}\rightarrow\mathbb{R}^{p-1}$ tal que $g(t,x_2,\dots,x_n) = \big(t, g^t(x_2,\dots,x_n)\big)$ <span class="comm">o sea, $g(t,x)=\big(t,g^t(x)\big)$</span> <br><br>
 
+        <ins>Afirmación:</ins> $(t,y)$ es crítico para $g \iff y$ es crítico para $g^t$ <br><br>
 
+        <ins>Dem:</ins> Esto sale directamente de ver cómo queda el diferencial de $g$, tenemos que $dg(t,y)$ es sobre $\iff dg^t(y)$ es sobre.
 
+        $$dg(t,y)=
+        
+        \begin{pmatrix}
+
+        1 & 0\\
+        0 & dg^t(y)
+        
+        \end{pmatrix}$$
+
+        Entonces, el conjunto de los puntos críticos de $g$ es $h(V\cap C) =: C'$ <span class="duda">???</span><br><br>
+
+        Por hipótesis de inducción tenemos que $g(C')\cap(t\times\mathbb{R}^{p-1})$ tiene medida de Lebesgue nula. <span class="comm">porque en $t\times\mathbb{R}^{p-1}$ puedo ver $g$ como $g^t$, y $g^t$ está en la hip. ind.</span> <br><br>
+
+        Esto vale para todo $t\in \mathbb{R}$, luego por Fubini obtenemos que $g(C')$ tiene medida nula. <br><br>
+
+        Tenemos entonces: $$\mu\big(g(C')\big)=0 \Rightarrow \mu\big(g(h(V\cap C))\big)=0 \Rightarrow \mu \big(f(V\cap C)\big)=0$$
+
+        Ahora cubrimos $C-C_1 \subset U$ con numerables abiertos $V_i$ tales que $\mu\big(f(V\cap C)\big)=0$ <span class="comm">puedo hacer esto porque dado cualquier punto en $C-C_1$, consigo el $V_x$, y como $\mathbb{R}^n$ tiene base numerable, puedo cubrir U con numerables de estos $V_{x_i}$.</span> <br><br>
+
+        Tenemos entonces $$C-C_1\subset \bigcup\limits^{\infty} v_i\cap C \Rightarrow \mu(C-C_1)\leq\sum\limits^{\infty}\mu\big(f(V_i\cap C)\big) = 0$$ <span style="text-align: right">(─‿‿─)</span>
 
 
     </div>
