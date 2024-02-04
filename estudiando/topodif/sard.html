@@ -153,9 +153,31 @@
         Ahora cubrimos $C-C_1 \subset U$ con numerables abiertos $V_i$ tales que $\mu\big(f(V\cap C)\big)=0$ <span class="comm">puedo hacer esto porque dado cualquier punto en $C-C_1$, consigo el $V_x$, y como $\mathbb{R}^n$ tiene base numerable, puedo cubrir U con numerables de estos $V_{x_i}$.</span> <br><br>
 
         Tenemos entonces $$C-C_1\subset \bigcup\limits^{\infty} v_i\cap C \Rightarrow \mu(C-C_1)\leq\sum\limits^{\infty}\mu\big(f(V_i\cap C)\big) = 0$$ <span style="text-align: right">(─‿‿─)</span>
+    </div>
+    
+    <div class="caja">
+      <span class="dem">Parte 2:</span> Probemos que $f(C_k-C_{k+1})$ tiene medida nula. <br><br>
+
+      Sea $x\in C_k-C_{k+1}$, entonces existe $w$ derivada $k$-ésima de alguna coordenada tal que $w(x)=0$ y $\frac{\partial w}{\partial x_i}\neq 0$ para algún $i\in\{1,\dots ,n\}$. Suponemos $i=1$ sin pérdida de generalidad. <br><br>
+
+      Definimos $h:U\rightarrow\mathbb{R}^n$ tal que $h(x_1,\dots ,x_n)=(w(x_1,\dots ,x_n),x_2,\dots ,x_n)$. Su diferencial queda de la siguiente manera:<br><br>
+
+      $$dh_x = \begin{pmatrix}
+
+      \frac{\partial w}{\partial x_1}(x) & *\\
+      0 & Id_{\mathbb{R}^{n-1}}
+      
+      \end{pmatrix}$$
+
+      Por TFI tenemos entonces que existe $V\subset\mathbb{R}^n$ abierto, $x\in V$ tal que $h|_V:V\rightarrow h(V)$ es difeo. Definimos $g=f\circ (h|_V^{-1})$ como antes. <br><br>
+
+      Observamos que $h(V\cap C_k)\subset \{0\}\times \mathbb{R}^{n-1}$. <span class="comm">$w$ se anula en C_k</span> <br><br>
+
+      Sea $W = \{(x_2,\dots ,x_n) / \;(0,x_2,\dots,x_n)\in h(V)\}$ ($W$ es un abierto de $\mathbb{R}^{n-1}$). Definimos $g^0:W\rightarrow\mathbb{R}^p / g^0(y)=g(0,y)$
+
+
 
 
     </div>
-    
 </body>
 </html>
