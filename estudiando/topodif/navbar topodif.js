@@ -3,6 +3,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="sard.html">teorema de sard</a>
 <span>✧</span>
+<a href="datos variedades.html">datos sobre variedades</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\datos variedades.png"
+      class="imagenTitulo"
+      alt="algunos datos sobre variedades"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+    
+    <img
+    src="..\..\assets\topodif\borde.png"
+    class="imagenTitulo"
+    alt="con borde y sin borde"
+    style="padding: 0px 0px 10px 10px;height: 80px;"
+  />
+
+  <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+  <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+  <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
+<!--  =============== terminar de hacer esto owo ================
+    <button onclick="document.body.setAttribute('style','filter: brightness(0.5);')">HOLABUENAS</button> 
+      ===========================================================  
+-->
+
+  <div class="caja">
+    <span class="teo">Teo:</span> Sean $M,N$ variedades, $y\in N$ valor regular de $f:M\to N$. Entonces $f^{-1}(y)$ es una variedad de dimensión $dim(N)-dim(M)$. <br><br>
+
+    <span class="dem">Dem:</span> Sea $M\subset \mathbb{R}^k, x\in f^{-1}(y)$. Como $y$ valor regular tenemos que $df_x:T_xM\to T_yN$ es sobre. <br><br>
+
+    $dim(Ker\;df_x) + dim(Im\;df_x) = dim(T_xM) \Rightarrow dim(Ker\;df_x) = m - n$ <br><br>
+
+    Tomamos $L:\mathbb{R}^k\to \mathbb{R}^{m-n}$ lineal tal que $Ker\;L\cap Ker\;df_x =\{0\}$. <br><br>
+
+    Definimos $F:M\to N\times\mathbb{R}^{m-n}$ tal que $F(p)=\big(f(p),\;L(p)\big) \Rightarrow dF_x(v)=\big(df_x(v),L(v)\big)$ <br><br>
+
+    Sea $v\in Ker\; dF_x \Rightarrow df_x(v) = L(v) = 0 \Rightarrow v=0 \Rightarrow dF_x$ es inyectivo. <br><br>
+    
+    Además, como $dim(M)=dim(N)+dim(\mathbb{R}^{m-n})$ tenemos que $dF_x$ es un isomorfismo. <br><br>
+
+    Aplicando TFI, tenemos abiertos $W\subset M$, $U\subset N$, $V\subset \mathbb{R}^{m-n}$, $x\in W$, $y\in U$, $L(x)\in V$ tales que $F|_W:W\to U\times V$ es un difeo. <br><br>
+
+    <ins>Afirmación:</ins> $f^{-1}(y)\cap W$ es difeomorfo a $V$. <br><br>
+
+    <ins>Dem:</ins> 
+    
+    $x\in f^{-1}(y)\cap W\iff F(x)=\big(y,\;L(x)\big)$ con $L(x)\in V$, entonces $F\big(f^{-1}(y)\cap W\big) = \{y\}\times V$. <br><br> 
+    
+    Luego como $F|_W:W\to U\times V$ es un difeo, tenemos $f^{-1}(y)\cap W \simeq \{y\}\times V \simeq V$. <br><br>
+
+    Por lo tanto, como $dim(W)=m$, $dim(V)=m-n$ tenemos que $f^{-1}(y)$ es una $m-n$ variedad. $\square$
+  </div>
+    
+  <div class="caja">
+    <span class="teo">Teo:</span> $f:M\to \mathbb{R}$ suave, $M$ variedad y $a\in \mathbb{R}$ valor regular de $f\Rightarrow f^{-1}(-\infty, a]$ es variedad de $dim=m$ con borde y $\partial f^{-1}(-\infty, a] = f^{-1}(a)$ <br><br>
+
+    <span class="dem">Dem:</span> Hay dos casos posibles. <br><br>
+    
+    <ul>
+        <li>$x\in f^{-1}(-\infty, a)$: En este caso, por continuidad tenemos un abierto $U\subset \mathbb{R}^m$ tal que $f(U)\subset (-\infty, a)$.</li><br>
+
+        <li>$x\in f^{-1}(a)$: Por el teorema de las dimensiones, tenemos que $dim \;Ker\; df_x = m-1$ <br><br>
+        
+        Sea $k \in \mathbb{N}$ tal que $M\subset\mathbb{R}^k$, sea $L:\mathbb{R}^k\to \mathbb{R}^{m-1}$ lineal tal que $L|_{Ker\; df_x}$ es biyectiva. <br><br>
+
+        Definimos $F:M\to \mathbb{R}^{m-1}$ tal que $F(p)=\big(f(p),L(p)\big)$. Por el mismo argumento que antes, $dF_x:T_xM\to \mathbb{R}\times \mathbb{R}^{m-1}$ es un isomorfismo. <br><br>
+
+        Tenemos entonces $W\subset M$, $U\subset \mathbb{R}$, $V\subset\mathbb{R}^{m-1}$ abiertos con $x\in W$, $f(x)\in U$, $L(x)\in V$ tales que $F|_W:W\to U\times V$ es difeo. <br><br>
+
+        Ahora observamos que $$F^{-1}\big(U\cap (-\infty , a]\times V\big) = F^{-1}(U)\cap F^{-1}\big((-\infty , a]\times V\big) = F^{-1}(U)\cap f^{-1}\big((-\infty , a ]\big) = W\cap f^{-1}\big((-\infty , a ]\big)$$
+
+        Y concluimos observando que $U\cap (-\infty , a]\times V$ es difeomorfo a un abierto de $\mathbb{H}^m$, por lo tanto $f^{-1}\big((-\infty , a ]\big)$ es una $m$-variedad con borde. <br><br>
+
+        Además, $\partial f^{-1}(-\infty , a]\cap W = F^{-1}(\{a\}\times V) = f^{-1}(\{a\})\cap W$ <span class="duda">ver bien esto último, toy cansa</span> $\square$
+        </li>    
+    </ul>
+  </div>
+
+  <div class="caja">
+    <span class="teo">Teo:</span> $M,N$variedades, $M$ con borde, $f:M\to N$ suave, $y$ valor regular de $f$ y de $f|_{\partial M}$ <br><br>
+
+    $\Rightarrow f{-1}(y)$ es una variedad con borde de dimensión $dim(M) - dim(N)$ y $\partial f^{-1}(y)=f^{-1}(y)\cap \partial M$ <br><br>
+
+    <span class="dem">Dem:</span> Es suficiente probarlo para $f:\mathbb{H}^m\to \mathbb{R}^n$ porque es todo local. <br><br>
+
+    Sea $x\in f^{-1}(y)$, hay dos opciones:
+
+    <ul>
+        <li>
+            $x\not\in\partial M$: En este caso, tenemos un abierto $W$ tal que $W\cap \partial\mathbb{H}^m=\varnothing$, entonces, por el primer teorema tenemos que $(f|_W)^{-1}(y)$ es una variedad de dimensión $m-n$. <br>
+        </li>
+        <li>
+            $x\in\partial M$: Acá hay q laburar
+        </li>
+    </ul>
+
+    Sean $U\subset\mathbb{R}^{m},\; x\in U$ tales que existe $g:U\to\mathbb{R}^m$ suave que cumple $f|_{\mathbb{H}^m\cap U} = g|_{\mathbb{H}^m\cap U}$ <span class="comm">(def de suave)</span><br><br>
+
+    Por definición también tenemos $df_x := dg_x$, y como $y$ valor regular de $f$ tenemos que $df_x = dg_x$ es sobre $\Rightarrow$ $x$ es punto regular para $g$. <br><br>
+
+    Como $\{x : x \text{ es punto regular }\}$ es abierto <span class="comm">las matrices sobre son un abierto</span> <br><br>
+
+    Achicando $U$ si es necesario, podemos entonces suponer que no contiene puntos críticos de $g$. <br><br>
+
+    $\Rightarrow g^{-1}(y)$ es variedad de dimensión $m-n$ contenida en $U$. <span class="duda">por qué contenida en $U$?</span> <span class="comm">$g:U\to\mathbb{R}^m$ me había entreverado owo</span><br><br>
+
+    Sea $\pi : g^{-1}(y)\to\mathbb{R}$ tal que $\pi(x_1,\dots,x_m)=x_m$ <span class="comm">tomo <i>"la altura"</i></span><br><br>
+
+    <ins>Afirmación:</ins> $0$ es valor regular de $\pi$. <br><br>
+
+    <ins>Dem:</ins> Tomamos $z\in g^{-1}(y)$, y veamos que $d\pi_z :T_zg^{-1}(y)\to\mathbb{R}$ es sobre. <br><br>
+    
+    Supongamos que no $\Rightarrow T_zg^{-1}(y)\subset \mathbb{R}^{m-1}\times\{0\}$ <span class="duda">??</span> <br><br>
+
+    <span class="comm">Obs:</span> $f|_{\partial\mathbb{H}^m\cap U}=g|_{\partial\mathbb{H}^m\cap U} \Rightarrow $
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>

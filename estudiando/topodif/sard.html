@@ -171,12 +171,48 @@
 
       Por TFI tenemos entonces que existe $V\subset\mathbb{R}^n$ abierto, $x\in V$ tal que $h|_V:V\rightarrow h(V)$ es difeo. Definimos $g=f\circ (h|_V^{-1})$ como antes. <br><br>
 
-      Observamos que $h(V\cap C_k)\subset \{0\}\times \mathbb{R}^{n-1}$. <span class="comm">$w$ se anula en C_k</span> <br><br>
+      Observamos que $h(V\cap C_k)\subset \{0\}\times \mathbb{R}^{n-1}$. <span class="comm">$w$ se anula en $C_k$</span> <br><br>
 
-      Sea $W = \{(x_2,\dots ,x_n) / \;(0,x_2,\dots,x_n)\in h(V)\}$ ($W$ es un abierto de $\mathbb{R}^{n-1}$). Definimos $g^0:W\rightarrow\mathbb{R}^p / g^0(y)=g(0,y)$
+      Sea $W = \{(x_2,\dots ,x_n) / \;(0,x_2,\dots,x_n)\in h(V)\}$ ($W$ es un abierto de $\mathbb{R}^{n-1}$). Definimos $$g^0:W\rightarrow\mathbb{R}^p / g^0(y)=g(0,y)$$ 
 
+    <ins>Afirmación:</ins> Si $(0,y)\in h(V\cap C_k) \Rightarrow y$ es punto crítico de $g^0$ <br><br>
 
+    <ins>Dem:</ins> $h^{-1}(0,y) \in C_k \Rightarrow df_{h-1}(0,y) \equiv 0$ <span class="comm">(todas las derivadas de orden $\leq k$ se anulan por estar en $C_k$)</span><br><br>
 
+    Luego como $dg_{(0,y)}=df_{h^{-1}(0,y)}\circ dh^{-1}_{(0,y)}\equiv 0$ tenemos que $dg^0_{y}\equiv 0 \Rightarrow y$ es valor crítico de $g^0$. <br><br>
+
+    Sea $K=\{ y \in \mathbb{R}^{n-1} \text{ tales que } (0,y) \in h(V \cap C_k)\}$ <span class="comm">agarramos los críticos de $g^0$</span> <br><br>
+
+    Por hipótesis inductiva tenemos que $\mu \big(g^0(K)\big) = 0$ <br><br>
+
+    Y observamos que $g^0(K) = g(0,K) = g\circ h(C_k\cap V)=f(C_k\cap V) \Rightarrow \mu\big( f(C_k\cap V) \big) = 0$ <br><br>
+
+    Por el mismo argumento que antes cubrimos $Ck-C_{k+1}$ por numerables abiertos $V_i$ tales que $\mu\big( f(C_k\cap V_i) \big) = 0$ y obtenemos $\mu\big( f(C_k - C_{k+1}) \big) = 0$.  (─‿‿─)
+
+    </div>
+
+    <div class="caja">
+      <span class="dem">Parte 3:</span> Probemos que algún $f(C_k)$ tiene medida nula. <br><br>
+
+      Sea $k > \frac{n}{p}-1$, probemos que $\mu\big(f(C_k)\big) = 0$. <br><br>
+
+      Sea $I \subset \mathbb{R}^n$ un cubo cerrado de arista $\delta > 0$ tal que $I\cap C_k\neq \varnothing$. <br><br>
+
+      Por el teo. de Taylor tenemos que $\exists \; c > 0$ tal que $|f(x+h)-f(x)|\leq c|h|^{k+1}$, con $x\in C_k\cap I$, $x+h\in I$ <span class="comm">resto de taylor con derrivadas $1,\dots,k$ nulas por estar $x$ en $C_k$</span> <br><br>
+
+      Dividimos $I$ en $r^n$ cubos de arista $\frac{\delta}{r}$. Sea $J$ uno de estos cubos $\Rightarrow diam(J)=\frac{\delta}{r}\sqrt n$ <br><br>
+
+    $\Rightarrow f(J\cap C_k)$ está contenido en un cubo de arista $c\big(\frac{\delta}{r}\sqrt n \big)^{k+1}$ <span class="duda">la misma constante $c$ me sirve para todos los $x\in J\cap C_k?$</span><br><br>
+    
+    <span class="comm">si. mirando cómo está enunciado arriba, lo que estamos haciendo es variar el $h$ para que $x+h \in J\cap C_k$</span> <br><br>
+
+    $\Rightarrow vol\big(f(J\cap C_k)\big) \leq c^p\big(\frac{\delta}{r}\sqrt n \big)^{p(k+1)} = a\cdot r^{-p(k+1)} \Rightarrow vol \big(f(I\cap C_k)\big) \leq a\cdot r^n\cdot r^{-p(k+1)}$ <br><br>
+
+    Como $\frac{n}{p}-1 < k \Rightarrow n - p\cdot(k+1) < 0 \Rightarrow a\cdot r^{n-p(k+1)} \;\xrightarrow[]{r\to 0} 0 \Rightarrow vol\big(f(I\cap C_k)\big)=0 \Rightarrow \mu\big(f(C_k)\big) =0 \;\; \square$ (─‿‿─)
+
+    
+
+      
 
     </div>
 </body>
