@@ -126,7 +126,7 @@
         </li>
     </ul>
 
-    Sean $U\subset\mathbb{R}^{m},\; x\in U$ tales que existe $g:U\to\mathbb{R}^m$ suave que cumple $f|_{\mathbb{H}^m\cap U} = g|_{\mathbb{H}^m\cap U}$ <span class="comm">(def de suave)</span><br><br>
+    Sean $U\subset\mathbb{R}^{m},\; x\in U$ tales que existe $g:U\to\mathbb{R}^n$ suave que cumple $f|_{\mathbb{H}^m\cap U} = g|_{\mathbb{H}^m\cap U}$ <span class="comm">(def de suave)</span><br><br>
 
     Por definición también tenemos $df_x := dg_x$, y como $y$ valor regular de $f$ tenemos que $df_x = dg_x$ es sobre $\Rightarrow$ $x$ es punto regular para $g$. <br><br>
 
@@ -140,13 +140,105 @@
 
     <ins>Afirmación:</ins> $0$ es valor regular de $\pi$. <br><br>
 
-    <ins>Dem:</ins> Tomamos $z\in g^{-1}(y)$, y veamos que $d\pi_z :T_zg^{-1}(y)\to\mathbb{R}$ es sobre. <br><br>
+    <ins>Dem:</ins> <!-- Tomamos $z\in g^{-1}(y)$, y veamos que $d\pi_z :T_zg^{-1}(y)\to\mathbb{R}$ es sobre. <br><br> -->
     
-    Supongamos que no $\Rightarrow T_zg^{-1}(y)\subset \mathbb{R}^{m-1}\times\{0\}$ <span class="duda">??</span> <br><br>
+    Supongamos que no $\Rightarrow$ existe $s\in g^{-1}(y)$ tal que $\pi(s)=0$ y $d\pi_s \equiv 0$. Observamos lo siguiente:
 
-    <span class="comm">Obs:</span> $f|_{\partial\mathbb{H}^m\cap U}=g|_{\partial\mathbb{H}^m\cap U} \Rightarrow $
+    <ul>
+      <li>
+        $\pi(s)=0$ implica que la última coordenada de $s$ es $0$, es decir, que $s\in g^{-1}(y)\cap \partial\mathbb{H}^m$
+      </li><br>
+      <li>
+        Como $\pi:g^{-1}(y)\to \mathbb{R}$ es lineal, $d\pi_s = \pi$.
+      </li>
+    </ul>
+    
+    Entonces, $d\pi_s:T_sg^{-1}(y)\to \mathbb{R} \equiv 0$ implica que la última coordenada de cada punto de $T_sg^{-1}(y)$ es $0$, es decir, $T_sg^{-1}(y) \subset \mathbb{R}^{m-1}\times\{0\}$ <br><br>
 
+    Sabemos también que $Ker\;df_s = Ker \;dg_s: \mathbb{R}^m\to \mathbb{R}^{n}$ (por definición) es $T_s g^{-1}(y)$ <span class="duda">pq ese es el kernel??</span> <br><br>
+    
+    Como $ dim \big(Ker \;dg_s\big) = m-n$ <span class="comm">(y val reg de f)</span>$\Rightarrow dim \big(Ker \;dg_s \cap \mathbb{R}^{m-1}\times\{0\}\big) = m-n$ <br><br>
 
+    La derivada de $g|_{\partial \mathbb{H}^m}$ es $dg_s:\mathbb{R}^m\to \mathbb{R}^{n}$ restricta a $\mathbb{R}^{m-1}$ <span class="comm">(así funcionan las derivadas restrictas a bordes)</span> <br><br> 
+    
+    Luego como $y$ valor regular de $f|_{\partial \mathbb{H}^m}$, tenemos $dim\big(Ker\;dg_s|_{\partial \mathbb{H}^m}\big)=m-1-n$ <br><br>
+
+    El absurdo se obtiene observando que $Ker\;dg_s|_{\partial \mathbb{H}^m} = Ker\;dg_s \cap \partial \mathbb{H}^m = Ker\;dg_s \cap \mathbb{R}^{m-1}\times\{0\}$. <br><br>
+
+    Por el teorema anterior tenemos entonces que $\pi^{-1}[0,\infty)$ es una variedad con borde y cumple: 
+    
+    <ul>
+      <li>
+        $\partial \pi^{-1}[0,\infty) = \pi^{-1}(0) = g^{-1}(y)\cap \partial\mathbb{H}^m = f^{-1}(y)\cap U \cap \partial\mathbb{H}^m$.
+      </li><br>
+      <li>
+        $\pi^{-1}[0,\infty) = g^{-1}(y)\cap \mathbb{H}^m = f^{-1}(y)\cap U \cap \mathbb{H}^m$
+      </li>
+    </ul>
+
+    Luego $f^{-1}(y)$ es una variedad y $\partial f^{-1}(y) = f^{-1}(y)\cap \partial\mathbb{H}^m$. $\square$ vamo loco (─‿‿─)
+  </div>
+
+  <div class="caja">
+    <span class="teo">Teo:</span> Toda variedad conexa de dimensión 1 es difeomorfa a $\mathbb{S}^1,\;\mathbb{R},\;[0,1],\;[0,1)$.
+  </div>
+
+  <div class="caja">
+    <span class="prop">Prop:</span> $M$ 1-variedad compacta $\Rightarrow$ tiene un número par de puntos en el borde. <br><br>
+
+    <span class="dem">Dem:</span> Probemos que $M$ tiene un número finito de componentes conexas. <br><br>
+
+    Supongamos que no, entonce podemos tomar $M_n$ sucesión de componentes conexas distintas, $x_n \in M_n\subset M$. <br><br>
+
+    Como $M$ compacta, tenemos una subsucesión convergente $x_{n_k} \to x \in M$ <br><br>
+
+    Luego, todo entorno de $x$ corta infinitas componentes conexas de $M \Rightarrow$ M no es localmente conexa, absurdo. <br><br>
+
+    Tenemos entonces finitas componentes conexas, que por el teorema anterior tienen 0 o 2 puntos en el borde cada una. <br><br>
+    
+    $\Rightarrow$ $M$ como unión de todas tiene cantidad par de puntos en el borde. $\square$
+  </div>
+
+  <div class="caja">
+    <span class="teo">Teorema de no retracción:</span> Sea $M$ variedad compacta con borde $\Rightarrow \not\exists \; f:M\to\partial M$ suave tal que $f|_{\partial M} = Id_{\partial M}$ <br><br>
+
+    <span class="dem">Dem:</span> Supongamos que existe tal $f$. <br><br>
+
+    Por Sard, existe $y$ valor regular de $f$ y $f|_{\partial M}$ simultáneamente. <br><br>
+
+    $\Rightarrow$ Por el teorema de antes, tenemos que $f^{-1}(y)$ es variedad y $\partial f^{-1}(y) = f^{-1}(y)\cap\partial M$ <br><br>
+
+    $f^{-1}(y)$ es cerrada, $M$ compacta, $f^{-1}(y)\subset M \Rightarrow f^{-1}(y)$ compacta. <br><br>
+
+    Además, $dim\big(f^{-1}(y)\big) = dim\big(M\big) - dim\big(\partial M\big) = m - (m-1) = 1$ <br><br>
+
+    $\Rightarrow f^{-1}(y)$ tiene un número par de puntos en el borde. <br><br>
+
+    Pero $f|_{\partial M} = Id_{\partial M} \Rightarrow f^{-1}(y) \cap \partial M = \big(f|_{\partial M}\big)^{-1}(y)=\{y\}$ impar, absurdo. $\square$
+  </div>
+
+  <div class="caja">
+    <span class="teo">Punto fijo de Brower (diferenciable):</span> Sea $D$ el disco unitario en $\mathbb{R}^n$, entonces toda $f:D\to D$ suave tiene punto fijo. <br><br>
+
+    <span class="dem">Dem:</span> Supongamos que $f(x)\neq x$ para todo $x\in D$. Entonces, los dos puntos $x, f(x)$ determinan una recta en $D$. <br><br>
+
+    Definimos $g:D\to\partial D$ tal que $g(x)$ es el punto en el que el segmento de recta que comienza en $f(x)$ y pasa por $x$ corta a $\partial D$. <br><br>
+
+    Si $x\in\partial D$, definimos $g(x)=x$. Entonces $g$ cumple $g|_{\partial D} = Id$ <br><br>
+
+    <img src="..\..\assets\topodif\diagrama4.png" class="agrandar" width="150px"> <br><br>
+
+    $\Rightarrow$ vale la igualdad $g(x)-f(x) = t\cdot (x-f(x))$ con $t\geq 1$ <span class="comm">estiro el segmento</span> <br><br>
+
+    $\Rightarrow$ escribimos $g(x) = t x + (1-t) f(x)$. <br><br>
+    
+    Si verificamos que $t$ varía suavemente con $x$, entonces $g$ es suave y tenemos la contradicción. Veamos eso: <br><br>
+
+    $\langle g(x), g(x) \rangle = \langle tx + (1-t) f(x), \; tx + (1-t) f(x)\rangle \Rightarrow 1 = t^2\lVert x \rVert ^2 + 2t(1-t)\langle x,\;f(x)\rangle + (1-t)^2\lVert f(x)\rVert^2$. <br><br>
+
+    Desarrollando esa igualdad llegamos a $$t^2\lVert x-f(x)\rVert ^2 + 2t\langle f(x), \; x-f(x)\rangle + \lVert f(x) \rVert ^2 -1 = 0$$ 
+
+    Este es un polinomio en $t$ con una única raíz positiva, por lo tanto podemos despejar $t$ a partir de funciones suaves. $\square$
 
 
 
