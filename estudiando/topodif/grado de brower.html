@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\grado de brower.png"
+      class="imagenTitulo"
+      alt="grado de brower"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
+    <div class="caja">
+        <span class="def">Def:</span> $M$, $N$ orientadas, sin borde, $dim(M)=dim(N)$, $M$ compacta, $N$ conexa, $y$ valor regular de $f:M\to N$ suave.
+
+        $$\text{Definimos }\;\;\;\; \deg(f,y)=\sum\limits_{x\in f^{-1}(y)} sg (df_x)$$
+    </div>
+
+    <div class="caja">
+        <span class="prop">Prop:</span> $f:M\to N$ en las hipótesis de la definición anterior, $y$ valor regular de $f$. $M$ unión disjunta de variedades compactas $M_1, M_2$ <br><br>
+
+        $\Rightarrow$ $y$ es valor regular de $f|_{M_1}$ y $f|_{M_2}$, y además $\deg(f,y)=\deg(f|_{M_1}, y)+\deg(f|_{M_2}, y)$ <br><br>
+
+        <span class="dem">Dem:</span> $\deg(f,y) = \sum\limits_{x\in f^{-1}(y)} sg (df_x) = \sum\limits_{x\in f^{-1}(y)\cap M_1} sg (df_x) + \sum\limits_{x\in f^{-1}(y)\cap M_2} sg (df_x) = \deg(f|_{M_1}, y)+\deg(f|_{M_2}, y) \;\;\;\square$
+    </div>
+    
+    <div class="caja">
+        <span class="def">Def:</span> $F:M\to N$ mapa diferenciable entre variedades orientadas, $M$ variedad con borde. $y$ valor regular de $F$ y $F|_{\partial M}$. <br><br>
+
+        Definimos la orientación preimagen de la variedad $F^{-1}(y)$ de la siguiente forma: <br><br>
+
+        Dado $x\in F^{-1}(y)$ decimos que una base $\{u_1,\dots,u_{m-n}\}$ de $T_xF^{-1}(y)$ es positiva si al completarla a una base $\{u_1,\dots,u_{m-n}, v_1,\dots,v_n\}$ de $T_xM$ <br><br>
+        
+        se cumple que $\{df_x(v_1),\dots,df_x(v_n)\}$ es una base positiva de $T_yN$. (es decir, tiene determinante positivo)
+    </div>
+
+</body>
+</html>
