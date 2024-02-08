@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\grado mod 2.png"
+      class="imagenTitulo"
+      alt="algunos datos sobre variedades"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    
+    <div class="caja">
+        <span class="def">Chichones (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)</span> <br><br>
+
+        Sea $f:\mathbb{R}\to\mathbb{R}$ tal que 
+        
+        $f(t)= \begin{cases}
+        e^{-1/t} & \text{si $t > 0$} \\
+        0 & \text{si }t \leq 0
+      \end{cases}$
+
+        <ul>
+            <li>
+                <ins>Medio chichón:</ins> $\psi_{a,b}:\mathbb{R}\to\mathbb{R}$ tal que $\psi_{a,b}(t)= \frac{f(t-a)}{f(t-a)+f(b-t)}$ <br><br>
+                <img src="..\..\assets\topodif\chichon1.png" class="agrandar" width="150px">
+            </li>
+            <li>
+                <ins>Chichón entero:</ins> $\phi_{a,b}:\mathbb{R}\to\mathbb{R}$ tal que $\phi_{a,b}(t)=\begin{cases} \psi_{-b,-a}(t) & \text{si } t\leq 0 \\ \psi_{-b,-a}(-t) & \text{si } t>0\end{cases}$ <br><br>
+                <img src="..\..\assets\topodif\chichon2.png" class="agrandar" width="150px">
+            </li>
+            <li>
+                <ins>Chichón multidimensional:</ins> $\rho_{a,b}:\mathbb{R}^n\to[0,1]$ tal que $\rho_{a,b}(x) = \phi_{a,b}(\lVert x \rVert)$
+            </li>
+        </ul>
+    </div>
+
+    <div class="caja">
+
+        <span class="def">Def</span> $f:M\to N,\; f:M\to N$ funciones suaves entre variedades <ins>sin borde</ins>. <br><br>
+
+        $F:M\times [0,1]\to N$ es una <ins>homotopía</ins> suave entre $f$ y $g$ si es suave y cumple $F(x,0)=f(x),\;F(x,1)=g(x) \;\forall x\in M$.
+    </div>
+
+    <div class="caja">
+        <span class="prop">Prop:</span> La relación de homotopía es una relación de equivalencia. <br><br>
+        
+        <span class="dem">Dem:</span> 
+
+        <ul>
+            <li>
+                $f \sim f$: Definimos $F(x,t) =f(x) \;\forall\; t, x$
+            </li>
+            <li>
+                $f\sim g \Rightarrow g\sim f$: Tenemos $F:M\times [0,1]\to N$ tal que $F(x,0)=f(x),\;F(x,1)=g(x) \;\forall x\in M$. <br><br>
+
+                Definimos $H:M\times [0,1]\to N$ tal que $H(x,t)=F(x,1-t) \Rightarrow H(x,0)=g(x),\; H(x,1)=f(x)$.
+            </li>
+            <li>
+                $f\sim g,\; g\sim h \Rightarrow f\sim h$: Definimos $F_0(x,t)=F(x,\psi_{\frac{1}{3},\;\frac{2}{3}}(t))$, $G_0(x,t)=F(x,\psi_{\frac{1}{3},\;\frac{2}{3}}(t))$ <br><br>
+
+                $\Rightarrow H(x,t)=\begin{cases} F_0(x,2t) & \text{si } t\in [0,1/2] \\ G_0(x,2t-1) & \text{si } t\in[1/2,1]\end{cases}$ $\square$
+            </li>
+        </ul>
+    </div>
+
+    <div class="caja">
+        <span class="def">Def:</span> $f:M\to N,\; g:M\to N$ difeos entre variedades <ins>sin borde</ins>. <br><br>
+
+        $F:M\times[0,1]\to N$ es una <ins>isotopía</ins> entre $f$ y $g$ i es una homotopía y además las funciones $f_t:M\to N$ son difeos para todo $t\in [0,1]$.
+    </div>
+
+    <div class="caja"><span class="duda">acá falta pasar un ejemplo que no agregué</span></div>
+
+    <div class="caja">
+        <span class="lema">Lema:</span> Sea $y \in B(0,1)$, entonces existe $h:\mathbb{R}^n\to\mathbb{R}^n$ tal que $h(0)=y$ y $h$ es isotópica a $Id$ mediante una isotopía que fija todos los puntos de $\mathbb{R}^n-B(0,1)$ <br><br>
+
+        <span class="dem">Dem:</span> Consideramos $Y:\mathbb{R}^n\to\mathbb{R}^n$ tal que $Y(x)=y$. La solución general es $\begin{cases}\phi (x,t) = x+ty \\ \phi(0,1)=y\end{cases}$ <br><br>
+
+        Sea $0< r < 1,\; y\in B(0,r)$. Tomamos la función chichón $\rho_{r,1}:\mathbb{R}^n\to [0,1]$ y consideramos el campo $X:\mathbb{R}^n\to\mathbb{R}^n,\; X=\rho_{r,1}\cdot Y$ <br><br>
+
+        Notar que $X|_{B(0,r)}=Y|_{B(0,r)}$. <br><br>
+
+        Si llamamos $\phi$ a la solución general de $X$ tenemos $\phi_1(0)=y$. <br><br>
+    
+        Llamando $h=\phi_1$ tenemos el lema. $\square$ <span class="duda">no entiendo bien qué está pasando lvd</span>
+    </div>
+
+    <div class="caja">
+        <span class="lema">Lema de homogeneidad:</span> $N$ conexa <ins>sin borde</ins>, $x,y\in N \Rightarrow$ existe $f:N\to N$ isotópica a $Id_N$ tal que  $f(x)=y$. <br><br>
+
+        <span class="dem">Dem:</span> Sabemos que $Diff^0(N)$ es un grupo (difeos de $N$ isotópicos a $Id_N$) que actúa en $N$ mediante $f\cdot x= f(x)$. <br><br>
+
+        Veamos que esta acción es transitiva, es decir, que tiene una única órbita. Para ver esto probaremos que las órbitas son abiertas, de esta manera tenemos que hay una única órbita ya que $N$ es conexa. <br><br>
+
+        Sea $x\in N$, queremos un entorno $W$ de $x$ tal que $\forall\; y \in W, \; y \in \mathcal{O}(x)$. <br><br>
+
+        Sea $\varphi:B(0,2)\to N$ parametrización tal que $\varphi(0)=x$. Definimos $W=\varphi\big(B(0,1)\big)$. <br><br>
+
+        Sea $q\in B(0,1)$, buscamos $h\in Diff^0(N)$ tal que $h(x)=\varphi(q)=y$. <br><br>
+
+        Tomamos $h:N\to N$ tal que $h(p)=\begin{cases}\varphi\circ \overline{h} \circ \varphi^{-1} & \text{si } p\in \varphi(B(0,2)) \\ p & \text{si no}\end{cases}$
+
+        siendo $\overline{h}$ la función dada por el lema anterior tal que $\overline{h}(0)=q$. $\square$
+    </div>
+
+    <div class="caja">
+        <span class="prop">Prop:</span> $Diff^0(N)$ es un grupo y $Diff^0(N) \triangleleft Diff(N)$ <br><br>
+
+        <span class="dem">Dem:</span> Sean $f,g\in Diff^0(N)$, veamos que $g\circ f\in Diff^0(N)$. <br><br> 
+        
+        Sabemos que existen $\begin{cases}F:N\times[0,1]\to N \\ G:N\times[0,1]\to N\end{cases}$ isotopías tales que $\begin{cases}F(x,0)=x,\;F(x,1)=f(x) \\ G(x,0)=x,\;G(x,1)=g(x)\end{cases}$. <br><br>
+
+        Tomemos $H:N\times[0,1]\to N$ tal que $H(x,t)=G\big(F(x,t),t\big)$. Entonces $H$ es suave y cumple:
+
+        <ul>
+            <li>
+                $H(x,0)=G\big(F(x,0),0\big)=x$
+            </li>
+            <li>
+                $H(x,1)=G\big(F(x,1),1\big)=g\circ f(x)$
+            </li>
+            <li>
+                $H_t(x)=G_t\circ F(t)(x) \Rightarrow H_t$ es difeo
+            </li>
+        </ul>
+
+        Sea $f \in Diff^0(N)$, veamos que $f^{-1}\in Diff^0(N)$. Tenemos $F:N\times [0,1]\to N$ isotopía entre $f$ y $Id_N$. <br><br>
+
+        Definimos $K:N\times[0,1]\to N$ tal que $K(t,x) = f^{-1}\big(F(x,t)\big)$. <br><br>
+
+        Luego $K$ cumple $K(x,0)=f^{-1}(x),\; K(x,1)=x \;\forall\; x\in N$ y $K_t$ es suave $\forall t$. Tenemos por lo tanto que $f^{-1}\in Diff^0(N)$. <br><br>
+
+        Tenemos entonces que $Diff^0(N)$ es un grupo. Veamos ahora que $Diff^0(N) \triangleleft Diff(N)$. <br><br>
+
+        Sean $g\in Diff(N)$, $f\in Diff^0(N)$, veamos que $g\circ f \circ g^{-1}\in Diff^0(N)$. <br><br>
+
+        Sea $F:N\times [0,1]\to N$ como antes y definimos $R:N\times [0,1]\to N$ tal que $R(x,t)=g\big(F(g^{-1}(x),t)\big)$ <br><br>
+
+        $\Rightarrow$ R cumple $R(x,0)=x$, $R(x,1)=g\circ f \circ g^{-1}\;\forall x \in N$ y además $R_t=g\circ F_t\circ g^{-1}$ son suaves $\forall t$.<br><br>
+
+        Tenemos entonces $g\circ f\circ g^{-1}\in Diff^0(N)$, por lo tanto se cumple que $Diff^0(N) \triangleleft Diff(N)$. $\square$
+    </div>
+
+    <div class="caja">
+        <span class="def">Def:</span> $M,N$ variedades <ins>sin borde</ins>, $M$ compacta, $N$ conexa, $dim(M)=dim(N)$, $f:M\to N$ suave, $y$ valor regular de $f$. <br><br>
+
+        $$\text{Definimos } \;\; \deg_2(f,y)=\# f^{-1}(y) \pmod{2}$$
+    </div>
+
+    <div class="caja">
+        <span class="lema">Lema: Grado módulo 2 es invariante por homotopía</span> <br><br>
+
+        $f,g:M\to N$ tales que $f\sim g$ y están en las condiciones de la teoría módulo 2. Sea $y$ valor regular de $f$ y $g$ simultáneamente. <br><br>
+
+        $$\Rightarrow \deg_2(f,y)=\deg_2(g,y)$$
+
+        <span class="dem">Dem:</span> Sea $F:M\times [0,1]\to N$ homotopía entre $f$ y $g$. Hay dos casos: 
+
+        <ul>
+            <li>
+                $y$ es valor regular de $F$.
+            </li>
+        </ul>
+
+        En este caso, $F^{-1}(y)$ es una variedad de dimensión 1 con borde y $\partial F^{-1}(y) = F^{-1}(y) \cap \partial\big(M\times [0,1]\big)=F^{-1}(y) \cap \big( M \times \{0\} \cup M\times \{1\}\big)$ <br><br>
+
+        Observamos que $\begin{cases} F|_{M\times\{0\}}(x,0) = f(x) \\ F|_{M\times\{1\}}(x,1) = g(x)\end{cases} \Rightarrow y$ es valor regular de $F|_{\partial (M\times [0,1])}$ <span class="duda">levemente dudoso</span><br><br>
+
+        Como $F^{-1}(y)$ es una variedad de dimensión 1 tenemos que $\# \partial F^{-1}(y) = 0 \pmod{2}$ <br><br>
+
+        $\Rightarrow \# F^{-1}(y)\cap \partial\big(M\times [0,1]\big) = 0 \pmod{2} \Rightarrow \# F^{-1}(y)\cap M\times\{0\} = \# F^{-1}(y)\cap M\times\{1\} \pmod{2}$ <br><br>
+
+        $\Rightarrow \#\big( F|_{M\times\{0\}}\big)^{-1}(y) = \#\big( F|_{M\times\{1\}}\big)^{-1}(y) \pmod{2} \Rightarrow \# f^{-1}(y) = \# g^{-1}(y) \pmod{2}$ 
+
+        <ul>
+            <li>
+                $y$ no es valor regular de $F$.
+            </li>
+        </ul>
+
+        Tomamos $V$ entorno de $y$ en donde vale pila de discos para $f$ y $g$ simultáneamente. Por Sard existe $z\in V$ valor regular de $F$. <br><br>
+
+        Por el caso anterior tenemos $\# f^{-1}(z) = \# g^{-1}(z) \pmod{2}$ y por pila de discos tenemos $\begin{cases}\# f^{-1}(y) = \# f^{-1}(z) \pmod{2} \\ \# g^{-1}(y) = \# g^{-1}(z) \pmod{2}\end{cases}$ $\square$
+    </div>
+
+    <div class="caja">
+        <span class="lema">Lema:</span> $f:M\to N$ suave en las hipótesis de la teoría de grado módulo 2, $y,z \in N$ valores regulares de $f$ $\Rightarrow \deg_2(f,y)= \deg_2(g,y)$ <br><br>
+
+        <span class="dem">Dem:</span> Como $N$ es conexa, existe $h:N\to N$ isotópica a $Id_N$ tal que $h(y)=z$ (lema de homogeneidad) <br><br>
+
+        <ins>Afirmación:</ins> $z$ es valor regular de $h\circ f$ <br><br>
+
+        <ins>Dem:</ins> Sea $x\in (h\circ f)^{-1}(z)$. <br><br>
+        
+        Observamos que $(h\circ f)^{-1}(z) = f^{-1}\circ h^{-1}(z) = f^{-1}(y)$, luego $x\in f^{-1}(y)$ <br><br>
+
+        $d(h\circ f)_x = dh_{f(x)}\circ df_x = dh_y \circ df_x$ $\Rightarrow$ es sobre ya que $x\in f^{-1}(y)$ punto regular y $dh_y$ es sobre por ser $h$ difeo. <br><br>
+
+        Como $h$ es isotópica a $Id_N$, tenemos que $h\circ f$ es homotópica a $f$ $\Rightarrow \deg_2(h\circ f, z)= \deg_2 (f, z)$ <br><br>
+
+        Además $\deg_2(h\circ f, z) = \# (h\circ f)^{-1}(z) \pmod{2} = \# f^{-1}\circ h^{-1}(z) \pmod{2} = \# f^{-1}(y) \pmod{2} = \deg_2 (f,y)$ (─‿‿─) $\square$
+
+    </div>
+
+
+</body>
+</html>

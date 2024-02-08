@@ -5,6 +5,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="datos variedades.html">datos sobre variedades</a>
 <span>✧</span>
+<a href="grado mod 2.html">grado módulo 2</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 

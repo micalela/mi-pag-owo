@@ -218,7 +218,7 @@
   </div>
 
   <div class="caja">
-    <span class="teo">Punto fijo de Brower (diferenciable):</span> Sea $D$ el disco unitario en $\mathbb{R}^n$, entonces toda $f:D\to D$ suave tiene punto fijo. <br><br>
+    <span class="teo">Punto fijo de Brower (diferenciable):</span> Sea $D$ el disco unitario en $\mathbb{R}^n$, entonces toda $f:D\to D$ <ins>suave</ins> tiene punto fijo. <br><br>
 
     <span class="dem">Dem:</span> Supongamos que $f(x)\neq x$ para todo $x\in D$. Entonces, los dos puntos $x, f(x)$ determinan una recta en $D$. <br><br>
 
@@ -239,8 +239,29 @@
     Desarrollando esa igualdad llegamos a $$t^2\lVert x-f(x)\rVert ^2 + 2t\langle f(x), \; x-f(x)\rangle + \lVert f(x) \rVert ^2 -1 = 0$$ 
 
     Este es un polinomio en $t$ con una única raíz positiva, por lo tanto podemos despejar $t$ a partir de funciones suaves. $\square$
+  </div>
 
+  <div class="caja">
+    <span class="teo">Punto fijo de Brower (continuo):</span> Sea $D$ el disco unitario en $\mathbb{R}^n$, entonces toda $f:D\to D$ <ins>continua</ins> tiene punto fijo. <br><br>
 
+    <span class="dem">Dem:</span> Supono que no, entonces existe $\mu > 0$ tal que $|f(x)-x|\geq \mu\;\; \forall x\in D$. <br><br>
+
+    Por Stone-Weierstrass, dado $\varepsilon > 0$ existe un polinomio $p$ tal que $|p(x)-f(x)|< \varepsilon\;\; \forall x\in D$. <br><br>
+
+    Se tiene que $|p(x)| \leq |p(x)-f(x)| + |f(x)| < 1+\varepsilon$ <span class="comm">desigualdad triangular owo</span> <br><br>
+
+    $\Rightarrow \frac{p}{1+\varepsilon}:D\to D$ y es suave, por el teorema anterior entonces tiene un punto fijo.
+
+    <ul>
+      <li>
+        $|\frac{p(x)}{1+\varepsilon} - x|=|\frac{p(x)}{1+\varepsilon} -f(x)+f(x)-x|\geq |f(x)-x|-|\frac{p(x)}{1+\varepsilon}-f(x)|>\mu-2\varepsilon$ <br><br>
+      </li>
+      <li>
+        $|\frac{p(x)}{1+\varepsilon} - f(x)| = \frac{|p(x)-f(x)-\varepsilon f(x)|}{1+\varepsilon} \leq \frac{|p(x)-f(x)|}{1+\varepsilon}+\varepsilon\frac{|f(x)|}{1+\varepsilon}< 2\varepsilon$ <span class="comm">denom. común y triangular</span> <br><br>
+      </li>
+    </ul>
+
+    <span class="duda">de esto supuestamente concluís el teorema porque se rompe tomando $\varepsilon < \mu /2$ pero noentiendo la contradicción </span> $\;\;\square$
 
 
   </div>
