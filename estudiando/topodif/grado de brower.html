@@ -60,11 +60,93 @@
     <div class="caja">
         <span class="def">Def:</span> $F:M\to N$ mapa diferenciable entre variedades orientadas, $M$ variedad con borde. $y$ valor regular de $F$ y $F|_{\partial M}$. <br><br>
 
-        Definimos la orientación preimagen de la variedad $F^{-1}(y)$ de la siguiente forma: <br><br>
+        Definimos la <ins>orientación preimagen</ins> de la variedad $F^{-1}(y)$ de la siguiente forma: <br><br>
 
         Dado $x\in F^{-1}(y)$ decimos que una base $\{u_1,\dots,u_{m-n}\}$ de $T_xF^{-1}(y)$ es positiva si al completarla a una base $\{u_1,\dots,u_{m-n}, v_1,\dots,v_n\}$ de $T_xM$ <br><br>
         
-        se cumple que $\{df_x(v_1),\dots,df_x(v_n)\}$ es una base positiva de $T_yN$. (es decir, tiene determinante positivo)
+        se cumple que $\{df_x(v_1),\dots,df_x(v_n)\}$ es una base positiva de $T_yN$. (es decir, tiene determinante positivo cuando hago el cambio de base con la canónica)
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> Dada $M$ variedad con borde definimos la <ins>orientación borde</ins> en $\partial M$ de la siguiente manera: <br><br>
+
+      Observamos que $\partial M$ tiene co-dimensión 1, sea $m=dim(M)$. <br><br>
+
+      Dado $x\in\partial M$, decimos que una base $\{v_1,\dots ,v_m-1\}$ de $T_x \partial M$ es positiva si al completarla con el vector normal saliente $n_x$ en $x$ <br><br>
+      
+      se cumple que $\{n_x,v_1,\dots ,v_m-1\}$ es una base positiva de $T_x M$.
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> Dadas $M,N$ variedades definimos la <ins>orientación producto</ins> en $M\times N$ de la siguiente forma: <br><br>
+
+      Dadas $\{v_1,\dots,v_m\}, \; \{w_1,\dots,w_n\}$ bases positivas de $T_pM$ y $T_qN$ decimos que $\{(v_1,0),\dots,(v_m,0),(0,w_1),\dots,(0,w_n)\}$ es una base positiva de $T_{(p,q)}M\times N$.
+    </div>
+
+    <div class="caja">
+      <span class="comm">falta acá agregar el ejemplo del cilindro, en el milnor creo que estaba prolijo</span>
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema:</span> $M$ compacta y con borde, $f:\partial M\to N$ en las hipótesis de la teoría de grado ($dim(\partial M)=dim(N)$, $f$ suave, $\partial M,N$ orientadas y sin borde), $\partial M$ con orientación borde. <br><br>
+
+      Si existe $F:M\to N$ suave tal que $F|_{\partial M}= f \Rightarrow \deg (f,y)=0 \;\;\forall\; y$ valor regular de $f$. <br><br>
+
+      <span class="dem">Dem:</span> Podemos analizar dos casos: 
+
+      <ul>
+        <li>
+          $y \in N$ es valor regular de $f$ y de $F$ simultáneamente
+        </li>
+      </ul>
+
+      En este caso, $F^{-1}(y)$ es una variedad con borde de dimensión 1. <span class="comm">tiene dimensión $m-n=1$, porque $dim(\partial M)=dim(N)$</span> <br><br>
+
+      Luego $F^{-1}(y)$ es unión finita de intervalos y $\mathbb{S}^1$'s. Tal que solo los bordes de los intervalos cortan $\partial M$ <br><br>
+      
+      <span class="duda">por qué un $\mathbb{S}^1$ no puede cortar $\partial M$ en un punto? --> yy pq $\partial F^{-1}(y) = F^{-1}(y)\cap \partial M $ viste entonces como los $\mathbb{S}^1$ no tienen borde $\Rightarrow \partial F^{-1}(y)$ son solo bordes de intervalos $\Rightarrow F^{-1}(y)\cap \partial M$ va a tener que ser solo los bordes de los intervalos</span> <br><br>
+
+      Tenemos $\partial F^{-1}(y) = F^{-1}(y)\cap \partial M = (F|_{\partial M})^{-1}(y) = f^{-1}(y)$. Hay que verificar entonces que los $sg(df_x)$ son opuestos en los bordes de los intervalos. (para que se cancelen todos en la sumatoria y me de 0)<br><br>
+
+      Sea $I \subset F^{-1}(y)$ intervalo con la orientación preimagen, $V$ campo tangente unitario dado por la orientación. <br><br>
+
+      Observamos que si $\partial I = \{a,b\}$ entonces $V(a)$ va a ser entrante a I y $V(b)$ saliente o vice-versa, ya que $V$ es unitario y suave. <br><br>
+
+      Entonces, por definición de orientación preimagen, tenemos que $sg(df_a)=-sg(df_b)$.
+
+      <ul>
+        <li>
+          $y \in N$ es valor regular de $f$ solamente
+        </li>
+      </ul>
+
+      Sabemos que $\deg (f,y)$ es constante en un entorno $U$ de $y$. <br><br>
+      
+      Por Sard entonces podemos hallar $y_0\in U$ valor regular de $F$ y $f$ simultáneamente, y por el caso anterior entonces vale $\deg (f,y)=\deg (f,y_0) = 0$. $\square$
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema:</span> $M$ compacta, $N$ conexa, $dim(M)=dim(N)$, orientables y sin borde. $f,g:M\to N$ homotópicas. $y\in N$ valor regular de $f$ y $g$ simultáneamente $\Rightarrow \deg(f,y)=\deg(g,y)$ <br><br>
+
+      <span class="dem">Dem:</span> Sea $F:M\times [0,1]\to N$ suave tal que $F(x,0)=f(x),\; F(x,1)=g(x)$ <br><br>
+
+      Por el lema anterior $\deg(F|_{\partial(M\times[0,1])},y)=0$, y haciendo referencia al ejemplo de antes tenemos que <br><br>
+
+      $0 = \deg(F|_{\partial(M\times[0,1])},y) = \deg(F|_{M\times\{0\}\cup M\times\{1\}},y) = \deg(F|_{M\times\{0\}},y) + \deg(F|_{M\times\{1\}},y) = -\deg(f,y) +\deg(g,y) \Rightarrow  \deg(f,y) = \deg(g,y) \;\;\square$ <br><br>
+    
+      <span class="comm">la orientación de $M\times\{0\}$ es opuesta a la de $M$ usual.</span>
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema:</span> $f:M\to N$ en hipótesis de la teoría de grado, $y,z\in N$ valores regulares de $f$ $\Rightarrow \deg(f,y)=\deg(f,z)$ <br><br>
+
+      <span class="dem">Dem:</span> Sea $h:N\to N$ isotópica a $Id_N$ tal que $h(y)=z$. Tenemos entonces que $z$ es valor regular de $h\circ f$. <br><br>
+
+      Además, como $h$ isotópica a $Id_N$, tenemos que $h\circ f$ es homotópica a $f$. <br><br>
+
+      $\Rightarrow \deg(f,z)=\deg(h\circ f, z)=\sum\limits_{x\in (h\circ f)^{-1}(z)}sg(d(h\circ f)_x) = \sum\limits_{x\in f^{-1}\big(h^{-1}(z)\big)} sg(dh_{f(x)}\circ df_x) = \sum\limits_{x\in f^{-1}(y)} sg(df_x) = \deg(f,y) \;\;\square$ <br><br>
+
+      <span class="comm">$sg(d(h\circ f)_x) = 1$ porque $h$ isotópica a $Id_N$</span>
     </div>
 
 </body>

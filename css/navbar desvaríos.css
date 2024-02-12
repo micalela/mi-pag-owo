@@ -1,0 +1,19 @@
+.navbar{
+
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(186, 189, 162);
+}
+
+.navbar a{
+
+color: rgb(85, 54, 126);
+background-color: transparent;
+
+}
+.navbar span{
+
+    color: rgb(85, 54, 126);
+    background-color: transparent;
+    
+}

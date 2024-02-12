@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\campos en variedades.png"
+      class="imagenTitulo"
+      alt="campos en variedades"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
+    <div class="caja">
+        <span class="def">Def:</span> $M\subset \mathbb{R}^k$ variedad. <br><br>
+
+        <ul>
+            <li>
+                $X:M\to\mathbb{R}^k$ suave es un <ins>campo de vectores</ins> en $M$ si $X(p)\in T_pM \;\;\forall \; p\in M$
+            </li>
+            <li>
+                $p\in M$ es <ins>de equilibrio</ins> si $X(p)=0$
+            </li>
+        </ul>
+    </div>
+
+    <div class="caja">
+        <span class="teo">Teorema de la bola peluda:</span> Todo campo de vectores en $\mathbb{S}^{2n}$ tiene un punto de equilibrio. <br><br>
+
+        <span class="dem">Dem:</span> Supongamos que existe $X:\mathbb{S}^{2n}\to\mathbb{R}^{2n+1}$ campo tal que $X(p)\neq 0 \;\;\forall\; p\in\mathbb{S}^{2n}$. <br><br>
+
+        Sea $V(p)=\frac{X(p)}{\lVert X(p) \rVert}$. Observar que se cumple $\langle p, V(p)\rangle = 0 \;\;\forall \; p$ <span class="comm">$(p\in \mathbb{S}^{2n})$</span> <br><br>
+
+        Definimos $F:\mathbb{S}^{2n}\times [0,\pi]\to \mathbb{S}^{2n}$ tal que $F(p,t)=\cos(t)\cdot p + \sin(t)\cdot V(p) \Rightarrow \langle F(p,t), F(p,t)\rangle = 1$ <br><br>
+
+        $\Rightarrow$ obtuvimos $F(p,0)=p$ y $F(p,\pi)=-p$ $\Rightarrow$ $Id$ homotópica a $-Id$, absurdo. $\square$
+    </div>
+
+    <div class="caja">
+      <span class="obs">Obs:</span> $\mathbb{S}^{2n++1}$ si tiene un campo sin puntos de equilibrio. <br><br>
+
+      $X(x_1,\dots,x_{2n+2})=(x_2,-x_1,x_4,-x_3,\dots,x_{2n+2},-x_{2n+1}) \Rightarrow \lVert X(p) \rVert = \lVert p \rVert = 1 \text{ y } \langle X(p),p \rangle = 0$
+
+      <span class="duda">no entiendo bien qué está pasando acá la verdad, por qué el teorema anterior falla en dimensión par? no entiendo en qué afecta y no entiendo qué pasa en este ejemplo tampoco. no me está saliendo pensar hoy
+        
+      </span>
+
+
+
+    </div>
+    
+</body>
+</html>

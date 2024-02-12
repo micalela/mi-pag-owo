@@ -1,7 +1,23 @@
 body {
-    background-image: url("../assets/fondos/celesestrellas.png");
+    background-image: url("../assets/fondos/apple.gif");
   }
 
+.caja {
+  background-color: rgba(147, 158, 127, 0.363);
+  margin: 0px 150px 50px 100px;
+  padding: 25px 20px 20px 20px;
+}
 p {
-  background-color: rgb(248, 198, 240);
+  background-color: rgba(159, 161, 139, 0.733);
+  margin: 0px 0px 10px 0px;
+  padding: 5px 5px 5px 5px;
+  width: fit-content;
+}
+
+h1 {
+  background-color: rgba(228, 203, 180, 0.973);
+  margin: 50px 150px 30px 100px;
+  width: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }

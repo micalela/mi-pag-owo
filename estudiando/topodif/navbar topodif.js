@@ -9,6 +9,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="grado de brower.html">grado de brower</a>
 <span>✧</span>
+<a href="campos en variedades.html">campos en variedades</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 
