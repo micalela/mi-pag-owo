@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\poincare hopf.png"
+      class="imagenTitulo"
+      alt="Poincaré - Hopf"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
+    <div class="caja">
+        <span class="lema">Lema:</span> $M\subset\mathbb{R}^n$ n-variedad compacta, con borde, orientada, $\partial M$ orientado con la orientación borde. <br><br>
+
+        $X$ campo en $M$ con finitas singularidades y sin singularidades en $\partial M$ <br><br>
+
+        $\Rightarrow \sum\limits_{X(p)=0}ind_p(X)=\deg(\hat{X})$, con $\hat{X}:\partial M\to\mathbb{S}^{n-1}$ tal que $\hat{X}(p)=\frac{X(p)}{\lVert X(p)\rVert} $ <br><br>
+
+        <span class="dem">Dem:</span> Sean $p_1,\dots,p_k\in M-\partial M$ las singularidades de $X$. Como son aisladas y $M-\partial M$ es abierto de $\mathbb{R}^n$, podemos tomar $B_i=B(p_i,r_i)\subset M-\partial M$ disjuntas dos a dos. <br><br>
+
+        Sea $N=M-\bigcup\limits_{i=1}^k B_i \Rightarrow N$ es una variedad compacta con borde y $X\neq0$ en $N$. Orientamos $N$ como subvariedad de $M$. <br><br>
+
+        Sea $F:N\to\mathbb{S}^{n-1}$ tal que $F(p)=\frac{X(p)}{\lVert X(p)\rVert}$. Por <a href="grado de brower.html#lema 1">este lema</a> tenemos entonces $\deg(F|_{\partial N})=0$. <br><br>
+
+        Observamos que $\partial N=\partial M \cup \bigcup\limits_{i=1}^k -\partial B_i$, ya que la orientación de $\partial B_i$ como borde de $B_i$ es opuesta a la orientación de $\partial B_i$ como borde de $N$. <br><br>
+
+        Por <a href="grado de brower.html#prop 1">esta proposición</a> sabemos entonces que $\deg(F|_{\partial N})=\deg(F|_{\partial M})-\sum\limits_{i=1}^k\deg(F|_{\partial B_i}) = \deg(F|_{\partial N})=\deg(F|_{\partial M})-\sum\limits_{i=1}^k ind_{p_i}(X)$. <br><br>
+
+        Como $F|_{\partial M} \equiv \hat{X}$ tenemos que $\deg(\hat{X}) = \sum\limits_{i=1}^k ind_{p_i}(X)$. $\square$
+    </div>
+
+    <div class="caja">
+        <span class="def">Def:</span> $M\subset\mathbb{R}^n$ n-variedad con borde y orientada, $\partial M$ con la orientación borde.
+        <ul>
+            <li>
+                Definimos el <ins>mapa de Gauss</ins> de $M$ como el único campo normal saliente y unitario $g:\partial M\to \mathbb{S}^{n-1}$.
+            </li>
+            <li>
+                Un campo $X$ en $M$ se dice <ins>saliente</ins> si $\langle X(p), g(p)\;\rangle > 0 \;\;\forall\;p\in \partial M$
+            </li>
+        </ul>
+    </div>
+
+    <div class="caja">
+        <span class="teo">Poincaré-Hopf para $n$-variedades compactas en $\mathbb{R}^n$:</span>
+
+        $M\subset\mathbb{R}^n$ n-variedad compacta, con borde, orientada, $X$ campo saliente en $M$ con finitas singularidades $$\Rightarrow \sum\limits_{X(p)=0}ind_p(X)=\deg(g)$$
+
+        <span class="dem">Dem:</span> Como $X$ es saliente, no se anula en $\partial M$ $\Rightarrow \sum\limits_{X(p)=0}ind_p(X) = \deg(\hat{X})$ por el lema anterior. <br><br>
+
+        Basta ver que $g$ y $\hat{X}$ son homotópicos: <br><br>
+
+        Sea $G:\partial M\times [0,1]\to\mathbb{S}^{n-1}$ tal que $G(x,t)=\frac{t\cdot g(x) + (1-t)\cdot\hat{X}(x)}{\lVert t\cdot g(x) + (1-t)\cdot\hat{X}(x)\rVert}$. Para verificar que es una homotopía hay que confirmar que el denominador no se anula. 
+
+        <ul>
+            <li>
+                Si $t=0,1$ entonces $\lVert t\cdot g(x) + (1-t)\cdot\hat{X}(x)\rVert \neq 0$
+            </li>
+            <li>
+                Si $t\in (0,1)$, se tiene $t\cdot g(x) + (1-t)\cdot\hat{X}(x)=0 \iff \hat{X}(x)=-\frac{t}{1-t}g(x)$. Como $-\frac{t}{1-t} < 0$ tenemos que $X$ no sería saliente.
+            </li>
+        </ul>
+
+        Por lo tanto obtuvimos que $\sum\limits_{X(p)=0}ind_p(X) = \deg(g)$  $\square$
+    </div>
+
+
+
+</body>
+</html>

@@ -69,17 +69,134 @@
     </div>
 
     <div class="caja">
-      <span class="obs">Obs:</span> $\mathbb{S}^{2n++1}$ si tiene un campo sin puntos de equilibrio. <br><br>
+      <span class="obs">Obs:</span> $\mathbb{S}^{2n+1}$ si tiene un campo sin puntos de equilibrio. <br><br>
 
-      $X(x_1,\dots,x_{2n+2})=(x_2,-x_1,x_4,-x_3,\dots,x_{2n+2},-x_{2n+1}) \Rightarrow \lVert X(p) \rVert = \lVert p \rVert = 1 \text{ y } \langle X(p),p \rangle = 0$
+      $X(x_1,\dots,x_{2n+2})=(x_2,-x_1,x_4,-x_3,\dots,x_{2n+2},-x_{2n+1}) \Rightarrow \lVert X(p) \rVert = \lVert p \rVert = 1 \text{ y } \langle X(p),p \rangle = 0$ <br><br>
 
       <span class="duda">no entiendo bien qué está pasando acá la verdad, por qué el teorema anterior falla en dimensión par? no entiendo en qué afecta y no entiendo qué pasa en este ejemplo tampoco. no me está saliendo pensar hoy
         
       </span>
-
-
-
     </div>
     
+    <div class="caja">
+      <span class="def">Def:</span> $M, N$ variedades, $f:M\to N$ difeo, $X$ campo en $M$. Definimos el <ins>push forward</ins> de $X$ como el campo dado por $f_*(p)=df_{f^{-1}(p)}\big(X(f^{-1}(p))\big)$
+    </div>
+
+    <div class="caja">
+      <span class="def">Def</span> Sea $X:U\subset\mathbb{R}^n\to\mathbb{R}^n$ campo y $p$ una singularidad aislada de $X$. Definimos el índice de $p$ como 
+
+      $$ind_p(X)=\deg(\hat{X})$$
+
+      donde $\hat{X}:\partial B(p,\varepsilon)\to\mathbb{S}^{n-1}$ es tal que $\hat{X}(q)=\frac{X(q)}{\lVert X(q) \rVert}$. Siendo $\varepsilon > 0$ tal que $\overline{B}(p,\varepsilon)\subset U$ y $X(q)\neq 0 \;\forall\;\; q\in\overline{B}^*(q,\varepsilon)$
+    </div>
+
+    <div class="caja">
+      <span class="obs">Obs:</span> La definición no depende del $\varepsilon$ elegido: <br><br>
+
+      Sea $\varepsilon_0$ que también lo cumple. Supongamos que $\varepsilon_0 < \varepsilon$. Luego $M = \overline{B}(p,\varepsilon)-B(p,\varepsilon_0)$ es una variedad con borde. <br><br>
+
+      Si consideramos $F:M\to\mathbb{S}^{n-1}$ tal que $F(q)=\frac{X(q)}{\lVert X(q) \rVert}$ tenemos que $F|_{\partial M}$ está en las hipótesis de la teoría de grado <br><br>
+
+      $\Rightarrow \deg(F|_{\partial M})=0 \Rightarrow \deg(F|_{\partial B(p,\varepsilon)}) - \deg(F|_{\partial B(p,\varepsilon_0)}) = 0$
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema:</span> $U\subset\mathbb{R}^n$ convexo, $0\in U$, $f:U\to\mathbb{R}^n$ suave tal que $f(0)=0$ $\Rightarrow \;\exists\;\; f:U\to\mathcal{M}_n(\mathbb{R})$ suave tal que $f(x)=g(x)\cdot x$ y $g(0)=df_0$. <br><br>
+
+      <span class="dem">Dem:</span> Tomamos $h:[0,1]\to\mathbb{R}^n$ tal que $h(t)=f(t\cdot x)$. Entonces vale $h(1)=f(x)$, $h(0)=0$. <br><br>
+
+      $\Rightarrow f(x)=h(1)-h(0)=\int_0^1 h'(t)dt=\int_0^1 df_{tx}\cdot x dt = \int_0^1 df_{tx} dt \cdot x$. LLamando $g(x)=\int_0^1 df_{tx} dt$ tenemos el lema. $\square$ <br><br>
+
+      <span class="duda">por qué $g$ cae en las matrices? aaaaaaaaaaaaaaaaaaaaaa pq estoy integrando matrices eso me da una matriz? o no funciona así? soy imbecil? ayuda porfa</span>
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema de isotopía:</span> $U\subset\mathbb{R}^n$ convexo, $f:U\to\mathbb{R}^n$ difeo suave sobre su imagen que preserva orientación, $0\in U$, $f(0)=0$ $\Rightarrow \;\exists\;\; F:U\times [0,1]\to\mathbb{R}^n$ isotopía tal que $f_t(0)=0$, $f_0\equiv Id$, $f_1\equiv f$ <br><br>
+
+      <span class="dem">Dem:</span> Tomamos $H:U\times [0,1]\to\mathbb{R}^n$ tal que 
+      
+      $H(x,t)=\begin{cases}
+      
+      \frac{f(t,x)}{t} & \text{ si } t\neq 0 \\
+
+      df_0(x) & \text{ si } t = 0
+      
+      \end{cases}$ <br><br>
+
+      Usando el lema anterior, podemos ver que $H$ es suave ya que $g$ es suave y valen las siguientes igualdades:
+
+      <ul>
+        <li>
+          $\frac{f(tx)}{t} = \frac{g(tx)tx}{t} = g(tx)x$
+        </li>
+        <li>
+          $df_0(x) = g(0)\cdot x$
+        </li>
+      </ul>
+
+      Ahora tenemos que verificar que $F(x,0) = f_0(x) = Id (x)$. <br><br> 
+      
+      <ins>Dato:</ins> $GL^{+}(\mathbb{R},n)$ es conexo.
+
+      $\Rightarrow$ existe $\alpha:[0,1]\to GL^{+}(\mathbb{R},n)$ tal que $\alpha(0)=df_0$ y $\alpha(1)=Id$. <br><br>
+
+      Llamamos $\tilde{H}:U\times [0,1]\to GL^{+}(\mathbb{R},n)$ tal que $\tilde{H}(x,t)=\alpha(t)(x)$. 
+
+      $\Rightarrow$ definiendo $F=\tilde{H}\circ H$ tenemos el lema. $\square$
+    </div>
+
+    <div class="caja">
+      <span class="lema">Lema:</span> $U\subset \mathbb{R}^n$ convexo, $0\in U$, $X:U\to\mathbb{R}^n$ campo tal que $0$ es la única singularidad, $f:U\to\mathbb{R}^n$ difeo sobre su imagen tal que $f(0)=0$ $\Rightarrow ind_0(f_*(X))=ind_0(X)$. <br><br>
+
+      <span class="dem">Dem:</span> Supongamos que $f$ preserva orientación. Por el lema de isotopía tenemos $F:U\times [0,1]\to \mathbb{R}^n$ isotopía tal que $f_0\equiv Id$, $f_1\equiv f$, $f_t(0)=0$. Definimos $Y_t = f_{t*}(X)$. <br><br>
+
+      <ins>Afirmación:</ins> $\exists\;\; r>0$ tal que $f_t$ está definida en $B(0,r)$ y $Y_t$ no tiene singularidades en $\partial B(0,r)$. <br><br>
+
+      <ins>Dem:</ins> Sea $r_0>0$ tal que $X\neq 0$ en $\overline{B}^*(0,r_0)$. Entonces $Y_t\neq 0$ en $f_t\big(\overline{B}(0,r_0)\big)-\{0\}$ ya que $d(f_t)_p$ es un isomorfismo. <br><br>
+
+      Hay que hallar $0 < r < r_0$ tal que $\overline{B}^*(0,r)\subset f_t\big(\overline{B}(0,r_0)\big) \;\forall\;\; t \in [0,1]$. <br><br>
+
+      Supongamos por absurdo que no existe tal $r$. Entonces tenemos una sucesión de puntos $p_n\in \partial B(0,r_0)$ y $t_n\in [0,1]$ tales que $\lim_n f_{t_n}(p_n)=0$ <span class="duda"> ver bien esto</span> <br><br>
+
+      Consideramos entonces $F:\partial B(0,r)\times[0,1]\to\mathbb{S}^{n-1}$ tal que $F(p,t)=\frac{Y_t(p)}{\lVert Y_t(p) \rVert}$ $\Rightarrow F(p,0)=\hat{X}, \; F(p,1)=\widehat{f_*(X)} \Rightarrow ind_0(X)=\deg(\hat{X})=\deg(\widehat{f_*(X)})=ind_0\big(f_*(X)\big)$ <br><br>
+
+      Esto prueba lo buscado si $f$ preserva orientación. <br><br>
+
+      En caso de que $f$ revierta orientación, consideramos $\rho:\mathbb{R}^n\to\mathbb{R}^n$ una reflexión $\Rightarrow f\circ\rho$ preserva orientación y $f\circ\rho\circ\rho = f$. 
+      
+      Además se cumple $(f\circ\rho\circ\rho)_*=(f\circ\rho)_*\circ\rho_*$. <span class="duda">verificar esta cuentita m da perecilla</span> <br><br>
+
+      Sería suficiente entonces verificar $ind_0(X)=ind_0\big(r_*(X)\big)$: <br><br>
+
+      Observamos que $r_*\big(X(p)\big)=dr_{r^{-1}(p)}\big( r^{-1}(p) \big)=r\circ X(q)$ siendo $q=r^{-1}(p)$ <br><br>
+
+      $\Rightarrow \widehat{r_*\big(X(p)\big)} = \frac{r_*\big(X(p)\big)}{\lVert r_*\big(X(p)\big)\rVert} = \frac{r\circ X(q)}{\lVert r\circ X(q)\rVert}=r\big(\frac{X(q)}{\lVert X(q)\rVert}\big) =r\circ \hat{X}(q)=r\circ X\circ r^{-1}(p) \Rightarrow ind_0(r_* X)=(-1)\cdot ind_0(X)\cdot (-1)=ind_0(X)$ $\square$
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> <ins>Índice de campo en variedad:</ins> $X$ campo en $M$, $p$ singularidad aislada de $X$, $\varphi:U\subset\mathbb{R}^n\to M$ parametrización tal que $\varphi(0)=p$ y $p$ es la única singularidad de $X$ en $\varphi(U)$.
+
+      $$\text{Definimos } \;\;ind_p(X) = ind_0\big(\varphi^{-1}_*(X)\big)$$
+    </div>
+
+    <div class="caja">
+      <span class="lema">Consistencia de la definición de índice:</span>
+
+      Sean dos parametrizaciones alrededor de $p$ tal que $p$ es la única singularidad de $X$ en la imagen de ambas parametrizaciones. <br><br>
+
+      Suponemos $\varphi:U\to M$, $\psi:V\to M$ con $\varphi(U)=\psi(V)$, $\varphi(0)=\psi(0)=p$. <br><br>
+
+      Queremos probar $ind_0\big(\varphi^{-1}_*(X)\big) = ind_0\big(\psi^{-1}_*(X)\big)$. <br><br>
+
+      Sea $f=\psi^{-1}\circ\varphi:U\to V \Rightarrow f$ está en las hipótesis del lema anterior $\Rightarrow ind_0\big(f_*(X)\big)=ind_0(X)$. <br><br>
+
+      Observamos que $(f\circ\varphi^{-1})_*(X)=\psi^{-1}(X) \Rightarrow f_*\big(\varphi^{-1}_*(X)\big)=\psi^{-1}_*(X) \Rightarrow ind_0\big(f_*\big(\varphi^{-1}_*(X)\big)\big)=ind_0\big(\psi^{-1}_*(X)\big)$ <br><br>
+
+      $\Rightarrow$ por el lema anterior tenemos $ind_0\big(f_*\big(\varphi^{-1}_*(X)\big)\big)=ind_0\big(\varphi^{-1}_*(X)\big)$ <br><br>
+
+      $\Rightarrow ind_0\big(\varphi^{-1}_*(X)\big) = ind_0\big(\psi^{-1}_*(X)\big)$ $\square$
+    </div>
+
+
 </body>
 </html>

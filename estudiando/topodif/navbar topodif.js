@@ -11,6 +11,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="campos en variedades.html">campos en variedades</a>
 <span>✧</span>
+<a href="poincare hopf.html">poincaré-hopf</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 
