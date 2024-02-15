@@ -197,6 +197,88 @@
       $\Rightarrow ind_0\big(\varphi^{-1}_*(X)\big) = ind_0\big(\psi^{-1}_*(X)\big)$ $\square$
     </div>
 
+    <div class="caja">
+      <span class="lema">Lema:</span> $M\subset\mathbb{R}^n$ variedad, $X$ campo en $M$, $p$ singularidad aislada, $\varphi:U\to M$ parametrización con $\varphi(0)=p$ y tal que $p$ es la única singularidad en $\varphi(U)$, sea $Y=\varphi^{-1}_*(X|_{\varphi(U)})$
+
+      $$\Rightarrow dX_p\circ d\varphi_0=d\varphi_0\circ dY_0$$
+
+      <span class="dem">Dem:</span> Organizando:
+
+      <ul>
+        <li>
+          $M\subset\mathbb{R}^n$ m-variedad <span class="duda">acá estoy suponiendo $dim(M)\neq n$, no me queda claro si es así o tiene que ser $m=n$</span>
+        </li>
+        <li>
+          $X:M\to T_pM$
+        </li>
+        <li>
+          $\varphi:U\subset \mathbb{R}^m\to M$
+        </li>
+        <li>
+          $Y=\varphi^{-1}_*(X|_{\varphi(U)}):U\to\mathbb{R}^m$ dado por $Y(u)=d\varphi^{-1}_{\varphi(u)}\big(X(\varphi(u))\big)$
+        </li>
+      </ul>
+      
+      Sea $u\in U$, observamos que vale $d\varphi_u(Y(u))=d\varphi_u\bigg(d\varphi^{-1}_{\varphi(u)}\big(X(\varphi(u))\big)\bigg)=d\varphi_u\circ (d\varphi_u)^{-1}\big(X(\varphi(u))\big)=X(\varphi(u))$. <br><br>
+
+      Definimos $G:U\times\mathbb{R}^m\to\mathbb{R}^n$ tal que $G(u,v)=d\varphi_u(v)$. <br><br>
+
+      Tenemos:
+
+      <ul>
+        <li>
+          $\frac{\partial G}{\partial u}(0,0)=0$ (ya que $\lim_{t \to 0}\frac{G(t,0)-G(0,0)}{t}=0$)
+        </li>
+        <li>
+          $\frac{\partial G}{\partial v}(0,0)=d\varphi_0$ (es lineal)
+        </li>
+      </ul>
+
+      Queremos derivar $d\varphi_u\big(Y(u)\big)=G(u,Y(u)) = X(\varphi(u))$. <br><br>
+
+      Sea $\alpha:(-\varepsilon,\varepsilon)\to U$ tal que $\alpha(0)=0$, entonces $G\big(\alpha(t),Y(\alpha(t))\big)=X(\varphi(\alpha(t)))$ <br><br>
+
+      Derivamos en $t=0$: $\overbrace{\frac{\partial G}{\partial u}(0,0)}^{0}\cdot\alpha'(0)+\frac{\partial G}{\partial v}(0,0)\circ dY_0\cdot \alpha'(0)=d\varphi_0\circ dY_0 \cdot\alpha'(0)$ <br><br>
+
+      Por otro lado sabemos que $dX\circ\varphi\circ\alpha_0=dX_p\circ d\varphi_0\circ\alpha'(0)$ <br><br>
+
+      $\Rightarrow dX_p\circ d\varphi_0 = d\varphi_0\circ dY_0$ $\square$
+    </div>
+
+    <div class="caja">
+      <span class="obs">Obs:</span> Como $\varphi$ es difeo, con esto tenemos que $dX_p$ isomorfismo $\iff dY_0$ isomorfismo. <br><br>
+
+      También vale observar que $dX_p:T_pM\to T_pM$.
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> $p$ es una singularidad <ins>no degenerada</ins> de $X$ si $dX_p:T_pM\to T_pM$ es un isomorfismo. <br><br>
+
+      Equivalentemente, dada una parametrización tendríamos que $dY_0$ es un isomorfismo.
+    </div>
+
+    <div class="caja">
+      <span class="obs">Obs:</span> $dY_0$ es un iso $\Rightarrow Y$ es un difeo en un entorno de $0 \Rightarrow p$ es aislada. <span class="duda">aa mepierdo</span>
+    </div>
+
+    <div class="caja">
+      <span class="lema" id="lema 2">Lema:</span> $p$ no degenerada $\Rightarrow$ $ind_p(X)=sg(dX_p)$ <br><br>
+
+      <span class="dem">Dem:</span> Tomamos una parametrización y un campo $Y=\varphi^{-1}_*(X|_{\varphi(U)})$. Tenemos por definición que $ind_p(X)=ind_0(Y_0)$. <br><br>
+
+      Por el lema anterior, podemos probarlo para $X:U\to\mathbb{R}^n$ con $0$ no degenerado. <span class="comm">uno es un iso $\iff$ el otro es un iso y además los índices coinciden</span> <br><br>
+
+      Por función inversa, tenemos $V$ abierto tal que $0\in V$, $X(V)$ es abierto y $X|_V:V\to X(V)$ es un difeo. <br><br>
+
+      Supongamos $V$ convexo y $dX_0$ preserva orientación. <br><br>
+
+      $\Rightarrow\;\exists\;\;X_t:V\to\mathbb{R}^n$ difeos tales que $X_0=Id$, $X_1=X$, $X_t(0)=0$ <span class="duda">pq es isotópico a id???</span> <br><br>
+
+      Sea $\overline{B}(0,a)\subset V$, defino $\hat{X}_t:\partial B(0,a)\to\mathbb{S}^{n-1}$ tal que $\hat{X}_t(q)=\frac{X_t(q)}{\lVert X_t(q)\rVert} \Rightarrow \deg(\hat{X}_1)=\deg(\hat{X}_0) \Rightarrow \deg(\hat{X})=\deg(Id/a)=1 \Rightarrow ind_0(X)=1$ <br><br>
+
+      En el caso en que $dX_0$ revierte orientación, hacemos la isotopía con una reflexión $\Rightarrow$ va a quedar multiplicado por $-1$. $\square$
+    </div>
+
 
 </body>
 </html>

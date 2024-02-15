@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\inmersiones.png"
+      class="imagenTitulo"
+      alt="Inmersiones, submersiones y encajes"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    <img
+    src="..\..\assets\topodif\encajes.png"
+    class="imagenTitulo"
+    alt="Inmersiones, submersiones y encajes"
+    style="padding: 0px 0px 10px 10px; height: 80px;"
+  /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    
+    <div class="caja">
+        <span class="def">Def:</span> $f:M\to N$ suave, $p\in M$. Decimos que $f$ es:
+
+        <ul>
+            <li>
+                <ins>Inmersión en p</ins> $\iff$ $df_p$ es inyectivo
+            </li>
+            <li>
+                <ins>Submersión en p</ins> $\iff$ $df_p$ es sobreyectivo
+            </li>
+            <li>
+                <ins>Inmersión o submersión</ins> $\iff$ lo es para todo punto
+            </li>
+            <li>
+                <ins>Encaje</ins> $\iff$ es inmersión y homeomorfismo sobre su imagen
+            </li>
+        </ul>
+    </div>
+
+    <div class="caja">
+        <span class="prop">Prop:</span> $U\subset\mathbb{R}^n$ abierto, $p\in U$, $f:U\to\mathbb{R}^k$ encaje <br><br>
+
+        $\Rightarrow$ existe $U_0\subset U$ entorno de $p$ tal que $f(U_0)$ es una variedad y $F|_{U_0}:U_0\to f(U_0)$ es un difeomorfismo. <br><br>
+
+        <span class="dem">Dem:</span> Como $df_p$ inyectivo $\Rightarrow \dim Im(df_p)=n\Rightarrow \dim Im(df_p)^{\perp}=k-n$ <br><br>
+
+        Sea $A:\mathbb{R}^{k-n}\to(Im(df_p)^{\perp})$ un isomorfismo. <br><br>
+
+        Definimos $F:U\times\mathbb{R}^{k-n}\to\mathbb{R}^k$ tal que $F(x,y)=f(x)+A(y)$ $\Rightarrow dF_{(p,0)}(u,v)=df_p(u)+A(v)$ <br><br>
+
+        Entonces $dF_{(p,0)}$ es inyectivo porque $dF_{(p,0)}(u,v)=0 \iff df_p(u) + A(v) = 0 \iff\begin{cases} df_p(u)=0 \iff u =0 \\ A(v)=0 \iff v=0\end{cases}$ <br><br>
+
+        Por TFI existen $U_0\subset U,\; V_0\subset\mathbb{R}^{k-n}$ entornos de $p,\; 0$ tales que $F|_{U_0\times V_0}:U_0\times V_0\to F(U_0\times V_0)$ es un difeomorfismo. <br><br>
+
+        Observar que $F(U_0\times \{0\}) = f(U_0)$ <br><br>
+
+        Entonces $F(U_0\times V_0)\subset\mathbb{R}^{k}$ es un abierto que contiene a $f(U_0)$ y además $F|_{U_0\times \{0\}}:U_0\times \{0\}\to F(U_0\times V_0)\cap f(U_0)$ es un difeomorfismo. <br><br>
+
+        Por lo tanto $F(U_0)$ es una variedad y $f:U_0\to f(U_0)$ es difeo. $\square$
+      
+    </div>
+
+
+
+
+</body>
+</html>

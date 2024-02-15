@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+      src="..\..\assets\topodif\gauss bonnet.png"
+      class="imagenTitulo"
+      alt="Gauss - Bonnet"
+      style="padding: 20px 0px 0px 10px; height: 80px;"
+    /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+
+    <div class="caja">
+        <span class="lema">Lema:</span> $M,N$ $n$-variedades compactas, orientables, sin borde, $f,g:M\to N$ homotópicas y $\omega\in\Omega^{n}(N)$ 
+        
+        $$\Rightarrow \int_M f^*\omega =\int_M g^*\omega$$
+
+        <span class="dem">Dem:</span> Sea $F:M\times [0,1]\to N$ homotopía, tomamos $M\times [0,1]$ con la orientación producto. <br><br>
+
+        Tenemos que $F^*d\omega =0$ porque $d\omega =0$ por ser $\omega\in\Omega^n(N)$ <br><br>
+
+        Entonces $0 = \int_{M\times [0,1]}F^*d\omega = \int_{M\times [0,1]}dF^*\omega = \int_{\partial(M\times [0,1])}F^*\omega = \int_{M\times \{0\}}F^*\omega + \int_{M\times \{1\}}F^*\omega = -\int_M f^*\omega + \int_M g^*\omega$ <br><br>
+
+        Por lo tanto obtuvimos $\int_M f^*\omega = \int_M g^*\omega$ $\square$
+    </div>
+
+    <div class="caja">
+        <span class="teo">Teo (fórmula del grado):</span> $M,N$ $n$-variedades compactas, sin borde, orientadas, $N$ conexa, $f:M\to N$ suave
+
+        $$\Rightarrow \text{ para todo } \omega\in\Omega^n(N) \text{ vale } \int_M f^*\omega = \deg(f)\cdot\int_N\omega$$
+
+        <span class="dem">Dem:</span> <ins>Dato:</ins> Si $f:M\to N$ difeo, entonces $\int_M f^*\omega = \pm\int_N\omega$ donde el signo depende de si $f$ preserva o revierte orientación. <br><br>
+
+        La prueba va a consistir de dos pasos: probarlo localmente y después extenderlo. <br><br>
+
+        <ins>Paso 1:</ins> Sea $y\in N$ valor regular de $f$, entonces existe $U\subset N$ entorno de $y$ tal que $\forall\omega\in\Omega^n(N)$ con $sop(\omega)\subset U$ vale el teorema. <br><br>
+
+        <ins>Dem:</ins> Por pila de discos tenemos $U$ entorno de $y$ tal que $f^{-1}(U)=\bigcup\limits_{i=1}^k U_i$ con $U_i$ disjuntos dos a dos y abiertos, y que cumplen $f|_{U_i}:U_i\to f(U_i)$ difeos. <br><br>
+
+        Sea $\omega$ tal que $sop(\omega)\subset U$ $\Rightarrow sop(f^*\omega)\subset\bigcup\limits_{i=1}^k U_i$. Sean $x_1,\dots,x_k$ las preimágenes de $y$ por $f$.<br><br>
+
+        $$\Rightarrow \int_M f^*\omega = \sum\limits_{i=1}^k\int_{U_i}f^*\omega = \sum\limits_{i=1}^k\int_{U_i}(f|_{U_i})^*\omega = \sum\limits_{i=1}^k sg(df_{x_i})\int_N\omega = \sum\limits_{x\in f^{-1}(y)} sg(df_{x_i})\int_N\omega = \deg(f)\int_N\omega$$ <br><br>
+
+        Tenemos entonces probada la primera parte. <br><br>
+        
+        <ins>Paso 2:</ins> Por Sard sabemos que existe $y\in N$ valor regular de $f$. Sea $U\subset N$ como en el caso local. <br><br>
+
+        Para todo $z\in N$ tenenmos $h_z:N\to N$ isotópica a $Id_N$ tal que $h_z(y)=z$ $\Rightarrow N = \bigcup\limits_{z\in N}\{z\} = \bigcup\limits_{z\in N}h_z(U)$ <br><br>
+
+        Como $N$ es compacto tenemos un subcubrimiento finito $P=\{h_1(U),\dots,h_m(U)\}$. <br><br>
+
+        Sea $\omega \in \Omega^n(N)$ y $\{\rho_1,\dots,\rho_m\}$ partición de la unidad subordinada a $P$. Escribimos $\omega = \omega_1 + \dots + \omega_m$ con $sop(\omega_i)\subset h_i(U)$ <span class="duda">ok acá me perdí, por qué tiene sentido $\subset h_i(\omega)$? aasdf estaba mal escrito xd ahora tiene sentido</span> <br><br>
+
+        Observar que $sop(h_i^*\omega_i) = h_i^{-1}(sop \omega_i)\subset h_i^{-1}\circ h_i(U) = U$, y también tenemos que $h_i\circ f$ es homotópico a $f$. <br><br>
+
+        $$\Rightarrow \underbrace{\int_M f^*\omega_i = \int_M (h_i\circ f)^*\omega_i}_{\text{Lema anterior}} = \int_M f^*h_i^*\omega_i = \underbrace{\deg(f)\cdot\int_Nh_i^*\omega_i = \deg(f)\cdot\int_N\omega_i}_{h \text{ preserva orientación (usamos el dato)}} \;\;\;\;\;\square$$
+    </div>
+
+    <div class="caja">
+        <span class="def">Def: </span> $M^{2n}\subset \mathbb{R}^{2n+1}$ compacta, sin borde, orientable, $g:M\to \mathbb{S}^{2n}$ mapa de Gauss. <br><br>
+
+        Observar que $dg_p:T_pM\to T_{g(p)}\mathbb{S}^{2n} = \{g(p)\}^{\perp}= T_pM$. <br><br>
+
+        Definimos $K:M\to \mathbb{R}$ como $K(p)=det(dg_p)$
+    </div>
+
+    <div class="caja">
+        <span class="def">Def:</span> $\;\chi(M)=\sum\limits_{i=1}^n ind_p(X)$ siendo $X$ un campo en $M$ con finitas singularidades.
+    </div>
+
+    <div class="caja">
+        <span class="lema">Lema:</span> $M^{2n}\subset \mathbb{R}^{2n+1}$ compacta, sin borde, orientable, $g:M\to \mathbb{S}^{2n}$ mapa de Gauss
+
+        $$\Rightarrow \chi(M)=2\cdot\deg(g)$$
+
+        <span class="dem">Dem:</span> Por Sard podemos tomar $a\in \mathbb{S}^{2n}$ valor regular de $g$ y $-g$ simultáneamente. <br><br>
+
+        Definimos $X(p)=\langle g(p),a \rangle\cdot g(p) - a$. Observar que $X(p)=0\iff g(p)=\pm a$ <br><br>
+
+        Calculemos $dX_p$. Sea $\alpha:(-\varepsilon, \varepsilon)\to M$ tal que $\alpha(0)=p$ con $X(p)=0$. <br><br>
+
+        $\Rightarrow dX_p(\alpha'(0))=\frac{d}{dt}|_{t=0}\bigg\langle g(\alpha(t)),a\rangle\cdot g(\alpha(t))-a\bigg) = \bigg(\frac{d}{dt}|_{t=0}\langle g(\alpha(t)),a\rangle\bigg)\cdot g(p) + \langle g(p),a\rangle\cdot dg_p(\alpha'(0)) = \underbrace{\langle dg_p(\alpha'(0)),a\rangle}_{=0 (X(p)=0 \Rightarrow a = \pm g(p))}\cdot g(p) + \underbrace{\langle g(p),a\rangle}_{=\pm 1} dg_p(\alpha'(0)) $ <br><br>
+
+        Por lo tanto tenemos que $dX_p = \pm dg_p$ en las singularidades de $X$ $\Rightarrow p$ es no degenerada, ya que $a, -a$ es valores regulares de $g$ y $p\in g^{-1}(a)\cup g^{-1}(-a)$. <br><br>
+
+        Entonces, por <a href="campos en variedades.html#lema 2">este lema</a> tenemos $ind_p(X)=sg(dX_p)$. Finalmente, tenemos: <br><br>
+
+        $$\chi(M)=\sum\limits_{X(p)=0}ind_p(X) = \sum\limits_{g(p)=a}ind_p(X) + \sum\limits_{g(p)=-a}ind_p(X) = \sum\limits_{g(p)=a}sg(dX_p) + \sum\limits_{g(p)=-a}sg(dX_p) = \sum\limits_{g(p)=a}sg(dg_p) + \underbrace{\sum\limits_{g(p)=-a}sg(-dg_p)}_{=sg(dg_p) \text{(dim par)}} = 2\cdot \deg(g) \;\;\;\square$$
+
+        <span class="duda">ver bien lo de dimensión par, no me queda claro pq funciona</span>
+    </div>
+
+    <div class="caja">
+        <span class="teo">Gauss-Bonnet:</span> $M^{2n}\subset\mathbb{R}^{2n+1}$ compacta, sin borde, orientable.
+
+        $$\Rightarrow\int_M KdV=\frac{vol(\mathbb{S}^{2n})}{2}\chi(M) \;\;\;\; \text{ donde $dV\in\Omega^{2n}(M)$ es la forma de volumen de $M$.}$$
+
+        <span class="dem">Dem:</span> Sea $\omega \in\Omega^{2n}(\mathbb{S}^{2n})$ la forma de volumen de $\mathbb{S}^{2n}$. <br><br>
+
+        <ins>Dato de cálculo 3:</ins> $g^*\omega(p)=(dg_p)^*(\omega(g)(p)))=det(dg_p)\omega(g(p))$ <span class="duda">?????</span> <br><br>
+
+        $$\Rightarrow \int_MKdV = \int_M det(dg_p)dV =\int_M g^*\omega = \deg(g)\int_{\mathbb{S}^{2n}}\omega = \frac{\chi(M)}{2}vol(\mathbb{S}^{2n}) \;\;\;\; \square$$
+
+        <span class="comm">mirar de nuevo las notas de juan para esto</span>
+    </div>
+    
+</body>
+</html>
