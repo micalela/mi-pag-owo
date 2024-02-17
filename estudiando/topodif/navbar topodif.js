@@ -17,6 +17,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="inmersiones submersiones encajes.html">inmersiones y submersiones</a>
 <span>✧</span>
+<a href="variedades abstractas.html">variedades abstractas</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 

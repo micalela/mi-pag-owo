@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="topodif.css" />
+        <link rel="stylesheet" href="..\..\css\navbar.css" />
+      </head>
+<body>
+
+    <script src="navbar topodif.js"></script>
+
+    <img
+    src="..\..\assets\topodif\variedades abstractas.png"
+    class="imagenTitulo"
+    alt="Variedades abstractas"
+    style="padding: 0px 0px 10px 10px; height: 80px;"
+  /> 
+    
+    <br>
+
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    <img src="..\..\assets\gifs\aaaa.gif" style="float:right;">
+    
+  <div class="caja">
+    <span class="def">Def:</span> $M$ espacio topológico Hausdorff y con base numerable. <br><br>
+
+    Un <ins>atlas suave</ins> de $M$ es una familia $\mathcal{A}$ de funciones $\phi:U\to M$ con $U\subset\mathbb{R}^n$ abierto tales que:
+
+    <ul>
+      <li>
+        $\phi$ es un homeo sobre su imagen
+      </li>
+      <li>
+        $\phi(U)$ es abierto en $M$
+      </li>
+      <li>
+        Las imágenes de $\phi\in\mathcal{A}$ cubren $M$
+      </li>
+      <li>
+        Si $\phi,\psi\in\mathcal{A}$ con $\phi:U\to M$, $\psi:V\to M$ y $\phi(U)\cap\psi(V)\neq\varnothing$ $\Rightarrow$ el mapa $\phi^{-1}\circ\psi|_{\psi^{-1}\big(\phi(U)\cap\psi(V)\big)}$ es un difeomorfismo
+      </li>
+    </ul>
+  </div>
+
+  <div class="caja">
+    <span class="def">Def:</span> Un atlas suave es una estructura diferenciable si es maximal en el siguiente sentido: <br><br>
+
+    Si $\psi:V\to M$ cumple los dos primeros puntos anteriores y es compatible con $\mathcal{A}$, entonces $\psi\in\mathcal{A}$.
+  </div>
+
+  <div class="caja">
+    <span class="def">Def:</span> El par $(M,\mathcal{A})$ se llama <ins>variedad diferenciable</ins>.
+  </div>
+
+  <div class="caja">
+    <span class="def">Def:</span> $M,N$ variedades, se dice que $f:M\to N$ es <ins>suave</ins> si para todo $p\in M$ existen 
+    
+    <ul>
+      <li>
+        $\phi:U\to M$ parametrización alrededor de $p$
+      </li>
+      <li>
+        $\psi:V\to N$ parametrización alrededor de $f(p)$
+      </li>
+    </ul>
+    tales que $f(\phi(U))\subset\psi(V)$ y además $\psi^{-1}\circ f\circ\phi:U\to V$ es suave.
+  </div>
+
+  <div class="caja">
+    <span class="lema">Lema:</span> $M$ variedad, $p\in M$, $U$ entorno abierto de $p$ <br><br>
+
+    $\Rightarrow$ existe $\rho:M\to[0,1]$ suave tal que $\rho(p)>0$ y $sop(\rho)\subset U$ <br><br>
+
+    <span class="dem">Dem:</span> Sea $\phi:\mathbb{R}^n\to M$ param. tal que $\phi(0)=p$ y $\phi(\mathbb{R}^n)\subset U$. 
+
+    Definimos $\hat{\rho}:\mathbb{R}^n\to[0,1]$ tal que $\hat{\rho}|_{\overline{B}(0,1)}\equiv 1$ y $\hat{\rho}|_{B(0,2)^c}\equiv 0$ <br><br>
+
+    Definimos $\rho$ como $\rho(x)=\begin{cases} \hat{\rho}\circ\phi^{-1}(x) & \text{si } x\in\phi(\mathbb{R}^n) \\ 0 & \text{si } x\not\in\phi(\mathbb{R}^n)\end{cases}$
+
+    Entonces $\rho$ es suave porque $\rho|_{\phi(\mathbb{R}^n)}$ lo es y $\rho|_{M-\phi(\mathbb{R}^n)}\equiv 0$. Además se tiene $sop(\rho)\subset U$. $\square$
+  </div>
+
+  <div class="caja">
+    <span class="lema">Lema:</span> $M$ variedad, $p\in M$, $U\subset M$ entorno abierto de $p$, $f\in C^{\infty}(U,\mathbb{R})$ <br><br>
+
+    $\Rightarrow \;\;\exists \;\;g\in C^{\infty}(U,\mathbb{R})$ tal que $f\equiv g$ en un entorno abierto de $p$. <br><br>
+
+    <span class="dem">Dem:</span> Sean $\phi:\mathbb{R}^n\to U$ y $\rho:M\to [0,1]$ las del lema anterior. <br><br>
+
+    Definimos $g:M\to \mathbb{R}$ como $g(x)=\begin{cases}\rho(x)\cdot f(x) & \text{si } x\in\phi(\mathbb{R}^n) \\ 0 & \text{si } x\in M -\phi(\mathbb{R}^n)\end{cases}$ $\;\;\square$
+  </div>
+
+  <div class="caja">
+    <span class="def">Def:</span> $M$ variedad, $p\in M$. Decimos que $D:C^{\infty}(M,\mathbb{R})\to\mathbb{R}$ es una <ins>derivación</ins> en $p$ si:
+
+    <ul>
+      <li>
+        $D$ es $\mathbb{R}$-lineal
+      </li>
+      <li>
+        $D(f\cdot g)=D(f)\cdot g(p) + f(p)\cdot D(g)$ para todas $f,g\in C^{\infty}(M,\mathbb{R})$
+      </li>
+    </ul>
+  </div>
+
+  <div class="caja">
+    <span class="lema">Lema:</span>
+
+    <ol>
+      <li>
+        Si $f$ es constante y $D$ es una derivación en $p$ $\;\Rightarrow Df=0$
+      </li>
+      <li>
+        Si $f(p)=g(p)=0$ y $D$ es una derivación en $p$ $\Rightarrow D(f\cdot g) =0$
+      </li>
+    </ol>
+
+    <span class="dem">Dem:</span>
+
+    <ol>
+      <li>
+        Por linealidad es suficiente probarlo para $f\equiv 1 \rightarrow$ 
+
+        $D(1)=D(1\cdot 1)=D(1)\cdot 1+ 1\cdot D(1) = 2D(1) \Rightarrow D(1)=0$
+      </li>
+      <li>
+        $D(f\cdot g)=D(f)\cdot g(p) + f(p)\cdot D(g)=0$ $\;\; \square$
+      </li>
+    </ol>
+  </div>
+
+  <div class="caja">
+    <span class="lema">Lema:</span> $M$ variedad, $p\in M$, $D$ derivación en $p$, $f,g\in C^{\infty}(M,\mathbb{R})$ que coinciden en un entorno abierto de $p$ $\Rightarrow D(f)=D(g)$ <br><br>
+
+    <span class="dem">Dem:</span> Sea $h=f-g$, entonces existe $U$ entorno abierto de $p$ en el que $h\equiv 0$. <br><br>
+
+    Sea $\rho:M\to [0,1]$ chichón con $sop(\rho)\subset U$ y $\rho(p)>0$ $\Rightarrow \rho\cdot h\equiv 0$ <br><br>
+
+    $\Rightarrow 0=D(\rho\cdot h)=D(\rho)\cdot \underbrace{h(p)}_{= 0}+\underbrace{\rho(p)}_{\neq 0}\cdot D(h) \Rightarrow D(h)=0 \;\; \square$
+  </div>
+
+  <div class="caja">
+    <span class="def">Def:</span> $M$ variedad, $p\in M$, definimos $T_pM$ como el <ins>espacio de las derivaciones</ins> en $p$.
+  </div>
+
+  <div class="caja">
+    <span class="prop">Prop:</span> $T_p\mathbb{R}^n = \langle \frac{\partial}{\partial x_1}(p),\dots,\frac{\partial}{\partial x_n}(p)\rangle$ <br><br>
+
+    <span class="dem">Dem:</span> Sea $D\in T_p\mathbb{R}^n$, $f\in C^{\infty}(\mathbb{R}^n,\mathbb{R})$, $p=(p_1,\dots, p_n)$ <br><br>
+
+    Tenemos que $f(x)=f(p)+\sum\limits_{i=1}^n \frac{\partial f}{\partial x_i}(p)\cdot(x-p_i) + r_i(x)\cdot(x_i-p_i)$ <span class="comm">taylor swift</span> <br><br>
+
+    Sea $g_i(p)= x_i-p_i \Rightarrow g_i(p)=0=r_i(p)$ <span class="comm">en efecto en $p$ vale 0</span> <br><br>
+
+    $\Rightarrow D(f)=\underbrace{Df(p)}_{=0}+\sum\limits_{i=1}^n D\big(\frac{\partial f}{\partial x_i}(p)\cdot g_i(x)\big)+\underbrace{D\big(r_i(x)\cdot g_i(x)\big)}_{=0 \text{ pq } r_i(p)=g_i(p)=0}$ 
+
+    $=\sum\limits_{i=1}^n\frac{\partial f}{\partial x_i}(p)\sum\limits_{i=1}^n D(x_i-p_i) = \sum\limits_{i=1}^n\frac{\partial f}{\partial x_i}(p) D(x_i)$ $\;\;\square$
+  </div>
+
+  <div class="caja">
+    <span class="prop">Prop:</span> $\{\frac{\partial}{\partial x_1}(p),\dots,\frac{\partial}{\partial x_n}(p)\}$ es base de $T_p\mathbb{R}^n$ <br><br>
+
+    <span class="dem">Dem:</span> $D=\sum\limits_{i=1}^n\lambda_i\frac{\partial}{\partial x_i}(p)=0$, sea $f_i(x)=x_i \Rightarrow Df_i=\lambda_i=0\;\;\square$
+  </div>
+  
+  <div class="caja">
+    <span class="def">Def:</span> $f:M\to N$ suave, definimos $df_p:t_pM\to T_{f(p)}N$ como $df_p(D)(\phi)=D(\phi\circ f)$ <br><br>
+    
+    dadas $D\in T_pM,\; \phi\in C^{\infty}(N,\mathbb{R})$.
+  </div>
+
+  <div class="caja">
+    <span class="lema">Lema:</span> $df_p(D)\in T_{f(p)}N$ <br><br>
+
+    <span class="dem">Dem:</span>
+
+    <ul>
+      <li>
+        Es $\mathbb{R}$-lineal
+      </li>
+      <li>
+        $\phi,\psi\in C^{\infty}(N,\mathbb{R}) \Rightarrow df_p(D)(\phi\cdot\psi)=D(\phi\cdot\psi\circ f)=D(\phi\circ f \cdot \psi \circ f)=$ <br><br> 
+        
+        $=D(\phi\circ f)\cdot\psi\circ f(p)+\phi\circ f(p)\cdot D(\psi\circ f) = df_p(D)(\phi)\psi(f(p))+df_p(D)(\psi)\cdot\phi(f(p)) \;\;\square$
+      </li>
+    </ul>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

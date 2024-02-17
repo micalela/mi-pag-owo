@@ -91,6 +91,42 @@
       
     </div>
 
+    <div class="caja">
+      <span class="prop">Prop:</span> $U\subset \mathbb{R}^n$ abierto, $f:U\to\mathbb{R}^k$ encaje $\Rightarrow f(U)$ es una variedad y $f$ es un difeo sobre su imagen. <br><br>
+
+      <span class="dem">Dem:</span> Sea $x_0\in U$, como $f$ es un encaje se tiene que $f$ es inmersión en $p$. <br><br>
+
+      Por el lema anterior tenemos $U_0$ abierto entorno de $x_0$ tal que $f|_{U_0}:U_0\to f(U_0)$ es un difeo. <br><br>
+
+      Como $x_0$ es arbitrario $\Rightarrow$ $f(U)$ es una variedad. <br><br>
+
+      Como $f$ es homeo sobre su imagen, tenemos $W\subset\mathbb{R}^k$ abierto tal que $f(U_0)=f(U)\cap W$ <span class="comm">por ser abierto relativo</span> <br><br>
+
+      Como $f^{-1}|_{f(U_0)}=(f|_{U_0})^{-1}:f(U_0)\to U_0$ es suave $\Rightarrow f^{-1}|_{f(U)\cap W}$ es suave. Como esto es para cualquier $x_0$ tenemos que $f$ es difeo sobre su imagen. $\square$
+    </div>
+
+    <div class="caja">
+      <span class="prop">Prop:</span> $M\subset\mathbb{R}^k$ $n$-variedad $\Rightarrow$ para todo $p\in M$ existe $W\subset\mathbb{R}^k$ entorno abierto de $p$ y $g:W\to \mathbb{R}^{k-n}$ submersión tal que $M\cap W=g^{-1}(0)$. <br><br>
+
+      <span class="dem">Dem:</span> Sea $\phi :U\to M$ parametrización tal que $\phi(q)=p$. Observar que $d\phi_q$ es inyectivo. <span class="duda">pq es inyectivo?</span> <br><br>
+
+      Sea $A:\mathbb{R}^{k-n}\to(Im d\phi_q)^{\perp}=(T_pM)^{\perp}$. Definimos $F:U\times\mathbb{R}^{k-n}\to\mathbb{R}^k$ tal que $F(x,y)=\phi(x)+A(y)$. <br><br>
+
+      Igual que antes, usamo TFI. Sean $U_0\subset U$, $V_0\subset\mathbb{R}^k$ entornos abiertos de $q$, $0$ tales que $F|_{U_0\times V_0}:U_0\times V_0\to F(U_0\times V_0)$ es un difeo. <br><br>
+
+      Sea $W=F(U_0\times V_0)\subset\mathbb{R}^k$ y $\Pi:\mathbb{R}^n\times\mathbb{R}^{k-n}\to\mathbb{R}^{k-n}$ tal que $\Pi(x,y)=y$ <br><br>
+
+      La función candidata es $g:W\to\mathbb{R}^{k-n}$ tal que $g=\Pi\circ(F|_{U_0\times V_0})^{-1}$. 
+
+      <ul>
+        <li>
+          $g^{-1}(0)=\big(\Pi\circ(F|_{U_0\times V_0})^{-1}\big)^{-1}(0) = F|_{U_0\times V_0}(\Pi^{-1}(0)) = F|_{U_0\times V_0}(\mathbb{R}^n\times \{0\}^{k-n})=\phi(U_0)=W\cap M$
+        </li>
+        <li>
+          $g$ es una submersión: $dg_x = d\Pi_{(F|_{U_0\times V_0})^{-1}(x)}\circ d(F|_{U_0\times V_0})^{-1}_x = \underbrace{\Pi}_{sobre}\circ \underbrace{d(F|_{U_0\times V_0})_x}_{iso}$ $\;\;\;\square$
+        </li>
+      </ul>
+    </div>
 
 
 
