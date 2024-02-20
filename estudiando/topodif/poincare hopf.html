@@ -75,7 +75,7 @@
         </ul>
     </div>
 
-    <div class="caja">
+    <div class="caja" id="poincarehopfchiquito">
         <span class="teo">Poincaré-Hopf para $n$-variedades compactas en $\mathbb{R}^n$:</span>
 
         $M\subset\mathbb{R}^n$ n-variedad compacta, con borde, orientada, $X$ campo saliente en $M$ con finitas singularidades $$\Rightarrow \sum\limits_{X(p)=0}ind_p(X)=\deg(g)$$
@@ -167,7 +167,7 @@
 
       $\begin{cases}X(r(x))\in T_{r(x)}M \\ x-r(x)\in (T_{r(x)}M)^{\perp}\end{cases} \Rightarrow X(r(x))+x-r(x) = 0 \iff \begin{cases} X(r(x)) \\ x=r(x) \end{cases}\iff X(x)=0$ <br><br>
 
-      Definimos ahora $\phi:N_{\varepsilon}M\to\mathbb{R}$ tal que $\phi(x)=\lVert x-r(x) \rVert ^2$. Calculemos $\nabla\phi$. <br><br>
+      Definimos ahora $\phi:N_{\varepsilon}M\to\mathbb{R}$ tal que $\phi(x)=\lVert x-r(x) \rVert ^2$. Calculemos $\nabla\phi$. <span class="comm">me sirve definir este $\phi$ y calcular $\nabla\phi$ porque es colineal a g, y quiero verificar que el campo $Y$ es saliente</span> <br><br>
 
       Sea $\alpha:(-\varepsilon, \varepsilon)\to N_{\varepsilon}M$ y escribimos $\alpha(t)=\overbrace{r(\alpha(t))}^{p(t) \in M}+\overbrace{\alpha(t)-r(\alpha(t))}^{v(t) \in (T_{\alpha(t)}M)^{\perp}}$ <br><br>
 
@@ -179,15 +179,40 @@
 
       Sea $x \in N_{\varepsilon}M$, entonces $\langle Y(x), \nabla\phi(x)\rangle = \langle X(r(x))+x-r(x), 2(x-r(x))\rangle = \langle \overbrace{X(r(x))}^{\in T_{r(x)}M}, \overbrace{2(x-r(x))}^{\in (T_{r(x)}M)^{\perp}}\rangle + 2\lVert x-r(x)\rVert ^{2} \geq 2\varepsilon^{2} >0 \Rightarrow Y$ es saliente. <br><br>
 
-      Por Poincaré-Hopf para $n$-variedades compactas en $\mathbb{R}^n$ tenemos $\sum\limits_{Y(p)=0}ind_p(Y) = \deg(g)$. <br><br>
+      Por <a href="#poincarehopfchiquito">Poincaré-Hopf para $n$-variedades compactas en $\mathbb{R}^n$</a> tenemos $\sum\limits_{Y(p)=0}ind_p(Y) = \deg(g)$. <br><br>
       
       Ahora basta probar que $ind_p(X)=ind_p(Y)$ para toda singularidad. Observamos que por <a href="campos en variedades.html#lema 2">este lema</a> tenemos que $ind_p(X)=sg(dX_p)$. <br><br>
       
       Calculemos $dY_p$ para verificar que $p$ es no degenerada (así poder usar <a href="campos en variedades.html#lema 2">ese lema</a> de nuevo) y verificar $sg(dY_p)=sg(dX_p)$.<br><br>
 
-      Observamos que $Y:N_{\varepsilon}M\to\mathbb{R}^n \Rightarrow dY_p:T_p (N_{\varepsilon}M) \to \mathbb{R}^n$ y tenemos que si $p\in M \Rightarrow T_p (N_{\varepsilon}M) = T_pM\oplus (T_pM)^{\perp}$
+      Observamos que $Y:N_{\varepsilon}M\to\mathbb{R}^n \Rightarrow dY_p:T_p (N_{\varepsilon}M) \to \mathbb{R}^n$ y tenemos que si $p\in M \Rightarrow T_p (N_{\varepsilon}M) = T_pM\oplus (T_pM)^{\perp}$ <br><br>
 
+      Calculemos entonces $dYp|_{T_pM}$ y $dYp|_{(T_pM)^{\perp}}$.
 
+      <ul>
+        <li>
+          $dY_p|_{T_pM}$: Sea $\alpha :(-\varepsilon, \varepsilon)\to N_{\varepsilon}M$ tal que $\alpha (t)\in T_pM \;\forall\;\; t \Rightarrow r(\alpha(t))=\alpha(t) \Rightarrow Y(\alpha(t))= X(r(\alpha(t))) + r(\alpha(t)) - \alpha(t) = X(\alpha(t)) \Rightarrow dY_p|_{T_pM} = dX_p$
+        </li>
+        <br>
+        <li>
+          $dYp|_{(T_pM)^{\perp}}$: Sea $\alpha :(-\varepsilon, \varepsilon)\to N_{\varepsilon}M$ tal que $\alpha (t)\in (T_pM)^{\perp} \;\forall\;\; t \Rightarrow r(\alpha(t)) = p$ <span class="comm">(ya que estamos cortando M transversalmente, y $r$ proyecta)</span> <br><br>
+
+          $\Rightarrow Y(\alpha(t))= X(r(\alpha(t))) + r(\alpha(t)) - \alpha(t) = X(p) + p - \alpha(t) \Rightarrow$ <br><br> 
+          
+          $dY_{\alpha(t)}\cdot\alpha'(t) = \frac{d}{dt}|_{t=0} Y(\alpha(t)) = \frac{d}{dt}|_{t=0} X(p) + p - \alpha(t) = \alpha'(t) \Rightarrow dY_{\alpha'(t)}=Id$
+        </li>
+      </ul>
+
+      Por lo tanto obtenemos que $dY_p$ se ve así: 
+
+      $\begin{pmatrix}
+
+      dX_p & 0\\
+      0 & Id_{n-m}
+      
+      \end{pmatrix}$
+
+      y con esto tenemos el resultado buscado (─‿‿─) $\quad\square$
 
 
 
