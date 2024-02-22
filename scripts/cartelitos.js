@@ -135,6 +135,7 @@ const pixeles = [
     img: "assets/cachivaches/stickers/discord.png",
   },
   {
+    link: "https://web.archive.org/web/20230425141801/https://www.lovetiny.art/",
     title: "https://foxfable.fun/",
     img: "assets/cachivaches/stickers/Washingmachine.gif",
   },
