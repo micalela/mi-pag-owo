@@ -59,7 +59,8 @@ h1 {
   width: fit-content;
   padding: 2px 5px 2px 5px;
   font-family: 'Courier New', Courier, monospace;
-  background-color: rgb(135, 211, 221);
+/*   background-color: rgb(135, 211, 221); */
+  background-color: rgb(98, 120, 187);
   font-size: 25px;
 }
 

@@ -61,6 +61,11 @@ const cartelitos = [
     link: "https://antikrist.lol/",
     img: "assets/botones/dreaminpixels.gif",
   },
+  {
+    link: "https://momg.neocities.org/",
+    img: "https://momg.neocities.org/site-images/momg-badge.gif",
+    title: "Visit the Gif Gallery!"
+  },
 ];
 
 const pixeles = [
