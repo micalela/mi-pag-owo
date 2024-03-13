@@ -197,5 +197,41 @@ este elemento deja el texto
 
 <!-- PRETTIER: ALT + SHIFT + F -->
 
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #6e97b9;
+    padding: 25px;
+    width: 50%;
+  }
+  .grid-item {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  </style>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<div style="display:flex; flex-wrap:nowrap; flex-direction: row; align-items: center; margin: auto; width: 90%; justify-content: space-between;background-color: blue;">
+
+  <div style="width: 15%; background-color: aquamarine; border: 1px solid #10241f;">aaa</div>
+  <div style="width: 50%; background-color: aquamarine; border: 1px solid #10241f;">ddd</div>
+  <div style="width: 15%; background-color: aquamarine; border: 1px solid #10241f;">fff</div>
+
+</div>
+
   </body>
 </html>

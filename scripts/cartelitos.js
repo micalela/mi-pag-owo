@@ -33,15 +33,6 @@ const cartelitos = [
     height: "20px",
   },
   {
-    img: "assets/botones/stardew.gif",
-  },
-  {
-    img: "assets/botones/hollowknight.gif",
-  },
-  {
-    img: "assets/botones/aseprite.gif",
-  },
-  {
     link: "https://skelenby.neocities.org/dump/icons",
     img: "assets/botones/stars.gif",
   },
@@ -257,10 +248,6 @@ const pixeles = [
     img: "assets/cachivaches/pixeles/1048.gif",
   },
   {
-    link: "https://www.deviantart.com/riut/art/Seed-Plant-Cup-Free-avatar-290625190",
-    img: "assets/cachivaches/pixeles/plantita.gif",
-  },
-  {
     img: "assets/cachivaches/pixeles/jupiter.gif",
     link: "https://sweetcharm.net/.CuteDesktop/index.html"
   },
@@ -320,6 +307,17 @@ const pixeles = [
     img: "assets/cachivaches/pixeles/artworkposter4.png",
     link: "https://artwork.neocities.org/toybox"
   },
+  {
+    img: "assets/cachivaches/pixeles/dump 1/honguitos.png",
+    link: "https://www.tumblr.com/averyluckyclover"
+  },
+  {
+    img: "assets/cachivaches/pixeles/dump 1/froggychair.gif",
+    link: "https://www.deviantart.com/8-bitspider/gallery"
+  },
+  {
+    img: "assets/cachivaches/pixeles/dump 1/silkblob.gif",
+  },
 
 ];
 
@@ -340,49 +338,6 @@ const cachivaches = [
     link: "https://shroom.ink/decay/adopt-a-shroom/",
     img: "https://shroom.ink/images/adoptables/Amanita_muscaria.png",
     height: "50px",
-  },
-  {
-    link: "https://cinni.net/?z=/web",
-    img: "assets/cachivaches/stamps/pastel.gif",
-  },
-  {
-    link: "http://lu.tiny-universes.net/",
-    img: "assets/cachivaches/stamps/stamp-yrownwebsite.png",
-  },
-  {
-    link: "https://skelenby.neocities.org/dump/icons",
-    img: "assets/cachivaches/stamps/thebread.png",
-  },
-  {
-    link: "https://www.deviantart.com/blubble-the-blubs/art/Nyan-205931322",
-    img: "assets/cachivaches/stamps/nyan_by_blubble_the_blubs_d3eltmi.gif",
-  },
-  {
-    link: "https://www.deviantart.com/onnawufei/art/Animal-Crossing-Gyroid-Fan-108439723",
-    img: "assets/cachivaches/stamps/d1sk8mj-31f3092b-bb6f-494a-9916-0f517d4e2215.gif",
-  },
-  {
-    img: "assets/cachivaches/stamps/night.gif",
-  },
-  {
-    img: "assets/cachivaches/stamps/yee.png",
-  },
-  {
-    img: "assets/cachivaches/stamps/system32.gif",
-  },
-  {
-    img: "assets/cachivaches/stamps/rat.jpg",
-  },
-  {
-    img: "assets/cachivaches/stamps/cat.png",
-  },
-  {
-    link: "https://www.deviantart.com/chuchucolate/art/Cats-Louis-Wayne-3-Stamp-386046115",
-    img: "assets/cachivaches/stamps/chuchucolate-waynecat.png",
-  },
-  {
-    link: "https://cinni.net/",
-    img: "assets/cachivaches/stamps/gstamp.png",
   },
   {
     img: "assets/cachivaches/miscelaneo/lattice.gif",
@@ -411,6 +366,125 @@ const cachivaches = [
 
 ];
 
+const plantitas = [
+  {
+    link: "https://www.deviantart.com/riut/art/Seed-Plant-Cup-Free-avatar-290625190",
+    img: "assets/cachivaches/plantitas/plantita.gif"
+  },
+  {
+    link: "https://www.deviantart.com/amsa95",
+    img: "assets/cachivaches/plantitas/eucaliptus.png"
+  },
+  {
+    link: "https://www.deviantart.com/midwestpest/art/f2u-jade-plant-pixel-671820995",
+    img: "assets/cachivaches/plantitas/planta2.png"
+  },
+  {
+    img: "assets/cachivaches/plantitas/planta1.png"
+  },
+];
+
+const estampillas = [
+  {
+    link: "https://cinni.net/?z=/web",
+    img: "assets/botones/99x56/pastel.gif",
+  },
+  {
+    link: "http://lu.tiny-universes.net/",
+    img: "assets/botones/99x56/stamp-yrownwebsite.png",
+  },
+  {
+    link: "https://skelenby.neocities.org/dump/icons",
+    img: "assets/botones/99x56/thebread.png",
+  },
+  {
+    link: "https://www.deviantart.com/blubble-the-blubs/art/Nyan-205931322",
+    img: "assets/botones/99x56/nyan_by_blubble_the_blubs_d3eltmi.gif",
+  },
+  {
+    link: "https://www.deviantart.com/onnawufei/art/Animal-Crossing-Gyroid-Fan-108439723",
+    img: "assets/botones/99x56/d1sk8mj-31f3092b-bb6f-494a-9916-0f517d4e2215.gif",
+  },
+  {
+    img: "assets/botones/99x56/night.gif",
+  },
+  {
+    img: "assets/botones/99x56/yee.png",
+  },
+  {
+    img: "assets/botones/99x56/system32.gif",
+  },
+  {
+    img: "assets/botones/99x56/rat.jpg",
+  },
+  {
+    img: "assets/botones/99x56/cat.png",
+  },
+  {
+    link: "https://www.deviantart.com/chuchucolate/art/Cats-Louis-Wayne-3-Stamp-386046115",
+    img: "assets/botones/99x56/chuchucolate-waynecat.png",
+  },
+  {
+    link: "https://cinni.net/",
+    img: "assets/botones/99x56/gstamp.png",
+  },
+  {
+    link: "https://cinni.net/",
+    img: "assets/botones/99x56/hoot.gif",
+  },
+  {
+    link: "https://cinni.net/",
+    img: "assets/botones/99x56/minecraft.png",
+  },
+  {
+    link: "https://cinni.net/",
+    img: "assets/botones/99x56/lynxbones-internet.gif",
+  },
+];
+
+c88x31 = [
+  {
+    link: "",
+    img: "assets/botones/88x31/a.webp",
+  },
+  {
+    link: "",
+    img: "assets/botones/88x31/lain.gif",
+  },
+  {
+    link: "",
+    img: "assets/botones/88x31/seedyourtorrents.gif",
+  },
+  {
+    link: "",
+    img: "assets/botones/88x31/ac.gif",
+  },
+];
+
+c80x15 = [
+  {
+    img: "assets/botones/80x15/stardew.gif",
+  },
+  {
+    img: "assets/botones/80x15/hollowknight.gif",
+  },
+  {
+    img: "assets/botones/80x15/aseprite.gif",
+  },
+  {
+    img: "assets/botones/80x15/puter.gif",
+  },
+  {
+    img: "assets/botones/80x15/stars.gif",
+  },
+  {
+    img: "assets/botones/80x15/90.gif",
+  },
+  {
+    img: "assets/botones/80x15/badwebdesign.gif",
+  },
+];
+
 const apis = [
   {
     img: "https://cataas.com/cat",
@@ -421,28 +495,36 @@ const apis = [
 function poner(ls, donde, donde2, titulo) {
 
   const h3 = document.createElement("h3");
-  const caja = document.getElementById(donde);
   const cajita = document.getElementById(donde2);
 
+  if(titulo){
+  const caja = document.getElementById(donde);
   h3.innerText = titulo;
   h3.className = "titulo";
-  caja.insertBefore(h3, caja.firstChild);
+  caja.insertBefore(h3, caja.firstChild);}
 
   for (var i = 0; i < ls.length; i++) {
     const a = document.createElement("a");
     const img = document.createElement("img");
 
-    if (donde === "pixeles") {
+    if (donde === "pixeles" || "plantitas") {
       img.className = "renderpixeles";
     }
+
     if (donde === "cartelitos") {
       img.className = "rendercartelitos";
     }
+
     if (donde === "cachivaches") {
       img.className = "rendercachivaches";
     }
+
     if (donde === "apis") {
       img.className = "renderapis";
+    }
+
+    if (donde2 === "c80x15") {
+      img.className = "renderc80x15";
     }
 
     if (ls[i].link) {
@@ -471,11 +553,15 @@ function poner(ls, donde, donde2, titulo) {
   }
 }
 
-poner(cartelitos, "cartelitos", "cartelitos2", "cartelitos");
+/* poner(cartelitos, "cartelitos", "cartelitos2", "cartelitos"); */
 poner(pixeles, "pixeles", "pixeles2", "pixel art");
 /* poner(nuse, "estampillas", "estampillas¿?"); */
 poner(cachivaches, "cachivaches", "cachivaches2", "cachivaches");
-poner(apis, "apis", "apis2", "apis");
+/* poner(apis, "apis", "apis2", "apis"); */
+poner(estampillas, null, "estampillas")
+poner(c88x31, null, "c88x31")
+poner(c80x15, null, "c80x15")
+poner(plantitas, null, "plantitas2")
 
 /* function api_nombres() {
   alert(<script type="text/javascript" src="https://momg.neocities.org/names.js" charset="utf-8"></script><script>alert(randomFullName());</script>)

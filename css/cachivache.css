@@ -1,6 +1,6 @@
 @font-face {
   font-family: "fuente";
-  src: url("/fonts/Perfect DOS VGA 437.ttf");
+  src: url("/fonts/Perfect DOS VGA 437 2.ttf");
 }
 
 body {
@@ -9,9 +9,18 @@ body {
 
   h3 {
     font-family: "fuente";
-    background-color: #bdecff;
+    background-color: rgb(158, 197, 231);
     padding: 2px;
     font-size: 30px;
+    color: rgb(231, 237, 241);
+    width: fit-content;
+  }
+
+  h1 {
+    font-family: "fuente";
+    background-color: rgb(158, 197, 231);
+    padding: 2px;
+    font-size: 60px;
     color: rgb(231, 237, 241);
   }
 
@@ -23,23 +32,56 @@ body {
   }
 
   .renderpixeles:hover{
-
     transform: scale(1.2);
-
   }
 
   .rendercachivaches{
-
     margin: 5px;
+  }
 
+  .renderc80x15 {
+    width: 80px;
+  }
+
+  .div_ersion{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 255, 0.096);
+  }
+
+  .estampillas{
+    width: fit-content;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izq{
+    width: 15%;
+  }
+
+  .mid{
+    width: 70%;
+    border: 1px solid black;
+  }
+
+  .der{
+    width: 15%;
   }
 
   .caja{
 /*     background-color: rgba(225, 227, 248, 0); */
     margin: auto;
     margin-top: 25px;
-    width: 50%;
-    padding: 25px;
+    width: 90%;
   }
 
   .cajita{
@@ -54,6 +96,7 @@ body {
 
   .borde{
     width: fit-content;
+    margin: auto;
     border: 32px solid orange;
     border-image: url('../assets/dividers/borde4.png') 32 / 32px round;
   }
@@ -61,9 +104,15 @@ body {
   .titulo{
     background-color: rgb(158, 197, 231);
     width: fit-content;
-    padding: 5px 15px;
+    padding: 10px 20px 8px 15px;
     margin: auto;
     margin-bottom: 25px;
+  }
+
+  p{
+    color: rgb(65, 42, 165);
+    width: fit-content;
+    margin: auto;
   }
 
   
