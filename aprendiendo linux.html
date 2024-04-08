@@ -12,5 +12,30 @@
   
   --> abrir consola en ese directorio (f4 en el dolphin abre la consola en el directorio actual) y sudo dpkg -i Minecraft.deb</p>
 
+  <p>cómo montar discos automáticamente al bootear:
+
+    <ul>
+      <li>
+        sudo blkid --> ver información sobre los discos
+      </li>
+      <li>
+        crear carpeta para que se monte el disco: sudo mkdir /mnt/nombre-del-disco (lo que está después de /dev/ en el directorio)
+      </li>
+      <li>
+        abrir nano para editar el archivo /etc/fstab: sudo nano /etc/fstab
+      </li>
+      <li>
+        agregar una línea al final con la info del disco que quiero que se monte: <br><br>
+
+        UUID=uuid-del-disco *tab* carpeta que hice antes *tab* formato del disco (ntfs, ext4) *tab* defaults *tab* 0 *tab* 2 <br><br>
+
+        el default es para mount option, el 0 es para dump, el 2 para pass
+      </li>
+      <li>
+        enjoy new auto mounting drives
+      </li>
+    </ul>
+  </p>
+
 </body>
 </html>
