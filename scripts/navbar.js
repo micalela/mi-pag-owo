@@ -1,6 +1,8 @@
 const navbar = `<div class="navbar">
 <a href="aprendiendo uwu.html">aprendiendo html</a>
 <span>✧</span>
+<a href="aprendiendo linux.html">aprendiendo linux</a>
+<span>✧</span>
 <a href="cartelitos.html">cachivachería</a>
 <span>✧</span>
 <a href="htmlmat2.html">paginas épicas</a>
