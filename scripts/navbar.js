@@ -11,7 +11,7 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="estudiando/topodif/valores regulares.html">topología diferencial</a>
 <span>✧</span>
-<a href="estudiando/din 2/1.html">dinámica topológica</a>
+<a href="estudiando/topodif/valores regulares.html">topología diferencial</a>
 <span>✧</span>
 <a href="desvaríos.html">desvaríos</a>
 </div>`;
