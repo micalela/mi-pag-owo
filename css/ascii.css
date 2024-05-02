@@ -1,12 +1,18 @@
+@font-face {
+  font-family: "msgothic";
+  src: url("../fonts/msgothic.ttc");
+}
+
 body {
   background-image: url("../assets/fondos/azulestrellitas.gif");
 }
 
 .ponja {
-  font-size: 12pt !important;
-  font-family: "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  font-size: 10pt !important;
+  /* font-family: "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
     "Osaka", "メイリオ, Meiryo", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "MS Gothic",
-    "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+    "Noto Sans CJK JP", TakaoPGothic, sans-serif; */
+    font-family: "msgothic";
     background-color: rgb(172, 173, 243);
     border: 2px solid rgb(98, 120, 187);
     width: fit-content;

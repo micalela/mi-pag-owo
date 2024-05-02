@@ -14,6 +14,15 @@ p {
   width: fit-content;
 }
 
+ul {  
+  background-color: rgba(159, 161, 139, 0.733);
+  width: fit-content;
+}
+
+li {  
+  background-color: rgba(159, 161, 139, 0.733);
+}
+
 h1 {
   background-color: rgba(228, 203, 180, 0.973);
   margin: 50px 150px 30px 100px;

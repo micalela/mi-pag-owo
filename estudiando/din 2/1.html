@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="din topo.css" />
+        <link rel="stylesheet" href="navbar din topo.css" />
+      </head>
+<body>
+
+    <script src="navbar din topo.js"></script>
+
+    <img
+      src="..\..\assets\dinámica topológica\título.png"
+      class="imagenTitulo"
+      alt="campos en variedades"
+      style="padding: 0px 0px 0px 10px; height: 120px;"
+    /> 
+
+    <div class="caja"><span class="teo">Teorema de Brouwer en el disco:</span> $f:\overline{\mathbb{D}^n}\to\overline{\mathbb{D}^n}$ continua $\Rightarrow$ existe $x\in \overline{\mathbb{D}^n}$ tal que $f(x)=x$ </div>
+
+    <div class="caja"><span class="teo">Petit Brouwer:</span> $f:\mathbb{R}^2\to \mathbb{R}^2$ homeo que presrva orientación con un punto periódico de período 2 $\Rightarrow$ fix($f$) $\neq\varnothing$</div>
+
+    <div class="caja"><span class="def">Cubrimiento:</span> Un cubrimiento de un espacio $X$ es un espacio $\tilde{X}$ y un mapa $p:\tilde{X}\to X$ tal que para todo $x\in X$ existe un entorno $U_x$ tal que <br>
+      
+      <ul>
+        <li>$p^{-1}(U_x)=\bigcup U_i$ con $U_i$ abiertos en $\tilde{X}$</li>
+        <li>$p|_{U_i}:U_i\to U_x$ es un homeo para todo $i$</li>
+      </ul>
+    </div>
+
+    <div class="caja"><span class="lema">Levantamiento de curvas:</span> Sea $\gamma :[0,1]\to X$ curva tal que $\gamma (0)=x_0$, $\tilde{x_0}$ levantado de $x_0$ $\Rightarrow$ existe una única curva $\tilde{\gamma}:[0,1]\to\tilde{X}$ tal que $\tilde\gamma (0)=\tilde{x_0}$, $p\circ\tilde\gamma = \gamma$</div>
+
+    
+
+</body>
+</html>
