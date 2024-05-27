@@ -411,9 +411,9 @@ const estampillas = [
   {
     img: "assets/botones/99x56/yee.png",
   },
-  {
+/*   {
     img: "assets/botones/99x56/system32.gif",
-  },
+  }, */
   {
     img: "assets/botones/99x56/rat.jpg",
   },
