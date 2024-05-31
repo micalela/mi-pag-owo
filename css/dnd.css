@@ -1,0 +1,32 @@
+body {
+    background-image: url("../assets/fondos/enredadera.png");
+  }
+
+.caja {
+  background-color: rgba(152, 155, 133, 0.85);
+  margin: 0px 150px 50px 100px;
+  padding: 25px 20px 20px 20px;
+}
+p {
+  background-color: rgb(192, 197, 153);;
+  margin: 0px 0px 10px 0px;
+  padding: 5px 5px 5px 5px;
+  width: fit-content;
+}
+
+ul {  
+  background-color: rgba(159, 161, 139, 0.733);
+  width: fit-content;
+}
+
+li {  
+  background-color: rgba(159, 161, 139, 0.733);
+}
+
+h1 {
+  background-color: rgb(166, 192, 141);
+  margin: 50px 150px 30px 100px;
+  width: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
