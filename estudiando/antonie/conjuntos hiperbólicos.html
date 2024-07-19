@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="monografía.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar monografía.js"></script>
+
+        <img
+        src="..\..\assets\monografía\ctos hiperbolicos.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        />
+
+        <div class="caja">En general trabajamos con $f:M\to M$ difeo y $M$ variedad compacta.</div>
+
+        <div class="caja"><span class="def">Def:</span>Un conjunto $f$-invariante $X$ es hiperbólico si $T_X M = E^s\oplus E^u$ y cumple:
+
+        <ul>
+          <li>
+            <ins>Invariante:</ins> $\forall\; x\in X$ se tiene $D_xf(E^s(x))=E^s(f(x))$ y $D_xf(E^u(x))=E^u(f(x))$
+          </li>
+          <li>
+            <ins>Expande / contrae uniformemente:</ins> $\exists\; c>0$ y $\lambda\in (0,1)$ tales que $\forall\; x\in X,\; n>0,\; v\in E^s(x),\; w\in E^u(x)$ se tiene
+
+            $$\| D_xf^n(v)\|\leq c\lambda^n\|v\| \quad\text{y}\quad \|D_xf^{-n}(w)\|\leq c\lambda^n\|w\|$$
+          </li>
+        </ul>
+        
+        </div>
+
+        <div class="caja"><span class="obs">Obs:</span> Acá para tomar norma estamos asumiendo que $M$ es una <ins>variedad riemanniana</ins>, es decir, una variedad con una métrica riemanniana. <br><br>
+        
+          Una <ins>métrica riemanniana</ins> $g$ en $M$ es una familia suave de productos internos (formas bilineales definidas positivas) definidas en los planos tangentes a $M$. <br><br>
+
+          Es decir, una familia $\{g_p:T_pM\times T_pM\to\mathbb{R}\}$ de formas bilineales definidas positivas tales que $p\mapsto g_p(X_p,Y_p)\in\mathbb{R}$ es suave para cuales quiera $X,\;Y$ campos suaves definidos en un entorno de $p$. <br><br>
+
+          Teniendo esto en cuenta, las normas de la definición en realidad serían $\| D_xf^n(v)\|_{f^n(x)},\;\|D_xf^{-n}(w)\|_{f^{-n}(x)}\;\|v\|_{x},\;\|w\|_{x}$.
+        
+        </div>
+
+
+    
+</body>
+</html>
