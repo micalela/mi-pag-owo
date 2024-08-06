@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="monografía.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar monografía.js"></script>
+
+        <img
+        src="..\..\assets\monografía\ifs.gif"
+        class="imagenTitulo"
+        alt="sistemas iterados de funciones"
+        style="padding: 20px 0px 0px 10px; height: 60px;"
+        />
+    
+    <div class="caja">
+        
+        <span class="def">Def:</span>
+    
+        Un <ins>sistema iterado de funciones</ins> (IFS) es una familia finita de contracciones $\{f_1,\dots,f_s\}$ actuando en un espacio métrico completo. <br><br>
+
+        Llamamos <ins>contracción</ins> a una función continua en un espacio métrico $(X,d)$ tal que para todos $x,\; y \in X$ 
+        se tiene $d(f(x),f(y))\leq\sigma d(x,y)$ para algún $\sigma\in (0,1)$. <br><br>
+
+        <span class="prop">Proposición:</span> Existe un único compacto no vacío $K\subset X$ tal que $K=\bigcup\limits^{s}_{i=1}f_i(K)$. <br><br>
+
+        Llamamos a este conjunto el <ins>atractor</ins> del IFS. <br><br>
+
+        <span class="def">Def:</span> $Y\subset\mathbb{R}^3$ compacto <ins>se puede separar</ins> si $Y=A_1\cup A_2$ con $A_1,\; A_2$ compactos no vacíos y existe una isotopía $(h_t)_{t\in [0,1]}$ con $h_0=Id$ y $h_1(A_1),\; h_2(A_2)$ están contenidas en bolas disjuntas. <br><br>
+
+        <span class="comm">escribir la def de $\mathcal{A}$</span> <br><br>
+
+        <span class="prop">Prop:</span> Un subconjunto$Y \subset \mathcal{A}$ es un <ins>anillo</ins> <span class="comm">(falta escribir la definición)</span> si <br><br>
+
+        <ul>
+            <li>$Y$ no se puede separar</li>
+
+            <li>$Y$ es <ins>cíclico:</ins> <br><br>
+                
+                Existen $A_1,A_2,A_3$ subconjuntos compactos y no vacíos tales que $Y=A_1\cup A_2\cup A_3$ y además los conjuntos $A_i,\; A_i\cap A_j,\; i\in\{1,2,3\}$ no se pueden separar.
+            
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
