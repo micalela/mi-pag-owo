@@ -38,9 +38,29 @@
         style="padding: 20px 0px 0px 10px; height: 80px;"
         />
 
-        <div class="caja">En general trabajamos con $f:M\to M$ difeo y $M$ variedad compacta.</div>
+        <div class="caja"><span class="obs">Obs:</span> Para tomar norma vamos a estar asumiendo que $M$ es una <ins>variedad riemanniana</ins>, es decir, una variedad con una métrica riemanniana. <br><br>
+        
+          Una <ins>métrica riemanniana</ins> $g$ en $M$ es una familia suave de productos internos (formas bilineales definidas positivas) definidas en los planos tangentes a $M$. <br><br>
 
-        <div class="caja"><span class="def">Def:</span>Un conjunto $f$-invariante $X$ es hiperbólico si $T_X M = E^s\oplus E^u$ y cumple:
+          Es decir, una familia $\{g_p:T_pM\times T_pM\to\mathbb{R}\}$ de formas bilineales definidas positivas tales que $p\mapsto g_p(X_p,Y_p)\in\mathbb{R}$ es suave para cuales quiera $X,\;Y$ campos suaves definidos en un entorno de $p$. <br><br>
+
+          Teniendo esto en cuenta, las normas de la definición de abajo en realidad serían $\| D_xf^n(v)\|_{f^n(x)},\;\|D_xf^{-n}(w)\|_{f^{-n}(x)}\;\|v\|_{x},\;\|w\|_{x}$.
+        
+        </div>
+
+        <div class="caja">
+          
+          En general trabajamos con $f:M\to M$ difeo y $M$ variedad diferenciable compacta. <br><br>
+
+          Para trabajar con variedades diferenciables es suficiente pensarlas como $n$-variedades diferenciables en $\mathbb{R}^N$, con $N&gt n$. <br><br>
+
+          Con esto, el producto interno usual en $\mathbb{R}^n$ induce un producto interno en cada $T_xM$, con lo que tenemos una variedad Riemannianana. <br><br>
+
+          Además induce una distancia entre dos puntos de $M$ dada por el ínfimo de las longitudes de curvas diferenciables en $M$ que conectan los dos puntos.
+
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Un conjunto $f$-invariante $X$ es hiperbólico si $T_X M = E^s\oplus E^u$ con $E^s,\;E^u$ familias de subespacios que cumplen:
 
         <ul>
           <li>
@@ -53,16 +73,194 @@
           </li>
         </ul>
         
+        <span class="def">Def:</span> Decimos que $\Lambda$ es <ins>localmente maximal</ins> si existe $V$ entorno abierto de $\Lambda$ tal que $$\Lambda =\bigcap\limits_{n\in\mathbb{Z}}f^n(\overline{V})$$
+
         </div>
 
-        <div class="caja"><span class="obs">Obs:</span> Acá para tomar norma estamos asumiendo que $M$ es una <ins>variedad riemanniana</ins>, es decir, una variedad con una métrica riemanniana. <br><br>
-        
-          Una <ins>métrica riemanniana</ins> $g$ en $M$ es una familia suave de productos internos (formas bilineales definidas positivas) definidas en los planos tangentes a $M$. <br><br>
 
-          Es decir, una familia $\{g_p:T_pM\times T_pM\to\mathbb{R}\}$ de formas bilineales definidas positivas tales que $p\mapsto g_p(X_p,Y_p)\in\mathbb{R}$ es suave para cuales quiera $X,\;Y$ campos suaves definidos en un entorno de $p$. <br><br>
+        <div class="caja">
 
-          Teniendo esto en cuenta, las normas de la definición en realidad serían $\| D_xf^n(v)\|_{f^n(x)},\;\|D_xf^{-n}(w)\|_{f^{-n}(x)}\;\|v\|_{x},\;\|w\|_{x}$.
+          <span class="ej">Ejemplos:</span>
+
+        </div>
+
+
+        <div class="caja">
+
+          <span class="ej">Ejemplo:</span> Sea $f:\mathbb{R}^2\to\mathbb{R}^2$ tal que $f(x,y)=(x+1,y)$. <br><br>
+          
+          Entonces, tenemos que $df_p = \begin{pmatrix}
+
+          1 & 0\\
+          0 & 1
+          
+          \end{pmatrix} \quad\forall\; p\in\mathbb{R}^2$. <br><br>
+
+          Definimos $\|\cdot\|_{(x,y)}$ tal que $\left\| \begin{pmatrix} 1 \\ 0 \end{pmatrix} \right\|_{(x,y)} = e^{-x}$ y $\left\| \begin{pmatrix} 0 \\ 1 \end{pmatrix} \right\|_{(x,y)} = e^{x}$. <span class="duda">Por qué puedo definir esto así?</span> <br><br>
+
+          Entonces, tomando $E^s(x,y) = \mathbb{R}\cdot\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \{\;(x,0)\; : \; x\in\mathbb{R}\}$ y $E^u(x,y) = \mathbb{R}\cdot\begin{pmatrix} 0 \\ 1 \end{pmatrix} = \{\;(0,y)\; : \; y\in\mathbb{R}\}$ <br><br>
+          
+          tenemos que $\left \| df^n_{(x,y)} \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \right \|_{(x+n,y)} = e^{-(x+n)} = e^{-x} \cdot e^{-n} = \left\| \begin{pmatrix} 1 \\ 0 \end{pmatrix} \right\|_{(x,y)}\cdot e^{-n}$
+
+          <span class="duda">lvd no entendí mucho por qué este ejemplo es peligroso? y tampoco entiendo cómo define las normas aunque tendría q tratar de hacer la cuenta o algo</span>
+
+        </div> 
+
+        <div class="caja">
+          
+          <span class="ej">Ejemplo:</span>
+
+          Sea $A=\begin{pmatrix} \lambda & 0 \\ 0 & \mu \end{pmatrix}$ con $0\ &lt\lambda &lt 1 &lt \mu$ <br><br>
+
+          <ul>
+            
+            <li>$\begin{pmatrix} \lambda & 0 \\ 0 & \mu \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} \lambda \\ 0 \end{pmatrix} = \lambda \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \Rightarrow A$ contrae en el eje horizontal</li> <br>
+          
+            <li>$\begin{pmatrix} \lambda & 0 \\ 0 & \mu \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ \mu \end{pmatrix} = \mu \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \Rightarrow A$ expande en el eje vertical</li> <br>
+
+          </ul>
+          
+          Tenemos entonces que  <br><br>
+          
+          <ul>
+            
+            <li>$\; A^n \cdot \begin{pmatrix} x \\ 0 \end{pmatrix}=\lambda^n \cdot \begin{pmatrix} x \\ 0 \end{pmatrix} \xrightarrow{n} \begin{pmatrix} 0 \\ 0 \end{pmatrix} \Longrightarrow \left \|  A^n \cdot \begin{pmatrix} x \\ 0 \end{pmatrix} \right \| \xrightarrow{n} 0$ </li><br><br>
+
+            <li>$\displaystyle\; A^n \cdot \begin{pmatrix} x \\ y \end{pmatrix}= \begin{pmatrix} \lambda^n \\ \mu^n \end{pmatrix} \cdot \begin{pmatrix} x \\ y \end{pmatrix} \xrightarrow{n} \begin{pmatrix} 0 \\ \infty \end{pmatrix} \Longrightarrow \left \|  A^n \cdot \begin{pmatrix} x \\ y \end{pmatrix} \right \| \xrightarrow{n} \infty$</li>
+          
+          </ul>
+
+          Observar que con esto caracterizamos al eje x, que cumple $\left\|A^n\cdot v\right\|\xrightarrow{n} 0$, pero no caracterizamos al eje y. <br><br>
+
+          Para caracterizar de forma similar al eje y, tomamos $A^{-1}$, que tiene valores propios $\lambda^{-1},\;\mu^{-1}$ y por lo tanto cumple $\left\|A^{-n}\cdot v\right\|\xrightarrow{n} 0$ <br><br>
+
+          Este análisis sigue funcionando igual para cualquier transformación lineal con valores propios $\neq 1$.
         
+        </div>
+
+        <div class="caja">
+
+          <span class="obs">Dato:</span> Si tomamos la suma de los subesepacios propios generalizados de valor absoluto $\leq \lambda \in (0,1)$, se tiene que $$\left\| A^n v\right\|\leq C\lambda^n \left\| v \right\| \text{ para algún } C &gt 0$$
+
+          Por lo tanto, si tenemos varios subespacios estables y varios inestables, podemos caracterizar su suma (directa) $E^s$ y $E^u$ de la siguiente manera: <br><br>
+
+          <ul>
+            <li>
+              $v\in E^s \iff \left\| A^n v\right\|\leq C\lambda^n \left\| v \right\|$ con $\lambda$ el mayor valor propio con $| \lambda |&lt 1$
+            </li>
+            <li>
+              $v\in E^u \iff \left\| A^{-n} v\right\|\leq C\mu^n \left\| v \right\|$ con $\mu$ el mayor valor propio con $| \mu |&gt 1$
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="caja"> <span class="def">Criterio de conos:</span> <br><br>
+        
+        Primero definamos qué es un cono: <br><br>
+
+        <span class="def">Def:</span> Definimos el <ins>$\gamma$-cono horizontal</ins> en $p\in\mathbb{R}^n$ como $$H_p^{\gamma} := \{(u,v)\in T_p\mathbb{R}^n / \|v\|\leq\gamma\|u\|\}$$
+
+        También definimos el <ins>$\gamma$-cono vertical</ins> en $p\in\mathbb{R}^n$ como $$V_p^{\gamma} := \{(u,v)\in T_p\mathbb{R}^n / \|u\|\leq\gamma\|v\|\}$$
+        
+        <span class="def">Def:</span> Un <ins>campo de conos</ins> es un mapa que a cada $p\in\mathbb{R}^n$ le asocia un cono $K_p$ centrado en $p$. <br><br>
+
+        Un difeo actúa en un campo de conos mediante $(F_*K)_p:=Df_{f^{-1}(p)}(K_{f^{-1}(p)})$. <br><br>
+
+        <span class="teo">Teo:</span> Un conjunto $\Lambda$ compacto y $f$-invariante es hiperbólico $\iff$ existen $\lambda< 1 < \mu $ tales que para todo $x\in\Lambda$ existen $S_x$ y $T_x$ subespacios de $T_x\Lambda$
+
+        y campos de conos horizontales $H_x \supset S_x$ y verticales $V_x \supset T_x$ tales que
+
+        $$Df_x(H_x)\subset\mathring{H}_{f(x)},\quad Df_x^{-1}(V_{f(x)})\subset \mathring{V}_x, \quad \|Df_x(v)\|\geq\mu\|v\|,\quad \|Df_x^{-1}(w)\|\geq\lambda^{-1}\|w\| \quad \text{para $v\in H_x$, $w\in V_{f(x)}$.} $$
+
+        <span class="obs">Observaciones:</span> <br><br>
+        
+        Es decir, dado un $x\in\Lambda$, tenemos dos conos complementarios en $T_x\Lambda$ que son "contraídos" o "expandidos" por $Df_x$. <br><br>
+
+        Estos conos en $x$ están dados por los vectores que tienen un ángulo $\leq\theta$ con los subespacios estables e inestables de $T_x\Lambda$. <br><br>
+
+        Tenemos que los subespacios estables e inestables están dados por $E^s(x)=\bigcap\limits_{n\in\mathbb{N}}Df^{-n}(V_{f^n(x)})$ y $E^u(x)=\bigcap\limits_{n\in\mathbb{N}}Df^{n}(H_{f^{-n}(x)})$
+
+        </div>
+
+        <div class="caja">
+
+          <span class="def">Variedades locales:</span> <br><br>
+
+          Dado $\Lambda\subset M$ un conjunto hiperbólico para f, tenemos una <ins>familia de subvariedades encajadas</ins> $W_{loc}^s(x)$ y $W_{loc}^u(x)$ de clase $C^1$ y difeomorfas a $\overline{B(0,1)}\subset\mathbb{R}^{\dim{E^s}}$ que varían continuamente con $x\in\Lambda$ <span class="comm">definir bien</span> y cumplen:
+
+          <ul>
+            <li>
+              <ins>Invariantes:</ins> $f(W_{loc}^s(x))\subset W_{loc}^s(f(x))$
+            </li>
+            <li>
+              <ins>Tangentes:</ins> $T_xW_{loc}^s(x) = E_{loc}^s(x)$
+            </li>
+            <li>
+              <ins>Contraídas / Expandidas:</ins> Existe $c&gt 0,\;  \lambda\in(0,1)$ tales que si $x\in\Lambda,\; y,\; z\in W_{loc}^s(x)$, entonces $d(f^n(y),f^n(z))\leq c\lambda^n$ <br><br>
+              <span class="comm">En el caso $W_{loc}^u(x)$ se tiene lo mismo pero con $f^{-n}$</span>
+            </li>
+            <li>
+              <ins>Únicas:</ins> Si $W_{loc}^s(x)'$ es otra familia con las propiedades anteriores, entonces existe $n_o$ tal que para todo $x\in\Lambda$ se cumple $f^{n_0}(W_{loc}^s(x))'\subset W_{loc}^s(f^{n_0}(x))$ <span class="comm">Lo mismo para $W_{loc}^u(x)$ pero con $f^{-n_0}$</span>
+            </li>
+          </ul>
+
+          <span class="obs">Dato:</span> Las $W_{loc}^s(x)$ y $W_{loc}^u(x)$ tienen tamaño uniforme, y también varían continuamente con respecto a $f$ difeomorfismo. <br><br>
+
+          <span class="def">Def:</span> Definimos la <ins>variedad estable global</ins> de $x\in\Lambda$ como:
+          
+          $$W^s(x) := \bigcup\limits_{n\geq 0}f^{-n}(W_{loc}^s(f^n(x))) = \{ y\in M : d(f^n(y),f^n(x))\xrightarrow{n} 0\}$$
+
+          A esta variedad $W^s(x)$ podemos inducirle una métrica Riemanniana restringiendo la de $M$, y de ese modo podemos definir 
+
+          $W^s_\varepsilon(x)$ como los puntos a distancia menor a $\varepsilon$ de $W^s(x)$. <br><br>
+
+          Si elegimos el $\varepsilon$ suficientemente chico, tenemos que $W^s_\varepsilon(x)$ es una familia de variedades estables locales que verifican las condiciones anteriores. <br><br>
+
+          Para obtener la <ins>variedad inestable global</ins> realizamos la misma construcción con $d(f^{-n}(y),f^{-n}(x))\xrightarrow{n} 0$ y $\bigcup\limits_{n\geq 0}f^{n}(W_{loc}^s(f^{-n}(x)))$ <br><br>
+
+          <span class="prop">Prop:</span> Existe $\delta &gt 0,\; c&gt 0 ,\; \varepsilon &gt 0$ tales que si $x,\; y \in\Lambda$ cumplen que $d(x,y)&lt \delta$ entonces $W^s_{\varepsilon}$ y $W^u_{\varepsilon}$ se cortan en un único punto y su intersección es transversal. (Es decir, $T_zW_{\varepsilon}^s(x)\oplus T_zW_{\varepsilon}^u(y)=T_zM$) <br><br>
+
+          Además $d(z,x)^2+d(z,y)^2\leq cd(x,y)^2$. <br><br>
+
+          <span class="prop">Prop:</span> Si $\Lambda$ es un <ins>conjunto hiperbólico compacto y localmente maximal</ins> para $f$, y $f:\Lambda\to\Lambda$ es <ins>topológicamente mixing</ins>, entonces existe un $n_0\in\mathbb{N}$ tal que para todos $x,\; y \in \Lambda,\; n\geq n_0$ se tiene $f^n(W^u(x))\cap W^s(y)\neq\varnothing$
+
+        </div>
+
+        <div class="caja">
+        
+          <span class="def">Def:</span> Un homeo $f:X\to X$ es <ins>expansivo</ins> si es <a href="..\sist din\expansivos a futuro.html" target="_blank">$\alpha$-expansivo</a> para algún $\alpha &gt 0$. <br><br>
+
+          <span class="obs">Obs:</span> La restricción de un difeo a un conjunto hiperbólico es expansiva.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="teo">$\lambda$-lema / Lema de inclinación:</span> ?????
+
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Anosov closing lemma:</span>
+
+          Sea $\Lambda$ un conjunto hiperbólico para $f$ definido en $U$. Entonces existe un entorno $V\supset \Lambda$ y constantes $c,\; \varepsilon_0 &gt 0$ tales que para todo $\varepsilon &lt\varepsilon_0$ y cualquier <a href="..\sist din\recurrentes por cadenas.html">$\varepsilon$-órbita</a> periódica $(x_0,\;\dots,\;x_m)\subset V$ existe un punto $y\in U$ con $d(f^k(y),\; x_k)&lt c\varepsilon$ para $k\in\{0,\dots,\; m-1\}$ y $f^m(y)=y$.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="def">Def:</span> Un subshift $\Sigma_A$ es de <ins>tipo finito</ins> si existe $n_0 &gt 0$ y un conjunto $P$ de palabras de largo $n_0+1$ tal que para todo $x\in\Sigma_A$ se tiene que toda palabra de largo $n_0+1$ de $x$ está en $P$. <br><br>
+
+          El <ins>orden</ins> del subshift es el mínimo $n_0$ que cumple la definición. <br><br>
+
+          <span class="prop">Prop:</span> Dado $\Lambda$ conjunto <ins>hiperbólico localmente maximal</ins> para $f$, existe un subshift de tipo finito $\sigma:\Sigma_A\to\Sigma_A$ y un mapa continuo y sobre $h:\Sigma_A\to\Lambda$ tal que $F|_{\Lambda}\circ h = h\circ\sigma$. <br><br>
+
+          Además, el mapa $h$ es biyectivo en un abierto denso de $\Lambda$, y existe $n_0 &gt 0$ tal que $h^{-1}(\{y\})$ tiene a lo sumo $n_0$ puntos para todo $y\in\Lambda$. <br><br>
+
+          De hecho, si $\Lambda$ es <ins>totalmente disconexo</ins>, entonces $h$ es un homeo.
+
         </div>
 
 
