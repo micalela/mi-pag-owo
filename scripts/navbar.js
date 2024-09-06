@@ -15,6 +15,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="estudiando/antonie/conjuntos hiperbólicos.html">intentando hacer una monografía</a>
 <span>✧</span>
+<a href="estudiando/tópicos/tópicos.html">tópicos de geometría</a>
+<span>✧</span>
 <a href="desvaríos.html">desvaríos</a>
 </div>`;
 
