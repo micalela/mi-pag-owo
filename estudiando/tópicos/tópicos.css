@@ -1,0 +1,87 @@
+.navbar{
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(241, 225, 172);
+}
+
+.navbar a{
+color: rgb(38, 88, 55);
+background-color: transparent;
+}
+
+.navbar span{
+    color: rgb(38, 88, 55);
+    background-color: transparent; 
+}
+
+body {
+    background-image: url("../../assets/fondos/bkgtile.gif");
+  }
+
+.ej{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.obs{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.teo{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.prop{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.lema{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.def{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.dem{
+    width: fit-content;
+    background-color: rgb(243, 166, 65);
+    padding: 3px;
+}
+.caja{
+    width: fit-content;
+    background-color: rgb(241, 225, 172);
+    padding: 15px 25px;
+    margin: 15px;
+}
+.duda{
+    width: fit-content;
+    background-color: rgb(163, 235, 207);
+    padding: 5px;
+}
+.comm{
+    width: fit-content;
+    background-color: rgb(163, 235, 207);
+    padding: 5px;
+}
+
+.agrandar:hover{
+    transform: scale(1.5) translateX(50px);
+}
+
+.poronga:hover{
+    transform: scale(3) translateX(40px);
+}
+
+li{
+    padding: 4px;
+}
+
+.imagenTitulo{
+    max-width: 100%;
+}

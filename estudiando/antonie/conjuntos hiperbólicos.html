@@ -73,8 +73,15 @@
           </li>
         </ul>
         
-        <span class="def">Def:</span> Decimos que $\Lambda$ es <ins>localmente maximal</ins> si existe $V$ entorno abierto de $\Lambda$ tal que $$\Lambda =\bigcap\limits_{n\in\mathbb{Z}}f^n(\overline{V})$$
+        <span class="def">Def:</span> Decimos que $\Lambda$ es <ins>localmente maximal</ins> si existe $V\supset \Lambda$ abierto tal que $$\Lambda =\bigcap\limits_{n\in\mathbb{Z}}f^n(\overline{V})$$
 
+        <span class="def">Def:</span> Decimos que $\Lambda$ es un <ins>atractor</ins> si existe $V\supset \Lambda$ abierto tal que $$\Lambda =\bigcap\limits_{n\in\mathbb{N}}f^n(\overline{V})$$
+
+        </div>
+
+        <div class="caja">
+
+          <span class="obs">Pregunta:</span> Puede un conjunto de Cantor $C$ ser un conjunto atractor? <br><br>
         </div>
 
 
@@ -85,6 +92,24 @@
           <ul>
             <li>
               <ins>Periódicos hiperbólicos de un difeo:</ins>
+            </li>
+            <li>
+              <ins>Solenoide:</ins>
+
+               Sea $M=\{(z,w)\in\mathbb{C}^2 : |z|=1,|w|\leq 1\; \} = S^1\times D$ el toro sólido, y definimos $T:M\to M$ tal que
+
+               $$T(z,w)=(z^2,\frac{z}{2}+\frac{w}{4})$$
+
+               Entonces cada disco $\{z\}\times D$ se mapea al disco $\{z\}\times D'$ de centro $\frac{z}{2}$ y radio $\frac{w}{4}$. <br><br>
+
+               Por lo tanto, $T(M)$ intersecta al disco $\{z^2\}\times D$ en dos discos de radio $1/4$, de centros $\frac{z}{2}$ y $-\frac{z}{2}$.
+
+               Es decir, $T$ actúa en el toro $M$ estirándolo para que de dos vueltas (expandiendo con factor $\frac{1}{2}$) y contrayéndolo por un factor de $\frac{1}{4}$. <br><br>
+
+               Inductivamente, $T^n$ hace que el toro de $2^n$ vueltas, y cada disco $\{z\}\times D$ intersecta a $T^n(M)$ en $2^n$ discos de radio $\frac{1}{4^n}$. <br><br>
+
+               Tomamos $\Lambda =\bigcap\limits_{n\in\mathbb{N}} T^n(M)$. Luego $\Lambda$ es un conjunto hiperbólico atractor que intersecta a los discos $\{z\}\times D$ en un Cantor.
+
             </li>
           </ul>
 

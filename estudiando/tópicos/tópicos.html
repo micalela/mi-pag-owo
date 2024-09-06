@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="tópicos.css" />
+        <link rel="stylesheet" href="navbar tópicos.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar tópicos.js"></script>
+
+        <img
+        src="..\..\assets\tópicos\tópicos.png"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 0px 0px 10px 10px; height: 100px;"
+        />
+    
+        <div class="caja"><span class="def">Plano afín:</span>
+        
+            Un plano afín es un par $(\mathbb{A},\mathcal{R})$, con $\mathbb{A}$ un conjunto y $\mathcal{R}$ un conjunto de subconjuntos que satisfacen los siguentes 3 axiomas: <br><br>
+
+            <ul>
+                <li><ins>A1</ins>: Dados dos puntos distintos, por ellos pasa una única recta.</li>
+                <li><ins>A2</ins>: Dadas una recta r y un punto $P\not\in r$, existe una recta que pasa por P y es paralela a r.</li>
+                <li><ins>A3</ins>: Existen 3 puntos no colineales.</li>
+            </ul>
+
+            Llamamos <ins>puntos</ins> a los elementos de $\mathbb{A}$ y <ins>rectas</ins> a los de $\mathcal{R}$.
+
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> $m$ y $l$ son paralelas ($m||l$) si $m = l$ o $m\cap l=\varnothing$ </div>
+
+        <div class="caja"><span class="prop">Prop:</span> El paralelismo es una relación de equivalencia.</div>
+
+        <div class="caja"><span class="prop">Prop:</span> Un plano afín contiene al menos 4 puntos.</div>
+
+        <div class="caja"><span class="ej">Ejemplos:</span>
+        
+            <ul>
+                <li>$(\mathbb{R}^2,\{(x,y)\;/\;ax+by=c \text{ con } a,b,c\in\mathbb{R}\})$</li>
+                <li>Plano afín de 4 puntos</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Un <ins>haz de rectas</ins> en $\mathbb{A}$ es alguno de estos subconjuntos de rectas:
+        
+            <ul>
+                <li>$\mathcal{H}_P$: Todas las rectas que pasan por un punto $P$.</li>
+                <li>$\mathcal{H}_l$: Todas las rectas paralelas a una recta $l$</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="ej">Ejemplo:</span>
+            En $\mathbb{R}^2$, tenemos:
+            
+            <ul>
+                <li>$\mathcal{H}_P$, con $P=(x_0,y_0)$ es el cojunto de rectas que verifican $ax+by=ax_0+by_0$</li>
+                <li>$\mathcal{H}_l$, con $l: ax+by=c$ es el conjunto de rectas de la forma $a\lambda x + b\lambda y =c$, con $\lambda\neq 0$.</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> El <ins>completado de $\mathbb{A}$</ins> es $\overline{\mathbb{A}}:=\mathbb{A}\cup \{P_l : l \text{ recta de } \mathbb{A}\}$. <br><br>
+
+            El <ins>completado de $l$</ins> recta de $\mathbb{A}$ (abuso de notación) es $\overline{l}=l\cup\{P_l\}$. <br><br>
+
+            Definimos la <ins>recta impropia</ins> $l_{\infty}$ como la unión de todos los puntos impropios. <br><br>
+
+            Definimos las rectas en $\overline{\mathbb{A}}$ como $\overline{l}$ para $l$ recta de $\mathbb{A}$ o como $l_{\infty}$.
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Definimos el plano proyectivo $(\mathbb{P},\mathcal{R})$ como el conjunto de puntos y rectas que verifican los siguientes 4 axiomas:
+        
+            <ul>
+                <li><ins>P1</ins>: Por dos puntos distintos pasa una única recta.</li>
+                <li><ins>P2</ins>: Dos rectas se intersectan en al menos un punto.</li>
+                <li><ins>P3</ins>: Existen al menos 3 puntos no colineales.</li>
+                <li><ins>P4</ins>: Una recta contiene al menos 3 puntos.</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="prop">Prop:</span> El completado de un plano afín es un plano proyectivo.</div>
+
+        <div class="caja"><span class="ej">Ejemplos:</span>
+        
+            <ul>
+                <li>$\overline{\mathbb{R}^2}$</li>
+                <li>El completado del plano afín de 4 puntos es un plano proyectivo de 7 puntos.</li>
+                <li>Definimos $\mathbb{P}^2 = \{[v] : v\in\mathbb{R}^3, \; v\neq(0,0,0)\}$, con $[v]=[w]$ si $v=\lambda w,\; \lambda\neq 0$. <br><br>
+                    
+                    Definimos una recta en $\mathbb{P}^2$ como el conjunto de puntos contenidos en un subespacio de dimensión 2. <br><br>
+
+                    Observar que verifica los axiomas: <br> <br>
+
+                    <ul>
+                        <li>P1: Dos vectores de dos sev distintos generan un único plano que los contiene.</li>
+                        <li>P2: Dos planos que pasan por el origen se intersectan en al menos una recta.</li>
+                        <li>P3: La base canónica nos genera 3 puntos no colineales.</li>
+                        <li>P4: Dado un plano, tomamos $v_1,\; v_2$ generadores y tenemos que las clases de $v_1,v_2,v_1+v_2$ son distintas.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Una <ins>colineación</ins> es una biyección entre planos proyectivos, $\phi:\mathbb{P}\to\mathbb{P}'$ que manda puntos colineales en puntos colineales. <br><br>
+
+            Decimos que dos planos proyectivos son <ins>isomorfos</ins> si existe una colineación entre ellos. <br><br>
+
+            Las colineaciones de $\mathbb{P}$ en sí mismo, junto con la composición, conforman el grupo $Aut(\mathbb{P})$.
+        </div>
+
+        <div class="caja"><span class="prop">Prop:</span> $\overline{\mathbb{R}^2}\simeq\mathbb{P}^2$</div>
+
+        <div class="caja"><span class="def">Def:</span> Un <ins>grupo</ins> es un conjunto $G$ junto con una operación binaria $\cdot:G\times G\to G$ que satisface los siguientes axiomas: <br>
+        
+                <ul>
+                    <li><ins>G1</ins>: Asociatividad</li>
+                    <li><ins>G2</ins>: Existencia del neutro</li>
+                    <li><ins>G3</ins>: Existencia de inverso</li>
+                </ul>
+
+            Además, si $G$ satisface: <br>
+
+            <ul><li><ins>G4</ins>: Conmutatividad</li></ul>
+
+            decimos que $G$ es abeliano.
+        </div>
+
+        <div class="caja"><span class="ej">Ejemplo:</span>
+        
+            Dado un conjunto $A$, su conjunto de biyecciones $Biy(A)$, junto con la composición, conforman un grupo, en general no abeliano. <br><br>
+
+            Si $A$ es finito, lo llamamos el <ins>grupo de permutaciones</ins> $Per(A)$.
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Un <ins>subgrupo</ins> de $G$ es un subconjunto no vacío $H\subset G$ tal que si $f,g\in H$ entonces $f\cdot g \in H$ y $f^{-1},g^{-1}\in H$.</div>
+
+        <div class="caja"><span class="def">Def:</span> Definimos el <ins>orden de G</ins> como $|G|:=\#G$ si G es finito, y como $|G|:=\infty$ si G no finito.</div>
+
+        <div class="caja"><span class="def">Def:</span> Decimos que $G$ <ins>actúa</ins> en un conjunto $A$ si existe una operación $\cdot :G\times A\to A$ que verifica: <br>
+        
+            <ul>
+                <li>$1\cdot a = a \quad\forall a\in A$</li>
+                <li>$(fg)\cdot a = f \cdot (g\cdot a) \quad\forall a\in A, f,g\in G$</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="ej">Ejemplo:</span> $Per(A)$ actúa en $A$ mediante $\phi\cdot a := \phi(a)$</div>
+
+        <div class="caja"><span class="def">Definiciones:</span>
+        
+            Sea $G$ grupo que actúa en $A$, y sea $a\in A$ <br>
+
+            <ul>
+                <li>La <ins>órbita</ins> de $a$ es el conjunto $\mathcal{O}(a) := \{g\cdot a : g\in G\} \subset A$</li>
+                <li>El <ins>estabilizador</ins> de $a$ es el subgrupo $G_a := \{g\in G : g\cdot a = a\} &lt G$</li>
+            </ul>
+        </div>
+
+        <div class="caja"><span class="prop">Prop:</span> $G$ finito y actúa en $A \Rightarrow \#\mathcal{O}(a)=\frac{|G|}{|G_a|} \quad\forall a\in A$ <br><br>
+
+            <span class="dem">Dem:</span> Consideramos la función $\varphi_a:G\to A$ dada por $\varphi_a(g)=g\cdot a$. Entonces $\mathcal{O}(a) = Im(\varphi_a)$<br><br>
+
+            Dado $b\in A$, $\varphi_a^{-1}(b)=\{g\in G : g\cdot a = b\}$. <br><br>
+            
+            Si $b\not\in\mathcal{O}(a)$, entonces $\varphi_a^{-1}(b)=\varnothing$. Luego, $\{\varphi_a^{-1}(b) : b\in\mathcal{O}(a)\}$ es una partición de $G$ en $\#\mathcal{O}(a)$ clases.<br><br>
+
+            Si $b\in\mathcal{O}(a)$, veamos que $\#\varphi_a^{-1}(b) = \# G_a$. De esta forma, tendríamos que todas las clases tienen $|G_a|$ elementos, y por lo tanto podríamos concluir $|G|=\#\mathcal{O}(a)\cdot |G_a|$. <br><br>
+
+            Como $b\in\mathcal{O}(a)\Rightarrow\;\exists\; h\in G / h\cdot a=b$. <br><br>
+
+            $g\in\varphi_a^{-1}(b) \iff \varphi_a(g)=b \iff g\cdot a =b \iff g\cdot a = h\cdot a \iff h^{-1}g \cdot a = a \iff h^{-1}g\in G_a$ <br><br>
+
+            Luego tenemos una biyección $\Phi:\varphi_a^{-1}(b)\to G_a$ dada por $\Phi(g)=h^{-1}g$.
+        </div>
+
+        <div class="caja"><span class="def">Def:</span>El <ins>conjugado</ins> de $H$ respecto a $g$ es $gHg^{-1}&lt G$.</div>
+
+        <div class="caja"><span class="def">Def:</span>$G$ actúa <ins>transitivamente</ins> en $A$ si dados $a,b\in A$ existe $g\in G$ tal que $g\cdot a =b$.</div>
+
+        <div class="caja"><span class="obs">Obs:</span> Si $g\cdot a = b$ entonces $G_a$ y $G_b$ son conjugados:</div>
+
+        <div class="caja"><span class="prop">Prop:</span> La acción de $Aut(\mathbb{P}_7)$ en $\mathbb{P}_7$ es transitiva. <br><br>
+        
+        <span class="dem">Dem:</span> encontrarlos a mano
+    
+            <ul>
+                <li>
+                    $(AC)(BD)\cdot A=C$
+                </li>
+                <li>
+                    $(AB)(CD)\cdot A=B$
+                </li>
+                <li>
+                    $(AC)(BD)\cdot (AB)(CD)\cdot A=D$
+                </li>
+                <li>
+                    plim plum
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="caja"><span class="prop">Prop:</span> Si $G=Aut(\mathbb{P}_7)$, el estabilizador $G_p$ actúa transitivamente en $\mathbb{P}_7-^{p\}$</div>
+
+        <div class="caja"><span class="prop">Prop:</span> $\# Aut(\mathbb{P}_7)=168$ <br><br>
+        
+            <span class="dem">Dem:</span> $|G|=\#\mathcal{O}(p) |G_p|=7|G_p|$, y además tenemos <br><br>
+
+            $|G_p|=\#\mathcal{O}(q) |G_{p,q}| = \#\mathbb{P}_7-\{p\} \cdot 4$ <span class="comm">esto es por ej practic me da paja escribirlo</span> <br><br>
+
+            $\Rightarrow |G_p|=6\cdot 4 \Rightarrow |G| = 7\cdot 6\cdot 4 =168 $
+
+        </div>
+
+        <div class="caja">
+            El número de ternas $(A_1,A_2,A_3)$ tales que $A_1,A_2,A_3$ son puntos distintos de $\mathbb{P}_7$ es la cantidad de arreglos de 7 tomados de a 3, $7\cdot 6\cdot 5$. <br><br>
+
+            Si queremos saber cuántas de estas ternas tienen puntos no colineales, debemos restar las ternas formadas por los puntos de cada una de las 7 rectas, o sea, $7\cdot 6\cdot 5 - 7\cdot 6=7\cdot 6\cdot 7 = 168$ <br><br>
+
+            Por otro lado, $Aut(\mathbb{P}_7)$ actúa naturalmente en $\mathbb{P}_7\times\mathbb{P}_7\times\mathbb{P}_7$ mediante $g\cdot (A_1,A_2,A_3)=(g(A_1),g(A_2),g(A_3))$.
+        </div>
+
+
+
+
+
+</body>
+</html>
