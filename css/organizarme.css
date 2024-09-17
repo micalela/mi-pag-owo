@@ -1,0 +1,72 @@
+body {
+    background-image: url("../assets/fondos/apple.gif");
+  }
+
+.caja {
+  background-color: rgba(147, 158, 127, 0.363);
+  margin: 0px 150px 50px 100px;
+  padding: 25px 20px 20px 20px;
+}
+p {
+  background-color: rgba(159, 161, 139, 0.733);
+  margin: 0px 0px 10px 0px;
+  padding: 5px 5px 5px 5px;
+  width: fit-content;
+}
+
+h1 {
+  background-color: rgba(228, 203, 180, 0.973);
+  margin: 50px 150px 30px 100px;
+  width: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.cajaflex {
+    display: flex;
+    background-color: rgba(159, 161, 139, 0.733);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.actividad {
+  width: 40%;
+  padding: 10px 0px 0px 0px;
+}
+
+.botones {
+  width: 40%;
+  padding: 10px 0px 0px 0px;
+}
+
+.total {
+  width: 20%;
+  padding: 10px 0px 0px 0px;
+}
+.tactividad {
+  width: 20%;
+  padding: 10px 0px 0px 0px;
+  font-size: 20px;
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.tbotones {
+  width: 30%;
+  padding: 10px 0px 0px 0px;
+  font-size: 15px;
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.ttotal {
+  width: 20%;
+  padding: 10px 0px 0px 0px;
+  font-size: 20px;
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
