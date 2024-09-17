@@ -52,11 +52,24 @@ function ponertitulo(title) {
 
 // cuenta checked checkboxes en un contenedor y pone el resultado en otro
 function countCheckedCheckboxes(containerId, resultId, checkboxNumber) {
-    
+
     const container = document.getElementById(containerId); // Select the div container by id
     const checkboxes = container.querySelectorAll('input[type="checkbox"]'); // Find all checkbox inputs within the container
     const checkedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length; // Filter and count the checked checkboxes
+    const checkedIndexes = Array.from(checkboxes)
+        .map((checkbox, idx) => checkbox.checked ? idx : null)
+        .filter(idx => idx !== null);
+
     document.getElementById(resultId).querySelector('p').textContent = `${checkedCount} / ${checkboxNumber}`; // Update the result text for the specific container
+    const currentContainer = containers.filter(container => container.containerId === containerId)[0];
+    const otherContainers = containers.filter(container => container.containerId !== containerId);
+    currentContainer.selected = checkedIndexes;
+
+    containers = [
+        ...otherContainers,
+        currentContainer,
+    ]
+
 }
 
 // agarra cada checkbox container y le dice estate atento a si cambia una checkbox y en ese caso conta de nuevo. y también cuenta de entrada cuando inicializas.
@@ -129,6 +142,41 @@ function hasWeekChanged() {
     }
 
     return false; // Same week
+}
+
+function sendContainers() {
+    fetch('http://localhost:3000/containers', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(containers)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        }
+        throw new Error('Network response was not ok.');
+    })
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
+}
+
+function fetchContainers() {
+    fetch('http://localhost:3000/containers')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Parse JSON response
+        })
+        .then(data => {
+            console.log('Containers data:', data);
+            // You can manipulate the DOM or update your application state here
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 }
 
 /* const 
