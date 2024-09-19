@@ -43,18 +43,16 @@ h1 {
   width: 20%;
   padding: 10px 0px 0px 0px;
 }
-.tactividad {
-  width: 20%;
-  padding: 10px 0px 0px 0px;
-  font-size: 20px;
+.awa{
+  padding-top: 10px;
+  font-size: 15px;
   background-color: rgba(228, 203, 180, 0.973);
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 
 .tbotones {
-  width: 30%;
-  padding: 10px 0px 0px 0px;
+  padding-top: 20px;
   font-size: 15px;
   background-color: rgba(228, 203, 180, 0.973);
   font-family: 'Courier New', Courier, monospace;
@@ -62,8 +60,23 @@ h1 {
 }
 
 .ttotal {
-  width: 20%;
-  padding: 10px 0px 0px 0px;
+  padding-top: 20px;
+  font-size: 20px;
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.ttotalsuma {
+  padding-top: 20px;
+  font-size: 20px;
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.tsemanas {
+  padding-top: 10px;
   font-size: 20px;
   background-color: rgba(228, 203, 180, 0.973);
   font-family: 'Courier New', Courier, monospace;

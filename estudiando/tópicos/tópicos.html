@@ -244,7 +244,79 @@
             Por otro lado, $Aut(\mathbb{P}_7)$ actúa naturalmente en $\mathbb{P}_7\times\mathbb{P}_7\times\mathbb{P}_7$ mediante $g\cdot (A_1,A_2,A_3)=(g(A_1),g(A_2),g(A_3))$.
         </div>
 
+        <div class="caja">
+            <span class="prop">Prop:</span> Dados dos triángulos $A_1,A_2,A_3$ y $A_1',A_2',A_3'$ en $\mathbb{P}_7$, existe un único $g\in Aut(\mathbb{P}_7)$ tal que $g(A_i)=A_i' \;\forall\;i\in\{1,2,3\}$
+        </div>
 
+        <div class="caja">
+            <span class="def">Notación:</span> $GL(n,\mathbb{R})=\{ A\in M_{n\times n}\; : \; det(A) \neq 0\}$ <br><br>
+
+            Dada $A \in GL(3,\mathbb{R})$, la transformación lineal $L_A:\mathbb{R}^3\to\mathbb{R}^3$ es constante en las clases de equivalencia de $\mathbb{P}^2$ y manda subespacios de dimensión 3 en subespacios de dimensión 3, por lo tanto $\widetilde{L_A}:\mathbb{P}^2\to\mathbb{P}^2$ es una colineación.
+        </div>
+
+        <div class="caja">
+            <span class="def">Def:</span> $PGL(3,\mathbb{R})=\{\phi_A:\mathbb{P}^2\to\mathbb{P}^2 : \; A\in GL(3,\mathbb{R})\}$ es el <ins>grupo general lineal proyectivo</ins>. <br><br>
+
+            <span class="def">Lema:</span> $\phi_A\circ\phi_B=\phi_{AB}$ <br><br>
+
+            <span class="obs">Obs:</span>
+
+            <ul>
+                <li>
+                    Si $A=\begin{pmatrix}
+                    \lambda & 0 & 0\\
+                    0 & \lambda & 0\\
+                    0 & 0 & \lambda
+                    \end{pmatrix}$ entonces $\phi_A=Id$
+                </li>
+                <li>
+                    $(\phi_A)^{-1} = \phi_{A^{-1}}$
+                </li>
+            </ul>
+        </div>
+
+        <div class="caja">
+            <span class="def">Def</span> $\varphi : G\to H$ es un <ins>homomorfismo de grupos</ins> si $\varphi(f)\cdot\varphi(g)=\varphi(f\cdot g)$ <br><br>
+
+            <span class="def">Def:</span> Un homomorfismo de grupos es un <ins>isomorfismo</ins> si es biyectiva.
+        </div>
+
+        <div class="caja">
+            <span class="teo">Teorema fundamental:</span> La acción natural ???? ññññ
+        </div>
+
+        <div class="caja">
+            <span class="teo">Teo:</span>
+            Dados $\{A_1,A_2,A_3,A_4\}$ y $\{B_1,B_2,B_3,B_4\}$ dos subconjuntos de $\mathbb{P}^2$ tal que todos 3 puntos son no colineales, existe una única $\phi\in PGL(3,\mathbb{R})$ tal que $\phi(A_i)=B_i \;\forall\; i\in\{1,2,3,4\}$
+        </div>
+
+        <div class="caja">
+            <span class="def">Def:</span> Un <ins>anillo con división</ins> es un conjunto $\mathbb{K}$ con dos operaciones $"+"$ y $"\cdot"$ tales que:
+
+            <ul>
+                <li>
+                    $(\mathbb{K},+)$ es un grupo abeliano
+                </li>
+                <li>
+                    $(\mathbb{K}-\{0\},\cdot)$ es un grupo
+                </li>
+                <li>
+                    $\forall \; a,b,c \in\mathbb{K}$ tenemos:
+                    <ul>
+                        <li>
+                            $(a+b)\cdot c=a\cdot c+ b\cdot c$
+                        </li>
+                        <li>
+                            $a\cdot(b+c)=a\cdot b + a\cdot c$
+                        </li>
+                    </ul>
+                </li>
+            </ul> 
+
+            Si además es abeliano, decimos que es un <ins>cuerpo</ins>.
+
+
+        </div>
 
 
 
