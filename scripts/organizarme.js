@@ -150,7 +150,7 @@ function sendContainers() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(containers)
+        body: JSON.stringify({containers})
     })
     .then(response => {
         if (response.ok) {
@@ -178,6 +178,8 @@ function fetchContainers() {
             console.error('Error fetching data:', error);
         });
 }
+
+fetchContainers();
 
 /* const 
 
