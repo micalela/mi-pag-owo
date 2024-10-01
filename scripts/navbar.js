@@ -1,5 +1,5 @@
 const navbar = `<div class="navbar">
-<a href="aprendiendo uwu.html">aprendiendo html</a>
+<a href="aprendiendo uwu2.html">aprendiendo html</a>
 <span>✧</span>
 <a href="cartelitos.html">cachivachería</a>
 <span>✧</span>
