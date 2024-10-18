@@ -3,6 +3,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="ifs.html">ifs</a>
 <span>✧</span>
+<a href="keep a necklace from falling apart.html">antoine</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a></div><br>`;
 
 /* <button id="boton_navbar">✧˖°˖✧°</button> */

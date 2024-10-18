@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ciencia</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="monografía.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar monografía.js"></script>
+
+        <img
+        src="..\..\assets\monografía\collar de antoine.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 70px;"
+        />
+
+        <div class="caja">Hola buenas tardes hoy vamos a leer este artículo "<a href="https://www.jstor.org/stable/2686463?read-now=1&seq=3#page_scan_tab_contents">Antoine's Necklace or How to Keep a Necklace from Falling Apart</a>" <br><br>
+        
+            (fuck jstor pero no pude encontrarlo en ningún otro lado)
+        
+        </div>
+
+        <div class="caja">
+            <span class="def">Def:</span> Un subconjunto $C$ de un espacio euclídeo $E$ es un <ins>cantor</ins> sii es:
+
+            <ul>
+                <li>
+                    <ins>perfecto</ins>: $x\in C\iff x=\lim\limits_{x\to\infty}x_n \quad$ para $\{x_n\}\subset C-\{x\}$
+                </li>
+                <li>
+                    <ins>compacto</ins> (cerrado y acotado)
+                </li>
+                <li>
+                    <ins>totalmente disconexo</ins> (sus componentes conexas son puntos)
+                </li>
+            </ul>
+
+            Un <ins>homeomorfismo</ins> de $X$ en $Y$ es una función $f:X\to Y$ continua y con inversa continua. <br><br>
+
+            Si $Y\subset E$, decimos que $f:X\to E$ es un <ins>encaje</ins> de $X$ en $E$. (También decimos que $Y$ es un <ins>encaje</ins> de $X$.)<br><br>
+
+            Todos los cantor son homeomorfos entre sí, es decir, dados $C,\;C'$ existe un homeo $f:C\to C'$. <br><br>
+
+            Dos encajes $f,g:X\to E$ se dicen <ins>equivalentes</ins> si existe un homeo $\psi :E\to E$ tal que $\psi(f(X))=g(X)$. Es decir, si existe un homeo "del ambiente" que me mande un encaje en el otro. <br><br>
+        </div>
+
+        <div class="caja">
+            <span class="teo">Teo:</span> Todo esto es 100% real:
+            
+            <ol>
+                <li>
+                    Todos los encajes del cantor en el plano son equivalentes.
+                </li>
+                <li>
+                    Todos los encajes de un intervalo en el plano son equivalentes.
+                </li>
+                <li>
+                    Todos los encajes de $S^1$ en el plano son equivalentes.
+                </li>
+            </ol>
+
+            Seguirá valiendo todo esto para el espacio???? la respuesta es no. ninguna de las 3 vale. <br><br>
+
+            El contraejemplo de 1. es el <ins>collar de antoine</ins>.
+        </div>
+
+        <div class="caja">
+
+            <span class="def">Collar de Antoine:</span> Definimos el collar de antoine como la intersección de numerables conjuntos $T_i$ de toros sólidos entrelazados: <br><br>
+
+            <ul>
+                <li>
+                    $T_0$ es un toro sólido.
+                </li>
+                <li>
+                    $T_1$ son 4 toros sólidos entrelazados $T_{(1,1)}, T_{(1,2)}, T_{(1,3)}, T_{(1,4)}$, formando una cadena cerrada, tal que $T_1\subset T_0$.
+                </li>
+                <li>
+                    $T_2$ son $4^2$ toros sólidos, separados en subconjuntos $T_{(2,1)}, T_{(2,2)}, T_{(2,3)}, T_{(2,4)}$ tales que $T_{(2,i)}\subset T_{(1,i)}$ es una cadena cerrada de 4 toros sólidos entrelazados.
+                </li>
+                <li>
+                    $T_n$ son $4^n$ toros sólidos, separados en subconjuntos $T_{(n,1)},\dots , T_{(n,4^{n-1})}$, tales que cada $T_{(n,j)}$ es una cadena de 4 toros sólidos entrelazados contenida en algún toro de $T_{n-1}$. <br><br>
+
+                    Observar que $T_{n-1}$ contiene exactamente $4^{n-1}$ toros sólidos, luego construimos $T_n$ de manera que si $i\neq j$, $T_{(n,i)}$ y $T_{(n,j)}$ están contenidos en distintos toros de $T_{n-1}$. <br><br>
+
+                    También pedimos que el diámetro de los toros con
+                </li>
+                <li>
+                    $A := \bigcap\limits_{n=0}^{\infty} T_i$
+                </li>
+            </ul>
+
+            <img src="..\..\assets\monografía\antoine.png" alt="primeras etapas de la construcción" class="agrandar" width="250px" > imagen real de las primeras etapas de la construcción
+        </div>
+
+        <div class="caja">
+            El collar de antoine es un cantor:
+
+            <ul>
+                <li>
+                    <ins>perfecto</ins>: las componentes conexas se van acercando cuando $n\to\infty$.
+                </li>
+                <li>
+                    <ins>compacto</ins>: es cerrado por ser intersección de cerrados y es acotado por estar contenido en $T_0$
+                </li>
+                <li>
+                    <ins>totalmente disconexo</ins>: dados dos puntos distintos, en algún momento de la construcción pasan a pertenecer a dos toros distintos, y por lo tanto, a dos componentes conexas distintas.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="caja">
+            <span class="def">Def:</span> Decimos que un conjunto $X$ <ins>se separa por esferas</ins> si existe una esfera $S$ tal que $S\cap X=\varnothing$ y $X$ contiene puntos en el interior de $S$ y en el exterior de $S$. <br><br>
+
+            Por ejemplo, dos puntos se separan por esferas en un espacio hausdorff. Un cantor usual $C$ definido como intersección de intervalos se separa por esferas.<br><br>
+
+            <span class="teo">Teo:</span> El collar de antoine no se separa por esferas. <br><br>
+
+            <span class="lema">Corolario:</span> $A$ y $C$ no son encajes equivalentes. <br><br>
+
+            <span class="dem">Dem:</span> Suponete q son equivalentes, entonces tengo un homeo $h:E^3\to E^3$ (siendo $E^3$ tu espacio euclídeo favorito) tal que $h(C)=A$. <br><br>
+
+            Sea $S$ la esfera que separa a $C$, entonces $h(S)$ es una esfera que separa $h(C)=A$ porque manda el interior al interior y el exterior al exterior.
+        </div>
+
+        <div class="caja">
+            <span class="teo">Teo:</span> Dos collares de antoine $A = \bigcap\limits_{n=0}^{\infty} T_i$ y $B = \bigcap\limits_{n=0}^{\infty} R_i$ son encajes equivalentes si y solo si $T_i$ y $R_i$ son encajes equivalentes $\forall i\in\mathbb{N}$. <br><br>
+
+            Es decir, si en cada paso $T_i$ y $R_i$ tienen la misma cantidad de toros y están entrelazados de la misma manera. <br><br>
+
+            hay un montón de collares de antoine distintos!!!
+        </div>
+
+    
+</body>
+</html>
