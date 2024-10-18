@@ -4,7 +4,7 @@ body {
 
 .caja {
   background-color: rgba(147, 158, 127, 0.363);
-  margin: 0px 150px 50px 100px;
+  margin: 0px 50px 50px 50px;
   padding: 25px 20px 20px 20px;
 }
 p {
@@ -70,3 +70,40 @@ h1 {
   text-align: center;
 }
 
+.titulo {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: rgba(228, 203, 180, 0.973);
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  height: 50px;
+}
+
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fila {
+  display: flex;
+  height: 50px;
+}
+
+.item {
+  flex: 1;
+  background-color: rgba(159, 161, 139, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:nth-child(even) {
+  background-color: rgba(189, 192, 163, 0.733);
+}

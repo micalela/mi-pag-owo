@@ -318,6 +318,30 @@ const pixeles = [
   {
     img: "assets/cachivaches/pixeles/dump 1/silkblob.gif",
   },
+  {
+    img: "assets/cachivaches/pixeles/dump2 bitmapdreams/crystalgreenhouse_juniper.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/dump2 bitmapdreams/midnightcreamy_cerealbowl.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/dump2 bitmapdreams/midnightcreamy_milk.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
+  {
+    img: "assets/cachivaches/pixeles/dump2 bitmapdreams/dinershift_rootbeer.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
+  {
+    img: "assets/cachivaches/cumpleaños/apartmentkitchen_crackedegg1 bmpdreams.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
+  {
+    img: "assets/cachivaches/cumpleaños/apartmentkitchen_crackedegg2 bmpdreams.gif",
+    link: "https://lastsecret.net/bitmapdreams/"
+  },
 
 ];
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="table">
+        <div class="header">
+            <span class="title" style="flex: 2">1</span>
+            <span class="title">2</span>
+        </div>
+        <div class="content">
+            <div class="value-item">
+                <span class="value">1</span>
+                <span class="value">1</span>
+                <span class="value">1</span>
+            </div>
+            <div class="value-item">
+                <span class="value">1</span>
+                <span class="value" style="flex: 3">3</span>
+                <span class="value">1</span>
+
+            </div>
+
+            <div class="value-item">
+                <span class="value" style="flex: 2">2</span>
+                <span class="value">1</span>
+                <span class="value" style="flex: 2">2</span>
+            </div>
+            <div class="value-item">
+                <span class="value">Valor 1</span>
+                <span class="value">Valor 2</span>
+                <span class="value">Valor 3</span>
+            </div>
+            <div class="value-item">
+                <span class="value">Valor 1</span>
+                <span class="value">Valor 2</span>
+                <span class="value">Valor 3</span>
+            </div>
+            <div class="value-item">
+                <span class="value">Valor 1</span>
+                <span class="value">Valor 2</span>
+                <span class="value">Valor 3</span>
+            </div>
+            <div class="value-item">
+                <span class="value">Valor 1</span>
+                <span class="value">Valor 2</span>
+                <span class="value">Valor 3</span>
+            </div>
+
+        </div>
+    </div>
+    <style>
+        body {
+            color: white;
+        }
+
+        .table {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .header {
+            background-color: green;
+            display: flex;
+            height: 60px;
+        }
+
+        .title {
+            flex: 1;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title:nth-child() {
+            background-color: rgb(12, 160, 12);
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .value-item {
+            display: flex;
+            height: 60px;
+        }
+
+        .value {
+            flex: 1;
+            background-color: rgb(146, 59, 228);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .value:nth-child(even) {
+            background-color: rgb(174, 95, 248);
+        }
+    </style>
+</body>
+
+</html>
