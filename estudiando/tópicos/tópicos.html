@@ -22,14 +22,20 @@
           type="text/javascript"
           async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
-        ></script>
+        >
+        </script>
         <link rel="stylesheet" href="tópicos.css" />
         <link rel="stylesheet" href="navbar tópicos.css" />
-      </head>
+    </head>
       
         <body>
 
         <script src="navbar tópicos.js"></script>
+
+        <div style="width: fit-content;">
+
+        <img src="../../assets/cachivaches/pixeles/dump2 bitmapdreams/midnightcreamy_lavalamp.gif" 
+        alt="lámpara de lava" style="float: inline-end; margin-left: 15px;">
 
         <img
         src="..\..\assets\tópicos\tópicos.png"
@@ -37,6 +43,18 @@
         alt="tópicos de geometría"
         style="padding: 0px 0px 10px 10px; height: 100px;"
         />
+
+        <img src="../../assets/cachivaches/pixeles/dump2 bitmapdreams/midnightcreamy_lavalamp.gif" 
+        alt="lámpara de lava" style="float: left; margin-left: 15px;">
+        </div>
+
+        $
+        \newcommand{\K}{\mathbb{K}}
+        \newcommand{\P}{\mathbb{P}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\dimk}{\dim_{\K}}
+        $ <!-- es la primera vez en mi vida q hago esto -->
+
     
         <div class="caja"><span class="def">Plano afín:</span>
         
@@ -282,6 +300,29 @@
         </div>
 
         <div class="caja">
+            <span class="teo">Teorema fundamental:</span> $PGL(3,\mathbb{R})\simeq Aut(\mathbb{P}^2)$
+        </div>
+
+        <div class="caja">
+            <span class="prop">Lema:</span> Si $\phi\in Aut(\mathbb{P}^2)$ fija los puntos $(1:0:0),\; (0:1:0),\; (0:0:1),\; (1:1:1)$, entonces $\phi = Id$. <br><br>
+
+            Por el teorema fundamental, tenemos que $\phi = \phi_A$ para alguna $A\in GL(3,\mathbb{R})$. <br><br>
+
+            $A\cdot (1,0,0)=(\lambda,0,0),\;\lambda\neq 0$ <br><br>
+
+            $A\cdot (1,0,0)=(0,\mu,0),\;\mu\neq 0$ <br><br>
+
+            $A\cdot (1,0,0)=(0,0,\nu),\;\nu\neq 0$ <br><br>
+
+            Entonces sabemos que 
+            
+            $A=\begin{pmatrix}
+            \lambda & 0 & 0\\
+            0 & \mu & 0\\
+            0 & 0 & \nu
+            \end{pmatrix}$ <br><br>
+
+            Como queremos $A\cdot (1,1,1)=(\eta,\eta,\eta)$ para algún $\eta\neq 0$, tenemos que $\lambda=\mu=\nu$ y por lo tanto $\phi_A=Id$.
             <span class="teo">Teorema fundamental:</span> La acción natural ???? ññññ
         </div>
 
@@ -315,6 +356,101 @@
 
             Si además es abeliano, decimos que es un <ins>cuerpo</ins>.
 
+        </div>
+
+        <div class="caja">
+            <span class="ej">Ejemplos:</span>
+
+            <ul>
+                <li>
+                    $\mathbb{R},\; \mathbb{Q},\; \mathbb{C}$ son cuerpos
+                </li>
+                <li>
+                    Cuaterniones de hamilton: Son un anillo que no es un cuerpo.
+                </li>
+                <li>
+                    $\mathbb{Z}_p$ para $p$ primo es un cuerpo.
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="caja">
+            <span class="def">Def:</span> Sea $E$ un espacio vectorial de dimensión positiva sobre $\mathbb{K}$. <br><br>
+
+            El <ins>espacio proyectivo asociado a $E$</ins> es el conjunto $\mathbb{P}(E)$ de sevs de dimensión 1. <br><br>
+
+            $\mathbb{P}(E)$ tiene dimensión $\dim_{\mathbb{K}}(E) -1$.
+            
+        </div>
+
+        <div class="caja">
+            <span class="ej">Ejemplos:</span>
+
+            <ul>
+                <li>
+                    Si $\dim_{\mathbb{K}}(E) = 1$ entonces $\mathbb{P}(E)$ es un punto.
+                </li>
+                <li>
+                    Si $\mathbb{K}=\mathbb{R}$ y $E=\mathbb{R}^3$, entonces $\mathbb{P}(E) = \mathbb{P}^2$
+                </li>
+                <li>
+                    Si $\mathbb{K}=\mathbb{R}$ y $E=\mathbb{R}^2$, entonces $T:\mathbb{R}^2\to\mathbb{R}^3$ dada por $T(x,y)=(x,y,0)$ establece una biyección entre $\mathbb{P}(E)$ y la recta de ecuación $x_2=0$ en $\mathbb{P}^2$.
+                </li>
+            </ul>
+        </div>
+
+        <div class="caja">
+
+            <span class="def">Def:</span> Un subespacio proyectivo de $\mathbb{P}(E)$ es un subconjunto de la forma $\mathbb{P}(S)$ con $S\subset E$ subespacio de dimensión positiva. <br><br>
+
+            <span class="def">Notación:</span> 
+
+            <ul>
+                <li>
+                    <ins>Recta:</ins> Subespacio proyectivo de dimensión 1
+                </li>
+                <li>
+                    <ins>Plano:</ins> Subespacio proyectivo de dimensión 2
+                </li>
+                <li>
+                    <ins>Hiperplano:</ins> Subespacio proyectivo de dimensión $\dim\mathbb{P}(E) -1$
+                </li>
+                <li>
+                    <ins>$l$-plano:</ins> Subespacio proyectivo de dimensión $l$
+                </li>
+            </ul>
+        </div>
+<!-- 
+        <div class="caja">
+            <span class="lema">Lema:</span> Si r,s son enteros no negativos tales que $r+s \geq \dim\mathbb{P}(E)$, entonces la intersección de dos subespacios proyectivos de dimensiones r y s es un subespacio proyectivo de dimensión al menos $r+s-\dim\mathbb{P}(E)$ <br><br>
+
+            <span class="dem">Dem:</span> Si $R,S \subset E$ son subespacios vectoriales de dimensiones $r+1,\; s+1$ y $n+1=\dim_{\mathbb{K}}(E)$, entonces $\dim_{\mathbb{K}}(R+S)=\dim_{\mathbb{K}}(R)+\dim_{\mathbb{K}}(S)-\dim_{\mathbb{K}}(R\cap S)\leq \dim_{\mathbb{K}}(E)$, luego $\dim_{\mathbb{K}}(R\cap S)\geq r+s-n+1$. <br><br>
+
+            Como $\mathbb{P}(R)\cap \mathbb{P}(S)=\mathbb{P}(R\cap S)$, entonces <span class="comm">mds manito esto está redactado de la peor manera con razón no entendía nada</span>
+        </div> -->
+
+        <div class="caja">
+            <span class="lema">Lema:</span> $R,S\subset E$ subespacios no triviales tales que $\dim\P(R)+\dim\P(S)\geq\dim\P(E)$, entonces $\P(R)\cap\P(S)$ es un subespacio proyectivo y $\dim\P(R)\cap\P(S)\geq \dim\P(R)+\dim\P(S)-\dim\P(E)$  <br><br>
+
+            <span class="dem">Dem:</span> dos cosas:
+            
+            <ul>
+                <li>
+                    $\dimk(E)=\dimk(R\oplus S)=\dimk(R)+\dimk(S)-\dimk(R\cap S)\Rightarrow\dimk(R\cap S)=\dimk(R)+\dimk(S)-\dimk(E)$ <br><br>
+
+                    $\Rightarrow\dim\P(R\cap S)=\dim\P(R)+\dim\P(S)-\dim\P(E)$ <br><br>
+
+                    Como $\dim\P(R)+\dim\P(S)\geq\dim\P(E)$ tenemos $\dim\P(R\cap S)=\dim\P(R)+\dim\P(S)-\dim\P(E)$ <br><br> 
+                </li>
+                <li>
+                    $\P(R\cap S)=\P(R)\cap\P(S)$
+                </li>
+            </ul>
+
+            $\dim\P(R)+\dim\P(S)\geq\dim\P(E)\Rightarrow \dim\P(R)+\dim\P(S)-\dimk(R\cap S)\geq\dim\P(E)-\dimk(R\cap S)$
+            <span class="duda">aaaa</span>
+        </div>
 
         </div>
 
