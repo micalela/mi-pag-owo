@@ -37,10 +37,44 @@
           alt="petit brouwer"
           style="padding: 0px 0px 0px 10px; height: 120px;"
         /> 
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        $
             
         <div class="caja"><span class="teo">Petit Brouwer:</span>
         
-            Sea $f\in hom^+(\mathbb{R}^2)$ tal que $f$ tiene un punto periódico de período 2 $\Rightarrow fix(f)\neq\varnothing$
+            Sea $f\in hom^+(\mathbb{R}^2)$ tal que $f$ tiene un punto periódico de período 2 $\Rightarrow fix(f)\neq\varnothing$ <br><br>
+
+            <span class="dem">Dem:</span> Extendemos $f$ a un homeo de la esfera tomando $f(\infty)=\infty$ <span class="comm">puedo hacer esto porque un homeo manda compactos en compactos y entonces manda entornos del infinito en entornos del infinito.</span> <br><br>
+
+            Sea $x \in Per_2(f)$, luego $f^2(x)=x\neq f(x)$. Podemos entonces restringir $f$ a $\A = S^2-\{x,f(x)\}$ y obtenemos un homeo del anillo abierto que intercambia los fines y tiene al menos un punto fijo, ya que $\infty\in\A$. <br><br>
+
+            Tomamos $X\subset\A$ un anillo esencial cerrado suficientemente grande para que se cumpla $fix(r\circ f)=fix(f)$ y además coincidan en un entorno de los puntos fijos, siendo $r:\A\to X$ retracción. <br><br>
+
+            Obtenemos entonces $g:X\to X / g = (r\circ f)|_X$ función continua. <span class="comm">componiendo con la retracción deja de ser un homeo.</span> <br><br>
+
+            "Basta" probar que $g$ tiene al menos dos puntos fijos distintos para obtener el teorema. <span class="comm">$g(\infty)=\infty$</span> <br><br>
+
+            Tomamos $G:\tilde{X}\to\tilde{X}$ levantado de $g$, y observamos que como $g$ preserva orientación, entonces $G$ también lo hace. <span class="duda">esto no me queda claro</span> <br><br>
+            
+            Luego, como $G$ intercambia los fines del anillo, para preservar orientación va a tener que cumplir $G(x+(1,0))=G(x)-(1,0) \;\forall\;x\in \tilde{X}$. <br><br>
+
+            Por lo tanto, si compactificamos $\tilde{X}$ agregando dos puntos $-\infty, \infty$ podemos extender $G$ al disco tomando $G(\infty)=-\infty$ y $G(-\infty)=\infty$. <br><br>
+
+            Tenemos entonces que $G$ intercambia los bordes y por lo tanto $G$ no tiene puntos fijos en $\partial\D$. <br><br>
+
+            Por Brouwer en el disco tenemos que existe $z\in Int(\tilde{X})$ fijo de $G$. <br><br>
+
+           Repetimos ahora todo este razonamiento pero esta vez con el levantado $(G+1)$. Obtenemos por lo tanto un $w\in Int(\tilde{X})$ fijo de $(G+1)$. <br><br>
+
+           Veamos que $z$ y $w$ no se proyectan al mismo punto en $X$: <br><br>
+
+           Supongamos que existe $k\in\Z$ tal que $w=z+(k,0)$, entonces $$z+(k,0)=w=(G+1)(w)=(G+1)(z+(k,0))=G(z)-(k,0)+(1,0)=z+(-k+1, 0)\Rightarrow z+(k,0) = z+(-k+1,0)\Rightarrow k=1/2 \quad\text{ absurdo }\square$$
+
+
         
         </div>
 
