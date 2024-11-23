@@ -38,6 +38,13 @@
           style="padding: 0px 0px 0px 10px; height: 120px;"
         /> 
 
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        $
+
         <div class="caja">
             <span class="teo">Teorema de traslación de Brouwer:</span>
 
@@ -72,6 +79,59 @@
             
             Además, si $f$ preserva orientación $g$ también. 
         
+        </div>
+
+        <div class="caja">Vamos ahora con toda la teoría previa: <br><br>
+
+          <span class="def">Def:</span> El <ins>soporte</ins> de $f:X\to X$ homeo es $Sop(f)=\{x\in X:f(X)\neq x\}$ <br><br>
+
+          <span class="def">Def:</span> Un <ins>disco topológico</ins> (disco) es cualquier conjunto homeomorfo a $\D$ disco unidad. <span class="comm">es decir, cualquier abierto simplemente conexo de $\R^2$</span><br><br>
+
+          <span class="def">Def:</span> Un conjunto $U$ es <ins>libre</ins> para $f$ si se cumple $f(U)\cap U=\varnothing$ <br><br>
+
+          <span class="obs">Obs:</span> Si $D$ es un disco topológico abierto, puede ser que $\overline{D}$ no sea homeomorfo a $\overline{\D}$.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema:</span> Sea $X$ hausdorff, $f:X\to X$ continua, $x\not\in fix(f)\Rightarrow \;\exists\; U$ entorno de $x$ tal que $U$ es libre para $f$. <br><br>
+
+          <span class="dem">Dem:</span> Sea $x\not\in fix(f)$, tomo $V_x,\; V_{f(x)}$ entornos disjuntos. Por continuidad de $f$ existe $U\subset V_x$ tal que $f(U)\subset V_{f(x)}$. Luego $U$ es libre para $f$.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema:</span> <ins>Puntos fijos y preturbaciones a soporte libre:</ins> <br><br>
+
+          Si $U$ es libre para $f$ y $\varphi$ es un homeo tal que $sop(\varphi)\subset f(U) \Rightarrow fix(f)=fix(\varphi\circ f)$ <br><br>
+
+          <span class="dem">Dem:</span> $x\in fix(f) \Rightarrow x\not\in U \Rightarrow f(x)=x\not\in f(U) \Rightarrow x\not\in sop(\varphi)\Rightarrow \varphi(x)=x\Rightarrow x\in fix(\varphi\circ f)$ <br><br>
+
+          $x\in fix(\varphi\circ f)$ 
+
+          <ul>
+            <li>
+              Si $x\not\in U$ tenemos $\varphi(x)=x$, entonces $x\in fix(\varphi\circ f)$ implica $x\in fix(f)$
+            </li>
+            <li>
+              Veamos que $x\in U$ es imposible: $x\in U\Rightarrow f(x)\in f(U)\Rightarrow \varphi(f(x))\in f(U)$ ya que $sop(\varphi)\subset f(U)$. Como $U\cap f(U)=\varnothing \Rightarrow U\cap \varphi\circ f(U)=\varnothing\Rightarrow x\not\in fix(\varphi\circ f)$
+            </li>
+          </ul>
+
+          <span class="obs">Ejercicio q tengo q escribir:</span> Este lema también es válido si tomamos $sop(\varphi)\subset U$ <br><br>
+
+          <span class="obs">Otro:</span> $U,V$ discos libres para $f\in Hom(\R^2)$, y sean $\varphi,\psi\in Hom(\R^2)$ tales que $sop(\varphi)\subset U, sop(\psi)\subset V$. Entonces $fix(\psi\circ\varphi\circ f)=fix(f).$ <br><br>
+
+          Pregunta: Qué pasa si $U\cap V\neq\varnothing$?
+
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema</span> <ins>Dedazos</ins>: Sea $U\subset \R^2$ un disco abierto, $x,y\in U$, entonces existe $\varphi\in Hom^+(\R^2)$ tal que $\varphi(x)=y$ y $sop(\varphi)\subset U$.
+
         </div>
     
 </body>
