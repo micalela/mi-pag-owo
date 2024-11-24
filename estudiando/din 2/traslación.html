@@ -43,45 +43,18 @@
         \newcommand{\D}{\mathbb{D}}
         \newcommand{\Z}{\mathbb{Z}}
         \newcommand{\R}{\mathbb{R}}
+        \newcommand{\N}{\mathbb{N}}
         $
 
         <div class="caja">
             <span class="teo">Teorema de traslación de Brouwer:</span>
 
-            Sea $f\in hom^+(\mathbb{R}^2)$ tal que $f$ tiene un punto periódico $\Rightarrow fix(f)\neq\varnothing$
+            Sea $f\in hom^+(\mathbb{R}^2)$ tal que $Per(f)\neq\varnothing\Rightarrow fix(f)\neq\varnothing$
         </div>
 
-        <div class="caja">Para probar esto usamos:</div>
+        <div class="caja">Hagamos todas las construcciones necesarias para llegar a la prueba:</div>
 
-        
-
-        <div class="caja"><span class="lema">Lema:</span>
-        
-          Si $fix(f)=\varnothing$ $\Rightarrow$ por todo punto pasa un arco de traslación.
-
-        </div>
-
-        <div class="caja"><span class="lema">Lema:</span>
-        
-          Sea $\alpha$ arco de traslación tal que $f^2(\alpha)\cap\alpha\neq\varnothing$ <br><br>
-
-          $\Rightarrow \;\exists\;\; g \in hom(\mathbb{R}^2)$ tal que $fix(g)=fix(f)$ y $g$ tiene un punto periódico de período $2$. <br><br>
-            
-          Además, si $f$ preserva orientación $g$ también. 
-        
-        </div>
-
-        <div class="caja"><span class="lema">Lema:</span>
-        
-            Sea $\alpha$ arco de traslación tal que $f^n(\alpha)\cap\alpha\neq\varnothing$, con $n>2$ <br><br>
-
-            $\Rightarrow \;\exists\;\; g \in hom(\mathbb{R}^2)$ tal que $fix(g)=fix(f)$ y $g$ tiene un punto periódico de período $n-1$. <br><br>
-            
-            Además, si $f$ preserva orientación $g$ también. 
-        
-        </div>
-
-        <div class="caja">Vamos ahora con toda la teoría previa: <br><br>
+        <div class="caja">
 
           <span class="def">Def:</span> El <ins>soporte</ins> de $f:X\to X$ homeo es $Sop(f)=\{x\in X:f(X)\neq x\}$ <br><br>
 
@@ -130,9 +103,184 @@
 
         <div class="caja">
 
-          <span class="lema">Lema</span> <ins>Dedazos</ins>: Sea $U\subset \R^2$ un disco abierto, $x,y\in U$, entonces existe $\varphi\in Hom^+(\R^2)$ tal que $\varphi(x)=y$ y $sop(\varphi)\subset U$.
+          <span class="lema">Lema</span> <ins>Dedazos</ins>: Sea $U\subset \R^2$ un disco abierto, $x,y\in U$, entonces existe $\varphi\in Hom^+(\R^2)$ tal que $\varphi(x)=y$ y $sop(\varphi)\subset U$. <br><br>
+
+          <span class="dem">Dem:</span> Primero observamos que en vez de un disco $U$ podemos tomar cualquier abierto convexo sin pérdida de generalidad. <br><br>
+
+          Consideramos el campo constante $F:\R^2\to\R^2$ tal que $F(z)=y-x \;\forall\; z\in\R^2$. El tiempo 1 del flujo asociado a este campo va a cumplir $\phi(x)=y$. <br><br>
+
+          Ahora componemos con un chichón que deje todo quieto en $U^c$ y listo.
 
         </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema:</span> <ins>Cerramiento de órbitas</ins> <br><br>
+
+          Dado $f:\R^2\to\R^2$ homeo tal que <a href="..\sist din\sistemas dinámicos.html#defs_dinámica">$\Omega(f)\neq 0$</a>, entonces existe $g:\R^2\to\R^2$ tal que $fix(f)=fix(g)$ y $g$ tiene un punto periódico. <br><br>
+
+          Además, si $f$ preserva orientación entonces $g$ también. <br><br>
+
+          <span class="dem">Dem:</span> Suponemos $per(f)=\varnothing$, si no ya está probado. <br><br>
+
+          Sea $x\in\Omega(f)$, $U$ disco libre que contiene a $x$, $n\in\N$ tal que $f^n(U)\cap U\neq\varnothing$ el mínimo con esta propiedad. <br><br>
+
+          Luego existe $y\in U$ tal que $f^n(y)\in U$. Por el lema anterior podemos meter un dedazo y cerrar la órbita. <br><br>
+
+          <span class="prop">Corolario:</span> $f\in Hom^+(\R^2)$ sin puntos fijos, entonces todos los puntos son errantes. <br><br>
+
+          <span class="obs">Obs:</span> Si $K$ compacto y $f(K)\subset K$ entonces $\Omega(f)\neq\varnothing$ y por lo tanto $fix(f)\neq\varnothing$.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="def">Def:</span> <ins>Cadena periódica de discos libres</ins> <br><br>
+
+          Sea $f\in Hom^+(\R^2)$ y sean $U_0,\dots,U_n$ discos topológicos libres y disjuntos dos a dos. <br><br>
+
+          Decimos que son una <ins>cadena periódica de discos</ins> si existen $k_0,\dots,k_n\in\N$ tales que $f^{k_i}(U_i)\cap U_{i+1}\neq\varnothing \;\forall\; i\in \{0,\dots n-1\}$ y $f(k_n(U_n))\cap U_0\neq\varnothing$. <br><br>
+
+          <span class="lema">Lema:</span> $f\in Hom(\R^2)$ con una cadena periódica de discos libres, entonces existe $g\in Hom(\R^2)$ tal que $fix(F)=fix(g)$ y $g$ tiene un punto periódico. <br><br>
+
+          Además, si $f$ preserva orientación, entonces $g$ también. <br><br>
+
+          <span class="dem">Dem:</span> Hacer lo mismo que en el lema anterior pero para cada disco.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="def">Def:</span> $\alpha:[0,1]\to\R^2$ es un <ins>arco de traslación</ins> si:
+
+          <ul>
+            <li>
+              $\alpha$ es un homeo sobre su imagen
+            </li>
+            <li>
+              $\alpha(0)=x,\; \alpha(1)=f(x)$
+            </li>
+            <li>
+              $\alpha\cap f(\alpha)\subset\{x,f(x)\}$
+            </li>
+          </ul>
+
+          <span class="lema" id="lema1">Lema:</span> Si $f$ no tene fijos, entonces por todo punto pasa un arco de traslación. <br><br>
+
+          <span class="dem">Dem:</span> Sea $x$ un punto cualquiera, como $f(x)\neq x$ podemos tomar una bola $B_x$ de centro $x$ y empezar a "inflarla" hasta que $B_x\cap f(B_x)\neq\varnothing$ se tocan tangencialmente. Llamamos $z$ a un punto en la intersección, luego $f^{-1}(z)\in B_x$. <br><br>
+          
+          Tomamos un arco que comienze en $f^{-1}(z)$, termine en $z$ y pase por $x$ sin autointersectarse y obtenemos lo buscado.
+
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema:</span> $\alpha$ arco de traslación tal que $f^2(\alpha)\cap\alpha\neq\varnothing$, entonces existe $g:\R^2\to\R^2$ tal que $fix(f)=fix(g)$ y $g$ tiene un punto periódico de período 2. <br><br>
+
+          Además, si $f$ preserva orientación $g$ también. <br><br>
+
+          <span class="dem">Dem:</span> Suponemos que $f$ no tiene puntos de período 2, entonces se cumple que $f(\alpha)\cap\alpha=\{f(x)\}$. <span class="comm">por ser arco de traslación no se autointersecta salvo en los bordes</span> <br><br>
+
+          Sea $f(z)\in f^2(\alpha)\cap\alpha$. Observar que $f(z)\neq f(x)$ porque si no $f^{-1}\circ f^2(\alpha)$ no es homeo sobre su imagen. <span class="comm">se autointersecta en $f(x)$</span> <br><br>
+
+          Tomamos $U,V$ discos libres disjuntos tales que
+
+          <ul>
+            <li>
+              $x, f(z)\in U$
+            </li>
+            <li>
+              $f(x),z\in V$
+            </li>
+          </ul>
+
+          <span class="comm">siempre podemos tomar estos discos definiéndolos como el entorno tubular de $\alpha$</span> <br><br>
+
+          Finalmente, tomando dos homeos $\varphi, \psi$ soportados en $U$ y $V$ respectivamente y tales que cumplen
+
+          <ul>
+            <li>
+              $\varphi(f(z))=x$
+            </li>
+            <li>
+              $\psi(f(x))=z$
+            </li>
+          </ul>
+
+          Definiendo $g=\psi\circ\varphi\circ f$ obtenemos lo buscado.
+
+          <span class="comm">agregar foto del pizarron</span>
+        </div>
+
+        <div class="caja">
+
+          <span class="lema">Lema:</span> Sea $\alpha$ arco de traslación tal que $f^n(\alpha)\cap\alpha\neq\varnothing$ para algún $n>2$ <br><br>
+
+          Entonces, existe $g\in Hom(\R^2)$ tal que $fix(g)=fix(f)$ y $g$ tiene un punto periódico de período $n-1$. <br><br>
+
+          Además, si $f$ preserva orientación, entonces $g$ también. <br><br>
+
+          <span class="dem">Dem:</span> Sea $n>2$ el mínimo para el que $f^n(\alpha)\cap\alpha\neq\varnothing$ <br><br>
+
+          Tenemos dos posibilidades:
+
+          <ul>
+            <li>
+              $f(\alpha)\cap\alpha=\{x,f(x)\}$: En este caso, tenemos que $f^3(\alpha)\cap\alpha\neq\varnothing$ y también que $x\in Per_2(f)$, por lo tanto probamos el teorema para $n=3$ tomando $f=g$.
+            </li>
+            <li>
+              $f(\alpha)\cap\alpha=\{f(x)\}$: Consideremos ahora este caso.
+            </li>
+          </ul>
+
+          Sea $z\in f^n(\alpha)\cap\alpha$. Se tiene que $f(z)\neq f(x)$ porque sino $f^{n-1}(\alpha)\cap\alpha=x\neq\varnothing$. <br><br>
+
+          Tomamos $U,V$ discos libres disjuntos tales que 
+
+          <ul>
+            <li>
+              $f(z),f^2(x)\in U$
+            </li>
+            <li>
+              $z,f^n(x)\in V$
+            </li>
+          </ul>
+
+          Y consideramos $\varphi,\psi\in Hom^+(\R^2)$ soportadas en $U$ y $V$ respectivamente, tales que cumplen
+
+          <ul>
+            <li>
+              $\varphi(f(z))=f^2(x)$
+            </li>
+            <li>
+              $\psi(f^n(x))=z$
+            </li>
+          </ul>
+
+          Definiendo $g=\psi\circ\varphi\circ f$ obtenemos lo buscado.
+
+          <span class="comm">agregar foto del pizarron</span>
+        
+        </div>
+
+        <div class="caja">
+          <span class="teo">Teorema de traslación de Brouwer:</span>
+
+          Sea $f\in hom^+(\mathbb{R}^2)$ tal que $Per(f)\neq\varnothing\Rightarrow fix(f)\neq\varnothing$ <br><br>
+
+          <span class="dem">Dem:</span> Observamos que si $f$ tiene un punto periódico de período $\leq 2$ entonces por Petit Brower ya tenemos la tesis. <br><br>
+
+          Sea $x\in Per(f)$ un punto con período $n > 2$. <br><br> 
+          
+          Por <a href="#lema1">este lema</a> sabemos que existe $\alpha$ arco de traslación que pasa por $x$. <br><br>
+
+          Observar que como $f^n(x)=x$, tenemos que $x\in f^{n-1}(\alpha)\cap\alpha\neq\varnothing$, luego, por <a href="lema2">este lema</a> podemos construir $g\in Hom^+(\R^2)$ con $fix(f)=fix(g)$ y tal que $g$ tiene un punto periódico de período $n-2$. <br><br>
+
+          Repetimos el mismo proceso hasta finalmente obtener $h\in Hom^+(\R^2)$ con $fix(h)=fix(f)$ y tal que $h$ tiene un punto periódico de período 2. <br><br>
+
+          Por Petit Brower concluimos el teorema.
+
+      </div>
     
 </body>
 </html>
