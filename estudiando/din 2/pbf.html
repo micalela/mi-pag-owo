@@ -38,20 +38,132 @@
           style="padding: 0px 0px 0px 10px; height: 120px;"
         /> 
 
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\fall}{\;\forall\;}
+        $
+
+        <div class="caja">
+          <span class="teo">Teorema de Poincaré-Birkhoff:</span>
+          
+          $f\in Hom_0^+(\s^1\times [0,1])$ que preserva área y cada componente del borde, y tal que existe un levantado $F\in Hom(\R\times [0,1])$ que cumple la <ins>condición de twist:</ins>
+
+          <ul>
+            <li>
+              $(F(x))_1 < (x)_1 \fall x\in\R\times{1}$
+            </li>
+            <li>
+              $(F(x))_1 > (x)_1 \fall x\in\R\times{0}$
+            </li>
+          </ul>
+
+          Entonces, $fix(f)\neq\varnothing$.
+
+        </div>
+
+        <div class="caja">
+          <span class="def">Def:</span> <ins>Discos regresando para adelante</ins> <br><br>
+
+          $F:\tilde{A}\to\tilde{A}$ levantado. Decimos que un disco $U\subset\tilde{A}$ regresa para adelate si:
+
+          <ul>
+            <li>
+              $F(U)\cap U=\varnothing$
+            </li>
+            <li>
+              $\exists\; n,k>0$ tales que $F^n(U)\cap(U+k)\neq\varnothing$
+            </li>
+          </ul>
+
+          Siendo $U+k=T^k(U)$, con $T:\tilde{A}\to\tilde{A}$ tal que $T(x,y)=(x+1,y)$. <br><br>
+
+          Para definir <ins>discos regresando para atrás</ins> tomamos $k< 0$
+
+        </div>
+
+        <div class="caja">
+          <span class="lema" id="lema1">Lema:</span> $f\in Hom^+(A)$ tal que $\Omega(f)=A$ y $fix(f)=\varnothing$. <br><br>
+          
+          Entonces, todo $x\in A$ pertenece a un disco tal que cualquiera de sus levantados es un disco que regresa para adelate o para atrás. <br><br>
+
+          <span class="dem">Dem:</span> $fix(f)=\varnothing$, luego todo punto esá en un disco libre $U\subset A$. <br><br>
+
+          Por lo tanto, cualquier levantado $\tu$ de $U$ es libre para $F$. <br><br>
+          
+          $\Omega(f)=A\Rightarrow\exists\; n>0$ tal que $f^n(U)\cap U\neq\varnothing$ <br><br>
+
+          Entonces, $F^n(\tu)\cap\tu+k\neq\varnothing$ para algún $k\in\Z$. <br><br>
+
+          Si $k=0$, cerrando la órbita tenemos un periódico y por lo tanto un fijo. <br><br>
+
+          Luego, $k>0$ o $k< 0$, y por lo tanto $\tu$ regresa para adelate o para atrás.
+        </div>
+
+        <div class="caja">
+          <span class="lema">Lema:</span> $f\in Hom_0^+(A)$, $F:\tilde{A}\to\tilde{A}$ levantado tal que $\exists\;U\subset\tilde{A}$ disco que regresa para adelante y para atrás $\Rightarrow fix(F)\neq\varnothing$. <br><br>
+
+          <span class="dem">Dem:</span> Obtengamos una cadena periódica de discos libres para aplicar <a href="traslación.html#cadena_discos">este lema</a>. <br><br>
+
+          Tenemos que existen $k_1, k_2 >0, m,n>1$ tales que $f^n(U)\cap(u+k_1)\neq\varnothing$ y $f^m(U)\cap(u-k_2)\neq\varnothing$. <br><br>
+
+          Como $f$ es isotópico a la identidad, tenemos que su grado de Brouwer es 1 y $F$ cumple $F(x+k)=F(x)+k$. <br><br>
+
+          Tenemos entonces que $F^n(U+ik_1)\cap U+(i+1)k_1=(F^n(U)+ik_1)\cap U+ik_1+k_1 \simeq F^n(U)\cap U+k_1 \neq\varnothing$. <br><br>
+
+          Tomamos $i\in\{0,\dots, k_2-1\}$ y tenemos la primera parte de nuestra cadena periódica de discos libres. <br><br>
+
+          De la misma manera tenemos $F^m(U+ik_1k_2)\cap U+(k_1-i)k_2\neq\varnothing$, y tomando $i\in\{0,\dots,k_2\}$ obtenemos el resto de la cadena. <br><br>
+
+          <span class="comm">terminar de escribir bien esto</span>
+        </div>
+
         <div class="caja"><span class="teo">Teorema de Poincaré-Birkhoff-Franks:</span>
         
-        Sea $f\in hom^+_0(A)$ tal que
+          Sea $f\in hom^+_0(A)$ tal que
+  
+          <ul>
+  
+              <li>$\Omega(f)=A$</li>
+              <li>Existe $F:\tilde{A}\to\tilde{A}$ que tiene un disco que regresa para adelante y también un disco que regresa para atrás</li>
+  
+          </ul>
+  
+          $$\Rightarrow fix(f)\neq\varnothing$$
+          
+          <span class="dem">Dem:</span> Sean $B^+$ los puntos que están en un disco que regresa para adelante y $B^-$ los que están en un disco que regresa para atrás. <br><br>
 
-        <ul>
+          Ambos conjuntos son abiertos y no vacíos por <a href="#lema1">ese lema</a>. También cumplen $B^+\cup B^-=\tilde{A}$<br><br> 
 
-            <li>$\Omega(f)=A$</li>
-            <li>Existe $F:\tilde{A}\to\tilde{A}$ que tiene un disco que regresa para adelante y también un disco que regresa para atrás</li>
+          Entonces, como $\tilde{A}$ es conexo, tenemos que $B^+\cap B^-\neq\varnothing$ <br><br>
 
-        </ul>
+          Sea $x\in B^+\cap B^- \Rightarrow x\in U_1\cap U_2$ abiertos libres, con $F^{n_1}(U_1)\cap U_1+k_1\neq\varnothing$ y $F^{n_2}(U_2)\cap U_2-k_2\neq\varnothing$, con $k_1,k_2>0$. <br><br>
 
-        $$\Rightarrow fix(f)\neq\varnothing$$
-        
-        </div>
+          Como $\Omega(f)=A$, tenemos que $p(x)$ es no errante, y por lo tanto si tomamos $U\subset U_1\cap U_2$ disco, tenemos $f^k(p(U))\cap p(U) \neq\varnothing$ para algún $k>0$. <br><br>
+
+          Se cumple entonces $F^k(U)\cap(U+l)\neq\varnothing$ para algún $l\in\Z$, y como $U\subset U_1\cap U_2$, también tenemos $F(U)\cap U=\varnothing$. <br><br>
+
+          <ins>Si $l$ > 0:</ins> 
+
+          <ul>
+            <li>
+              $F^k(U_2)\cap(U_2+l)\neq\varnothing$ porque $U_2\subset U$ 
+            </li>
+            <li>
+              $F^k(U_2)\cap(U_2-k_2)\neq\varnothing$ porque $U_2$ regresa para atrás
+            </li>
+          </ul>
+
+          <ins>Si $l$ < 0:</ins> Hacemos lo mismo pero intercambiando los roles de $U_1$ y $U_2$. <br><br>
+
+          Por lo tanto, tenemos que existe $x$ que está en un disco que regresa para adelante y para atrás. Por el lema anterior concluimos que $fix(f)\neq\varnothing$
+
+          </div>
     
 </body>
 </html>

@@ -1,0 +1,115 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciencia</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="..\..\assets\iconos\photodisc.png"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="din topo.css" />
+    <link rel="stylesheet" href="navbar din topo.css" />
+  </head>
+  
+    <body>
+
+    <script src="navbar din topo.js"></script>
+
+    <img
+      src="..\..\assets\dinámica topológica\foliado.png"
+      class="imagenTitulo"
+      alt="teorema de brouwer foliado"
+      style="padding: 0px 0px 0px 10px; height: 120px;"
+    /> 
+
+    $
+    \newcommand{\A}{\mathbb{A}}
+    \newcommand{\D}{\mathbb{D}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\s}{\mathbb{S}}
+    \newcommand{\tu}{\tilde{U}}
+    \newcommand{\F}{\mathcal{F}}
+    \newcommand{\fall}{\;\forall\;}
+    \newcommand{\exst}{\;\exists\;}
+    $
+<body>
+
+    <div class="caja">
+        <span class="def">Def:</span> Una <ins>foliación topológica orientada</ins> $\F$ en una superficie orientada $S$ es una partición de $S$ en subvariedades de dimensión 1, llamadas hojas, que cumplen: <br><br>
+
+        Para todo $x\in S$, existe $U_x$ entorno, y $h:U_x\to(0,1)^2$ homeo que preserva orientación y que mapea $\F$ en la partición por rectas verticales de $(0,1)^2$ <br><br>
+
+        <span class="obs">Notación:</span> Llamamos $\phi_x$ a la hoja que pasa por $x$. <br><br>
+
+        <span class="def">Def:</span> Una curva $\gamma :[0,1]\to S$ es <ins>positivamente transversal</ins> a $\F$ si para todo $t_0\in [0,1]$ existe un entorno $U$ de $\gamma(t_0)$ y $h:U\to (0,1)^2$ homeo que preserva orientación y cumple:
+        
+        <ul>
+            <li>
+                Mapea $\F$ en la foliación por líneas verticales de $[0,1]^2$
+            </li>
+            <li>
+                La proyección de $h(\gamma(t))$ sobre la primer coordenada es estrictamente creciente
+            </li>
+        </ul>
+
+        <span class="def">Def:</span> Un <ins>encaje topológico</ins> de $\R$ en una superficie $S$ es una función $\Gamma : \R\to S$ que es un homeo sobre su imagen con la topología inducida por $S$. <br><br>
+
+        Decimos que el encaje es <ins>propio</ins> si $\Gamma^{-1}(K)$ es compacto para todo $K\subset S$ compacto. <br><br>
+
+        <span class="def">Def:</span> Una <ins>línea</ins> en $S$ es la clase de equivalencia por reparamerizaciones que preservan orientación de un encaje topológico propio de $\R$. Identificaremos la línea $\Gamma$ con su imagen $\Gamma(\R)$. <br><br>
+
+        Observar que una línea queda determinada por su imagen y su orientación. Además, si $S\simeq\R^2$ por el teorema de Schoenflies tenemos que cualquier línea es homeomorfa a la línea vertical que pasa por $(0,0)$. Usando un homeo que preserva orientación podemos definir la izquierda y la derecha de $\Gamma$, que notamos $I(\Gamma), D(\Gamma)$. <br><br>
+
+        <span class="def">Def:</span> Dado $f\in Hom^+(\R^2)$, decimos que $\Gamma$ es una <ins>línea de Brouwer</ins> de $f$ si es una línea y cumple
+
+        <ul>
+            <li>
+                $f(\Gamma)\subset D(\Gamma)-\Gamma$
+            </li>
+            <li>
+                $f^{-1}(\Gamma)\subset I(\Gamma)-\Gamma$
+            </li>
+        </ul>
+
+        Es decir, $\Gamma$ es <ins>línea de Brouwer</ins> si siempre se mueve hacia la derecha por $f$. <span class="duda">pq es importante el segundo punto y con el primero no es suficiente?</span>
+        
+    </div>
+
+    <div class="caja">
+
+        <span class="teo">Teorema de Brouwer foliado:</span> $f\in Hom^+(\R^2)$ tal que $fix(f)=\varnothing$, entonces existe una foliación topológica orientada de $\R^2$ tal que cada hoja es una línea de Brouwer.
+
+    </div>
+
+    <div class="caja">
+
+        <span class="lema">Lema:</span> <ins>La foliación es positivamente transversal a la dinámica</ins> <br><br>
+
+        Por todo $x\in\R^2$ pasa un arco positivamente transversal a $\F$ que va de $x$ a $f(x)$. <br><br>
+
+        <span class="dem">Dem:</span> Sea $W=\{z\in\R^2 : \text{existe un arco positivamente transversal a $\F$ que va de $z$ a $x$}\}$ <br><br>
+
+        Observar que $W$ es abierto.
+
+    </div>
+
+    
+
+</body>
+</html>
