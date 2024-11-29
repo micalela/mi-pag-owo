@@ -74,7 +74,7 @@
 
         <span class="def">Def:</span> Una <ins>línea</ins> en $S$ es la clase de equivalencia por reparamerizaciones que preservan orientación de un encaje topológico propio de $\R$. Identificaremos la línea $\Gamma$ con su imagen $\Gamma(\R)$. <br><br>
 
-        Observar que una línea queda determinada por su imagen y su orientación. Además, si $S\simeq\R^2$ por el teorema de Schoenflies tenemos que cualquier línea es homeomorfa a la línea vertical que pasa por $(0,0)$. Usando un homeo que preserva orientación podemos definir la izquierda y la derecha de $\Gamma$, que notamos $I(\Gamma), D(\Gamma)$. <br><br>
+        Observar que una línea queda determinada por su imagen y su orientación. Además, si $S\simeq\R^2$ por el teorema de Schoenflies tenemos que cualquier línea es homeomorfa a la línea vertical que pasa por $(0,0)$. Usando un homeo que preserva orientación podemos definir la izquierda y la derecha de $\Gamma$, que notamos $I(\Gamma), D(\Gamma)$ (y son cerradas). <br><br>
 
         <span class="def">Def:</span> Dado $f\in Hom^+(\R^2)$, decimos que $\Gamma$ es una <ins>línea de Brouwer</ins> de $f$ si es una línea y cumple
 
@@ -87,7 +87,11 @@
             </li>
         </ul>
 
-        Es decir, $\Gamma$ es <ins>línea de Brouwer</ins> si siempre se mueve hacia la derecha por $f$. <span class="duda">pq es importante el segundo punto y con el primero no es suficiente?</span>
+        Es decir, $\Gamma$ es <ins>línea de Brouwer</ins> si siempre se mueve hacia la derecha por $f$. <br><br> 
+        
+        <span class="duda">pq es importante el segundo punto y con el primero no es suficiente?</span> <br><br>
+
+        <span class="duda"> -- > pq estamos hablando solo de una línea. si toda la fto fuera por líneas de brouwer, y la foliación fuera invariante por $f$, el segundo punto no sería necesario.</span>
         
     </div>
 
@@ -99,13 +103,62 @@
 
     <div class="caja">
 
-        <span class="lema">Lema:</span> <ins>La foliación es positivamente transversal a la dinámica</ins> <br><br>
+        <span class="lema">Lema:</span> <ins>La foliación anterior es positivamente transversal a la dinámica</ins> <br><br>
 
-        Por todo $x\in\R^2$ pasa un arco positivamente transversal a $\F$ que va de $x$ a $f(x)$. <br><br>
+        Sea $\F$ foliación tal que toda hoja es una línea de Brouwer. Entonces, por todo $x\in\R^2$ pasa un arco positivamente transversal a $\F$ que va de $x$ a $f(x)$. <br><br>
 
         <span class="dem">Dem:</span> Sea $W=\{z\in\R^2 : \text{existe un arco positivamente transversal a $\F$ que va de $z$ a $x$}\}$ <br><br>
 
-        Observar que $W$ es abierto.
+        Observar que $W$ es abierto. <br><br>
+
+        $\partial W$ contiene a $\phi_x$ y posiblemente algunas hojas $\phi$ más, que cumplan $\overline{W}\subset D(\phi)$ <br><br>
+
+        Consideramos ahora el caso de $f(x)$. Pueden pasar las siguientes cosas:
+
+        <ul>
+          <li>
+            $f(x)\in\partial W$ 
+          </li>
+          <li>
+            $f(x)\in \overline{W}^c$
+          </li>
+          <li>
+            $f(x)\in W$
+          </li>
+        </ul>
+
+        En los dos primeros casos, tenemos que $f(x)\in I(\phi)$ para alguna $\phi$ hoja en $\partial W$. 
+        
+        Esto es absurdo porque entonces $x  = f^{-1}(f(x))\in I(\phi)$, pero sabemos que $x\in W\subset D(\phi)$.
+    </div>
+
+    <div class="caja">
+
+      El teorema anterior nos da el resultado para $f$ homeo de $\R^2$, pero podemos trasladarlo a homeos de superficies $\not\simeq\s^2$ (y orientables claro). <br><br>
+
+      Si $S\not\simeq\s^2$, entonces $S$ tiene a $\R^2$ como cubrimiento universal. Si $f\in Hom^+(S)$ y $fix(f)=\varnothing$, entonces todo levantado $F$ va a preservar orientación y no va a tener fijos. <br><br>
+
+      Por el teorema entonces tenemos una foliación topológica orientada de $\R^2$ por líneas de Brouwer para $F$. <br><br>
+
+      Para poder bajar esta foliación a $S$, precisamos que sea invariante por las transformaciones de cubrimiento. <br><br>
+
+      <span class="obs">Observación:</span> No todos los levantados conmutan con las transformaciones de cubrimiento. $F$ puede variar entre distintas copias del dominio fundamental e igual preservar la propiedad de ser un levantado. <br><br>
+
+      Si nuestro homeo es isotópico a la identidad, podemos construir un levantado que conmuta con las transformaciones de cubrimiento. <br><br>
+
+      <span class="def">Def:</span> <ins>Levantado canónico</ins> <br><br>
+
+      Dada $f\in Hom_0(S)$ tenemos una isotopía $(f_t)_{t\in[0,1]}$. Podemos levantar esta isotopía a una única isotopía $F_t:\tilde{S}\to\tilde{S}$ tal que $F_0=Id$. <br><br>
+
+      Llamamos a $F_1$ el levantado canónico de $f$. <br><br>
+
+      <span class="lema">Lema:</span> <ins>El levantado canónico conmuta con las tranformaciones de cubrimiento</ins> <br><br>
+
+      Sea $f\in Hom_0(S)$, $F:\tilde{S}\to\tilde{S}$ el levantado canónico, entonces se cumple $Fg=gF$ para toda $g\in G$, siendo $G$ el grupo de tranformaciones de cubrimiento. <br><br>
+
+      <span class="dem">Dem:</span>Dada $g\in G$, tenemos que $gF_tg^{-1}$ es una isotopía de la identidad a $gFg^{-1}$. <br><br>
+
+      
 
     </div>
 
