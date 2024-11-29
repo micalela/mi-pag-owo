@@ -91,19 +91,23 @@
         
         <span class="duda">pq es importante el segundo punto y con el primero no es suficiente?</span> <br><br>
 
-        <span class="duda"> -- > pq estamos hablando solo de una línea. si toda la fto fuera por líneas de brouwer, y la foliación fuera invariante por $f$, el segundo punto no sería necesario.</span>
+        <span class="duda"> -- > pq estamos hablando solo de una línea. si toda la fto fuera por líneas de brouwer, y la foliación fuera invariante por $f$, el segundo punto no sería necesario.</span><br><br>
+
+        <span class="duda">se podrá tener una foliación por líneas de Brw que no sea fto?</span>
         
     </div>
 
     <div class="caja">
 
-        <span class="teo">Teorema de Brouwer foliado:</span> $f\in Hom^+(\R^2)$ tal que $fix(f)=\varnothing$, entonces existe una foliación topológica orientada de $\R^2$ tal que cada hoja es una línea de Brouwer.
+        <span class="teo">Teorema de Brouwer foliado:</span> $f\in Hom^+(\R^2)$ tal que $fix(f)=\varnothing$, entonces existe una foliación topológica orientada de $\R^2$ tal que cada hoja es una línea de Brouwer. <br><br>
+
+        <span class="obs">Notación:</span> Llamamos <ins>homeo de Brouwer</ins> a los homeos en estas hipótesis.
 
     </div>
 
     <div class="caja">
 
-        <span class="lema">Lema:</span> <ins>La foliación anterior es positivamente transversal a la dinámica</ins> <br><br>
+        <span class="lema" id="lema1">Lema:</span> <ins>La foliación anterior es positivamente transversal a la dinámica</ins> <br><br>
 
         Sea $\F$ foliación tal que toda hoja es una línea de Brouwer. Entonces, por todo $x\in\R^2$ pasa un arco positivamente transversal a $\F$ que va de $x$ a $f(x)$. <br><br>
 
@@ -158,7 +162,88 @@
 
       <span class="dem">Dem:</span>Dada $g\in G$, tenemos que $gF_tg^{-1}$ es una isotopía de la identidad a $gFg^{-1}$. <br><br>
 
+      Veamos que también es un levantado de $f_t$: $p\circ gF_tg^{-1}=p\circ F_tg^{-1}=f_t\circ p\circ g^{-1}=f_t\circ p$. <br><br>
+
+      Por la unicidad del levantado canónico tenemos que $gF_tg^{-1}=F_t$. <br><br>
+
+      <span class="obs">Conclusión:</span> Tenemos que si nuestro homeo de Brouwer es isotópico a la identidad y $S\not\simeq\s^2$, siempre puedo obtener una foliación topológica orientada de $S$ por líneas de Brouwer.
+
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> $G < Hom^+(\R^2)$ tiene la <ins>propiedad de cubrimiento</ins> si para todo $x\in\R^2$ existe un entorno $U$ tal que la familia $\{g(U):g\in G\}$ es dos a dos disjunta. <br><br>
+
+      <span class="teo">Teorema de Brouwer foliado equivariante:</span>
+
+      Sea $G < Hom^+(\R^2)$ con la propiedad de cubrimiento. Sea $f$ un homeo de brouwer tal que $fg=gf$ para todo $g\in G$. <br><br>
+
+      Entonces, existe $\F$ foliación topológica orientada en $\R^2$, invariante por la acción de $G$, tal que cada hoja es una línea de Brouwer para $f$.
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> <ins>Puntos fijos contractibles</ins> <br><br>
+
+      $f\in Hom_0(S),\; z\in S$, definimos una curva $\gamma_z$ como $\gamma_z(t)=f_t(z)$ para $(f_t)_{t\in[0,1]}$ isotopía de $Id$ a $f$. <br><br>
+
+      Si $z\in fix(f)$, $\gamma_z$ es una curva cerrada en $S$. Decimos que $z$ es contractible si $\gamma_z$ es homotópicamente trivial en $S$. <br><br>
+
+      <span class="obs">Obs:</span> $z$ es contractible $\iff$ $F(\tilde{z})=\tilde{z}$ para todo $\tilde{z}$ levantado de $z$. <br><br>
+
+      (El cubrimiento universal es simplemente conexo, las curvas no triviales en $S$ no levantan a curvas cerradas.) <br><br>
+
+      <span class="teo">Teorema:</span> <ins>Foliación transversa a la isotopía en una superficie</ins> <br><br>
+
+      Sea $f\in Hom^+_0(S)$ sin puntos fijos contractibles, entonces existe $\F$ foliación topológica orientada en $S$ tal que por todo punto $z\in S$ pasa un arco $\gamma$ de $z$ a $f(z)$ positivamente transversal a $\F$, y que es homotópico a extremos fijos en $S$ al arco $\gamma_z$. <br><br>
+
+      <span class="obs">Notación:</span> Decimos que $\F$ y la isotopía $(f_t)_{t\in[0,1]}$ son <ins>transversas</ins>.
+
+    </div>
+
+    <div class="caja">
+
+      Veamos algunas propiedades de la foliación transversa. Sea $f\in Hom^+_0(S)$ sin puntos fijos contractibles, y sea $\F$ una foliación transversa a la isotopía dada por el teorema anterior. <br><br>
+
+      <span class="lema">Lema:</span> Para todo $z\in S$ existen entornos $U_z$ y $V_{f(z)}$ tales que todo punto $z'\in U_z$ puede ser conectado con cualquer otro $z''\in V_{f(z)}$ mediante un arco positivamente transversal a $\F$. <br><br>
+
+      <span class="dem">Dem:</span> Por el teorema anterior tenemos que por todo punto $z\in S$ pasa un arco $\gamma$ que va de $z$ a $f(z)$, es posistivamente transversal a $\F$ y es homotópico a extremos fijos en $S$ al arco $\gamma_z$. <br><br>
+
+      Sean $U', V'$ entornos de $z$ y $f(z)$, y sean $g:U'\to (0,1)^2$, $g:V'\to (0,1)^2$ homeos que preservan orientación y mapean $\F$ en la foliación por rectas verticales de $(0,1)^2$. <br><br>
+
+      Como $\gamma$ es positivamente transversal a $\F$, se cumple que $p_1(h(\gamma))$ y $p_1(g(\gamma))$ son estrictamente crecientes. <br><br>
+
+      Sean $s=\sup\{t\in[0,1]:\gamma(t)\in U'\}$, $i=\inf\{t\in[0,1]:\gamma(t)\in V'\}$, $p=\gamma(s)$, $q=\gamma(i)$. <br><br>
+
+      Ahora tomamos entornos $U\subset U', V\subset V'$ tales que $U\subset I(\phi_p),\; V\subset D(\phi_q)$. <br><br>
+
+      Entonces, dado cualquier $z'\in U$ tengo un arco $\gamma_{z'}$ que va de $z'$ a $p$ y es positivamente transversal a $\F$. <br><br>
+
+      De la misma manera, dado cualquier $z''\in V$ tengo $\gamma_{z''}$ que va de $q$ a $z''$ y es positivamente transversal a $\F$. <br><br>
+
+      Concatenando estos dos arcos con $\gamma|_{[s,i]}$ obtenemos un arco positivamente transversal a $\F$ que va de $z'$ a $z''$. <br><br>
+
+      <span class="lema">Lema:</span> Sea $z\in\Omega(f)$, entonces existe un lazo $\Gamma$ basado en $z$ y positivamente transversal a $\F$. <br><br>
+
+      <span class="dem">Dem:</span> Por el lema anterior tenemos entornos $U_{f^{-1}(z)}$, $V_{f(z)}$ tales que cualquier punto de estos entornos conecta con $z$ por un arco positivamente transversal a $\F$ <br><br>
+
+      Tomamos $W=f(U)\cap f^{-1}(V) \Rightarrow W$ es un entorno de $z$ <br><br>
       
+      $z\in\Omega(f)\Rightarrow f^n(W)\cap W\neq\varnothing$ para algún $n>0$. <br><br>
+
+      Podemos considerar entonces $y\in W$ tal que $f^n(y)\in W$. <br><br>
+
+      Entonces, tenemos que $f^{n-1}(y)\in U$, $f(y)\in V$. <br><br>
+      
+      Por lo tanto, podemos considerar $\gamma_1, \gamma_2$ arcos positivamente transversales a $\F$ que van de $f^{n-1}(y)$ a $z$ y de $z$ a $f(y)$. <br><br>
+
+      Además, por <a href="#lema1">este lema</a> tenemos arcos $\beta_2 \dots \beta_{n-1}$ que van de $f^{i-1}(y)$ a $f^{i}(y)$. <br><br>
+
+      Concatenando todos esos arcos tenemos la curva cerrada que buscábamos.
+
+
+      <br><br>
+
+      <span class="obs">Obs:</span> Esta es otra forma de ver que $\Omega(f)\neq\varnothing$ me da $fix(f)\neq\varnothing$. Tener un lazo cerrado positivamente transversal a la dinámica me da un entorno que se manda adentro de si mismo por $f$ o $f^{-1}$.
+
 
     </div>
 
