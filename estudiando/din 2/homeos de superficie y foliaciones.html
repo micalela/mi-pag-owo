@@ -1,0 +1,119 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciencia</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="..\..\assets\iconos\photodisc.png"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="din topo.css" />
+    <link rel="stylesheet" href="navbar din topo.css" />
+  </head>
+  
+    <body>
+
+    <script src="navbar din topo.js"></script>
+
+    <img
+      src="..\..\assets\dinámica topológica\aplicaciones.png"
+      class="imagenTitulo"
+      alt="teorema de brouwer foliado"
+      style="padding: 0px 0px 0px 10px; height: 120px;"
+    /> 
+
+    $
+    \newcommand{\A}{\mathbb{A}}
+    \newcommand{\D}{\mathbb{D}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\s}{\mathbb{S}}
+    \newcommand{\tu}{\tilde{U}}
+    \newcommand{\F}{\mathcal{F}}
+    \newcommand{\fall}{\;\forall\;}
+    \newcommand{\exst}{\;\exists\;}
+    $
+<body>
+    <div class="caja">
+        <span class="def">Def:</span> <ins>Clases de homología y función de índice</ins>
+    </div>
+
+    <div class="caja">
+      <span class="teo">Franks:</span> $f\in Hom^+_0(A)$ tal que $\Omega(f)=A$ y existen $z_0,z_1\in A$ puntos recurrentes que cumplen $\rho(f,z_0) < 0 < \rho(f,z_1)$
+
+      $$\Rightarrow fix(f)\neq\varnothing$$ 
+
+      <span class="dem">Dem:</span> Tomo la isotopía $(f_t)$ de $Id$ a $f$ y considero su levantado al cubrimiento universal $(F_t)$ que cumple $F_0=Id$. <br><br>
+
+      Supongo que no hay fijos. En particular, no hay fijos contractibles, entonces, puedo construir $\F$ fto positivamente transversal a la isotopía $(f_t)$. <br><br>
+
+      Existen lazos no triviales $\Gamma_0,\Gamma_1$ positivamente transversales a $\F$, basados en $z_0,z_1$ y existen $n_0,n_1\in\mathbb{N}^*$ tales que $n_0[\Gamma_0]+n_1[\Gamma_1]=0$ 
+      
+      <span class="duda">por queeee ---> entre $x$ y $f(x)$ siempre tengo arco posit transv a $\F$, entonces tengo arco entre $x$ y $f^n(x)$. Como es recurrente, $\forall\; U_x\;\exists\; m>0$ tq $f^m(x)\in U_x$, tomando el $U_x$ para que sea libre podemos cerrar la órbita. Naturalmente estas curvas van a girar en direcciones opuestas alrededor del anillo. TLDR: $x$ recurrente $\Rightarrow$ $x\in\Omega(f)$</span><br><br>
+
+      Consideramos entonces la función $\Lambda:A-\{Im(\Gamma_0)\cup Im(\Gamma_1)\}\to\Z$ <br><br>
+
+      Esta función es constante en cada componente conexa, no es constante en general y vale $0$ en las componentes conexas que tocan el borde exterior del anillo. Además, por compacidad de las curvas, tenemos siempre finitas componentes conexas, y por lo tanto nuestra función $\Lambda$ alcanza finitos valores.<br><br>
+
+      Como $n_0[\Gamma_0]+n_1[\Gamma_1]=0$ tenemos $\Lambda=0$ en un entorno de $0$. <br><br>
+
+      Por lo tanto, $\Lambda$ alcanza un máximo o mínimo no nulo en algún lugar de $A-\{Im(\Gamma_0)\cup Im(\Gamma_1)\}$ que no toca los bordes de $A$. <br><br>
+
+      Sea $U$ esta componente conexa. Supongamos, sin pérdida de generalidad, que lo que se da es un máximo. Los bordes de $U$ van a ser positivamente transversales a $\F$, y como es un máximo local, $U$ va a quedar "a la izquierda" de $\partial U$. Esto implica que $f(U)\subset U$. <br><br>
+
+      Como supusimos que $fix(f)=\varnothing$, por Brouwer clásico sabemos que $U$ no puede ser un disco topológico. Por lo tanto, hay un agujero en $U$. Esto es más q nada un dato de color. <br><br>
+
+      Por Poincaré-Bendixon tenemos que el $\omega$ límite de las fibras $\phi$ que cortan $\partial U$ tiene que ser una órbita periódica, ya que nuestra foliación no tiene singularidades. Por lo tanto, tenemos una hoja cerrada de nuestra foliación.<br><br>
+
+      Esto rompe $\Omega(f)=A$, absurdo. (Un abierto que apenas corta $\partial U$ no vuelve a cortar).
+    </div>
+
+    <div class="caja">
+      <span class="def">Def:</span> $X\subset fix(f)$ está <ins>desenlazado</ins> si existe una isotopía $(f_t)$ de $Id$ a $f$ tal que $f_t(z)=z$ para todo $z\in fix(f), t\in[0,1]$. <br><br>
+
+      Decimos que $X$ es un <ins>desenlazado maximal</ins> si es desenlazado y para cualquier $z\in fix(f)-X$, $X\cup\{z\}$ no es desenlazado. <br><br>
+
+    </div>
+     
+    <div class="caja">
+
+      <span class="lema">Lema:</span> Si $\#X=3$ para $f:\s^2\to \s^2,\; X\subset fix(f) \Rightarrow X$ es desenlazado. <br><br>
+
+      <span class="dem">Dem:</span> Sea $X=\{x_1,x_2,x_3\}$. Tomo una isotopía $(f_t)$ de $Id$ a $f$. <br><br>
+      
+      Para todo $t\in [0,1]$ tengo $\varphi_t$ transformación de Möbius tal que $\varphi_t(f_t(x_i))=x_i\;\forall\;i=1,2,3$. <br><br>
+
+      Entonces, $g_t=\varphi_t\circ f_t$ es la isotopía buscada. <br><br>
+
+      <span class="lema">Lema:</span> $X\subset fix(f)$ desenlazado maximal, $S'=S-X$, $f_t:S'\to S'$ isotopía de $Id$ a $f|_{S'}$. Entonces, el levantamiento canónico $F:S'\to S'$ no tiene puntos fijos. <br><br>
+
+      <span class="dem">Dem:</span> Los lazos de puntos que no son desenlazados se levantan a caminos abiertos en el cubrimiento universal, por lo tanto, los extremos no son fijos.
+    </div>
+
+    <div class="caja">
+
+      <span class="teo">Teo:</span> $f\in Hom_0(\s^2),\; f\neq Id,\;\Omega(f)=\s^2$ y $\# fix(f)\geq 3$
+
+      $$\Rightarrow f \text{ tiene puntos periódicos de período arbitrariamente grande}$$
+
+      <span class="dem">Dem:</span>
+
+    </div>
+
+</body>
+</html>

@@ -11,6 +11,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="foliado.html">brouwer foliado</a>
 <span>✧</span>
+<a href="homeos de superficie y foliaciones.html">homeos de superficie</a>
+<span>✧</span>
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 
