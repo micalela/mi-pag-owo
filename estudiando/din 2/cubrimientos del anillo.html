@@ -1,0 +1,81 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciencia</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="..\..\assets\iconos\photodisc.png"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <link rel="stylesheet" href="din topo.css" />
+    <link rel="stylesheet" href="navbar din topo.css" />
+  </head>
+  
+    <body>
+
+    <script src="navbar din topo.js"></script>
+
+    <img
+      src="..\..\assets\dinámica topológica\cubrimientos.png"
+      class="imagenTitulo"
+      alt="cubrimientos del anillo"
+      style="padding: 0px 0px 0px 10px; height: 120px;"
+    /> 
+
+    $
+    \newcommand{\A}{\mathbb{A}}
+    \newcommand{\D}{\mathbb{D}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\s}{\mathbb{S}}
+    \newcommand{\tu}{\tilde{U}}
+    \newcommand{\F}{\mathcal{F}}
+    \newcommand{\fall}{\;\forall\;}
+    \newcommand{\exst}{\;\exists\;}
+    $
+<body>
+    
+<div class="caja">
+  <span class="obs">Sistemas no invertibles:</span> Si consideramos $f:\C\to\C$ tal que $f(z)=z^2$ tenemos los puntos fijos 0 y 1, además de $\infty$ si extendemos la función a $\overline{\C}$. <br><br>
+
+  $f(-1)=f(1)=1$ y por lo tanto $f$ no es invertible. <br><br>
+
+  Además, $\s^1$ es totalmente invariante. <br><br>
+
+  Viendo en coordenadas polares, $f(\rho e^{i\theta})=\rho^2 e^{2i\theta}$, y con esto vemos que si $|z|< 1\Rightarrow \lim\limits_{n\to\infty}f^n(z)=0$ y si $|z|> 1\Rightarrow \lim\limits_{n\to\infty}f^n(z)=\infty$.
+  
+  Por lo tanto, 0 e $\infty$ son puntos <ins>atractores</ins>. <br><br>
+
+  Si buscamos los puntos fijos de $f^n$, tenemos $(z^2)^n=z\iff z^{2^n}-z=0 \iff z(z^{2^{n}-1}-1)=0$. 
+  
+  Por lo tanto los fijos son $0$ y $2^{n}-1$ raíces de la unidad, hay entonces $2^n$ fijos en todo $\C$ y $2^n -1$ fijos en $\s^1$. <br><br> 
+
+  En general, dada $f(z)=z^d$ tenemos que $\# fix(f^n|_{\s^2})=d^n-1$ ($d\in\Z, |d|>1$). <br><br>
+
+  Además, este número es el mínimo posible en la clase de homotopía de $f$. <span class="comm">esto se ve moviendo las manos con el gráfico,, insertar imagen aqui</span> <br><br>
+
+  En estos casos se cumple entonces que $\lim\limits_{n\to\infty}\frac{\log(\# fix(f^n))}{n}=\log(d)$. <br><br>
+
+  Otro ejemplo: Consideramos $f:\s^1\to\s^1$ tal que $f(z)=2z$
+
+
+</div>
+
+</body>
+</html>
