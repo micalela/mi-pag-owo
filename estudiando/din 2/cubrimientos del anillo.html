@@ -42,12 +42,15 @@
     \newcommand{\Z}{\mathbb{Z}}
     \newcommand{\R}{\mathbb{R}}
     \newcommand{\C}{\mathbb{C}}
+    \newcommand{\T}{\mathbb{T}}
     \newcommand{\N}{\mathbb{N}}
+    \newcommand{\H}{\mathcal{H}}
     \newcommand{\s}{\mathbb{S}}
     \newcommand{\tu}{\tilde{U}}
     \newcommand{\F}{\mathcal{F}}
     \newcommand{\fall}{\;\forall\;}
     \newcommand{\exst}{\;\exists\;}
+    \newcommand{\nexst}{\;\not\exists\;}
     $
 <body>
     
@@ -72,8 +75,116 @@
 
   En estos casos se cumple entonces que $\lim\limits_{n\to\infty}\frac{\log(\# fix(f^n))}{n}=\log(d)$. <br><br>
 
-  Otro ejemplo: Consideramos $f:\s^1\to\s^1$ tal que $f(z)=2z$
+  <ins>Otro ejemplo</ins>: Consideramos $f:\s^1\to\s^1$ tal que $f(x)=2x\mod 1$, los fijos de $f^n$ van a cumplir $2^n x=x+k$ con $k\in\Z$, es decir $x=\frac{k}{2^n-1}$.  <br><br>
 
+  Por lo tanto tenemos $2^n -1$ fijos distintos, y $f$ cumple $\lim\limits_{n\to\infty}\frac{\log(\# fix(f^n))}{n}=\log(d)$. <br><br>
+
+  Esto es básicamente el mismo ejemplo que antes pero viendo la coordenada $\theta$. <br><br>
+
+  <span class="obs">Pregunta:</span> ¿Dada $f:\s^2\to\s^2$ de grado $d$, siempre se cumple $\limsup\limits_{n\to\infty}\frac{\log(\# fix(f^n))}{n}=\log(d)$? <br><br>
+
+  <ins>Respuesta:</ins> Non. 
+  
+  <span class="duda">no entiendo el contraejemplo,, restringir $z^d$ a cualquiera de las cuencas de atracción? pero, no tiene que ser en $\s^2$ la función? non comprendo. Lo mismo pensando en $f(r,\theta)=(2r,2\theta)$, se va de $\s^2$.</span>
+
+  <br><br>
+
+  Nuestro objetivo en esta sección es buscar hipótesis que nos garanticen esta <ins>tasa</ins>.
+</div>
+
+<div class="caja">
+
+Sea $A=\s^1\times(0,1)$ el anillo abierto, consideramos $f:A\to A$ continua, y llamamos $\deg(f)=[f(\gamma)]\in H_1(A,\Z)$, con $\gamma:[0,1]\to A$ tal que $\gamma(t)=(e^{2\pi i t}, 1/2)$. Es decir, $\deg(f)$ es la "cantidad de vueltas".<span class="comm">poner dibujo</span> <br><br>
+
+<span class="obs">Observación:</span> $f:A\to A$ puede ser un <ins>cubrimiento</ins>. <br><br>
+
+Es decir, para todo $x\in A\exst U_x$ abierto que contiene a $x$ tal que $f^{-1}(U_x)=\bigcup \tilde{U_x}$ abiertos disjuntos y $f|_{\tilde{U_x}}$ es un homeo. <br><br>
+
+En este caso, tenemos que $\# f^{-1}(x)$ es localmente constante, y como $A$ es conexo por caminos, entonces $\# f^{-1}(x)$ es constante. <br><br>
+
+Si $\deg(f)=d$, entonces $\# f^{-1}(x)=d$. <span class="comm">agregar dibujito de como queda un cubrimiento del anillo</span> <br><br>
+
+<span class="obs">Dato:</span> $\T^2$ y $A$ admiten ser cubrimiento de si mismos, las demás superficies no. ($A$ no es una superficie pero se entiende el punto aaaa) <br><br>
+
+<span class="obs">Observación:</span> Si $f:A\to A$ es un cubrimiento, y $(p,\tilde{A})$ es el cubrimiento universal de $A$, entonces $F:\tilde{A}\to\tilde{A}$ es un homeo del plano. <br><br>
+
+<span class="ej">Ejemplo:</span> $f:\s^1\to\s^1$ tal que $f(z)=z^2$ se levanta a $F:\R\to\R$ tal que $F(x)=2x$. <br><br>
+
+¿Puntos fijos de $F$? El único fijo es el 0. <br><br>
+
+¿Puntos fijos de levantados de $f$ en general? Sabemos que todos los levantados de $f$ van a ser de la forma $F+k$ con $k\in\Z$ <span class="duda">esto sigue pero no entiendo el punto, no entiendo qué es lo que muestra el ejemplo</span> <br><br>
+
+<span class="def">Def:</span> Decimos que un conjunto $K\subset A$ es <ins>esencial</ins> si $\nexst D\subset A$ tal que $K\subset D$. <br><br>
+
+<span class="lema">Lema:</span> $f:A\to A$ cubrimiento que preserva orientación, $K\subset A$ compacto, conexo, invariante e <ins>inesencial</ins> $\Rightarrow fix(f)\neq\varnothing$. <br><br>
+
+<span class="dem">Dem:</span> Sea $F:\tilde{A}\to\tilde{A}$ levantado de $f$ al cubrimiento universal, entonces $F$ es un homeo del plano que preserva orientación. <br><br>
+
+Si probamos que $F$ tiene un compacto invariante, entonces vamos a tener que $fix(F)\neq\varnothing$ y por lo tanto $fix(f)\neq\varnothing$. <br><br>
+
+Como $K\subset D$ y $D$ es simplemente conexo, tenemos que $p$ es un homeo en cada componente conexa de $p^{-1}(D)$, por lo tanto manda compactos en compactos, luego $p^{-1}(K)$ es unión disjunta de compactos. <br><br>
+
+<span class="duda">entiendo que en este caso se cumple $F(p^{-1}(K))\subset p^{-1}(K)$, pero no puede ser que $p^{-1}(K)$ tenga infinitas c.c y por lo tanto no sea compacto aunque todas ellas sean compactas? estoy confundida.</span> <br><br>
+
+<span class="teo">Conjetura de Shub:</span> $f:\s^2\to\s^2 \;\; C^1$ de grado $d \;\Rightarrow \limsup\limits_{n\to\infty} \frac{\log(\#fix(f^n))}{n}\geq \log(d)$ <br><br>
+
+<span class="teo">Teorema de Nielson:</span> $f:A\to A,\; \deg(f)=d,\; |d|>1$ tal que todo levantado $F:\tilde{A}\to\tilde{A}$ tiene un fijo $\Rightarrow \# fix(f)\geq |d-1|$ <br><br>
+
+<span class="dem">Dem:</span> Sea $F$ un levantado cualquiera, sabemos que $\fall k\in\Z,\exst x_k\in \tilde{A}$ tal que $F_k(x_k)=x_k$, con $F_k(x)=F(x)+k$. <br><br>
+
+Queremos saber $\#\{p(x_k):k\in\Z\}$ <span class="comm">a ver cuántos de estos fijos se pierden con la proyección</span> <br><br>
+
+Como sabemos explícitamente cuál es $p$ <span class="comm">escribir esto</span> sabemos que contar el cardinal de ese conjunto es lo mismo que fijarnos cuándo $x_k=x_l+j$ para $l,j\in\Z$. <br><br>
+
+$x_k=x_l+j\Rightarrow x_k=F_k(x_k)=F_k(x_l+j)=F_k(x_l)+dj$ <span class="comm">$\deg(f)=d\Rightarrow\deg(F)=d$</span> <br><br>
+
+$\Rightarrow x_k=F_k(x_l)+dj=F(x_l)+k+dj=F(x_l)+l-l+k+dj=F_l(x_l)-l+k+dj=x_l-l+k+dj$ <br><br>
+
+$\Rightarrow x_l+j=x_k=x_l-l+k+dj \Rightarrow j(1-d)=k-l\Rightarrow k-l\in\Z\cdot(1-d)$ <br><br>
+
+Por lo tanto $\{x_0,\dots ,x_{|d-1|-1}\}$ se proyectan a puntos distintos. <br><br>
+
+Obtuvimos entonces que hay a lo sumo $|d-1|$ fijos distintos de $f$. <br><br>
+
+<span class="duda">insertar ejemplo nefasto de función que tiene fijo en un levantado pero en los otros no,, (no lo entendí)</span> <br><br>
+
+<span class="lema">Lema:</span> ($f$ es semiconjugada a $z^d$ en un compacto) <br><br>
+
+$f:A\to A,\; \deg(f)=d,\; |d|>1, K\subset A$ compacto invariante, $\tilde{K}\subset p^{-1}(K)$, $F:\tilde{A}\to\tilde{A}$ levantado de $f$. <br><br>
+
+Entonces, existe $H_F:\tilde{K}\to\R$ continua tal que:
+
+<ul>
+  <li>
+    $H_F(x+1)=H_F(x)+1\fall x\in \tilde{K}$
+  </li>
+  <li>
+    $H_F\circ F=d\cdot H_F$
+  </li>
+  <li>
+    $\{|H_F(x,y)-x|:(x,y)\in\tilde{K}\}$ es acotado
+  </li>
+</ul>
+
+<span class="dem">Dem:</span> Sea $\H =\{H:\tilde{K}\to\R\text{ continua } \mid H(x+1)=H(x)+1\}$ con la métrica $\rho(H_1,H_2)=\sup\limits_{x\in\tilde{K}}|H_1(x)-H_2(x)|$ <br><br>
+
+$(\H,\rho)$ es un espacio métrico completo. <br><br>
+
+Defino $T:\H\to \H$ tal que $T(H)=\frac{H\circ F}{d}$. <br><br>
+
+Verifiquemos que $T(H)$ siempre cae en $\H$: $T(H)(x+1)=\frac{H\circ F(x+1)}{d}=\frac{H(F(x)+d)}{d}=\frac{H(F(x))+d}{d}=\frac{H\circ F(x)}{d}+1$ enefecto <br><br>
+
+$T$ es una contracción: $\rho(T(H_1),T(H_2))=\sup\limits_{x\in\tilde{K}}|\frac{H_1\circ F(x)}{d}-\frac{H_2\circ F(x)}{d}|=\frac{1}{d}\sup\limits_{x\in\tilde{K}} |H_1\circ F(x)-H_2\circ F(x)|\leq \frac{1}{d}\sup\limits_{x\in\tilde{K}}|H_1(x)-H_2(x)|=\frac{1}{d}\rho(H_1,H_2)$ <br><br>
+
+<span class="duda">no entendí pq la desigualdad</span> <br><br>
+
+Con esto podemos concluir que $T$ tiene un fijo en $\H$, llamamos a esa función $H_F$ <br><br>
+
+Luego $T(H_F)=H_F \Rightarrow \frac{H_F\circ F}{d}=H_F\Rightarrow H_F\circ F=d\cdot H_F$, por lo tanto $H_F$ verifica los primeros dos puntos. <br><br>
+
+Además, como es continua y cumple $H(x+1)=H(x)+1$ entonces la función que manda $(x,y) \mapsto H_F(x,y)-x$ también es continua y además $\Z$-periódica, ya que $H_F(x+1,y+1)-x-1=H_F(x,y)+1-x-1=H_F(x,y)-x$. <br><br>
+
+Por lo tanto, $H_F(x,y) - x$ es acotada.
 
 </div>
 
