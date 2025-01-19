@@ -184,9 +184,60 @@ Luego $T(H_F)=H_F \Rightarrow \frac{H_F\circ F}{d}=H_F\Rightarrow H_F\circ F=d\c
 
 Además, como es continua y cumple $H(x+1)=H(x)+1$ entonces la función que manda $(x,y) \mapsto H_F(x,y)-x$ también es continua y además $\Z$-periódica, ya que $H_F(x+1,y+1)-x-1=H_F(x,y)+1-x-1=H_F(x,y)-x$. <br><br>
 
-Por lo tanto, $H_F(x,y) - x$ es acotada.
+Por lo tanto, $H_F(x,y) - x$ es acotada. <br><br>
 
+Para probar el próximo teorema en el caso en el que $f$ revierte orientación vamos a usar este resultado: <br><br>
+
+<span class="teo">Teorema de Kuperberg:</span> $f\in Hom^-(\R^2)$, $K$ continuo invariante $\Rightarrow fix(f)\cap K\neq\varnothing$ <br><br>
+
+<span class="teo">Teo:</span> $f:A\to A$ cubrimiento, $\deg(f)=d$ con $|d|>1$, $K\subset A$ compacto, conexo, invariante y esencial $$\Rightarrow \# fix(f^n)\geq |d^n-1|\fall n\geq 1$$ <br><br>
+
+<span class="dem">Dem:</span> <ins>Veamos el caso en el que $f$ preserva orientación:</ins> <br><br>
+
+Veamos que vale para $n=1$. Con esto vamos a tener que vale para todo $n\in\N$ usando que $\deg(f^n)=d^n$ y $f^n$ verifica las mismas hipótesis que $f$. <br><br>
+
+Sea $H:\tilde{K}\to\R$ como en el lema anterior, consideramos su proyección $h:K\to\s^1$. <br><br>
+
+Queremos probar que $H$ es sobre. <br><br>
+
+<span class="duda">¿pq no tengo que $\deg(H)=1\Rightarrow \deg(h)=1$ y por lo tanto $h$ es sobre por ser un mapa de grado > 0 en $s^1$????? en qué le estoy pifiando?¿</span> <br><br>
+
+Sea $U$ un entorno abierto de $K$, por el <a href="https://en.wikipedia.org/wiki/Tietze_extension_theorem" target="_blank">teorema de extensión de Tietze</a> podemos tomar una extensión continua de $h$ a $U$, la llamamos $\hat{h}$. <br><br>
+
+$\deg(H)=1\Rightarrow \deg(\hat{h})=1$ y por lo tanto $\hat{h}$ es sobre. <span class="duda">no entiendo pq en este caso vale.</span> <br><br>
+
+Tomo $(U_n)_{n\in\N}$ anillos encajados tales que $\bigcap\limits_{n\in\N}U_n =K,\; U_0=U$ y $x\in \s^1$. <br><br>
+
+Como $\hat{h}$ es sobre en cada uno de estos anillos, para todo $n\in\N$ tenemos $y_n\in U_n$ tal que $h(y_n)=x$. <br><br>
+
+Como todos estos $y_n$ están adentro del compacto $\overline{U}$, tengo una subsucesión convergente, y va a converger a un $z\in K$. Luego como $\hat{h}$ es continua tenemos que $\hat{h}(z)=x$ y por lo tanto $h(z)=x$. Con esto probamos que $h$ es sobre, y por lo tanto $H$ es sobre. <br><br>
+
+Con eso tenemos que $H^{-1}(0)\neq\varnothing$. <br><br>
+
+$H^{-1}(0)$ es compacto porque $\{0\}$ es compacto, $\tilde{K}$ es Hausdorff y $f$ es continua. <br><br>
+
+Además es invariante porque $F(H^{-1}(0))\subset H^{-1}(0) \iff H(F(H^{-1}(0)))\subset H(H^{-1}(0))=\{0\}$ y $H(F(H^{-1}(0)))=d\cdot H(H^{-1}(0)) = \{d\cdot 0\}=\{0\}$. <br><br>
+
+Por lo tanto tenemos que $fix(F)\neq\varnothing$. <br><br>
+
+Como podemos hacer el mismo argumento para todos los levantados de $f$, entonces por el teorema de Nielsen tenemos el resultado buscado. <br><br>
+
+<ins>Veamos el caso en el que $f$ revierte orientación:</ins> Separamos esta prueba en dos casos: $d>0$ y $d< 0$ <br><br>
+
+<ins>Caso d > 0:</ins> En este caso $f$ intercambia los fines <span class="duda">pq los intercambia?</span><br><br>
+
+Primero observamos que podemos modificar $f$ en un entorno de los fines para que se extienda a $\overline{A}$ (pegarle dos círculos) sin agregar puntos fijos. <br><br>
+
+La manera de hacer esto para cada fin, a partir de un momento empezar a foliar $A$ por círculos concéntricos $\gamma_t$ y definir la extensión $g$ como  $g|_{\gamma_t}=h_t$, siendo $(h_t)_{t=0}^{t=1}$ la homotopía que manda $f|_{\gamma_0}$ a $z^d$. 
+
+<span class="comm">todos los mapas de la esfera del mismo grado son homotópicos, y definimos el grado de $f$ en $A$ a partir del grado de $f|_{\gamma}$ para $\gamma$ generador de $H_1(A,\Z)$</span> <br><br>
+
+Tenemos entonces $g:\s^1\times[0,1]\to\s^1\times[0,1]$ cubrimiento que intercambia los fines del anillo. Por lo visto anteriormente, ahora que estamos en un compacto, tenemos que $g$ es semiconjugada a $z^d$ con el mapa $h$ visto anteriormente. <span class="comm">en realidad todavía no escribí el $h$ explícitamente pero es la proyección de $H$ a $\s^1$, insertar mapita prolijo antes de esto</span><br><br>
+
+<ins>Afirmación:</ins> $h^{-1}(0)$ contiene un conexo que corta los fines del anillo. <br><br>
+
+Esto se debe a que si no sucede, entonces puedo tener una curva $\gamma\subset h^{-1}(0)^c$ esencial, pero esto implicaría que $h$ no alcanza el $0$, y como $\deg(h)=1$ entonces $h$ es sobre en $\gamma$, absurdo. <br><br>
 </div>
 
 </body>
-</html>
+</html> 
