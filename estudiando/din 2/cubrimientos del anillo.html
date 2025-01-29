@@ -224,7 +224,7 @@ Como podemos hacer el mismo argumento para todos los levantados de $f$, entonces
 
 <ins>Veamos el caso en el que $f$ revierte orientación:</ins> Separamos esta prueba en dos casos: $d>0$ y $d< 0$ <br><br>
 
-<ins>Caso d > 0:</ins> En este caso $f$ intercambia los fines <span class="duda">pq los intercambia?</span><br><br>
+<ins>Caso d > 0:</ins> En este caso $f$ intercambia los fines <span class="duda">pq los intercambia? --> como revierte orientación necesariamente tiene que intercambiar los fines o los puntos $\infty, -\infty$, en este caso como $d>0$ sabemos que no cambia $\infty, -\infty$ entonces tiene que intercambiar las tapas.</span><br><br>
 
 Primero observamos que podemos modificar $f$ en un entorno de los fines para que se extienda a $\overline{A}$ (pegarle dos círculos) sin agregar puntos fijos. <br><br>
 
@@ -237,6 +237,30 @@ Tenemos entonces $g:\s^1\times[0,1]\to\s^1\times[0,1]$ cubrimiento que intercamb
 <ins>Afirmación:</ins> $h^{-1}(0)$ contiene un conexo que corta los fines del anillo. <br><br>
 
 Esto se debe a que si no sucede, entonces puedo tener una curva $\gamma\subset h^{-1}(0)^c$ esencial, pero esto implicaría que $h$ no alcanza el $0$, y como $\deg(h)=1$ entonces $h$ es sobre en $\gamma$, absurdo. <br><br>
+
+Teniendo este conexo invariante que corta ambas tapas y que llamamos $C\subset h^{-1}(0)^c$, por Kuperberg tenemos que $fix(G)\cap C\neq\varnothing$ y por lo tanto tenemos $fix(F)\neq\varnothing$. <br><br>
+
+<span class="duda">No entiendo la justificación (cuadernola de lu) que dan para afirmar que es invariante, y pq tiene que tomar la unión de muchos u.u aiuda</span> <br><br>
+
+<ins>Caso d < 0:</ins>  <span class="duda">no entiendo!!! no entiendo pq este caso es distinto que el d>0 y hay que hacerlo aparte,, no entiendo pq la estrategia de extender la función para d>0 no sirve también para este caso y vice versa. tampoco entiendo pq ((en la def de G que no escribí acá, está en el cuaderno y en fotos de mi pizarron)) pq defino la función para los bordes del rectángulo y después la extiendo para el interior: no preciso que en el interior sea igual a $F$????? no la tengo definida ya en el interior??? i don understand math or my life or anything waaaaaaaaaaa</span> <br><br>
+
+<span class="obs">Ejemplo: (Denjoy)</span> $F:A\to A$ cubrimiento, $K$ compacto invariante, $Per(f)=\varnothing$, $\deg(f)=d$ con $|d|>1$. <br><br>
+
+Observar que necesariamente en este ejemplo el compacto $K$ va a ser inesencial, de lo contrario tendríamos algún punto fijo. <br><br>
+
+Partimos de $R_\alpha:\s^1\to \s^1$ rotación de ángulo $\alpha\not\in\mathbb{Q}$. Agarranos un $x\in \s^1$ y para cada $R_\alpha^n(x)$, con $n\in\N$, "explotamos" el punto, es decir, lo cambiamos por un intervalo abierto $I_n$ tal que $\sum\limits_{n=0}^{n=\infty}|I_n|<\infty$. <br><br>
+
+Definimos nuestra nueva función como $R_\alpha$ afuera de los $I_n$, y mandamos $I_n$ a $I_{n+1}$ de forma lineal. <br><br>
+
+Entonces nuestra nueva función $g:\s^1\to\s^1$ tiene intervalos errantes y $(\bigcup I_n)^c$ es un compacto invariante. <br><br>
+
+Luego esta $g$ cumple $Per(g)=\varnothing$ <span class="comm">(rotación irracional afuera de los intervalos errantes)</span> <br><br>
+
+Veamos como construir a partir de esto una $f:A\to A$ que cumpla lo buscado: <br><br>
+
+Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande al siguiente dando una vuelta entera alrededor del círculo
+
+
 </div>
 
 </body>
