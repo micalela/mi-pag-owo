@@ -190,7 +190,7 @@ Para probar el próximo teorema en el caso en el que $f$ revierte orientación v
 
 <span class="teo">Teorema de Kuperberg:</span> $f\in Hom^-(\R^2)$, $K$ continuo invariante $\Rightarrow fix(f)\cap K\neq\varnothing$ <br><br>
 
-<span class="teo">Teo:</span> $f:A\to A$ cubrimiento, $\deg(f)=d$ con $|d|>1$, $K\subset A$ compacto, conexo, invariante y esencial $$\Rightarrow \# fix(f^n)\geq |d^n-1|\fall n\geq 1$$ <br><br>
+<span class="teo" id="teo1">Teo:</span> $f:A\to A$ cubrimiento, $\deg(f)=d$ con $|d|>1$, $K\subset A$ compacto, conexo, invariante y esencial $$\Rightarrow \# fix(f^n)\geq |d^n-1|\fall n\geq 1$$ <br><br>
 
 <span class="dem">Dem:</span> <ins>Veamos el caso en el que $f$ preserva orientación:</ins> <br><br>
 
@@ -258,8 +258,57 @@ Luego esta $g$ cumple $Per(g)=\varnothing$ <span class="comm">(rotación irracio
 
 Veamos como construir a partir de esto una $f:A\to A$ que cumpla lo buscado: <br><br>
 
-Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande al siguiente dando una vuelta entera alrededor del círculo
+Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande al siguiente dando una vuelta entera alrededor del círculo <br><br>
 
+<span class="duda">no entiendo todo este ejemplo</span>
+</div>
+
+<div class="caja">
+  <span class="lema">Lema:</span>
+
+  Sea $f\in C^1(\R^2)$ con $f(0)=0$, $U, V$ entornos de 0 tal que $f|_{U-\{0\}}:U-\{0\}\to V-\{0\}$ es un cubrimiento de grado 2. <br><br>
+
+  $$\Rightarrow df_0\equiv 0$$ 
+
+  <span class="dem">Dem:</span> Como $f$ no es inyectiva en un entorno de 0 sabemos que $df_0$ no es invertible. <br><br>
+
+  Sea $v\in\R^2$ tal que $df_o(v)\neq 0$ y tomo la curva $\gamma(t)=tv, t\in(-\varepsilon, \varepsilon)$, luego $\dot\gamma(t)=v$ <br><br>
+
+  Como $df_0(v)\neq0$ entonces $f\circ\gamma (t)$ es una curva simple en el entorno de 0. <br><br>
+
+  Como el cubrimiento es 2:1, hay una curva $\beta$ tal que $f(\beta)=f(\gamma)$ <br><br>
+
+  <span class="comm">para el resto de la prueba mirar mi cuaderno pq es mucho movimiento de manos pero se entiende</span> <br><br>
+
+  <span class="obs">Observación (mía):</span> Esto vale para cualquier grado $|d|>1$. <br><br>
+
+  <span class="lema">Corolario:</span> En las hipótesis anteriores $0$ es atractor para $f$. <br><br>
+
+  <span class="dem">Dem:</span> Esto lo vemos observando el taylor: <br><br>
+
+  $f(v)=f(0)+df_0(v)+|v|\cdot R(0,v)$, como $f(0)=df_0(v)=0$ entonces $f(v)=|v|\cdot R(0,v)$, y como el resto tiende a 0 cuando $|v|\to 0$ entonces tenemos $|f(v)\leq |v|$ en un entorno de 0. <br><br>
+
+  <span class="lema">Aplicación:</span> $f\in C^1(\R^2)$ con $\deg(f)=d$, $|d|>1$ tal que existen dos puntos $p,q$ con $f^{-1}(p)=p, f^{-1}(q)=q$
+
+  $$\Rightarrow \limsup\limits_{n\to\infty} \frac{\log (\# fix(f^n))}{n}\geq \log(d)$$ <br><br>
+
+  <span class="dem">Dem:</span> Observamos que podemos ver $f|_{S^2-\{p,q\}}$ como una función del anillo abierto en sí mismo de grado $d$. <br><br>
+
+  <ins>Asumimos que esta función restricta es un cubrimiento del anillo.</ins> <br><br>
+
+  Además, por lo visto antes (para $f(0)=0$, pero es lo mismo en cualquier lado) tenemos que $p,q$ son atractores, y por lo tanto tenemos entornos $U,V$ de $p,q$ respectivamente tales que $\fall x\in U, f^n(x)\rightarrow p$ y $\fall x\in V, f^n(x)\rightarrow q$. <br><br>
+
+  Definimos $B:=\{x\in\s^2 : f^n(x)\rightarrow p\}, C:=\{x\in\s^2 : f^n(x)\rightarrow q\}$. <br><br>
+
+  Estos conjuntos son abiertos disjuntos, y son ambos no vacíos por lo visto recién, por lo tanto $A\neq B\cup C$. <br><br>
+
+  Sea $K=(B\cup C)^c$, entonces $K$ es un compacto esencial en $A$ (no toca $p,q$) y por definición es invariante por $f$. <br><br>
+
+  Por lo tanto por <a href=#teo1>este teorema</a> concluimos que $f$ tiene la tasa. <br><br>
+
+  Intentemos ahora probar este resultado sin asumir que $f$ es un cubrimiento del anillo.
+
+  
 
 </div>
 
