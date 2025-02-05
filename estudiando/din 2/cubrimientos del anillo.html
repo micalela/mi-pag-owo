@@ -346,7 +346,7 @@ Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande
 
   Necesariamente la curva debe pasar por $y$ para cerrar, y esto tiene que pasar para algún $j\in\{1,\dots, d-1\}$ <br><br>
 
-  <span class="lema">Lema:</span> $f:A\to A$ cubrimiento de grado $d$, semiconjugado a $z^d$ en $\s^1$, con $|d|>1$, $A_0\subset A$ anillo esencial compacto, $\alpha$ curva esencial, cerrada, simple y basada en $z$ <br><br>
+  <span class="lema" id="lema2">Lema:</span> $f:A\to A$ cubrimiento de grado $d$, semiconjugado a $z^d$ en $\s^1$, con $|d|>1$, $A_0\subset A$ anillo esencial compacto, $\alpha$ curva esencial, cerrada, simple y basada en $z$ <br><br>
 
   Entonces, existe $c$ tal que todo levantado de $j \cdot\alpha$ por $f^n$ con extremos $x, y\in A_0$ verifica $|(\tilde{x})_1-(\tilde{y})_1|<  c$  <br><br>
 
@@ -392,9 +392,9 @@ Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande
   
   tales que $\alpha$ conecta $(1,a_0)$ con $(1, a_1)$ y $\beta$ conecta $(-1,a_0)$ con $(-1, a_1)$<br><br>
 
-  Además, $\alpha_0,\beta_0$ van a cumplir $|\alpha_0|=| \beta_0|=1$, tomando $|\cdot |$ como la distancia entre la primera coordenada de los extremos de la curva. <br><br>
+  Además, $\alpha_0,\beta_0$ van a cumplir $|\alpha_0|=| \beta_0|=1$, tomando $|\cdot |$ como la distancia entre la primera coordenada de los extremos del levantado de la curva. <br><br>
 
-  Además vamos a tener $f^{-1}(p_1)=\{q_1,q_2\}$, y vamos a definir nuestra $f$ para que $|q_1-q_2$ sea casi 1. <br><br>
+  Además vamos a tener $f^{-1}(p_1)=\{q_1,q_2\}$, y vamos a definir nuestra $f$ para que $|\tilde{q_1}-\tilde{q_2}|$ sea casi 1. <br><br>
 
   Definiendo arbitrariamente estas preimágenes $\alpha_0$ y $\beta_0$ para que cumplan lo de arriba, tenemos $f$ definida en el borde de dos discos en $A_0$. <br><br>
 
@@ -402,7 +402,83 @@ Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande
 
   Por lo tanto podemos extender continuamente $f$ a $A_0-\{\alpha_0\cup\beta_0\}$ como un homeo sobre su imagen en cada disco. <br><br>
 
+  <ins>Paso 2:</ins> Definamos $f$ en $A_1$. <br><br>
   
+  Para eso quiero encontrar las buenas curvas $\alpha_1$ y $\beta_1$ que serán las preimágenes del segmento $\delta_2=\{(1,t) : t\in [a_2,a_3]\}\subset A_2$. <br><br>
+
+  Voy a querer que estas curvas cumplan que $|f^{-1}(\alpha_1)|=|f^{-1}(\beta_1)|=2$ <span class="comm">y observar q cada una de estas preimágenes son 2 curvas.</span> <br><br>
+
+  Para encontrar $\alpha_1$ y $\beta_1$ hacemos lo siguiente: <br><br>
+
+  Tomamos $\alpha$, $\beta$ dos curvas en $A_0$ tales que 
+
+  <ul>
+    <li>
+      $\alpha\cap\beta =\varnothing$
+    </li>
+    <li>
+      $|\alpha|=|\beta|=2$
+    </li>
+    <li>
+      $\alpha$ une $(1,a_0)$ con $(1,a_1)$
+    </li>
+    <li>
+      $\beta$ une $(-1,a_0)$ con $(-1,a_1)$
+    </li>
+    <li>
+      $\alpha$ y $\beta$ son simples.
+    </li>
+  </ul>
+  
+  Entonces $f(\alpha)$ y $f(\beta)$ van a tener $|f(\alpha)|=|f(\beta)|=4$. <span class="duda">why tho</span><br><br>
+
+  Además pueden autointersectarse, entonces defino $\alpha_1$ como una curva simple que sea homotópica a $f(\alpha)$ a extremos fijos, y $\beta_1$ de la misma manera pero para $\beta$. <br><br>
+
+  Con esto nuevamente, si establecemos que $\alpha_1$ y $\beta_1$ sean las preimágenes por $f$ de $\delta_2$, tenemos $f$ definida en el borde de dos discos y podemos extenderla a todo el anillo $A_1$ <br><br>
+
+  También vamos a pedir que $f^{-2}(p_2)$ tengan distancia casi 2 (en $A_0$). <span class="duda">son 4 preimágenes no? pido que todas entre ellas estén separadas? o solo 2 particulares?</span> <br><br>
+
+  <ins>Paso 3:</ins> Definir $f$ en el resto del anillo inductivamente<br><br>
+
+  Suponemos que $f$ está definida en $A_n$ y vamos a definirla en $A_{n+1}$ <br><br>
+
+  Primero consideramos $\delta_{n+2}$ y $p_{n+2}$ como en los casos anteriores. <br><br>
+
+  También consideramos $\alpha_n$ y $\beta_n$ curvas en $A_0$ tales que 
+  
+  <ul>
+    <li>
+      Son simples y no se intersectan entre ellas
+    </li>
+    <li>
+      $|\alpha_n|=|\beta_n|=n$ 
+    </li>
+    <li>
+      $\alpha_n$ conecta $(1,a_0)$ con $(1,a_1)$
+    </li>
+    <li>
+      $\beta_n$ conecta $(-1,a_0)$ con $(-1,a_1)$
+    </li>
+    <li>
+      $f^{n+1}(\alpha_n)$ y $f^{n+1}(\beta_n)$ son simples en $A_{n+1}$
+    </li>
+  </ul>
+
+  Puedo asegurar que puedo tomar curvas que cumplan el último punto porque, en el caso de no ser simples las imágenes puedo cambiarlas homotópicamente por otras que sean simples. 
+  
+  <span class="duda">acá dice "las cambio por otras simples y homotópicas y las $f^n$ levanto, el $f^n$ lift ya está definido" what the hell does this mean, pq tengo que hablar del f^n levantado?</span> <br><br>
+
+  Defino $f$ en $A_{n+1}\cap(\alpha_n\cup\beta_n)$ tal que mande $\alpha_n, \beta_n$ en $\delta_{n+2}$ y tal que existan dos preimágenes $q_1,q_2$ de $p_{n+2}$ tales que sus levantados disten casi $n$. <br><br>
+
+  Después puedo extenderla a todo $A_{n+1}$ como en los casos anteriores. <br><br>
+
+  Con esto tenemos $f$ definida en todo $A$. <br><br>
+
+  <span class="obs">Observación:</span> $f$ no es semiconjugada a $z^2$ <br><br>
+
+  $A_0$ es compacto y para todo $n\in\N$ tengo $x_n,y_n\in A_0$ tales que $f^n(x_n)=f^n(y_n)=p_n$ y $\tilde{x_n}, \tilde{y_n}$ distan casi $n$. <br><br>
+
+  Por <a href="#lema2">este lema</a> tenemos entonces que $f$ no es semiconjugada a $z^2$.
 
 </div>
 

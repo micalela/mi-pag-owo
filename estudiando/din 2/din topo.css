@@ -63,11 +63,14 @@ body {
     width: fit-content;
     background-color: rgb(228, 218, 185);
     padding: 5px;
+    line-height: 1.5;
+
 }
 .comm{
     width: fit-content;
     background-color: rgb(209, 228, 185);
     padding: 5px;
+    line-height: 1.5;
 }
 
 .agrandar:hover{
