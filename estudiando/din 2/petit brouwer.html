@@ -42,9 +42,109 @@
         \newcommand{\A}{\mathbb{A}}
         \newcommand{\D}{\mathbb{D}}
         \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
         $
+        
+        <div class="caja">
+          Algunos preliminares: <br><br>
 
-        <div class="caja"><span class="prop">Def:</span> <span class="comm">definir grado (ej 12)</span></div>
+          <span class="def">Def:</span> Un <ins>cubrimiento</ins> de un espacio $X$ es un espacio $\tilde{X}$ con una función $p:\tilde{X}\to X$ tal que para cada $x\in X$ existe un entorno $U$ con $p^{-1}(U)=\bigcup V_n$ abiertos disjuntos y tal que $p|_{V_n}$ es un homeo local. <br><br>
+
+          <span class="def">Def:</span> Decimos que un cubrimiento es <ins>universal</ins> si el espacio $\tilde{X}$ es simplemente conexo. <br><br>
+
+          <span class="obs">Obs:</span> El espacio de cubrimiento universal de una superficie es único. <br><br>
+
+          <span class="prop">Lema: (Levantamiento de curvas)</span> Sea $\gamma:[0,1]\to X$ curva con $\gamma(0)=x$ y sea $\tilde{x}\in\tilde{X}$ levantado de $x$. <br><br>
+          
+          Entonces, existe una única curva $\tilde{\gamma}:[0,1]\to\tilde{X}$ tal que $\tilde{\gamma}(0)=\tilde{x}$ y $p\circ\tilde\gamma=\gamma$ <br><br>
+
+          <span class="dem">Dem:</span> Como $[0,1]$ compacto lo partimos en intervalitos suficientemente chicos tal que la unión de los entornos $U_{\gamma(t_i)}$ dados por el levantado en los bordes de los intervalos cubra toda la curva. <br><br>
+
+          Con eso puedo definir $\tilde{\gamma}$ en todos lados usando $p$. <br><br>
+
+          Para probar la unicidad imaginate q hay dos levantados que cumplen lo mismo y considerate el conjunto $S=\{t\in[0,1]\;\;:\;\;\tilde{\gamma_1}(t)=\tilde{\gamma_2}(t)\}$. <br><br>
+
+          Tenemos $0\in S$ entonces $S\neq\varnothing$, además como las curvas son continuas tenemos que $S$ es cerrado. Queremos probar que también es abierto y ahí tenemos $S=[0,1]$. <br><br>
+
+          Para ver esto observamos que dado un $t\in S$ podemos considerar un entorno abierto de $\gamma(t)$ dado por el cubrimiento, luego en este entorno los levantados de las curvas van a coincidir. <br><br>
+
+          Por lo tanto $S$ abierto, luego $S=[0,1]$ y las curvas coinciden en todo punto. <br><br>
+
+          <span class="prop">Lema: (Levantamiento de mapas)</span> Sea $f:X\to X$ con $f(x_0)=y_0$ y sea $(\tilde X, p)$ el cubrimiento universal. <br><br>
+          
+          Dados $\tilde{x_0},\; \tilde{y_0}$ levantados, existe una única $F:\tilde X\to \tilde X$ tal que $F(\tilde{x_0})=y_0$ y $p\circ F= f\circ p$. <br><br>
+
+          Llamamos a esta función el <ins>levantado</ins> de $f$. <br><br>
+
+          <span class="dem">Dem:</span> Dado $\tilde x\in\tilde X$ definimos $F(\tilde x)$ de la siguiente forma: <br><br>
+
+          Tomamos una curva $\gamma$ de $\tilde{x_0}$ a $\tilde x$. La proyectamos, le aplicamos $f$ y la levantamos de nuevo con el lema anterior. <br><br>
+          
+          Definimos $F(\tilde x)$ como $\tilde{f\circ p\circ\gamma}(1)$. <br><br>
+
+          $F$ está bien definida porque cualquier otra curva que vaya de $\tilde{x_0}$ a $\tilde x$ va a ser homotópica a $\gamma$ porque estamos en el cubrimiento universal, entonces vamos a tener que $f\circ p\circ\gamma$ va a ser homotópica a $f\circ p\circ\gamma'$ y por lo tanto sus levantados van a terminar en el mismo punto. <br><br>
+
+          <span class="def">Grado de Brouwer (cuando mi espacio es un anillo):</span> Sea $f:\s^1\times[0,1]\to \s^1\times[0,1]$ una función continua y $F:\R\times[0,1]\to\R\times[0,1]$ levantado al cubrimiento universal.<br><br>
+
+          Definimos el <ins>grado</ins> de $f$ como el entero $k\in\Z$ tal que $F(x+(1,0))=F(x)+(k,0) \fall x\in\R\times[0,1]$
+
+        </div>
+
+        <div class="caja">
+          
+          <span class="prop">Ejercicio: (El grado está bien definido)</span> Sea $f:A\to A$ continua y $F:\tilde{A}\to\tilde{A}$ su levantado al cubrimiento universal, sea $p:\tilde{A}\to A$ tal que $p(x,y)=(e^{2\pi i x},y)$<br><br>
+
+          <ul>
+            <li>
+              Probar que la función que manda $x$ a $F(x+1,y)-F(x,y)$ toma valores en $\Z\times\{0\}$ <br><br>
+
+              Primero observamos que $p(x+n,y)=(e^{2n\pi i x},y)=(e^{2\pi i x},y)=p(x,y)$ <br><br>
+
+              Usando eso tenemos que $p(F(x+1,y))=f(p(x+1,y))=f(p(x,y))=p(F(x,y))$, y por la definición de $p$ necesariamente tenemos que $F(x+1,y)$ y $F(x,y)$ difieren en un entero en la primera coordenada y coinciden en la segunda. <br><br>
+            </li>
+            <li>
+              Probar que existe $k\in\Z$ tal que $F(x+1,y)-F(x,y)=(k,0)$ para todo $(x,y)\in\tilde A$ <br><br>
+
+              Esto vale por continuidad del mapa $F(x+1,y)-F(x,y)$ y por ser $\tilde{A}$ conexo. <br><br>
+            </li>
+            <li>
+              Probar que para cualquier $n\in\Z$ se cumple que $F(x+n,y)-F(x,y)=(kn,0)$ <br><br>
+
+              vas restando 1 al x+n y eso sale como un +k, se puede hacer por inducción pero me da paja escribirlo <br><br>
+            </li>
+            <li>
+              Probar que si $f$ es un homeo, entonces $k\in\{-1,1\}$ <br><br>
+
+              Supongamos que $f$ y $f^{-1}$ pueden tener distintos grados, respectivamente $k$ y $l$. <br><br>
+
+              Entonces $(x+1,y)=f^{-1}\circ f(x+1,y)=f^{-1}(f(x,y)+(k,0))=f^{-1}\circ f(x,y)+(kl,0)=(x+kl,y)$ <br><br>
+
+              Luego $kl=1$ y $k,l\in\Z$, por lo tanto necesariamente tenemos $k=l=-1$ o $k=l=1$. <br><br>
+            </li>
+            <li>
+              Probar que si $f$ es un homeo que preserva orientación e intercambia los bordes del anillo, entonces $k=-1$. <br><br>
+
+              $f$ preserva orientación, entonces dada una curva que divide el espacio, $f$ tiene que mandar la derecha de la curva en la derecha de la imagen de la curva, y lo mismo para la izquierda (aunque esta info sobra pq es homeo) <br><br>
+
+              Tomando la curva que divida el anillo tocando ambos fines, tenemos que si $x_1< y_1\Rightarrow f(x)_1>f(y)_1$, por lo tanto $k=-1$. <br><br>
+
+              <img src="..\..\assets\dinámica topológica\1.jpg" alt="dibujito pizarron" class="img">
+            </li>
+          </ul>
+        
+          
+        
+        </div>
             
         <div class="caja"><span class="teo">Petit Brouwer:</span>
         
@@ -76,11 +176,19 @@
 
            Supongamos que existe $k\in\Z$ tal que $w=z+(k,0)$, entonces $$z+(k,0)=w=(G+1)(w)=(G+1)(z+(k,0))=G(z)-(k,0)+(1,0)=z+(-k+1, 0)\Rightarrow z+(k,0) = z+(-k+1,0)\Rightarrow k=1/2 \quad\text{ absurdo }\square$$
 
-
-        
         </div>
 
-        <div class="caja"><span class="ej">Este es un contraejemplo para $f\in hom^-(\mathbb{R}^2)$:</span> <br><br><br><br> *piensa* <br><br><br></div>
+        <div class="caja"><span class="ej">
+          
+          Este es un contraejemplo para $f\in hom^-(\mathbb{R}^2)$:</span> <br><br>
+
+          Defino $f:\R^2\to\R^2$ tal que $f(x,y)=\begin{cases} (x,-y) \text{ si } |y|\geq 1 \\ (x+1-|y|, -y) \text{ si } |y|< 1\end{cases}$ <br><br>
+
+          <img src="..\..\assets\dinámica topológica\2.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+          Esta $f$ tiene puntos de período 2 en los semiplanos $|y|\geq 1$ pero no tiene puntos fijos.
+        
+        </div>
         
     
 </body>

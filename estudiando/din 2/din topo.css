@@ -73,7 +73,11 @@ body {
     line-height: 1.5;
 }
 
-.agrandar:hover{
+.img{
+    width: 300px;
+}
+
+.img:hover{
     transform: scale(1.5) translateX(50px);
 }
 
