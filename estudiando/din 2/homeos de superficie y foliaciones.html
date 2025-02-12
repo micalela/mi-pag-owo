@@ -48,7 +48,7 @@
     \newcommand{\fall}{\;\forall\;}
     \newcommand{\exst}{\;\exists\;}
     $
-<body>
+
     <div class="caja" id="homología">
         <span class="def">Def:</span> <ins>Clases de homología y función de índice</ins>
     </div>
@@ -102,7 +102,63 @@
 
       <span class="lema">Lema:</span> $X\subset fix(f)$ desenlazado maximal, $S'=S-X$, $f_t:S'\to S'$ isotopía de $Id$ a $f|_{S'}$. Entonces, el levantamiento canónico $F:S'\to S'$ no tiene puntos fijos. <br><br>
 
-      <span class="dem">Dem:</span> Los lazos de puntos que no son desenlazados se levantan a caminos abiertos en el cubrimiento universal, por lo tanto, los extremos no son fijos.
+      <span class="dem">Dem:</span> Los lazos de puntos que no son desenlazados se levantan a caminos abiertos en el cubrimiento universal, por lo tanto, los extremos no son fijos. 
+      
+      <span class="comm">si $z$ no es desenlazado, entonces ninguna isotopía de $f$ a $id$ lo deja quieto, esto implica que $\gamma_z$ no es contractible, y por lo tanto se levanta a un camino abierto.</span>
+    </div>
+
+    <div class="caja">
+      <span class="lema" id="lema1">Lema:</span> Sea $f\in Hom_0^+(A)$ tal que
+
+      <ul>
+        <li>
+          Existe $\phi$ una línea que une ambos fines del anillo
+        </li>
+        <li>
+          $fix(f)\neq\varnothing$
+        </li>
+        <li>
+          $\Omega(f)=A$
+        </li>
+      </ul>
+
+      Entonces $f$ tiene puntos periódicos de período arbitrariamente grande <br><br>
+    
+      <span class="dem">Dem:</span> Sea $x\in fix(f)$, y sea $F$ que fija $\tilde x$ levantado. <br><br>
+
+      Tomo $\tilde\phi$ una preimagen de $\phi$ por $p$, entonces $\tilde\phi$ separa $A$ en dos componentes conexas. <br><br>
+
+      Como $f(\phi)\cap\phi=\varnothing$ suponemos sin pérdida de generalidad que $F(\tilde\phi)\subset D(\tilde\phi)$. <br><br>
+
+      Dado $n\geq 0$, si tomamos el levantado $G=T^{-1}F^n$ de $f^n$, entonces $G$ tiene un disco libre que regresa hacia atrás. <br><br>
+      
+      <span class="comm">Como $F$ fija $\tilde x$, entonces en un disco suficientemente chico al rededor de $\tilde x$ tenemos $T^{-1}F^n(U)\cap U-1\neq\varnothing$</span> <br><br>
+
+      Ahora vamos a querer encontrar algún $n\in\N$ tal que $G=T^{-1}F^n$ tenga un disco libre que regresa para adelante, y así usar <a href="">Poincaré-Bhirkoff-Franks</a> para obtener un fijo de $T^{-1}F^n$. <br><br>
+
+      En ese caso, tendremos un $\tilde x$ tal que $T^{-1}F^n(\tilde x)=\tilde x$, es decir $F^n(\tilde x)=\tilde x + 1$, entonces $\rho(\tilde x, F)=\frac{1}{n}$. <span class="duda">esto es por lo del número de rotación para puntos periódicos que todavía no escribí</span> <br><br>
+
+      Además de esto, por hipótesis tenemos un punto fijo que va a tener velocidad de rotación $0$, entonces, por <a href="../pbf#corolario">este corolario</a> vamos a tener que existen puntos periódicos de período arbitrariamente largo. <br><br>
+
+      Para encontrar $n$ y el disco libre $U$, consideramos un abierto $U$ en la región entre $\tilde\phi$ y $F(\tilde\phi)$. <br><br>
+
+      Como $\Omega(f)=A$, sabemos que existen $n,k$ tales que $F^n(U)\cap (U+k)\neq\varnothing$, y queremos garantizar que $k>1$ para que así $G(U)\cap(U+k-1)\neq\varnothing$ y tenemos que $U$ regresa para adelante con $G$ porque $k-1>0$. <br><br>
+
+      Observar que como tomamos $U$ entre $\tilde\phi$ y $F(\tilde\phi)$ y tenemos que $F(\tilde\phi)\subset D(\tilde\phi)$ entonces necesariamente va a ser $k>0$. <br><br>
+
+      Si $k=1$ tenemos dos posibilidades:
+
+      <ul>
+        <li>
+          $F^n(U)\subset U+1$: En este caso tenemos entonces que $G(U)\subset U$ y por lo tanto tenemos un fijo de $G$ en $U$ por Brouwer, con esto obtenemos lo que estábamos buscando en un principio y podemos concluir la prueba. <br><br>
+        </li>
+        <li>
+          Existe $V\subset U$ tal que $F^n(V)\cap(V+1)=\varnothing$: En este caso tenemos que $V$ va a ser el abierto buscado que regresa para adelante con $k>1$, porque sabemos que no hay puntos errantes en $A$ y por lo tanto se va a cumplir $F^n(V)\cap(V+k)\neq\varnothing$ para algún $k$, que por lo visto anteriormente tiene que ser $>0$ y ya sabemos que es $\neq 1$.
+        </li>
+      </ul>
+
+
+    
     </div>
 
     <div class="caja">
@@ -111,9 +167,22 @@
 
       $$\Rightarrow f \text{ tiene puntos periódicos de período arbitrariamente grande}$$
 
-      <span class="dem">Dem:</span>
+    <span class="dem">Dem:</span> Tomo $X\subset fix(f)$ desenlazado maximal, por el lema de antes tenemos que $\# X\geq 3$ <br><br>
 
+      Por el lema anterior sabemos que el levantamiento canónico $F:\tilde{S'}\to\tilde{S'}$ no tiene fijos, siendo $S'=S^2-fix(f)$. <br><br>
+
+      Por lo tanto, por el <a href="..\foliado.html#lema2">teorema de Le Calvez</a> existe una foliación $\F$ en $S'$ transversa a la isotopía. <br><br>
+
+      Como $\Omega(f)=\s^2$, por el teorema de Poincaré-Bendixon <span class="duda">enunciar bien este teorema y justificar bien esto</span> tenemos que toda hoja de $\F$ conecta dos singularidades de $\F$, es decir, dos puntos distintos de $X$. <span class="duda">no entiendo esta parte u.u what is a "singularidad de $\F$" y pq todos los puntos de $X$ son singularidades de $\F$ i don understan ---> ok creo q con "singularidad de $\F$" se refiere a un punto fijo de $f$</span> <br><br>
+
+      Tomamos una hoja $\phi$ cualquiera y sean $x_1=\alpha(\phi)$ y $x_2=\omega(\phi)$
+
+      Tenemos entonces que $A=S^2-\{x_1,x_2\}$ es una anillo y como $\# X\geq 3$ entonces $f|_A:A\to A$ tiene un punto fijo
+
+      Concluimos entonces usando <a href="#lema1">este lema</a>, teniendo en cuenta que $f(\phi)\cap\phi=\varnothing$ por ser $\phi$ una línea de Brouwer.
     </div>
+
+
 
 </body>
 </html>

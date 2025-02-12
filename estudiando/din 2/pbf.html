@@ -164,6 +164,60 @@
           Por lo tanto, tenemos que existe $x$ que está en un disco que regresa para adelante y para atrás. Por el lema anterior concluimos que $fix(f)\neq\varnothing$
 
           </div>
+
+          <div class="caja">
+
+            <span class="def">Def:</span> Dado $f\in Hom^+(\s^1)$ y $F:\R\to\R$ levantado, definimos el <ins>número de rotación</ins> de $f$ como $\lim\limits_{n\to\infty}\frac{F^n(\tilde x)-\tilde x}{n}\mod\Z$. <br><br>
+
+            Este límite existe y para todo $\tilde x\in\R$ y es independiente del punto, lo notamos $\rho(f)$. <br><br>
+
+            Podemos extender esta definición a $f\in Hom^+_0(A)$ mirando la primer coordenada, es decir, estudiando el límite $\lim\limits_{n\to\infty}\frac{(F^n(\tilde x)-\tilde x)_1}{n}$ <br><br>
+
+            Este límite existe pero <ins>no es independiente del punto ni del levantado</ins>, y lo notamos $\rho(\tilde x, F)$. <br><br>
+
+            <span class="obs">Obs:</span> Los números de rotación difieren en un entero entre levantados: <br><br>
+
+            Si $k\in\Z$ entonces $\rho(\tilde x, F+k)=\lim\limits_{n\to\infty}\frac{((F+k)^n(\tilde x)-\tilde x)_1}{n} =\lim\limits_{n\to\infty}\frac{(F^n(\tilde x)+kn-x)_1}{n}=\rho(\tilde x,F)+k$ <br><br>
+
+            Entonces tiene sentido definir el número de rotación para un $x\in A$, tomando $\rho(x,f):=\rho(\tilde x,F)\mod\Z$ para $\tilde x,\; F$ levantados cualesquiera. <br><br>
+
+            En general si no hay ambigüedad escribiremos solo $\rho(x)$. <br><br>
+
+            <span class="duda">acá agregar el caso en el q tengo un punto periódico</span> <br><br>
+
+            <span class="teo">Teo:</span> Sea $f\in Hom^+_0(A)$ con $\Omega(f)=A$ y tal que existen $x_0,x_1\in A$ positivamente recurrentes tales que $\rho(x_0)< 0 < \rho(x_1) \Rightarrow fix(f)\neq\varnothing$ <br><br>
+
+            Tomo $\tilde x_0$ levantado de $x_0$ y $F$ levantado de $f$. <br><br>
+
+            Tenemos $\rho(\tilde x_0, F)=\lim\limits_{n\to\infty}\frac{(F^n(\tilde x_0)-\tilde x_0)_1}{n} < 0$, por lo tanto si elegimos $n$ suficientemente grande, se cumple $F^n(\tilde x_0)-\tilde x_0 < 0$. <br><br>
+
+            Como $x_0$ es recurrente, puedo tomar $(n_k)$ sucesión tal que $f^{n_k}(x_0)\to x_0$. <br><br>
+
+            Luego, si $U$ es un entorno libre de $x_0$ tenemos que a partir de un $k$ suficientemente grande se cumple que $f^k(x_0)\in U$ <br><br>
+
+            Tomo $\tilde U$ un levantado de $U$, entonces tenemos $F^{n_k}(\tilde U)\cap\tilde U+l\neq\varnothing$ para algún $l\in\Z$. <br><br>
+
+            Como $(F^n(\tilde x_0)-\tilde x_0)_1< 0$ si $n$ es suficientemente grande, entonces necesariamente $l< 0$ y por lo tanto $U$ es un disco que regresa para atrás. <br><br>
+
+            De forma análoga para $x_1$, como se cumple $\rho(x_1)>0$ podemos encontrar un disco que regresa para adelante. <br><br>
+
+            Por lo tanto estamos en las hipótesis de Poincaré-Bhirkoff-Franks, y concluimos que $fix(f)=\varnothing$. <br><br>
+
+            <span class="teo" id="corolario">Corolario:</span> $f\in Hom^+_0(A)$ con $\Omega(f)=A$ y tal que existen dos puntos $x_0,x_1\in A$ positivamente recurrentes y con velocidades de rotación diferentes. <br><br>
+
+            Entonces, para todo $\frac{p}{q}\in(\rho(x_0),\rho(x_1))$ irreducible existe un punto $x\in A$ con período $q$ y $\rho(x)=\frac{p}{q}$. <br><br>
+
+            <span class="dem">Dem:</span> Tomamos levantados $\tilde x_0, \tilde x_1, F$ y sea $\frac{p}{q}$ tal que $\rho(\tilde x_0, F)< \frac{p}{q}< \rho(\tilde x_1, F)$ <br><br>
+
+            $\Rightarrow q\rho(\tilde x_0, F)< p< q\rho(\tilde x_1, F)$ ya que $q> 0$ <br><br>
+            
+            $\Rightarrow q\rho(\tilde x_0, F)-p< 0< q\rho(\tilde x_1, F)-p$ <br><br>
+
+            $\Rightarrow \rho(\tilde x_0, F^q-p) < 0 < \rho(\tilde x_1, F)$ <br><br>
+
+            Luego por el lema anterior, como $F^1-p$ es un levantado de $f^q$ concluimos que existe un punto periódico de período $q$, y como cumple $F^q(\tilde x)=\tilde x+p$ entonces su número de rotación va a ser $\rho(x)=\frac{p}{q}$.
+
+          </div>
     
 </body>
 </html>
