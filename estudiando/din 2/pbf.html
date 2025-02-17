@@ -111,17 +111,19 @@
 
           <span class="dem">Dem:</span> Obtengamos una cadena periódica de discos libres para aplicar <a href="traslación.html#cadena_discos">este lema</a>. <br><br>
 
-          Tenemos que existen $k_1, k_2 >0, m,n>1$ tales que $f^n(U)\cap(u+k_1)\neq\varnothing$ y $f^m(U)\cap(u-k_2)\neq\varnothing$. <br><br>
+          Tenemos que existen $k_1, k_2 in\N^*, n_1,n_2>1$ tales que $f^n(U)\cap(u+k_1)\neq\varnothing$ y $f^m(U)\cap(u-k_2)\neq\varnothing$. <br><br>
 
           Como $f$ es isotópico a la identidad, tenemos que su grado de Brouwer es 1 y $F$ cumple $F(x+k)=F(x)+k$. <br><br>
 
-          Tenemos entonces que $F^n(U+ik_1)\cap U+(i+1)k_1=(F^n(U)+ik_1)\cap U+ik_1+k_1 \simeq F^n(U)\cap U+k_1 \neq\varnothing$. <br><br>
+          Tenemos entonces que $F^n(U+ik_1)\cap U+(i+1)k_1=F^n(U)+ik_1\cap U+ik_1+k_1 \simeq F^n(U)\cap U+k_1 \neq\varnothing$. <br><br>
 
-          Tomamos $i\in\{0,\dots, k_2-1\}$ y tenemos la primera parte de nuestra cadena periódica de discos libres. <br><br>
+          Tomamos $i\in\{0,\dots, k_2\}$ y tenemos la primera parte de nuestra cadena periódica de discos libres, que conecta $U$ con $U+k_1k_2$. <br><br>
 
-          De la misma manera tenemos $F^m(U+ik_1k_2)\cap U+(k_1-i)k_2\neq\varnothing$, y tomando $i\in\{0,\dots,k_2\}$ obtenemos el resto de la cadena. <br><br>
+          De la misma manera tenemos $F^{n_2}(U-ik_2)\cap U-(i+1)k_2=F^{n_2}(U)-ik_2\cap U-(i+1)k_2 \simeq F^{n_1}(U)\cap U-k_2 \neq\varnothing$ <br><br>
+          
+          Tomando entonces $i\in\{k_1,\dots,0\}$ obtenemos el resto de la cadena, que parte de $U+k_1k_2$ y termina en $U$. <br><br>
 
-          <span class="comm">terminar de escribir bien esto</span>
+          Por el lema mencionado arriba tenemos entonces $fix(F)\neq\varnothing$.
         </div>
 
         <div class="caja"><span class="teo">Teorema de Poincaré-Birkhoff-Franks:</span>
@@ -137,9 +139,11 @@
   
           $$\Rightarrow fix(f)\neq\varnothing$$
           
-          <span class="dem">Dem:</span> Sean $B^+$ los puntos que están en un disco que regresa para adelante y $B^-$ los que están en un disco que regresa para atrás. <br><br>
+          <span class="dem">Dem:</span> 
+          
+          Sean $B^+$ los puntos que están en un disco que regresa para adelante y $B^-$ los que están en un disco que regresa para atrás. <br><br>
 
-          Ambos conjuntos son abiertos y no vacíos por <a href="#lema1">ese lema</a>. También cumplen $B^+\cup B^-=\tilde{A}$<br><br> 
+          Supongamos $fix(f)=\varnothing$, entonces, por <a href="#lema1">ese lema</a> tenemos que ambos conjuntos son no vacíos y que se cumple $B^+\cap B^-=\tilde A$. Además son abiertos por ser unión de abiertos. <span class="comm">son la unión de todos discos que regresan</span><br><br>
 
           Entonces, como $\tilde{A}$ es conexo, tenemos que $B^+\cap B^-\neq\varnothing$ <br><br>
 
@@ -198,7 +202,7 @@
 
             Tomo $\tilde U$ un levantado de $U$, entonces tenemos $F^{n_k}(\tilde U)\cap\tilde U+l\neq\varnothing$ para algún $l\in\Z$. <br><br>
 
-            Como $(F^n(\tilde x_0)-\tilde x_0)_1< 0$ si $n$ es suficientemente grande, entonces necesariamente $l< 0$ y por lo tanto $U$ es un disco que regresa para atrás. <br><br>
+            Como $(F^n(\tilde x_0)-\tilde x_0)_1< 0$ si $n$ es suficientemente grande, entonces necesariamente $l< 0$ y por lo tanto $U$ es un disco que regresa para atrás. <span class="comm">honestamente esto no sé si es necesario aclararlo pero de todas formas si tengo $l=0$ en ese caso podría cerrar la órbita para algún punto de $U$ y entonces $fix(f)\neq\varnothing$.</span> <br><br>
 
             De forma análoga para $x_1$, como se cumple $\rho(x_1)>0$ podemos encontrar un disco que regresa para adelante. <br><br>
 
