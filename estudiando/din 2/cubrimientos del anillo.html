@@ -348,17 +348,17 @@ Primero modifico $f$ para que uno de los intervalos (por ejemplo $I_0$) se mande
 
   <span class="lema" id="lema2">Lema:</span> $f:A\to A$ cubrimiento de grado $d$, semiconjugado a $z^d$ en $\s^1$, con $|d|>1$, $A_0\subset A$ anillo esencial compacto, $\alpha$ curva esencial, cerrada, simple y basada en $z$ <br><br>
 
-  Entonces, existe $c$ tal que todo levantado de $j \cdot\alpha$ por $f^n$ con extremos $x, y\in A_0$ verifica $|(\tilde{x})_1-(\tilde{y})_1|<  c$  <br><br>
+  Entonces, existe $c$ tal que todo levantado de $j \cdot\alpha$ por $f^n$ con extremos $x, y\in A_0$ (donde $j\in \{1,...,d^{n-1}\}$) verifica $|(\tilde{x})_1-(\tilde{y})_1|<  c$  <br><br>
 
   <span class="dem">Dem:</span> Sea $F$ un levantado de $f$ a $\tilde{A}$. Recordamos la función $H:A_0\to \R$ definida en <a href=#lema1>este lema.</a> <br><br>
 
   $|\tilde{x}-\tilde{y}|=|\tilde{x} -H(\tilde{x}) + H(\tilde{x}) - H(\tilde{y}) + H(\tilde{y}) -\tilde{y}|\leq |\tilde{x} -H(\tilde{x})| + |H(\tilde{x}) - H(\tilde{y})| + |H(\tilde{y}) -\tilde{y}|\leq 2M + |H(\tilde{x}) - H(\tilde{y})|$
 
-  Como $F^n$ es un $j\alpha$ levantado tenemos $|F^n(\tilde{x}) - F^n(\tilde{y})| = j < d$ <br><br>
+  Como $F^n$ es un $j\alpha$ levantado tenemos $|F^n(\tilde{x}) - F^n(\tilde{y})| = j < d^{n-1}$ <br><br>
 
   Luego $|F^n(\tilde{x}) - F^n(\tilde{y})| = |H\circ F^n(\tilde{x}) - H\circ F^n(\tilde{y})| = |d^n H(\tilde{x}) - d^n H(\tilde{y})|$ <br><br>
 
-  Por lo tanto $|H(\tilde{x}) - H(\tilde{y})| < \frac{d}{d^n} < 1 $ <br><br>
+  Por lo tanto $|H(\tilde{x}) - H(\tilde{y})| < \frac{d^{n-1}}{d^n} < 1 $ <br><br>
 
   Con eso obtenemos $|\tilde{x}-\tilde{y}| \leq 2M + 1$ <br><br>
 
