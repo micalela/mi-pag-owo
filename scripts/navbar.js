@@ -13,7 +13,9 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="estudiando/din 2/1.html">dinámica topológica</a>
 <span>✧</span>
-<a href="estudiando/antonie/conjuntos hiperbólicos.html">intentando hacer una monografía</a>
+<a href="estudiando/antonie/conjuntos hiperbólicos.html">antoine y dinámica hiperbólica</a>
+<span>✧</span>
+<a href="estudiando/esferas salvajes/comienza una nueva aventura.html">intentando hacer una monografía v2</a>
 <span>✧</span>
 <a href="estudiando/tópicos/tópicos.html">tópicos de geometría</a>
 <span>✧</span>
