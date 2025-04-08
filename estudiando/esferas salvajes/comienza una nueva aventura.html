@@ -68,7 +68,11 @@
         <div class="caja">
             Voy a intentar entender <a href="..\..\assets\monografía\wild sphere con tame arcs.pdf" target="_blank">este pdf</a>. <br><br>
 
-            <span class="def">Def:</span> Decimos que un cerrado $X\subset \R^3$ está <ins>domesticado</ins> si existe un homeomorfismo $h:\R^3\to\R^3$ tal que $h(X)$ es un <ins>poliedro</ins>. <span class="duda">definir bien poliedro</span> <br><br>
+            <!-- <span class="def">Def:</span> Un <ins>poliedro</ins> es una unión de tetraedros aaaaa -->
+
+            <span class="def">Def:</span> Una función $f:X\to Y$ entre dos espacios topológicos es un <ins>encaje</ins> si es inyectiva y cumple que $f|_{f^{-1}(Y)}:f^{-1}(Y)\to Y$ es un homeo. <br><br>
+
+            <span class="def">Def:</span> Decimos que un cerrado $X\subset \R^3$ está <ins>domesticado</ins> si existe un homeomorfismo $h:\R^3\to\R^3$ tal que $h(X)$ es un <ins>poliedro</ins>. <span class="duda">definir bien poliedro, y en el futuro me gustaría cambiar "domesticada" por otra palabra mejor</span> <br><br>
 
             Si un cerrado <ins>no está domesticado</ins> decimos que es <ins>salvaje</ins>. <br><br>
 
@@ -116,7 +120,7 @@
 
             Por el teo 11 una curva $J$ como en la imagen es no trivial en $\R^3-W_1$ <br><br> 
 
-            Ahora sacamos un cilindro sólido de cada $H_i$ para obtener un cubo topológico $K_i$. <br><br>
+            Ahora sacamos un cilindro sólido de cada $H_i$ para obtener un cubo topológico $K_i$. <span>cubo topológico? por qué no decir esfera sólida/bola?</span><br><br>
 
             Observar que $\partial E_i$ divide $\partial K_i$ en dos discos, uno que está contenido en la componente acotada de $\R^3-S_0$ y otro que está contenido en $H_i$ pero que ya no encierra a $H_{i+1}$. 
             
@@ -160,9 +164,31 @@
         </div>
 
         <div class="caja">
-          <span class="teo">Afirmación:</span> Si $J$ es una curva cerrada simple como en la primer imagen, entonces $J$ no es homotópicamente trivial en $\R^3 - S$ <br><br>
+          <span class="teo">Afirmación:</span> Si $J$ es una curva cerrada simple como en la primer imagen, entonces $J$ no es homotópica a un punto en $\R^3 - S$ <br><br>
 
-          Si tengo una homotopía de $J$ a un punto en $\R^3 - S$, entonces tengo una homotopía que contrae $J$ en $\R^3 - W_n$ para algún $n\in\N$ <span class="duda">no me queda claro,, aparte, no debería ser que es contractible en cualquier $W_n^c$?</span>
+          <span class="dem">Dem:</span> $J\sim\ast$ en $\s^c \Rightarrow J\sim\ast$ en $(\bigcap\limits_{i\in\N} W_i)^c\Rightarrow J\sim\ast$ en $\bigcup\limits_{i\in\N} W_i^c\Rightarrow J\sim\ast$ en algún $W_i^c$<br><br>
+
+          Veamos que tener una homotopía de $J$ a un punto en algún $W_i^c$ es absurdo. <br><br>
+
+          Sea $W_i'$ el conjunto obtenido rellenando los agujeros de $W_i$ <span class="duda">me parece raro decir esto así</span>, y sea $W_i''$ el conjunto obtenido quitando un cilindro de cada agujero en $W_i$ <span class="duda">también esto xd y no entendí lo que sigue</span>
         </div>
+
+        <div class="caja">
+          <span class="teo">Teorema 9:</span> Sea $C$ un cilindro con bases $B_1$ y $B_2$, sean $T_1,\; T_2$ dos toros enganchados entre sí <span class="duda">se puede decir así esto?</span> tales que $T_i\cap\partial C=B_i$ y sea $X\subset\R^3$ un cerrado tal que $X\cap C=B_1\cup B_2$. <br><br>
+          
+          Entonces, dada una curva simple y cerrada $J \subset (X\cup C)^c$, tenemos que $J$ no es homotópica a un punto en $(X\cup T_1\cup T_2)^c$ <br><br>
+
+          <img src="..\..\assets\monografía\3.png" class="img" style="width:180px">
+        </div>
+
+        <div class="caja"> <span class="teo">Teorema 11:</span> Sean $C$ un cubo topológico, $B_1,\; B_2,\; B_3\subset\partial C$ discos disjuntos dos a dos, $C_1$ cubo topológico tal que $C_1\cap int(C)^c =B_1\cup B_2$, $T$ un toro sólido tal que $T\cap C=B_3$ y tal que $T$ engancha $C_1$. <br><br>
+
+          Sea $X$ un cerrado tal que $X\cap C= B_1\cup B_2\cup B_3$ y tal que $\partial B_i$ no es homotópico a un punto en $\partial B_i \cup (X\cup C)^c$ para $i=1,\;2$. <br><br>
+
+          Entonces, si $J$ es una curva simple cerrada en $(X\cup C)^c$ y no es homotópica a un punto en $(X\cup C)^c$, se tiene que $J$ no es homotópica a un punto en $(X\cup C_1\cup T)^c$. <br><br>
+        
+          <img src="..\..\assets\monografía\4.png" class="img" style="width:250px">
+        </div>
+
 </body>
 </html>
