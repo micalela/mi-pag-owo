@@ -29,10 +29,10 @@
       
         <body>
 
-        <script src="navbar.js"></script>
+        <!-- <script src="navbar.js"></script> -->
 
-        <img
-        src="..\..\assets\monografía\intentando.gif"
+<!--         <img
+        src="..\..\assets\monografía\esferas.gif"
         class="imagenTitulo"
         alt="conjuntos hiperbólicos"
         style="padding: 20px 0px 0px 10px; height: 80px;"
@@ -45,7 +45,15 @@
         class="imagenTitulo"
         alt="conjuntos hiperbólicos"
         style="padding: 20px 0px 0px 10px;"
+        /> -->
+
+        <img
+        src="..\..\assets\monografía\esferas salvajes.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
         />
+
 
 
         $
@@ -108,59 +116,73 @@
             
             Sea $E_1,\dots,E_n$ una descomposición celular de $S_0$ <span class="duda">definir</span> tal que $E_i$ y $E_{i+1}$ comparten borde para todo $i\in\{1,\dots,n-1\}$, y $E_1$, $E_n$ también compartan borde. <br><br>
 
-            Engordamos las células $E_i$ y les agregamos un cilindro con un asa al final $H_i$ para obtener un toro $T_i$, de manera que el agujero de $T_i$ encierre al cilindro de $H_{i+1}$. De la misma manera $H_n$ encierra el cilindro de $H_1$. <br><br>
+            <!-- Engordamos las células $E_i$ <span class="duda">¿qué debería decir? tomar entorno tubular? tendría que definir mejor esto</span> y les agregamos un cilindro con un asa al final $H_i$ para obtener un toro $T_i$, de manera que el agujero de $T_i$ encierre al cilindro de $H_{i+1}$. De la misma manera $H_n$ encierra el cilindro de $H_1$. <br><br> -->
             
-            Podemos pensar a los $H_i$ como una aguja con un cubo en la parte puntiaguda, y por el hojal de la aguja de $H_i$ pasa la aguja $H_{i+1}$. <br><br>
+            Consideramos $H_i$ toros sólidos, a los que nos referiremos como "lazos", y tomamos $E_i'$ un entorno tubular de $E_i$. <br><br>
+            
+            Definimos $T_i$ como el pegado de $E_i'$ con $H_i$ por un disco, de manera que el agujero de $H_i$ encierre a $T_{i+1}$ como se ve en la imagen. <span class="duda">no sé si esto está bien explicado, no sé bien cómo escribirlo</span><br><br>
 
-            Llamamos $W_1=\sum T_i$. <br><br>
+            Llamamos $W_1=\bigcup\limits_{i=1}^n T_i$. <br><br>
 
-            La 2-esfera $S$ del ejemplo va a estar contenida en $W_1$, y va a intersectar a $\sum\partial T_i$ sólamente en $\sum\partial E_i$. <br><br>
+            La 2-esfera $S$ del ejemplo va a estar contenida en $W_1$, y va a intersectar a $\bigcup\limits_{i=1}^n\partial T_i$ sólamente en $\bigcup\limits_{i=1}^n\partial E_i$.<br><br>
             
             <img src="..\..\assets\monografía\1.png" alt="J no trivial en W_i" class="img"> <br><br>
 
-            Por el teo 11 una curva $J$ como en la imagen es no trivial en $\R^3-W_1$ <br><br> 
+            Por el teo 11 una curva $J$ como en la imagen es no trivial en $\R^3-W_1$ <span class="duda">justificar mejor</span><br><br> 
 
-            Ahora sacamos un cilindro sólido de cada $H_i$ para obtener un cubo topológico $K_i$. <span>cubo topológico? por qué no decir esfera sólida/bola?</span><br><br>
+            Ahora sacamos un cilindro sólido de cada $H_i$ para obtener un cubo topológico $K_i$. <span class="duda">cubo topológico? por qué no decir esfera sólida/bola? yo le copié al bing</span><br><br>
 
             Observar que $\partial E_i$ divide $\partial K_i$ en dos discos, uno que está contenido en la componente acotada de $\R^3-S_0$ y otro que está contenido en $H_i$ pero que ya no encierra a $H_{i+1}$. 
             
             Llamamos a este segundo disco $D_i$. <br><br> 
           
-            Movemos el interior de este segundo disco de manera que quede contenido en $int(T_i)$. <span class="duda">homotópicamente</span> Entonces tenemos $D_i\subset int(T_i)$ y $\partial D_i=\partial E_i$. <br><br>
+            Movemos homotópicamente el interior de este segundo disco de manera que quede contenido en $int(T_i)$. Entonces tenemos $D_i\subset int(T_i)$ y $\partial D_i=\partial E_i$. <br><br>
 
-            Luego $\sum D_i$ es una esfera, a la que llamamos $S_1$. <br><br>
+            Luego $\bigcup\limits_{i=1}^n D_i$ es una esfera, a la que llamamos $S_1$. <br><br>
 
             Ahora subdividimos cada $D_i$ en 2-células $E^i_1,\dots, E^i_{15}$ tal que $E^{i}_{j},E^{i}_{j+1}$ comparten borde para todo $i\in\{1,\dots,14\}$, $E^{i}_{15}$ y $E^{i}_{1}$ compartan borde. <span class="duda">q pasa si usamos otros números? obtenemos esferas no equivalentes supongo. y qué pasa si usamos x ejemplo n=2? funciona igual?</span> <br><br>
 
-            Continuamos con un proceso similar. Ahora engordamos los $E^i_j$ y les agregamos un cilindro con asa para formar un toro sólido $T^i_j$, que de la misma manera que antes encierra al cilindro de $T^i_{j+1}$ para todo $j\in\{1,\dots, 14\}$, y $T^i_{15}$ encierra a $T^i_1$. <br><br> 
+            Continuamos con un proceso similar. Ahora engordamos los $E^i_j$ y les pegamos un toro $H_i$ por un disco para formar un toro sólido $T^i_j$, que de la misma manera que antes encierra a $T^i_{j+1}$ para todo $j\in\{1,\dots, 14\}$, y $T^i_{15}$ encierra a $T^i_1$. <br><br> 
             
-            Además pedimos que dos cilindros de $T^i_j$ no consecutivos, por ejemplo $T^i_7$ y $T^i_{11}$, se enrieden como en la siguiente imagen: <br><br>
+            Además pedimos que dos cilindros de $T^i_j$ no consecutivos, por ejemplo $T^i_7$ y $T^i_{11}$, se enrieden como en la siguiente imagen: <span class="duda">no me queda claro si pedir q no sean consecutivos es lo único que se necesita</span><br><br>
 
             <img src="..\..\assets\monografía\2.png" alt="T^i_j se enriedan" class="img" style="width:250px"> <br><br>
               
-            Por los teoremas 9 y 11 tenemos que cualquier curva cerrada no trivial en $\R^3 - T_i$ es no trivial en $\R^3-\sum T^i_j$. <br><br>
+            Por los teoremas 9 y 11 tenemos que cualquier curva cerrada no trivial en $\R^3 - T_i$ es no trivial en $\R^3-\sum T^i_j$. <span class="duda">justificar</span><br><br>
             
-            Hacemos esta construcción de manera que $\sum T^i_j\subset T^i$, es decir, tomamos los $T^i_j$ bien pegaditos a los $E^i_j$. (También puedo decir que están bien pegaditos al $D_i$) <br><br>
+            Hacemos esta construcción de manera que $\bigcup\limits_{j=1}^{15} T^i_j\subset T^i$, es decir, tomamos los $T^i_j$ bien pegaditos a los $E^i_j$. (También puedo decir que están bien pegaditos al $D_i$) <br><br>
 
-            De la misma forma que antes, sacamos un cilindro sólido de cada $T^i_j$ para obtener un cubo $K^i_j$, cuyo borde es separado en dos discos por $\partial E^i_j$. Llamamos $D^i_j$ al disco contenido en la componente conexa de $T^i_j-E^i_J$ que es un toro. <br><br>
+            De la misma forma que antes, sacamos un cilindro sólido de cada $T^i_j$ para obtener un cubo $K^i_j$, cuyo borde es separado en dos discos por $\partial E^i_j$. Llamamos $D^i_j$ al disco contenido en la componente conexa de $T^i_j-E^i_J$ que es un toro, y movemos $int(D_j^i)$ mediante una homotopía para que quede contenido en $int(T_j^i)$. <br><br>
 
-            Llamamos entonces $S_2$ a la esfera $\sum\limits_{i,j} D^i_j$. También llamamos $W_2$ a $\sum\limits_{i,j}T^i_j$ <br><br>
+            Llamamos entonces $S_2$ a la esfera $\bigcup\limits_{i,j} D^i_j$. También llamamos $W_2$ a $\bigcup\limits_{i,j}T^i_j$ <br><br>
 
-            El ejemplo $S$ es el límite de la secuencia $\{S_i\}_{i\in\N}$, y también es $S=\bigcap\limits_{i\in\N}W_i$, con $W_i$ 3-variedades con borde. <span class="duda">sus</span><br><br>
+            El ejemplo $S$ es el límite de la secuencia $\{S_i\}_{i\in\N}$, y también es $S=\bigcap\limits_{i\in\N}W_i$, con $W_i$ 3-variedades con borde. <span class="duda">justificar por qué la secuencia tiene límite y cómo defino eso y tb justificar por qué la intersección de los $W_i$ es una variedad sin borde.</span><br><br>
 
-            En general, para obtener $S_{n+1}$ a partir de $S_n$, subdividimos cada disco $D$ de la construcción de $S_n$ (específicamente, los discos "especiales" o "distinguidos", es decir, los que antes en la construcción fueron cubos con cilindro y toro) en 15 discos, que engordamos a un cubo y les agregamos el cilindro sólido con un toro al final ($T_i$) de forma que queden enredados como describimos antes. <br><br>
+            En general, para obtener $S_{n+1}$ y $W_{n+1}$ a partir de $S_n=\bigcup\limits_{i=1}^{15}D_i$ y $W_n=\bigcup\limits_{i=1}^{15}T_i$ el proceso es el siguiente: <br><br>
+            
+            Subdividimos cada disco $D_i$ de la construcción de $S_n$ en 15 discos que llamaremos $E^i_1,\dots, E^i_{15}$, luego tomamos sus entornos tubulares $E^{i'}_{j}$ y los pegamos con un toro $H_j^i$ por un disco, obteniendo toros $T^i_1,\dots,T^i_{15}$ de manera que queden enganchados como describimos antes, y de manera que dos lazos $T_j^i$ y $T_k^i$ no consecutivos se enrieden entre sí como se mostraba en la imagen. 
+            
+            Además nos aseguramos de tomar estos $T_j^i$ bien cerca de $D_i$ para que $\bigcup\limits_{j} T^i_j\subset T_i$<br><br>
 
-            La 3-variedad con borde $W_{n+1}$ es la unión de todos estos toros $T_i$ y cumple $W_{n+1}\subset W_n$. <br><br>
+            La 3-variedad con borde $W_{n+1}$ la definimos como $\bigcup\limits_{i,j} T_j^i$ y cumple $W_{n+1}\subset W_n$. <br><br>
 
-            Obtenemos $S_{n+1}$ cortando los toros y poniendo dos tapas. <br><br>
+            Después sacamos un cilindro de cada uno de los toros $T_j^i$ para obtener cubos $K_j^i$, que son separados por $\partial E_j^i$ en dos discos. <br><br>
+
+            Llamamos $D_j^i$ al disco contenido en la componente conexa de $T_j^i - E_j^i$ que es un toro, y movemos $int(D_j^i)$ mediante una homotopía para que quede contenido en $int(T_j^i)$. <br><br>
+
+            Definimos $S_{n+1} = \bigcup\limits_{i,j} D_j^i$. <br><br>
         </div>
 
         <div class="caja">
           <span class="obs"><ins>¿Por qué este límite es una esfera?</ins></span> <br><br>
 
-          Si $D$ es un disco distinguido de $S_n$, entonces $\partial D\subset S_{n+k} \fall k\in\N \Rightarrow \partial D\subset \lim\limits_{n\to\infty} S_n$. <br><br>
+          Sea $S_n=\bigcup D_i$ como en la construcción, entonces $\partial D_i\subset S_{n+k} \fall k\in\N \Rightarrow \partial D_i\subset \lim\limits_{n\to\infty} S_n$ <br><br>
 
-          Además, dados $D_1,D_2$ discos distinguidos en $S_n$ cumplen $D_1\cap D_2=\varnothing$, y como $D_i\subset W_n$ y sus subsecuentes modificaciones van a seguir estando en $W_{n+k}$ y por lo tanto las modificaciones no se van a intersectar. <span class="duda">r h what are you trying to tell me</span>
+          Además, dados $D_{i_1},D_{i_2}$ discos de la construcción de $S_n$, se tiene que $D_{i_1}\cap D_{i_2}=\varnothing$ <br><br>
+          
+          y como $D_i\subset W_n$ y sus subsecuentes modificaciones van a seguir estando en $W_{n+k}$ y por lo tanto las modificaciones no se van a intersectar. <span class="duda">r h what are you trying to tell me</span> <br><br>
+
+          <img src="..\..\assets\monografía\esfera.png" alt="" class="img" style="width: 600px;">
         </div>
 
         <div class="caja">
@@ -170,7 +192,9 @@
 
           Veamos que tener una homotopía de $J$ a un punto en algún $W_i^c$ es absurdo. <br><br>
 
-          Sea $W_i'$ el conjunto obtenido rellenando los agujeros de $W_i$ <span class="duda">me parece raro decir esto así</span>, y sea $W_i''$ el conjunto obtenido quitando un cilindro de cada agujero en $W_i$ <span class="duda">también esto xd y no entendí lo que sigue</span>
+          Sea $W_i'$ el conjunto obtenido rellenando los agujeros de $W_i$ <span class="duda">me parece raro decir esto así</span>, entonces $W_i'$ es una esfera <span class="duda">o una "bola hueca" porque en realidad estamos tomando un entorno tubular del borde, pero no sé si importa decir esto</span> con manijas<br><br>
+          
+          y sea $W_i''$ el conjunto obtenido quitando un cilindro de cada agujero en $W_i$ <span class="duda">también esto xd y no entendí lo que sigue</span>
         </div>
 
         <div class="caja">
