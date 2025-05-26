@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+        <img
+        src="..\..\assets\monografía\esferas salvajes.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        />
+
+
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="caja">
+
+            <span class="obs">TLDR:</span> Arranco con un toro sólido $B_1$, sustituyo una <ins>pillbox</ins> por sus dos respectivos toros enlazados $T_1$ y $T_2$, a eso lo llamo $B_2$. 
+            
+            Repito este proceso con $T_1$ y $T_2$, y al resultado lo llamo $B_3$. Observamos que $B_n$ van quedando encajadas. Seguimos haciendo esto procurando hacer que <s>los diámetros internos de los T_i tiendan a 0</s> los diámetros de las pillboxes tiendan a $0$ y llamamos $B=\bigcap\limits_{n=1}^\infty B_n$, esta es la <ins>bola de Alexander</ins>. <br><br>
+
+            Llamamos $S=\partial B$ la <ins>esfera de Alexander</ins>. <br><br>
+
+            Veamos que $\pi_1(B^c)\neq\{1\}$: Tomamos $J$ una curva cerrada que es no trivial en el complemento de $B_1$ (toro). Supongamos $J$ es trivial en $B^c$ y consideramos su homotopía $H$ a un punto. <br><br>
+            
+            $Im(H)$ es un compacto tal que $Im(H)\subset B^c=\left(\bigcap\limits_{n=1}^\infty B_n\right)^c=\bigcup\limits_{n=1}^\infty B_n^c$. Observamos que $\{B_n^c\}$ es una familia de abiertos encajados, y por lo tanto $Im(H)$ está contenida en una cantidad finita de ellos. <br><br>
+
+            Esto implica que existe un $N\in\N$ tal que $Im(H)\subset B_N^c$, es decir, $J$ es contractible en $B_N^c$. Por inducción podemos ver que esto es absurdo. <br><br>
+
+            Ahora veamos que $B$ es una 3-célula: Pensemos $B$ como unión de cosas en vez de intersección. <br><br>
+
+            En la etapa $n$ de la construcción tenemos $2^{n-1}$ pillboxes, que cada una contiene 2 toros sólidos. Tenemos entonces $2^n$ toros sólidos en la etapa $n$, que son cada uno unión de una pillbox y una 3-célula complementaria. <br><br>
+
+            Definimos $D_n$ a la unión de las $2^{n-1}$ 3-células complementarias a las $2^{n-1}$ pillboxes en la etapa $n$ de la construcción. <br><br>
+
+            De esta manera podemos definir $B$ como $\overline{\bigcup\limits_{n=1}^\infty C_n}$, siendo $C_1=D_1$ y $C_n=C_{n-1}\cup D_n$ 
+            
+            <span class="duda">convencerme de por qué preciso clausurar--> $B$ es intersección arbitraria de cerrados entonces es cerrado, los $C_n$ son abiertos entonces su unión va a ser abierta. Como $B$ no es $\varnothing$ ni $\R^3$ no puede ser un clopen, entonces no son iguales. Falta convencerme pq clausurar funciona.</span><br><br> 
+
+            Llamemos $P_n^i$ a la i-ésima pillbox del n-ésimo paso de la construcción. Es decir, $P_n^i\subset B_n \fall i\in\{1,\dots,2^{n-1}\}$ y $B_n=B_{n+1}\cup\bigcup\limits_{i=1}^{2^{n-1}}P_n^i$. <br><br>
+            
+            Sea $x\in B-\bigcup\limits_{n=1}^\infty C_n \Rightarrow x\in \bigcap\limits_{n=1}^\infty B_n-\bigcup\limits_{n=1}^\infty C_n$ <br><br>
+
+            $x\not\in\bigcup\limits_{n=1}^\infty C_n \Rightarrow x\not\in C_n\fall n\in\N$ <br><br>
+
+            $x\in B-C_n\Rightarrow \exst i\in\{1,\dots,2^{n-1}\}$ tal que $x\in P_n^i$ <br><br>
+
+            Con esto concluimos que $x\in B-\bigcup\limits_{n=1}^\infty C_n \Leftrightarrow x\in\bigcap\limits_{n=1}^\infty P_n^{k_n}$ para alguna sucesión de naturales $\{k_n\}$. <span class="comm">(recordar que $diam(P_n)\xrightarrow{n} 0$, son compactas y encajadas)</span><br><br>
+
+            Como $diam(P_n)\xrightarrow{n} 0$, esto además implica que $x\in\overline{\bigcup\limits_{n=1}^\infty C_n}$, y por lo tanto tenemos la igualdad de conjuntos. <br><br>
+
+            Además, fun fact, observar que dada una pillbox $P_n^i$ se cumple que $\#\big\{j\in\{1,\dots, 2^n\}:P_{n+1}^j\cap P_n^i\neq\varnothing\big\}=2$, por lo tanto, los $x\in B-\bigcup\limits_{n=1}^\infty C_n$ están en biyección con $2^{\N}$, es decir, son un Cantor. <br><br>
+        </div>
+    
+</body>
+</html>

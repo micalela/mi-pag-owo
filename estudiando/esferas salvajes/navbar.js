@@ -1,7 +1,7 @@
 const navbar = `<div class="navbar">
-<a href="comienza una nueva aventura.html">comienza una nueva aventura</a>
+<a href="esferas.html">general</a>
 <span>✧</span>
-<a href="../../ascii.html">atrás!</a>
+<a href="alexander.html">alexander</a>
 </div>`;
 
 const body = document.body;
