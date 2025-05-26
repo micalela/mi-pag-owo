@@ -6,4 +6,5 @@ const navbar = `<div class="navbar">
 
 const body = document.body;
 
+
 body.insertAdjacentHTML("beforeBegin", navbar);
