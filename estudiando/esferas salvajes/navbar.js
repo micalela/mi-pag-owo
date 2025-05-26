@@ -1,5 +1,5 @@
 const navbar = `<div class="navbar">
-<a href="esferas.html">general</a>
+<a href="bing.html">general</a>
 <span>✧</span>
 <a href="alexander.html">alexander</a>
 </div>`;
