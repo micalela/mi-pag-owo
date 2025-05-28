@@ -94,6 +94,30 @@
             Como $diam(P_n)\xrightarrow{n} 0$, esto además implica que $x\in\overline{\bigcup\limits_{n=1}^\infty C_n}$, y por lo tanto tenemos la igualdad de conjuntos. <br><br>
 
             Además, fun fact, observar que dada una pillbox $P_n^i$ se cumple que $\#\big\{j\in\{1,\dots, 2^n\}:P_{n+1}^j\cap P_n^i\neq\varnothing\big\}=2$, por lo tanto, los $x\in B-\bigcup\limits_{n=1}^\infty C_n$ están en biyección con $2^{\N}$, es decir, son un Cantor. <br><br>
+
+            Viendo $B$ de esta manera, probemos que efectivamente es una bola: <br><br>
+
+            Para cada $C_n$ en la construcción, podemos definir un homeo $h_n:C_n\to C_{n+1}$ soportado en un entorno $U_n$ de $C_n\cap D_{n+1}$. <br><br>
+
+            Definimos entonces una familia de funciones $\{f_n:C_1\to C_{n+1}\}_{n\in\N}$ tales que $f_n=h_n\circ h_{n-1}\circ\dots\circ h_1$. Observar que cada $f_n$ difiere de $f_{n+1}$ sólamente en $U_n$.<br><br>
+
+            Como $diam(P_n)\xrightarrow n 0$, podemos ir tomando los $U_n$ con $diam(U_n)\xrightarrow n 0$, por lo tanto $\{f_n\}$ converge uniformemente a $f:C_1\to B$, que resulta continua. <span class="comm">acomodar esto pq en realidad los $U_n$ son disconexos entonces el diametro no tiende a 0</span><br><br>
+
+            Queremos verificar ahora que $f$ es biyectiva, y con eso obtener que es un homeomorfismo. <br><br>
+
+            Por lo visto anteriormente, sabemos que $K=f^{-1}(B-\bigcup\limits_{n=1}^{\infty}C_n)$ es un conjunto de Cantor. <br><br>
+
+            Dado $x\in C_1- K$, $\exst N\in\N$ tal que $f_{N-1}(x)\in C_{N}-U_N$ (en este caso pensamos $f_0$ como la identidad), y por lo tanto $f(x)=f|_{N-1}(x)$. <br><br>
+            
+            Con esto tenemos que $f$ es biyectiva en $C_1- K$. <br><br>
+
+            Por lo observado anteriormente, dados $x_0, x_1\in K$, en algún momento van a estar en distintas componentes conexas de los entornos $U_n$, y por lo tanto van a diferir sus imágenes por alguna de las $f_n$. Con esto tenemos la inyectividad de $f$ en $K$. <br><br>
+
+            Para la sobreyectividad, tomamos un punto $x\in B-\bigcup\limits_{n=1}^{\infty}C_n$ y su correspondiente elemento de $2^\N$, y observamos que se corresponde a un único punto 
+
+            
+
+
             
         </div>
     
