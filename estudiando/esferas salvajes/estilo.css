@@ -91,4 +91,12 @@ li{
 
 .imagenTitulo{
     max-width: 100%;
+    padding: 10px 30px 10px 30px;
+}
+
+.titulo{
+    background-color: rgba(227, 235, 208, 0.767);
+    margin-top: 20px;
+    margin: auto;
+    width: fit-content;
 }
