@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+<!--         <img
+        src="..\..\assets\monografía\esferas.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        />
+
+        <br>
+
+        <img
+        src="..\..\assets\monografía\segunda.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px;"
+        /> -->
+
+<!--         <div class="titulo">
+          <img
+            src="..\..\assets\monografía\homología.gif"
+            class="imagenTitulo"
+            alt="homología"
+            style="height: 80px; margin: auto; display: block;"
+          />
+        </div> -->
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+      
+      <img src="../../assets/cachivaches/plantitas/plant15.png" alt="plantita colgante" style="float: left; margin-right: 8px; height: 1em;"> 
+      
+      homología 
+      
+      <img src="../../assets/cachivaches/plantitas/plant15.png" alt="plantita colgante" style="float: right; margin-left: 15px; height: 1em;">
+    
+      </h1>
+
+
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="caja">
+            <span class="def">Def:</span> Un <ins>n-símplice</ins> es el menor conjunto convexo en un espacio euclídeo $\R^m$ tal que contiene $n+1$ puntos $v_0,\dots,v_n$ no coplanares para ningún hiperplano de dimensión menor a $n$. <br><br>
+
+            Los puntos $v_i$ son los vértices del símplice, al que notamos $[v_0,\dots,v_n]$. <br><br>
+
+            El n-símplice estándar que usaremos es $\Delta^n:=\{(t_0,\dots,t_n)\in\R^{n+1} : \sum_i t_i=1, t_i\geq 0 \fall i\}$. <br><br>
+
+            En general, siempre que mencionemos un n-símplice estará implícito un orden para sus vértices.
+            
+            Esto fijará también una orientación para las aristas, definiendo que una arista $[v_i,v_j]$ va de $v_i$ a $v_j$ si $i< j$. <br><br>
+
+            Habiendo fijado el orden, tenemos un homeomorfismo lineal entre $\Delta^n$ y cualquier otro n-símplice $[v_1,\dots, v_n]$, dado por $(t_0,\dots,t_n)\mapsto\sum_it_iv_i$. <br><br>
+
+            Si eliminamos un vértice de un n-símplice $[v_0,\dots,v_n]$, los n vértices restantes definen un (n-1)-símplice, al que llamaremos una <ins>cara</ins> de $[v_0,\dots,v_n]$. Por conveniencia, definimos el orden de los vértices de esta cara acorde al orden dado en $[v_0,\dots,v_n]$.<br><br>
+
+            Notamos $[v_0,\dots,\hat{v_i},\dots,v_n]$ al símplice obtenido al eliminar $v_i$ de $[v_0,\dots,v_n]$.
+            
+        </div>
+
+        <div class="caja">
+          <span class="def">Homología singular:</span> <br><br>
+
+          <span class="def">Def:</span> Un <ins>n-símplice singular</ins> en un espacio $X$ es una función continua (un mapa) $\sigma:\Delta^n\to X$. <br><br>
+
+          La idea es que se llaman "singulares" porque $\sigma$ no tiene por qué ser un encaje, puede tener singularidades. <span class="duda">pensar ejemplos de esto, no lo termino de ver</span><br><br>
+
+          <span class="def">Def:</span> Sea $C_n(X)$ el grupo libre abelianizado que tiene como base al conjunto de n-símplices singulares en $X$. <br><br>
+
+          Llamamos <ins>n-cadenas singulares</ins> (o n-cadenas) a los elementos de este grupo, que serán "sumas formales" finitas $\sum_in_i\sigma_i$, con $n_i\in\Z$ y $\sigma_i:\Delta^n\to X$. <br><br>
+
+          <span class="def">Def:</span> Definimos un mapa borde $\partial_n: C_n(X)\to C_{n-1}(X)$ dado por $\partial_n(\sigma)=\sum_i (-1)^i\sigma|_{[v_0,\dots,\hat{v_i},\dots,v_n]}$. <br><br>
+
+          Está implícita en esta fórmula la identificación de $\Delta_{n-1}$ con $[v_0,\dots,\hat{v_i},\dots,v_n]$, para que la restricción $\sigma|_{[v_0,\dots,\hat{v_i},\dots,v_n]}$ sea un mapa $\Delta_{n-1}\to X$, es decir, un (n-1)-símplice singular.
+        </div>
+
+        <div class="caja">
+          <span class="lema">Lema:</span> La composición $C_n(X)\xrightarrow{\partial_n} C_{n-1}(X)\xrightarrow{\partial_{n-1}} C_{n-2}(X)$ es cero. <br><br>
+
+          <span class="dem">Dem:</span> Tenemos $\partial_n(\sigma)=\sum_i (-1)^i\sigma|_{[v_0,\dots,\hat{v_i},\dots,v_n]}$, entonces al componer con $\partial_{n-1}$ obtenemos <br><br>
+
+          $$\partial_{n-1}\partial_n(\sigma)=\sum_{j< i} (-1)^i(-1)^j\sigma|_{[v_0,\dots,\hat{v_j},\dots,\hat{v_i},\dots,v_n]} + \sum_{j> i} (-1)^i(-1)^{j-1}\sigma|_{[v_0,\dots,\hat{v_i},\dots,\hat{v_j},\dots,v_n]}$$
+
+          El $j-1$ en el segundo término de esta igualdad se debe a que $v_j$ es el vértice número $j-1$ de $[v_0,\dots,\hat{v_i},\dots,\hat{v_j},\dots,v_n]$. <br><br>
+
+          Estas dos sumas se cancelan. <span class="duda">escribir esto mejor</span> <br><br>
+
+          Con esto tenemos que se cumple $Im(\partial_{n+1})\subset Ker(\partial_n)$. <br><br>
+          
+          Tenemos entonces una familia de homomorfismos entre los $C_n(X)$ que cumple $$\dots\rightarrow C_{n+1}(X)\xrightarrow{\partial_{n+1}}C_n(X)\xrightarrow{\partial_n}\dots\rightarrow C_1(X)\xrightarrow{\partial_1} C_0(X)\xrightarrow{\partial_0} 0 $$
+
+          <span class="def">Def:</span> Llamamos <ins>complejo de cadenas</ins> a una familia de homomorfismos de grupos abelianos que cumple lo anterior. <br><br>
+
+          <span class="def">Def:</span> Definimos el <ins>n-ésimo grupo de homología</ins> de un complejo de cadenas como el cociente $H_n=Ker(\partial_n)/Im(\partial_{n+1})$. <br><br>
+        </div>
+
+        
+    
+</body>
+</html>
