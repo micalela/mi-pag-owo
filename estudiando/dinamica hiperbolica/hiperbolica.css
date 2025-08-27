@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "fuente";
+  src: url("../../fonts/Perfect DOS VGA 437 2.ttf");
+}
+
+  h1 {
+    font-family: "fuente";
+    background-color: rgb(158, 197, 231);
+    padding: 2px;
+    font-size: 2.5em;
+    color: rgb(131, 115, 172);
+  }
+
+.navbar{
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(130, 185, 151);
+}
+
+.navbar a{
+color: rgb(85, 54, 126);
+background-color: transparent;
+}
+
+.navbar span{
+    color: rgb(85, 54, 126);
+    background-color: transparent; 
+}
+
+body {
+    background-image: url("../../assets/fondos/vgrid.jpg");
+  }
+
+.ej{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.obs{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.teo{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.prop{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.lema{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.def{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.dem{
+    width: fit-content;
+    background-color: rgb(131, 115, 172);
+    padding: 3px;
+}
+.caja{
+    width: fit-content;
+    background-color: rgb(158, 197, 231);
+    padding: 15px 25px;
+    margin: 15px;
+}
+.duda{
+    width: fit-content;
+    background-color: rgb(228, 218, 185);
+    padding: 5px;
+    line-height: 1.5;
+
+}
+.comm{
+    width: fit-content;
+    background-color: rgb(209, 228, 185);
+    padding: 5px;
+    line-height: 1.5;
+}
+
+.img{
+    width: 250px;
+}
+
+.img:hover{
+    transform: scale(1.5) translateX(50px);
+}
+
+.poronga:hover{
+    transform: scale(3) translateX(40px);
+}
+
+li{
+    padding: 4px;
+}
+
+.imagenTitulo{
+    max-width: 100%;
+    padding: 10px 30px 10px 30px;
+}
+
+.titulo{
+    background-color: rgba(227, 235, 208, 0.767);
+    margin-top: 20px;
+    margin: auto;
+    width: fit-content;
+}
+
+.homologia{
+    background-color: rgb(158, 197, 231);
+    width: fit-content;
+    padding: 10px 20px 8px 15px;
+    margin: auto;
+    margin-bottom: 25px;
+  }

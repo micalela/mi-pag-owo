@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="hiperbolica.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+<!--         <img
+        src="..\..\assets\monografía\esferas.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        />
+
+        <br>
+
+        <img
+        src="..\..\assets\monografía\segunda.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px;"
+        /> -->
+
+<!--         <div class="titulo">
+          <img
+            src="..\..\assets\monografía\homología.gif"
+            class="imagenTitulo"
+            alt="homología"
+            style="height: 80px; margin: auto; display: block;"
+          />
+        </div> -->
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+
+      dinamica hiperbolica
+    
+      </h1> 
+
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+
+
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="caja">
+           <span class="def">Def:</span> Una transformación lineal $A:\R^n\to\R^n$ es hiperbólica si para todo $v$ valor propio de $A$ se cumple $\|{v}\|\neq 1$ <br><br>
+
+           Nuestras transformaciones lineales hiperbólicas pueden ser expansoras, contractivas o pueden tener algunos subespacios que expanden y otros que contraen.
+        </div>
+
+        <div class="caja">
+          <span class="lema">Prop:</span> Sea $A$ una matriz hiperbólica tal que $\|v\|< 1$ para todo $v$ valor propio <br><br>
+
+          $\Rightarrow \exst c>0, \lambda\in(0,1)$ tales que $\| A^n v\|\leq c\lambda^n\|v\|$ <br><br>
+
+          <span class="dem">Dem:</span> Sabemos que en $\R^n$ todas las normas son equivalentes. <br><br>
+          
+          Definimos $\|A\|_m := \max\{a_{ij}\}$. Para esta norma tenemos que $\exst ñ\in\N$ tal que $\|A^ñ\|_m< 1$. <br><br>
+
+          Por equivalencia de las normas entonces obtenemos que $\exst n\in\N$ tal que $\|A^n\|< 1$, y por lo tanto  $\exst q\in\N$ tal que $\|A^q\| < \lambda_0 < 1$. <br><br>
+
+          Podemos escribir $n=mq+r$ con $0< r< q$. Sea $c=\max\{\|A^j\|: 0\leq j \leq q\}$. <br><br>
+
+          $A^nv=A^rA^{mq}v\Rightarrow\|A^nv\|=\|A^rA^{mq}v\|\leq\|A^r\|\|A^{mq}\|\|v\|\leq c\lambda_0^m\|v\|\leq $ cuentas demierda y llegas
+        </div>
+
+        
+    
+</body>
+</html>
