@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="hiperbolica.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+
+      dinamica hiperbolica
+    
+      </h1> 
+
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+
+
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="caja">
+           <span class="def">Def:</span> Dada $f:M\to M$ un difeo, con $M$ variedad Riemanniana. <br><br>
+
+           Un compacto invariante $\Lambda$ es <ins>hiperbólico</ins> si para todo $x\in\Lambda$ existen $E_x^s, E_x^u$ subespacios de $T_xM$ tales que
+           
+           <ol>
+            <li>
+                $T_xM=E_x^s	\oplus E_x^u$
+            </li>
+            <li>
+                Son invariantes: $Df_x(E_x^s)=E_{f(x)}^s$ y $Df_x(E_x^u)=E_{f(x)}^u$
+            </li>
+            <li>
+                Existen constantes $c>0$ y $\lambda \in (0,1)$ tales que para todo $v\in T_xM, n\in\N$ se cumple:
+                <ul>
+                    <li>
+                        $v\in E_x^s\Rightarrow \|Df^n_x(v)\|\leq c\lambda^n\|v\|$
+                    </li>
+                    <li>
+                        $v\in E_x^u\Rightarrow \|Df^{-n}_x(v)\|\leq c\lambda^n\|v\|$
+                    </li>
+                </ul>
+            </li>
+           </ol>
+
+           <span class="obs">Prop:</span> $E_x^s, E_x^u$ varían continuamente con $x$ y tienen dimensión constante.
+        </div>
+
+    
+</body>
+</html>

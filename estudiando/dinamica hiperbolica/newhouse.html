@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>newhouse chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+<!--         <img
+        src="..\..\assets\monografía\esferas.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        />
+
+        <br>
+
+        <img
+        src="..\..\assets\monografía\segunda.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px;"
+        /> -->
+
+        <!-- <img
+        src="..\..\assets\monografía\esferas salvajes.gif"
+        class="imagenTitulo"
+        alt="conjuntos hiperbólicos"
+        style="padding: 20px 0px 0px 10px; height: 80px;"
+        /> -->
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        \newcommand{\om}{\Omega_1}
+        $
+
+        <div class="caja"><span class="teo">Lema:</span> 
+            
+            Dado $x\in\Omega_1$ se tiene $B^+(x)\cap\Omega_1\neq\varnothing$ y $B^-(x)\cap\Omega_1\neq\varnothing$. <br><br>
+
+            <span class="dem">Dem:</span> Llamamos $A=\{x\in\Omega_1: B^+(x)\cap\Omega_1\neq\varnothing\}$. La prueba va separada en un montón de pasos:
+        
+        </div>
+
+        <div class="caja"> <span class="prop">Paso 1:</span> Se cumple $f(A)=A$ <br><br>
+
+            <span class="dem">Dem:</span> Como $f$ preserva la orientación de $E^u$ tenemos que $f(B^+(x))=B^+(f(x))$. <br><br> 
+
+            Además $\Omega_1$ cumple $f(\Omega_1)=\Omega_1$, entonces $f(\Omega_1\cap B^+(x))=\Omega_1\cap B^+(f(x))$. <br><br>
+
+            Por lo tanto tenemos $f(A)=A$.
+        </div>
+
+        <div class="caja"> <span class="prop">Paso 2</span> Si $x\in\Omega_1$ no es periódico para $f$, entonces $x\in A$ <br><br>
+
+            <span class="dem">Dem:</span> Tomo un $\varepsilon$-entorno de $x$ donde tenga producto local. <br><br>
+
+            Como $x\not\in Per(f)$, $o(x)$ es un conjunto infinito. <br><br>
+
+            <ins>Afirmación:</ins> Existe una sucesión $\{x_i\}\subset o(x)$ que cumple $x_i\neq x_j\Rightarrow W^s_\varepsilon(x_i)\cap W^s_\varepsilon(x_j)=\varnothing$. <br><br>
+
+            Probaremos algo más fuerte. Dados dos enteros $n_1 > n_2$ se cumple $W^s_\varepsilon(f^{n_1}(x))\cap W^s_\varepsilon(f^{n_2}(x))=\varnothing$. <br><br>
+
+            Para probar esto, supongamos que existen $n_1 > n_2$ tales que $W^s_\varepsilon(f^{n_1}(x))\cap W^s_\varepsilon(f^{n_2}(x))\neq\varnothing$, entonces $W^s(f^{n_1}(x))=W^s(f^{n_2}(x))$. <span class="comm">desigualdad triangular, esto vale siempre x def de $W^s$ y $W^u$</span> <br><br>
+
+            Obtenemos $f^{n_1 - n_2}(W^s(x))=W^s(x)$. <br><br>
+
+            Como $f^{-(n_1-n_2)}$ expande $W^s(x)$, tenemos una sucesión $\{m_i\}_{i=0}^\infty$ tal que si $i\neq j$, $d\left(f^{-m_i(n_1-n_2)}(x),f^{-m_j(n_1-n_2)}(x)\right)< 2\varepsilon$ en $W^s(x)$. <br><br>
+
+            Entonces $W^s_\varepsilon(f^{-m_i(n_1-n_2)}(x))\cap W^s_\varepsilon(f^{-m_j(n_1-n_2)}(x))=\varnothing$ y nuestra sucesión está dada por $x_i=f^{-m_i(n_1-n_2)}(x)$. Esto finaliza la prueba de la afirmación. <br><br>
+
+            Como $M$ es compacta, tenemos un punto $y\in M$ que es límite de una subsucesión $\{x_{i_j}\}$. <br><br>
+
+            Sea $V_\varepsilon(y)$ un $\varepsilon$-entorno de $y$ con estructura de producto local. <br><br>
+
+            Dados $x_{i_j}, x_{i_k}$ en este entorno, se cumple $B^+(x_{i_j})\cap W^s(x_{i_k})\neq\varnothing$ o $B^+(x_{i_k})\cap W^s(x_{i_j})\neq\varnothing$. <span class="comm">poner imagen</span> <br><br>
+
+            Como $\Omega_1$ es $f$-invariante, $x_i\in\Omega_1\fall i$ y entonces $W^s(x_i)\subset\Omega_1\fall i$. <br><br>
+
+            Por lo tanto, $x_{i_j}\in A$ o $x_{i_k}\in A$. <br><br>
+
+            Con esto tenemos, como $A$ es invariante por $f$ y los $x_i$ están en la órbita de $x$, que $x\in A$.
+
+            <!-- 
+            Sea $\{n_k\}_{k=0}^{\infty}$ tal que $f^{n_k}(x)\xrightarrow{k} y$. <br><br>
+
+            Como $\Omega_1$ es $f$-invariante y $x\in\Omega_1$, tenemos $f^{n_k}(x)\in\Omega_1\fall k$ y también por compacidad de $\Omega_1$ tenemos $y\in\Omega_1$. -->
+
+        </div> 
+
+        <div class="caja"> Ahora vamos a probarlo para el caso en el que $p\in\Omega_1\cap Per(f)$. Acá el argumento es distinto si $dim(M)=2$ o $>2$. Voy a escribir el caso $dim(M)>2$. Tenemos entonces $dim(E^u)=1$ y $dim(E^s)\geq 2$.</div>
+
+        <div class="caja"><span class="prop">Paso 3:</span>
+
+          Sea $x\in W^s(p)-\{p\}$. Como $d\left(f^n(x),f^n(p)\right)\xrightarrow{n}0$, $x$ no puede ser periódico. Por la parte 2 entonces tenemos que $x\in A$. <br><br>
+
+          Tiene sentido entonces definir $\overline{\phi}(x):=\inf\{\;l[x,y]:y\in\Omega_1\}$. <br><br>
+
+          <ins>Afirmación:</ins> Si existe algún $x\in W^s(p)-\{p\}$ con $\overline{\phi}(x)=0$, entonces $p\in A$. <br><br>
+
+          Para probar esto, observamos que dado un $x$ así, sus iterados cumplen lo mismo y tienden a $p$. Por lo tanto podemos encontrarnos un punto que cumpla esa propiedad tan cerca de $p$ como queramos. <span class="duda">justificar bien acá</span> <br><br>
+
+          Tomando entonces un entorno de $p$ con estructura de producto local, tenemos que $B^+(p)\cap\Omega_1\neq\varnothing$. <br><br>
+
+          Por lo tanto, a partir de ahora vamos a asumir $\overline{\phi}(x)\neq 0\fall x\in W^s(p)-\{p\}$. <br><br>
+        </div>
+
+        <div class="caja">
+          <span class="prop">Paso 4:</span> Dado $x\in W^s(p)-\{p\}$, definimos la función $\phi:W^s(p)-\{p\}\to M$ tal que $\phi(x)$ es el punto en $B^+(x)$ que cumple $l[x,\phi(x)]=\overline{\phi}(x)$. <br><br>
+
+          Tiene sentido definirla porque $\om$ es compacto. Por definición sabemos que $Im(\phi)\subset\om$, pero podemos decir más que eso: <br><br>
+
+          <ins>Afirmación:</ins> $Im(\phi)\subset W^s(z_0)$ para algún $z_0\in\om$. <br><br>
+          
+          <span class="duda">estoy segura de q está en $\om$ no? si $Im(\phi)\subset\om$ y $\phi(x)\in W^s(z_0) \Rightarrow z_0\in W^s(\phi(x))\subset\om$</span><br><br>
+
+          Para probar esto consideramos los conjuntos $U_z := \{x\in W^s(p)-\{p\} : \phi(x)\in W^s(z)\}$. <br><br>
+
+          Tomando un entorno con estructura de producto local, tenemos que son abiertos relativos en $W^s(p)-\{p\}$. <span class="comm">dibujo</span> Además, son disjuntos y cubren $W^s(p)-\{p\}$.<br><br>
+
+          Como $dim(M)\geq 2$, $W^s(p)-\{p\}$ es conexo, por lo tanto si algún $U_{z_0}\neq\varnothing$ entonces se cumple $U_{z_0}=W^s(p)-\{p\}$. <br><br>
+          
+        </div>
+
+        <div class="caja">
+          <span class="prop">Paso 5:</span> La función $\phi:W^s(p)-\{p\}\to W^s(z_0)$ es continua y inyectiva. <br><br>
+
+          <span class="dem">Dem:</span> La inyectividad es por definición, porque si $[x,y]\cap [z,w]\neq\varnothing$, entonces $[x,y]=[z,w]$. <span class="comm">no está bien esto pero paja escribir, vale = solo cuando se intersectan en final del arco, sino uno está incluído en el otro.</span><br><br>
+          
+          Dado $x\in W^s(p)-\{p\}$, llamamos $\gamma$ al arco $[x,\phi(x)]$. Dado $\varepsilon > 0$, queremos encontrar un abierto que contenga a $y$ contenido en la preimagen por $\phi$ de $W^s_\varepsilon(y)$. <br><br>
+          
+          Podemos considerar un producto local relativo a $\gamma$ al que llamaremos $N$, tal que $(W^s(\phi(x)),N)\subset W^s_\varepsilon(\phi(x))$ pero $p\not\in (W^s(x),N)$ <span class="comm">dibujo</span>. <br><br>
+
+          Entonces, los $y\in (W^s(x),N)$ cumplen que $\phi(y)\in (W^s(\phi(x)),N)\subset W^s_\varepsilon(\phi(x))$. <br><br>
+        </div>
+
+        <div class="caja">
+          Con esto tenemos que dado un compacto $K$, $\phi|_K$ es un homeo sobre su imagen. <br><br>
+
+          Consideramos una $(n-1)$-bola centrada en $p$ y contenida en $W^s(p)$. <br><br>
+
+          Le ponemos nombre a las cositas,, <span class="comm">dibujo</span>
+
+
+        </div>
+    
+</body>
+</html>
