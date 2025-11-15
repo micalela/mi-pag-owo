@@ -72,6 +72,34 @@
         \newcommand{\om}{\Omega_1}
         $
 
+        <div class="caja">Nuestro objetivo en esta sección va a ser probar el siguiente resultado: <br><br>
+        
+          <span class="teo">Teo:</span> Dada $M$ n-variedad compacta y conexa, $f:M\to M$ un difeo de Anosov de codimension 1, entonces $NW(f)=M$. <br><br>
+
+        </div>
+
+        <div class="caja">
+          Usando el lema, podemos probar que dada una pieza básica repulsora $\Omega_1$, se cumple $W^u(\om)\subset\om$. Vice versa para una pieza básica atractora. El argumento es el siguiente: <br><br>
+
+          Sea $x\in\om$, como $\om$ es compacto e invariante, tenemos que $f^{n_k}(x)\xrightarrow{k} y$ para algún $y\in\om$. <br><br>
+
+          Por el lema, $B^\pm(y)\cap\om\neq\varnothing$, entonces $B^\pm_\alpha(y)\cap\om\neq\varnothing$ para algún $\alpha > 0$. <br><br>
+
+          Como los $f^{n_k}(x)$ acumulan en $y$, tenemos que $B^\pm_\alpha(x)(f^{n_k}(x))\cap\om\neq\varnothing$ <br><br>
+
+          Como $f^{-n_k}$ contrae las variedades estables, tirando para atrás cada una de estas $B^\pm_\alpha(x)(f^{n_k}(x))$ para $n\geq N$, tenemos que $x$ es un punto de acumulación de $\om$ en $W^u(x)$. <br><br>
+
+          <ins>Afirmación:</ins> Esto implica que $W^u(x)\subset\om$. <br><br>
+
+          Esto se debe a que, como $\om$ es cerrado, $W^u(x)\cap\om$ es un cerrado en la topología relativa de $W^u(x)$. <br><br>
+
+          Entonces, mirando un $y$ en el complemento de $\om$ en $W^u(x)$, existen $x_1, x_2 \in\om$ tal que $y\in(x_1,x_2)\subset W^u(x)-\om$ <br><br>
+
+          Esto no puede pasar porque entonces $\om$ no acumula $x_1,x_2$ por ambos lados. <br><br>
+
+          Por lo tanto, no existe $y$ en $W^u(x)-\om$, es decir, $W^u(x)\subset\om$.
+        </div>
+
         <div class="caja"><span class="teo">Lema:</span> 
             
             Dado $x\in\Omega_1$ se tiene $B^+(x)\cap\Omega_1\neq\varnothing$ y $B^-(x)\cap\Omega_1\neq\varnothing$. <br><br>
