@@ -70,6 +70,7 @@
         \newcommand{\exst}{\;\exists\;}
         \newcommand{\nexst}{\;\not\exists\;}
         \newcommand{\om}{\Omega_1}
+        \newcommand{\sig}{\Sigma}
         $
 
         <div class="caja">Nuestro objetivo en esta sección va a ser probar el siguiente resultado: <br><br>
@@ -87,7 +88,9 @@
 
           Como los $f^{n_k}(x)$ acumulan en $y$, tenemos que $B^\pm_\alpha(x)(f^{n_k}(x))\cap\om\neq\varnothing$ <br><br>
 
-          Como $f^{-n_k}$ contrae las variedades estables, tirando para atrás cada una de estas $B^\pm_\alpha(x)(f^{n_k}(x))$ para $n\geq N$, tenemos que $x$ es un punto de acumulación de $\om$ en $W^u(x)$. <br><br>
+          Como $f^{-n_k}$ contrae las variedades estables, tirando para atrás cada una de estas $B^\pm_\alpha(x)(f^{n_k}(x))$ para $n\geq N$, tenemos que $x$ es un punto de acumulación de $\om$ en $W^u(x)$.<br><br>
+
+          <img src="..\..\assets\hiperbolica\4.png" alt="dibujito pizarron" class="img"> <br><br>
 
           <ins>Afirmación:</ins> Esto implica que $W^u(x)\subset\om$. <br><br>
 
@@ -139,7 +142,9 @@
 
             Sea $V_\varepsilon(y)$ un $\varepsilon$-entorno de $y$ con estructura de producto local. <br><br>
 
-            Dados $x_{i_j}, x_{i_k}$ en este entorno, se cumple $B^+(x_{i_j})\cap W^s(x_{i_k})\neq\varnothing$ o $B^+(x_{i_k})\cap W^s(x_{i_j})\neq\varnothing$. <span class="comm">poner imagen</span> <br><br>
+            Dados $x_{i_j}, x_{i_k}$ en este entorno, se cumple $B^+(x_{i_j})\cap W^s(x_{i_k})\neq\varnothing$ o $B^+(x_{i_k})\cap W^s(x_{i_j})\neq\varnothing$.<br><br>
+
+            <img src="..\..\assets\hiperbolica\5.png" alt="dibujito pizarron" class="img"> <br><br>
 
             Como $\Omega_1$ es $f$-invariante, $x_i\in\Omega_1\fall i$ y entonces $W^s(x_i)\subset\Omega_1\fall i$. <br><br>
 
@@ -182,7 +187,9 @@
 
           Para probar esto consideramos los conjuntos $U_z := \{x\in W^s(p)-\{p\} : \phi(x)\in W^s(z)\}$. <br><br>
 
-          Tomando un entorno con estructura de producto local, tenemos que son abiertos relativos en $W^s(p)-\{p\}$. <span class="comm">dibujo</span> Además, son disjuntos y cubren $W^s(p)-\{p\}$.<br><br>
+          Tomando un entorno con estructura de producto local, tenemos que son abiertos relativos en $W^s(p)-\{p\}$. Además, son disjuntos y cubren $W^s(p)-\{p\}$.<br><br>
+
+          <img src="..\..\assets\hiperbolica\3.png" alt="dibujito pizarron" class="img"> <br><br>
 
           Como $dim(M)\geq 2$, $W^s(p)-\{p\}$ es conexo, por lo tanto si algún $U_{z_0}\neq\varnothing$ entonces se cumple $U_{z_0}=W^s(p)-\{p\}$. <br><br>
           
@@ -193,19 +200,54 @@
 
           <span class="dem">Dem:</span> La inyectividad es por definición, porque si $[x,y]\cap [z,w]\neq\varnothing$, entonces $[x,y]=[z,w]$. <span class="comm">no está bien esto pero paja escribir, vale = solo cuando se intersectan en final del arco, sino uno está incluído en el otro.</span><br><br>
           
-          Dado $x\in W^s(p)-\{p\}$, llamamos $\gamma$ al arco $[x,\phi(x)]$. Dado $\varepsilon > 0$, queremos encontrar un abierto que contenga a $y$ contenido en la preimagen por $\phi$ de $W^s_\varepsilon(y)$. <br><br>
+          Dado $x\in W^s(p)-\{p\}$, llamamos $\gamma$ al arco $[x,\phi(x)]$. Dado $\varepsilon > 0$, queremos encontrar un abierto <!-- que contenga a $y$ contenido en la preimagen por $\phi$ de $W^s_\varepsilon(y)$.  -->
           
-          Podemos considerar un producto local relativo a $\gamma$ al que llamaremos $N$, tal que $(W^s(\phi(x)),N)\subset W^s_\varepsilon(\phi(x))$ pero $p\not\in (W^s(x),N)$ <span class="comm">dibujo</span>. <br><br>
+          relativo $U$ de $W^s(p)-\{p\}$ tal que $f(U)\subset W^s_\varepsilon(\phi(x))$.<br><br>
+          
+          Podemos considerar un producto local relativo a $\gamma$ al que llamaremos $N$, tal que $(W^s(\phi(x)),N)\subset W^s_\varepsilon(\phi(x))$ pero $p\not\in (W^s(x),N)$. <br><br>
 
           Entonces, los $y\in (W^s(x),N)$ cumplen que $\phi(y)\in (W^s(\phi(x)),N)\subset W^s_\varepsilon(\phi(x))$. <br><br>
+
+          <img src="..\..\assets\hiperbolica\2.png" alt="dibujito pizarron" class="img"> <br><br>
         </div>
 
         <div class="caja">
           Con esto tenemos que dado un compacto $K$, $\phi|_K$ es un homeo sobre su imagen. <br><br>
 
-          Consideramos una $(n-1)$-bola centrada en $p$ y contenida en $W^s(p)$. <br><br>
+          Consideramos una $(n-1)$-bola centrada en $p$ y contenida en $W^s(p)$, y llamamos $\Sigma_0$ a su borde. <br><br>
 
-          Le ponemos nombre a las cositas,, <span class="comm">dibujo</span>
+          $\phi |_{\Sigma_0}:\sig_0\to\sig_1$ es un homeo, como consecuencia, teniendo en cuenta la continuidad de los $W^u$ se cumple que $\bigcup\limits_{x\in\sig_0}[x,\phi(x)$ es homeomorfo a $\sig_0\times [0,1]$. <br><br>
+          
+          Le ponemos nombre a las cositas,, llamamos $\gamma_x :=\gamma_x$, dado $y\in\gamma_x$, $\sigma_y:=W^s(y)\cap\sig\times [0,1]$ <- pero solo la componente conexa que contiene a $y$</span><br><br>
+
+          <img src="..\..\assets\hiperbolica\1.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+          Queremos probar que para cualquier $y\in\gamma_x, z\in\sig_0$ se cumple que $\gamma_z\cap\sig_y$ es exactamente un punto. Nuestro objetivo es después probar que $\phi_y:\sig_0\to\sig_y$ es un homeo para cada $y\in\gamma_x$. <br><br>
+
+          Para ver que la intersección es únicamente un punto, empezaremos por probar que es no vacía. <br><br>
+
+          Sea $y\in\gamma_x$, llamamos $\sig'_0:=\{x\in\sig_0 : \gamma_x\cap\sig_y\neq\varnothing\}$. Vamos a probar que $\sig'_0$ es un abierto y cerrado no vacío y por lo tanto tiene que ser igual a $\sig_0$. <br><br>
+
+          Dado un $x\in\sig'_0$, tenemos un entorno con estructura de producto local. Este entorno va a estar contenido en $\sig'_0$, por lo tanto es abierto. <br><br>
+
+          Ahora, dado un $z\in\sig_0-\sig'_0$, tenemos un entorno de producto local relativo a $\gamma_z$. De la misma manera, este entorno está contenido en el conjunto y por lo tanto $z\in\sig_0-\sig'_0$ es abierto y concluimos que $\sig'_0=\sig_0$.<br><br>
+
+          Con esto tenemos que la intersección de los $\gamma_z$ con los $\sig_y$ es no vacía, veamos ahora que es un único punto. <br><br>
+
+          Sea $D_x=\{y\in\gamma_x: \#\gamma_z\cap\sigma_y=1\fall z\in\sig_0\}$ <br><br>
+
+          Veamos que es un abierto y cerrado no vacío. <br><br>
+
+          Tomando un entorno con estructura de producto local relativo a $\sig_0$ <span class="duda">acá dice $E_0$ en las escrituras,,,, pq?</span> se cumple que $W^u_\varepsilon(z)$ intersecta a $\sig_y$ en un único punto. Entonces un entorno de $x$ está en $D_x$, entonces $D_x\neq\varnothing$. <br><br>
+
+          Para ver que es abierto, observamos que dado $y\in D_x$ tenemos un entorno con estructura de producto relativo a $\sig_y$ contenido en $D_x$. <br><br>
+
+          Para ver que su complemento es abierto en $\gamma_x$, consideramos un $y$ ahí y observamos que como $\sigma'_0=\sig_0$, hay algún $z\in\sigma_0$ tal que $\sig_y\cap\gamma_z$ tiene al menos dos elementos.<br><br>
+
+          Dados dos puntos en $\sig_y\cap\gamma_z$, consideramos el arco por $\gamma_z$ que los une. Toda $\gamma_{z'}$ en un entorno con producto local relativo a ese arco va a intersectar a $\sig_0$ más de una vez, y por lo tanto ese entorno queda contenido en el complemento de $D_x$ en $\gamma_x$. <span class="comm">dibujo</span> <br><br>
+
+          Ahora con esto queremos ver que 
+          
 
 
         </div>
