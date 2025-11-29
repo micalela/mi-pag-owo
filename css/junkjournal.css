@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "fuente";
+  src: url("/fonts/Perfect DOS VGA 437 2.ttf");
+}
+
+body {
+    background: url("/assets/fondos/mantel\ grande\ 2.png");
+  }
+
+  h3 {
+    font-family: "fuente";
+    background-color: rgb(158, 197, 231);
+    padding: 2px;
+    font-size: 30px;
+    color: rgb(231, 237, 241);
+    width: fit-content;
+  }
+
+  h1 {
+    font-family: "fuente";
+    background-color: rgb(158, 197, 231);
+    padding: 2px;
+    font-size: 60px;
+    color: rgb(231, 237, 241);
+  }
+
+  .renderpixeles {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    margin: 5px;
+  }
+
+  .renderpixeles:hover{
+    transform: scale(1.2);
+  }
+
+  .rendercachivaches{
+    margin: 5px;
+  }
+
+  .renderc80x15 {
+    width: 80px;
+  }
+
+  .div_ersion{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 255, 0.096);
+  }
+
+  .estampillas{
+    width: fit-content;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izq{
+    width: 15%;
+  }
+
+  .mid{
+    width: 70%;
+    border: 1px solid black;
+  }
+
+  .der{
+    width: 15%;
+  }
+
+  .caja{
+    background-color: rgba(225, 227, 248, 0.507);
+    margin: auto;
+    margin-top: 25px;
+    width: 90%;
+    height: 700px;
+    position: relative;
+  }
+
+  .cajita{
+    background-color: rgba(177, 219, 255, 0.342);
+    width: fit-content;
+    padding: 15px;
+    margin: auto;
+/*     border: 32px solid orange;
+    border-image: url('../assets/dividers/borde4.png') 32 / 32px round;
+    background-clip: padding-box; <--- este comando ta bueno, queda el borde afuera del padding*/
+  }
+
+  .borde{
+    width: fit-content;
+    margin: auto;
+    border: 32px solid orange;
+    border-image: url('/assets/dividers/borde4.png') 32 / 32px round;
+  }
+
+  .titulo{
+    background-color: rgb(175, 140, 88);
+    width: fit-content;
+    padding: 10px 20px 8px 15px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  p{
+    color: rgb(85, 44, 11);
+    width: fit-content;
+    margin: auto;
+    font-size: 18px;
+  }
+
+
+.navbar{
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(204, 157, 95);
+}
+
+.navbar a{
+color: rgb(78, 55, 10);
+background-color: transparent;
+}
+.navbar span{
+    color: rgb(126, 101, 54);
+    background-color: transparent;
+}
+

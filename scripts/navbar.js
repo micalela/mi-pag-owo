@@ -1,4 +1,4 @@
-const navbar = `<div class="navbar">
+const navbar = `<div class="navbar" id="navi">
 <a href="aprendiendo uwu2.html">aprendiendo html</a>
 <span>✧</span>
 <a href="cartelitos.html">cachivachería</a>
@@ -20,6 +20,8 @@ const navbar = `<div class="navbar">
 <a href="estudiando/tópicos/tópicos.html">tópicos de geometría</a>
 <span>✧</span>
 <a href="desvaríos.html">desvaríos</a>
+<span>✧</span>
+<a href="junkjournal.html">junk journal</a>
 </div>`;
 
 const body = document.body;
