@@ -1,10 +1,10 @@
 @font-face {
   font-family: "fuente";
-  src: url("/fonts/Perfect DOS VGA 437 2.ttf");
+  src: url("../fonts/Perfect DOS VGA 437 2.ttf");
 }
 
 body {
-    background: url("/assets/fondos/mantel\ grande\ 2.png");
+    background: url("../assets/fondos/mantel%20grande%202.png");
   }
 
   h3 {
