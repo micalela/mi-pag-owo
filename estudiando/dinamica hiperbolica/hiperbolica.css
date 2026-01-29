@@ -28,7 +28,7 @@ background-color: transparent;
 }
 
 body {
-    background-image: url("../../assets/fondos/vgrid.jpg");
+    background-image: url("../../assets/fondos/sleepy_aisha.gif");
   }
 
 .ej{
@@ -66,6 +66,12 @@ body {
     background-color: rgb(131, 115, 172);
     padding: 3px;
 }
+.fondo {
+  background-color: rgba(178, 246, 248, 0.616);
+  margin: 0px 150px 50px 100px;
+  padding: 25px 20px 20px 20px;
+}
+
 .caja{
     width: fit-content;
     background-color: rgb(158, 197, 231);
@@ -91,7 +97,7 @@ body {
 }
 
 .img:hover{
-    transform: scale(1.5) translateX(50px);
+    transform: scale(2) translateX(50px);
 }
 
 .poronga:hover{

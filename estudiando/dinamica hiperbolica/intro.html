@@ -85,10 +85,12 @@
         \newcommand{\nexst}{\;\not\exists\;}
         $
 
+      <div class="fondo">
+
         <div class="caja">
            <span class="def">Def:</span> Una transformación lineal $A:\R^n\to\R^n$ es hiperbólica si para todo $v$ valor propio de $A$ se cumple $\|{v}\|\neq 1$ <br><br>
 
-           Nuestras transformaciones lineales hiperbólicas pueden ser expansoras, contractivas o pueden tener algunos subespacios que expanden y otros que contraen.
+           Pueden ser expansoras, contractivas o tener algunos subespacios que expanden y otros que contraen.
         </div>
 
         <div class="caja">
@@ -107,6 +109,70 @@
           $A^nv=A^rA^{mq}v\Rightarrow\|A^nv\|=\|A^rA^{mq}v\|\leq\|A^r\|\|A^{mq}\|\|v\|\leq c\lambda_0^m\|v\|\leq $ cuentas demierda y llegas
         </div>
 
+        <div class="caja">
+          <span class="prop">Prop:</span> Si $A:\R^n\to\R^n$ hiperbólica, entonces existen espacios $E^s,E^u$ tales que: 
+          <ol>
+            <li>$\R^n=E^u\oplus E^s$</li>
+            <li>$E^u, E^s$ invariantes por $A$</li>
+            <li>Existen $c>0,\;\lambda\in(0,1)$ tq...</li>
+            <li>Dado $x\in\R^n$ definimos $E_x^s, E_x^u$ como $x+E^s,x+E^u$.<br>
+              Se cumple $y\in E^s \Rightarrow \|A^ny-A^nx\|\leq c\lambda^n \xrightarrow{n}0$ y lo mismo para $E^u$ con $n< 0$.
+            </li>
+          </ol>
+
+          <span class="obs">Obs:</span> El punto 4 implica que si $x\neq y$ entonces $\sup\limits_{n\in\Z}\|A^ny-A^nx\| =\infty$
+        </div>
+
+        <div class="caja"><span class="prop">Norma adaptada:</span> Dada $A:\R^k\to\R^k$ hiperbólica, $\R^k=E^s\oplus E^u$, existe una norma $\|\cdot\|_1:\R^k\to\R$ tal que $$\|A|_{E^s}\|_1< a< 1 \;\text{ y }\; \|A^{-1}|_{E^u}\|_1< a< 1$$
+        
+        
+        
+        </div>
+
+        <div class="caja">
+          <span class="def">Def:</span> $k$ - Pseudo órbitas ($k$-p.o)
+        </div>
+
+        <div class="caja">
+          <span class="prop">Propiedad del sombreado:</span> $A:R^n\to\R^n$ hiperbólica, dado $K>0$ existe $\alpha>0$ tal que dada $\{x_n\}$ $K$-p.o hay un único $z\in\R^n$ tal que $\|A^nz-x_n\|\leq\alpha\fall n\in\Z$ <br><br>
+
+          <span class="dem">Dem:</span> Primero lo probamos para $\R^n=E^s$. Es análogo el caso $\R^n=E^u$. <br> <br>
+
+          <img src="..\..\assets\dinamica hiperbolica\somb.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+          Ahora lo probamos en general: <br> <br>
+
+          <img src="..\..\assets\dinamica hiperbolica\somb2.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+        </div>
+
+        <div class="caja"><span class="def">Def:</span> Estabilidad <br><br>
+
+        <span class="teo">Teo:</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica, $G:\R^k\to\R^k$ homeo tal que $\|A^nx - G^n(x)\|< \infty$, existe $H:\R^k\to\R^k$ continua y sobreyectiva tal que $H\circ G=A\circ H$. <br><br>
+
+        <span class="dem">Dem:</span><br><br>
+
+        <img src="..\..\assets\dinamica hiperbolica\semic1.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+        <img src="..\..\assets\dinamica hiperbolica\semic2.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+        <span class="duda">por qué me aseguro que converge?</span><br><br>
+
+        <img src="..\..\assets\dinamica hiperbolica\semic3.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+        Esto último es absurdo porque contradice el teorema de punto fijo de Brouwer. Si $r$ es continua, entonces aplicando $r$, la isotopía a Id y después rotando obtenemos una función continua y sin puntos fijos de la bola en si misma. <br><br>
+
+        <span class="obs">Pregunta:</span> ¿Qué necesito para asegurar que $H$ sea un homeo? <br><br>
+
+        <span class="prop">Prop:</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica y $G:\R^k\to\R^k$ homeo, existe $\varepsilon>0$ tal que si  $A-G$ es Lipschitz de constante menor a $\varepsilon$, entonces $G$ es $\infty$-expansiva ($x\neq y\Rightarrow\sup\limits_{n\in\Z}\|G^n(x)-G^n(y)\|=\infty$) <br><br>
+
+        Esto nos permite obtener la inyectividad de $H$: <br><br>
+
+        <span class="teo">Teo:</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica, $G:\R^k\to\R^k$ homeo tal que $\|A^nx - G^n(x)\|< \infty$, existe $\varepsilon >0$ tal que si $G-A$ es Lipschitz de constante menor a $\varepsilon$, entonces existe $H:\R^k\to\R^k$ homeo tal que $H\circ G=A\circ H$. <br><br>
+
+        </div>
+
+      </div>
         
     
 </body>
