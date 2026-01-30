@@ -166,9 +166,18 @@
 
         <span class="prop">Prop:</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica y $G:\R^k\to\R^k$ homeo, existe $\varepsilon>0$ tal que si  $A-G$ es Lipschitz de constante menor a $\varepsilon$, entonces $G$ es $\infty$-expansiva ($x\neq y\Rightarrow\sup\limits_{n\in\Z}\|G^n(x)-G^n(y)\|=\infty$) <br><br>
 
-        Esto nos permite obtener la inyectividad de $H$: <br><br>
+        <img src="..\..\assets\dinamica hiperbolica\exp.jpg" alt="dibujito pizarron" class="img"> <br><br>
 
-        <span class="teo">Teo:</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica, $G:\R^k\to\R^k$ homeo tal que $\|A^nx - G^n(x)\|< \infty$, existe $\varepsilon >0$ tal que si $G-A$ es Lipschitz de constante menor a $\varepsilon$, entonces existe $H:\R^k\to\R^k$ homeo tal que $H\circ G=A\circ H$. <br><br>
+        <span class="duda">no me termina de cerrar</span> <br><br>
+
+        Esto nos permite obtener la inyectividad de $H$: Si $H(x)=H(y)$ entonces  $$\|G^n(x)-G^n(y)\|=\|G^n(x) - A^n H(x) + A^n H(y) - G^n(y) \|\leq \|G^n(x) - A^n H(x)\| + \|A^n H(y) - G^n(y)\|\leq 2\alpha$$
+        Como $G$ es $\infty$-expansiva entonces necesariamente es $x=y$.<br><br>
+
+        Con eso obtenemos el siguiente resultado de estabilidad <br><br>
+
+        <span class="teo">Teo: (Estabilidad general de las lineales hiperbólicas)</span> Dadas $A:\R^k\to\R^k$ lineal hiperbólica, $G:\R^k\to\R^k$ homeo tal que $\|A^nx - G^n(x)\|< \infty$, existe $\varepsilon >0$ tal que si $G-A$ es Lipschitz de constante menor a $\varepsilon$, entonces existe $H:\R^k\to\R^k$ homeo tal que $H\circ G=A\circ H$. <br><br>
+
+        
 
         </div>
 

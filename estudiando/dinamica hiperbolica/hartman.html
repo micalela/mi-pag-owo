@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="hiperbolica.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+    </head>
+      
+    <body>
+        <script src="navbar.js"></script>
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+        dinamica hiperbolica
+        </h1> 
+
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="fondo">
+
+        <div class="caja">
+            En esta sección, $M$ es una variedad riemanniana compacta, conexa, sin borde y $f:M\to M$ difeomorfismo.  <br><br>
+            
+            <span class="def">Def:</span> Puntos fijos   hiperbólicos, periódicos hiperbólicos <br><br>
+
+            <span class="teo">Teo: (Hartman)</span> $p\in fix(f)$ hiperbólico, entonces $f$ y $Df_p$ son localmente conjugados. <br><br>
+
+            Es decir, existen $U\subset M$, $V\subset T_pM$ entornos de $p$, $0$ y un homeomorfismo $h:U\to V$ tal que $h\circ f=Df_p\circ h$ <br><br>
+
+            <span class="dem">Dem:</span> Como es local, usando cartas locales lo probamos para $f:\R^k\to\R^k$ y $p=0$. Escribimos $f=A+\phi$ con $\phi\in C^1(\R^k)$.<br><br>
+
+            La idea es que usando un chichon definimos $G=A$ en $B(p,\delta)^c$ y $G=f$ en $B(p,\delta /2)$. Explícitamente es $G(x)=Ax+\rho(x)\phi(x)$. Con esta definición $G$ cumple $\sup\|G(x)-A(x)\|\leq\infty$.<br><br>
+
+            Haciendo la cuenta y pidiendo que $\|\nabla\phi(x)\|$ y $\|D\rho_x\|$ sean suficientemente chicos tenemos que $G-A$ tiene constante de Lipschitz $< \varepsilon$. <br><br>
+
+            Por lo tanto $G$ y $A$ son conjugadas. Restringiendo el homeo a $B(p,\delta/2)$ tenemos el resultado. <br><br>
+
+            <span class="lema">Corolario:</span> $p\in fix(f)$ hiperbólico, existe un entorno $U\subset M$ de $p$ tal que $fix(f)\cap U=\{p\}$. <br><br>
+
+            En particular, si $f^n(x)\in U \fall n\in\Z$ entonces $x=p$. 
+        </div>
+
+        <div class="caja">
+
+            <span class="def">Def:</span> conjuntos estable, inestable de $p\in fix(f)$, ctos locales <br><br>
+
+            <span class="lema">Corolario:</span> $p\in fix(f)$ hiperbólico, existe $\varepsilon >0$ tal que 
+
+            <ol>
+                <li>
+                    $W^s_\varepsilon(p)\subset W^s(p)$ y lo mismo para $W^u$
+                </li>
+                <li>
+                    $W^s_\varepsilon(p)$ es una subvariedad topológica de la miama dimensión que $E^s$. Lo mismo para $W^u$.
+                </li>
+                <li>
+                    $W^s_\varepsilon(p)=\bigcup\limits_{n\geq0}f^{-n}(W^s_\varepsilon(p))$ y lo mismo para $W^u$ con $f^n$. Además son subvariedades topológicas inmersas en $M$.
+                </li>
+            </ol>
+
+            <span class="teo">Teorema de la variedad estable</span> <br><br>
+
+            <span class="def">Def:</span> $p\in fix(f)$ atractor, repulsor, silla <br><br>
+
+            <span class="teo">Teo:</span> En un entorno de $f$ también se cumple que $U$ tiene un único fijo <br><br>
+
+            <span class="teo">Teo: (Kupka-Smale)</span> Existe un residual $\mathcal{R}\subset Diff^r(M)$ tal que si $f\in\mathcal{R}$ entonces
+            
+            <ol>
+                <li>
+                    Todo periódico de $f$ es hiperbólico
+                </li>
+                <li>
+                    $W^s(p), W^u(q)$ son transversales para cualquier $p,q\in Per(f)$ 
+                </li>
+            </ol>
+        </div>
+        
+        </div>
+    </body>
+</html>

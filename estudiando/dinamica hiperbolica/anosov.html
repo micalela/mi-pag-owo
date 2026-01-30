@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="hiperbolica.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+    </head>
+      
+    <body>
+        <script src="navbar.js"></script>
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+        dinamica hiperbolica
+        </h1> 
+
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+        <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="fondo">
+
+        <div class="caja">
+            En esta sección, $A$ es una matriz con entradas enteras y determinante $\pm 1$, es decir, un elemento de $SL(n,\Z)$. Una matriz $A$ de esta manera induce un difeomorfismo en el toro $\T^n$. <br><br>
+
+            <span class="def">Def:</span> El difeo inducido por $A$ se llama difeomorfismo de Anosov lineal. <br><br>
+
+            <span class="teo">Teo:</span> $f:\T^n\to\T^n$ difeo de Anosov lineal, entonces
+
+            <ol>
+                <li>
+                    $\overline{Per(f)}=\Omega(f)=\T^n$
+                </li>
+                <li>
+                    $f$ es transitiva y topológicamente mixing.
+                </li>
+                <li>
+                    $f$ es expansiva
+                </li>
+                <li>
+                    $W^s(x)$, $W^u(x)$ son densas en $\T^n$ para todo $x$.
+                </li>
+            </ol>
+
+            <span class="dem">Dem:</span> Lo probamos para $n=2$. <br><br>
+
+            <img src="..\..\assets\dinamica hiperbolica\1.jpg" alt="dibujito pizarron" class="img">   
+
+            <img src="..\..\assets\dinamica hiperbolica\2.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+            <img src="..\..\assets\dinamica hiperbolica\3.jpg" alt="dibujito pizarron" class="img">   
+
+            <img src="..\..\assets\dinamica hiperbolica\4.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+            <span class="teo">Teo: (Estabilidad de Anosov lineales)</span> $f:\T^n\to\T^n$ Anosov lineal, existe $\varepsilon >0$ tal que si $g:\T^n\to\T^n$ difeo $\varepsilon$-$C^1$-cerca de $f$ entonces $f$ y $g$ son conjugadas. <br><br>
+
+            <span class="dem">Dem:</span> Sea $A\in SL(n,\Z)$ hiperbólica tal que $f\circ\pi=\pi\circ A$, sea $g:\T^n\to\T^n$ difeo $\varepsilon$-$C^1$-cerca de $f$ ($\sup\|df_x - Ax\|<\varepsilon$) y sea $G$ un levantado $C^1$ de $g$. <br><br>
+
+            Podemos escribir $G(x)=Ax+p(x)$ con $p:\R^n\to\R^n$ periódica en $\Z^n$. Como es periódica, cumple $\sup\|p(x)\|< \infty$. <span class="duda">También cumple $\|Dp_x\|\leq\varepsilon$ no entiendo pq.,, pero con eso tengo $p=G-A$ $\varepsilon$-lipschitz.</span> <br><br>
+
+            Por el teorema de estabilidad general lineal tenemos que $G$ y $A$ son conjugadas por $H:\R^n\to\R^n$ siendo $H(x)$ el único punto que cumple $$\sup\limits_{n\in\Z}\|A^nH(x)-G^n(x)\|<\infty$$ <br><br>
+
+            me fui a mimir
+        </div>
+        
+        </div>
+    </body>
+</html>
