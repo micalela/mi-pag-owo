@@ -93,11 +93,29 @@
 
             <span class="dem">Dem:</span> Sea $A\in SL(n,\Z)$ hiperbólica tal que $f\circ\pi=\pi\circ A$, sea $g:\T^n\to\T^n$ difeo $\varepsilon$-$C^1$-cerca de $f$ ($\sup\|df_x - Ax\|<\varepsilon$) y sea $G$ un levantado $C^1$ de $g$. <br><br>
 
-            Podemos escribir $G(x)=Ax+p(x)$ con $p:\R^n\to\R^n$ periódica en $\Z^n$. Como es periódica, cumple $\sup\|p(x)\|< \infty$. <span class="duda">También cumple $\|Dp_x\|\leq\varepsilon$ no entiendo pq.,, pero con eso tengo $p=G-A$ $\varepsilon$-lipschitz.</span> <br><br>
+            Podemos escribir $G(x)=Ax+p(x)$ con $p:\R^n\to\R^n$ periódica en $\Z^n$. <br><br>
+            
+            Como es periódica, cumple $\sup\|p(x)\|< \infty$. También cumple $\|Dp_x\|\leq\varepsilon$ porque $g$ y $f$ están $\varepsilon$-$C^1$-cerca. Con eso tenemos $p=G-A$ $\varepsilon$-lipschitz. <br><br>
 
             Por el teorema de estabilidad general lineal tenemos que $G$ y $A$ son conjugadas por $H:\R^n\to\R^n$ siendo $H(x)$ el único punto que cumple $$\sup\limits_{n\in\Z}\|A^nH(x)-G^n(x)\|<\infty$$ <br><br>
 
-            me fui a mimir
+            <ins>Afirmación:</ins> $H(x+q)=H(x)+q$ si $q\in\Z^n$ <br><br>
+
+            Para probar esto primero observamos que podemos escribir $G^n$ como $A^n+p_n$ tal que $p_n$ es $\Z^n$-periódica. <br><br>
+
+            $\sup\limits_{n\in\Z}\|A^n(H(x)+q)-G^n(x+q)\|=\sup\limits_{n\in\Z}\|A^n(H(x))+A^n(q)-A^n(x+q)-p_n(x+q)\|$ <br><br>
+            
+            $=\sup\limits_{n\in\Z}\|A^nH(x)-A^nx-p_n(x)\|=\sup\limits_{n\in\Z}\|A^nH(x)-G^n(x)\|<\infty$ <br><br>
+
+            Como $H(x+q)$ es el único punto para el que este supremo puede valer $<\infty$ entonces tenemos $H(x+q)=H(x)+q$. <br><br>
+
+            Cocientando $H$ obtenemos un homeo $h:\T^n\to\T^n$ tal que 
+
+            $$f\circ h\circ\pi=f\circ\pi\circ H=\pi\circ A\circ H=\pi\circ H \circ G=h \circ\pi\circ G=h\circ g\circ\pi$$ 
+
+            Y con esto tenemos $f\circ h = h\circ g$. $\square$
+
+
         </div>
         
         </div>
