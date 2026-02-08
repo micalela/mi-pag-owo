@@ -7,8 +7,9 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="herradura.html">herradura y homoclinicos</a>
 <span>✧</span>
-<a href="difeos.html">difeos</a>
+<a href="ctos hip.html">conjuntos hiperbolicos</a>
 <span>✧</span>
+
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
 

@@ -85,7 +85,60 @@
             </li>
            </ol>
 
-           <span class="obs">Prop:</span> $E_x^s, E_x^u$ varían continuamente con $x$ y tienen dimensión constante.
+           <span class="obs">Prop:</span> $E_x^s, E_x^u$ varían continuamente con $x$ y tienen dimensión constante. <br><br>
+
+           <span class="dem">Dem:</span> Sea $x_n\to x$, probemos que $E^s(x_n)\to E^s(x), E^u(x_n)\to E^u(x)$. <br><br>
+
+           Como $\{1,\dots,\dim(M)\}$ compacto, tengo una subsucesión $x_{n_k}$ tal que $\dim\big(E^s (x_{n_k})\big) = d$ es constante. <br><br>
+
+           Tomo $\{v_k^1,\dots,v_k^d\}$ base ortonormal de $E^s(x_{n_k})$, $\{w_k^{d+1},\dots,w_k^n\}$ base ortonormal de $E^u(x_{n_k})$. <br><br>
+
+           Como $S^1$ compacta, tengo subsucesión convergente de bases ortogonales para cada espacio, convergen a bases ortonormales $\{v^{1},\dots,v^d\}, \{w^{d+1},\dots,w^n\}$ de dos espacios $S$, $U$. <br><br>
+
+           Sea $v^j\in \{v^{1},\dots,v^d\}$, entonces $v^j=\lim_{k} v^j_k$ y por lo tanto $\| Df_x(v^j) \| = \lim_{k} \| Df_{x_{n_k}}(v^j_k) \| \leq c \lambda$. Es decir, $v^j\in E^s(x)$. <br><br>
+           
+           Por lo tanto obtuvimos $S\subset E^s(x)$. Análogamente $U\subset E^u(x)$
+
+        </div> <br><br>
+
+        <div class="caja">
+          <span class="teo">Teo: (Equivalencias de la hiperbolicidad)</span> $f:M\to M$ difeo, $\Lambda$ compacto invariante, son equivalentes <br>
+          
+          <ol>
+            <li>
+              $\Lambda$ es hiperbólico
+            </li>
+            <li>
+              Existe $B$ una forma cuadrática continua, no degenerada en $\Lambda$ con dimensión constante a lo largo de las órbitas y tal que $f^{\#}B-B$ es definida positiva.
+            </li>
+            <li>
+              Existen dos familias de conos $C^s$ y $C^u$ en $\Lambda$ con dimensiones complementarias y dimensión constante a lo largo de las órbitas, tales que: <br><br>
+              <ul>
+                <li>
+                  $Df_x(C^u_x)\subset C^u_{f(x)}$ y $Df^{-1}_x(C^u_x)\subset C^u_{f^{-1}(x)}$
+                </li>
+                <li>
+                  Existen $\sigma\in(0,1)$, $m>0$ tales que $\|Df^m(v)\|\geq\sigma\| v\|$ si $v\in C^u$ y $\|Df^{-m}(v)\|\geq\sigma\| v\|$ si $v\in C^s$
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <span class="dem">Dem:</span> Probemos $1)\Rightarrow 2)$<br><br>
+
+          <img src="..\..\assets\dinamica hiperbolica\12.jpg" alt="dibujito pizarron" class="img"> 
+
+          <img src="..\..\assets\dinamica hiperbolica\122.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+          Una observación que me faltó escribir es que si $v\in E^s(x)$ entonces $B_x(v)< 0$, y si $v\in E^u(x)$ entonces $B_x(v)< 0$. Con esto, usando que los espacios son invariantes por $f$, tenemos que $B$ tiene dimensión constante a lo largo de las órbitas. <br><br>
+
+          Probemos ahora $2)\Rightarrow 3)$ <br><br>
+
+          <img src="..\..\assets\dinamica hiperbolica\23.jpg" alt="dibujito pizarron" class="img"> 
+
+          <img src="..\..\assets\dinamica hiperbolica\232.jpg" alt="dibujito pizarron" class="img"> <br><br>
+
+          Y finalmente $3)\Rightarrow 1)$
         </div>
 
     
