@@ -9,6 +9,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="ctos hip.html">conjuntos hiperbolicos</a>
 <span>✧</span>
+<a href="expansividad.html">expansividad</a>
+<span>✧</span>
 
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
