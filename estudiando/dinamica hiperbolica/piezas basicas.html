@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>r h bing chan</title>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="..\..\assets\iconos\photodisc.png"
+        />
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+        <script
+          type="text/javascript"
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"
+        ></script>
+        <link rel="stylesheet" href="hiperbolica.css" />
+        <link rel="stylesheet" href="navbar monografía.css" />
+      </head>
+      
+        <body>
+
+        <script src="navbar.js"></script>
+
+        <h1 class="homologia" style="margin-top: 40px; padding: 0.5em;"> 
+
+      dinamica hiperbolica
+    
+      </h1> 
+
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+      <img src="../../assets/gifs/onda.gif" width="200px" style="float: right;">
+
+
+
+        $
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\Z}{\mathbb{Z}}
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\H}{\mathcal{H}}
+        \newcommand{\s}{\mathbb{S}}
+        \newcommand{\tu}{\tilde{U}}
+        \newcommand{\F}{\mathcal{F}}
+        \newcommand{\fall}{\;\forall\;}
+        \newcommand{\exst}{\;\exists\;}
+        \newcommand{\nexst}{\;\not\exists\;}
+        $
+
+        <div class="caja">
+            <span class="def">Teo: (Descomposición espectral)</span> Dado $f:M\to M$ un difeo $L$-hiperbólico, entonces: <br><br>
+
+            <ol>
+              <li>
+                $L(f)=\bigcup\limits_{i=1}^N\Lambda_i$ conjuntos compactos, invariantes, transitivos y disjuntos dos a dos. Llamamos a estos conjuntos <ins>piezas básicas</ins>.
+              </li>
+              <li>
+                $\Lambda_i=\bigcup\limits_{j=1}^{N_i}\Lambda_{i_j}$ compactos, disjuntos dos a dos, tales que 
+                
+                <ul>
+                  <li>
+                    $f(\Lambda_{i_j})\subset\Lambda_{i_{j+1}}$
+                  </li>
+                  <li>
+                    $f^{N_i}:\Lambda_{i_j}\to\Lambda_{i_j}$ es topológicamente mixing
+                  </li>
+                  <li>
+                    $W^s(x)\cap\Lambda_{i_j}$ es denso en $\Lambda_{i_j}\fall x\in\Lambda_{i_j}$
+                  </li>
+                </ul>
+                <br><br>
+
+
+              </li>
+            </ol>
+        </div>
+
+
+    
+</body>
+</html>

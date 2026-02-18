@@ -11,6 +11,8 @@ const navbar = `<div class="navbar">
 <span>✧</span>
 <a href="expansividad.html">expansividad</a>
 <span>✧</span>
+<a href="piezas%20basicas.html">descomposición espectral</a>
+<span>✧</span>
 
 <a href="../../htmlmat2.html">atrás!</a>
 </div>`;
